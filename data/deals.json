@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T17:09:56.685Z",
+  "generatedAt": "2026-03-30T17:48:33.314Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -50,7 +50,7 @@
     {
       "source": "쿨엔조이",
       "status": "error",
-      "message": "Invalid time value"
+      "message": "fetch failed"
     }
   ],
   "deals": [
@@ -115,35 +115,6 @@
     },
     {
       "id": 3,
-      "title": "[버거킹] 와퍼, 불고기와퍼(3,900원), 치즈와퍼(4,500원) .",
-      "productName": "와퍼, 불고기와퍼(3,900원), 치즈와퍼(4,500원) .",
-      "category": "meat",
-      "source": "개드립",
-      "platform": "버거킹",
-      "price": 3900,
-      "priceText": "3,900원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-03-30T16:40:32.072Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "식품",
-      "summary": "와퍼, 불고기와퍼(3,900원), 치즈와퍼(4,500원) . 특가입니다. 버거킹 기준 3,900원.",
-      "summaryPoints": [
-        "플랫폼: 버거킹",
-        "가격: 3,900원"
-      ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/693524775?sort_index=popular&page=1",
-      "purchaseUrl": "",
-      "url": "https://www.dogdrip.net/hotdeal/693524775?sort_index=popular&page=1"
-    },
-    {
-      "id": 4,
       "title": "[11번가] 알뜰폰 데이터 7gb 평생요금제",
       "productName": "알뜰폰 데이터 7gb 평생요금제",
       "category": "festa",
@@ -173,7 +144,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693285"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "[네이버] 구운란 30구",
       "productName": "구운란 30구",
       "category": "festa",
@@ -203,7 +174,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693284"
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "[네이버] 으뜸한돈 삼겹살 500g +목살500g 16300원 체감1469...",
       "productName": "으뜸한돈 삼겹살 500g +목살500g 16300원 체감1469...",
       "category": "meat",
@@ -232,7 +203,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102881?"
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "[G마켓] 라쿠진 풀스테인리스 2단 계란찜기",
       "productName": "라쿠진 풀스테인리스 2단 계란찜기",
       "category": "festa",
@@ -262,7 +233,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693283"
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "[11번가] 26년 무안황토밭 시금치 1kg",
       "productName": "26년 무안황토밭 시금치 1kg",
       "category": "festa",
@@ -292,7 +263,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693282"
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "[옥션] 카누 호환 캡슐 57g 4개(40캡슐)+텀블러",
       "productName": "카누 호환 캡슐 57g 4개(40캡슐)+텀블러",
       "category": "kitchen",
@@ -320,7 +291,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693281"
     },
     {
-      "id": 10,
+      "id": 9,
       "title": "[네이버페이] 일일적립, 클릭 35원 + 15원(추가), 라이브예고 5원",
       "productName": "일일적립, 클릭 35원 + 15원(추가), 라이브예고 5원",
       "category": "festa",
@@ -351,7 +322,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102880?"
     },
     {
-      "id": 11,
+      "id": 10,
       "title": "[G마켓] 힐린 리포좀 식물성 멜라토닌 2mg 30정 1+1+1",
       "productName": "힐린 리포좀 식물성 멜라토닌 2mg 30정 1+1+1",
       "category": "festa",
@@ -381,7 +352,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693280"
     },
     {
-      "id": 12,
+      "id": 11,
       "title": "[루리웹] 트위스터 콤보 3300원 (3/31~4/27)",
       "productName": "트위스터 콤보 3300원 (3/31~4/27)",
       "category": "festa",
@@ -409,7 +380,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102879?"
     },
     {
-      "id": 13,
+      "id": 12,
       "title": "[지마켓] 100% 아이스 망고바 10봉+꿀스틱 10봉+파인애플바 3봉",
       "productName": "100% 아이스 망고바 10봉+꿀스틱 10봉+파인애플바 3봉",
       "category": "festa",
@@ -439,7 +410,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693279"
     },
     {
-      "id": 14,
+      "id": 13,
       "title": "[루리웹] 오후 2~4시 컴포즈커피 50% 할인(5천원 한도) (3/...",
       "productName": "오후 2~4시 컴포즈커피 50% 할인(5천원 한도) (3/...",
       "category": "dessert",
@@ -465,7 +436,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102878?"
     },
     {
-      "id": 15,
+      "id": 14,
       "title": "[지마켓] 참쥐포 대사이즈(22g) 총 30장",
       "productName": "참쥐포 대사이즈(22g) 총 30장",
       "category": "festa",
@@ -495,7 +466,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693278"
     },
     {
-      "id": 16,
+      "id": 15,
       "title": "[네이버] 맘스터치 시그니처 순살치킨 1kg",
       "productName": "맘스터치 시그니처 순살치킨 1kg",
       "category": "food-other",
@@ -525,7 +496,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693277"
     },
     {
-      "id": 17,
+      "id": 16,
       "title": "[네이버] 포크밸리 한돈 냉장 삼겹살 1kg",
       "productName": "포크밸리 한돈 냉장 삼겹살 1kg",
       "category": "meat",
@@ -555,7 +526,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693276"
     },
     {
-      "id": 18,
+      "id": 17,
       "title": "[지마켓] 마포장터 돼지갈비 왕구이 600g 3팩",
       "productName": "마포장터 돼지갈비 왕구이 600g 3팩",
       "category": "meat",
@@ -585,7 +556,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693275"
     },
     {
-      "id": 19,
+      "id": 18,
       "title": "[지마켓] 브프캣 20kg 대용량 고양이 사료",
       "productName": "브프캣 20kg 대용량 고양이 사료",
       "category": "festa",
@@ -615,7 +586,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693274"
     },
     {
-      "id": 20,
+      "id": 19,
       "title": "[지마켓] 퀸센스 베이직 후라이팬 궁중팬 2종세트",
       "productName": "퀸센스 베이직 후라이팬 궁중팬 2종세트",
       "category": "kitchen",
@@ -643,7 +614,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693273"
     },
     {
-      "id": 21,
+      "id": 20,
       "title": "[지마켓] 한입 삼겹살 / 큐브 삼겹살 / 돌돌말이 대패 삼겹살 골라담기 1KG",
       "productName": "한입 삼겹살 / 큐브 삼겹살 / 돌돌말이 대패 삼겹살 골라담기 1KG",
       "category": "meat",
@@ -673,7 +644,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693272"
     },
     {
-      "id": 22,
+      "id": 21,
       "title": "[네이버] 고당도 프리미엄 블랙라벨 오렌지 중과 8과",
       "productName": "고당도 프리미엄 블랙라벨 오렌지 중과 8과",
       "category": "festa",
@@ -703,7 +674,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693271"
     },
     {
-      "id": 23,
+      "id": 22,
       "title": "[알리뽐뿌] 2+1 활성탄 차량 에어컨필터 (7,319원), 테트리카 와이퍼 2+2(5,289원)/...",
       "productName": "2+1 활성탄 차량 에어컨필터 (7,319원), 테트리카 와이퍼 2+2(5,289원)/...",
       "category": "overseas",
@@ -730,14 +701,44 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85844"
     },
     {
+      "id": 23,
+      "title": "[네이버페이] 2026-03-31 일일적립, 클릭 35원",
+      "productName": "2026-03-31 일일적립, 클릭 35원",
+      "category": "festa",
+      "source": "개드립",
+      "platform": "네이버페이",
+      "price": 35,
+      "priceText": "35원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-03-30T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "적립",
+        "페이적립"
+      ],
+      "sourceCategory": "기타",
+      "summary": "2026-03-31 일일적립, 클릭 35원 특가입니다. 네이버페이 기준 35원.",
+      "summaryPoints": [
+        "플랫폼: 네이버페이",
+        "가격: 35원"
+      ],
+      "originalUrl": "https://www.dogdrip.net/hotdeal/693696893?sort_index=popular&page=1",
+      "purchaseUrl": "https://new-m.pay.naver.com/historybenefit/home",
+      "url": "https://www.dogdrip.net/hotdeal/693696893?sort_index=popular&page=1"
+    },
+    {
       "id": 24,
-      "title": "[지마켓] 삼다수 그린(무라벨) 2L 24개입",
-      "productName": "삼다수 그린(무라벨) 2L 24개입",
+      "title": "[지마켓] C타입 도킹형 미니 보조배터리 5000mAh",
+      "productName": "C타입 도킹형 미니 보조배터리 5000mAh",
       "category": "festa",
       "source": "뽐뿌",
       "platform": "지마켓",
-      "price": 0,
-      "priceText": "",
+      "price": 4900,
+      "priceText": "4,900원",
       "shipping": "무배",
       "discount": 0,
       "createdAt": "2026-03-29T15:00:00.000Z",
@@ -749,14 +750,15 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "삼다수 그린(무라벨) 2L 24개입 특가입니다. 지마켓 기준 무배.",
+      "summary": "C타입 도킹형 미니 보조배터리 5000mAh 특가입니다. 지마켓 기준 4,900원, 무배.",
       "summaryPoints": [
         "플랫폼: 지마켓",
+        "가격: 4,900원",
         "배송: 무배"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693073",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693073&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3Iva2tCN2ZDQ0ZDQg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693073"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693217",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693217&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvWnVwRVFaeWt1&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693217"
     },
     {
       "id": 25,

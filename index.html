@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>핫딜 레이더</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="eyebrow">무료로 시작하는 한국형 딜 큐레이션</p>
+      <h1>핫딜 레이더</h1>
+      <p class="hero-sub">
+        아카라이브, 뽐뿌, 네이버, 맘카페 등의 딜을 한곳에 모아 보고, 키워드 알림으로 놓치지 않기.
+      </p>
+      <div class="hero-cta">
+        <button id="google-login" class="btn btn-primary">Google로 로그인</button>
+        <button id="google-logout" class="btn btn-ghost" type="button">로그아웃</button>
+        <button id="toggle-alert" class="btn btn-ghost">키워드 알림 켜기</button>
+      </div>
+      <p id="auth-status" class="helper"></p>
+      <p id="sync-status" class="helper"></p>
+      <p class="helper">
+        비회원 열람 가능 · 회원은 스크랩/알림 가능 · 원문 링크 중심으로 연결
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="controls card">
+        <div class="tabs" id="category-tabs"></div>
+        <div class="filter-row">
+          <label>
+            검색
+            <input id="search-input" type="search" placeholder="브랜드/상품/키워드" />
+          </label>
+          <label>
+            소스
+            <select id="source-select">
+              <option value="all">전체</option>
+            </select>
+          </label>
+          <label>
+            정렬
+            <select id="sort-select">
+              <option value="latest">최신순</option>
+              <option value="discount">할인율순</option>
+              <option value="deadline">마감임박순</option>
+            </select>
+          </label>
+        </div>
+        <div class="alert-manager">
+          <label>
+            알림 키워드 추가
+            <div class="alert-input-row">
+              <input id="keyword-input" type="text" placeholder="예: 닌텐도, 기프티콘, 갤럭시" />
+              <button id="add-keyword" class="btn btn-primary" type="button">추가</button>
+            </div>
+          </label>
+          <div class="alert-actions">
+            <button id="request-notification" class="btn btn-ghost" type="button">브라우저 알림 권한 요청</button>
+            <span id="notification-status" class="small"></span>
+          </div>
+          <div id="keyword-list" class="tag-cloud"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-title-row">
+          <h2>실시간 딜 피드</h2>
+          <span id="deal-count" class="chip"></span>
+        </div>
+        <p id="data-status" class="small"></p>
+        <div id="deal-list" class="deal-list"></div>
+      </section>
+
+      <section class="card split">
+        <article>
+          <h2>회사 행사 태그</h2>
+          <p>
+            3개 대분류 안에서 회사 행사 정보는 태그로 노출됩니다. 예: 삼성행사, 닌텐도프로모션, 배민쿠폰.
+          </p>
+          <div id="event-tags" class="tag-cloud"></div>
+        </article>
+        <article>
+          <h2>스크랩</h2>
+          <p class="small">로컬 저장 기반 데모입니다.</p>
+          <ul id="bookmark-list" class="bookmark-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>배포 비용 0원 가이드: GitHub Pages 또는 Cloudflare Pages + 정적 파일</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

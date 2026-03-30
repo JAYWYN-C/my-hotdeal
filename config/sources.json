@@ -1,0 +1,62 @@
+{
+  "policyVersion": "1.0.0",
+  "mode": "rss-only",
+  "sources": [
+    {
+      "name": "네이버쇼핑",
+      "type": "rss",
+      "enabled": true,
+      "feedUrl": "https://rss.blog.naver.com/naver_shopping.xml",
+      "allowedDomains": ["blog.naver.com"],
+      "notes": "공개 RSS만 수집. 원문 링크/출처 유지."
+    },
+    {
+      "name": "네이버",
+      "type": "rss",
+      "enabled": true,
+      "feedUrl": "https://rss.blog.naver.com/naver_diary.xml",
+      "allowedDomains": ["blog.naver.com"],
+      "notes": "공개 RSS만 수집. 비딜성 콘텐츠는 필터링."
+    },
+    {
+      "name": "11번가",
+      "type": "rss",
+      "enabled": false,
+      "feedUrl": "https://example.com/11st-official-feed.xml",
+      "allowedDomains": ["www.11st.co.kr", "11st.co.kr"],
+      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+    },
+    {
+      "name": "G마켓",
+      "type": "rss",
+      "enabled": false,
+      "feedUrl": "https://example.com/gmarket-official-feed.xml",
+      "allowedDomains": ["www.gmarket.co.kr", "gmarket.co.kr"],
+      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+    },
+    {
+      "name": "옥션",
+      "type": "rss",
+      "enabled": false,
+      "feedUrl": "https://example.com/auction-official-feed.xml",
+      "allowedDomains": ["www.auction.co.kr", "auction.co.kr"],
+      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+    },
+    {
+      "name": "SSG",
+      "type": "rss",
+      "enabled": false,
+      "feedUrl": "https://example.com/ssg-official-feed.xml",
+      "allowedDomains": ["www.ssg.com", "ssg.com"],
+      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+    },
+    {
+      "name": "컬리",
+      "type": "rss",
+      "enabled": false,
+      "feedUrl": "https://example.com/kurly-official-feed.xml",
+      "allowedDomains": ["www.kurly.com", "kurly.com"],
+      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+    }
+  ]
+}

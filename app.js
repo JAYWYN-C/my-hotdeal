@@ -1,8 +1,9 @@
 const categories = [
   { id: "all", label: "전체" },
-  { id: "game-electronics", label: "게임/전자기기" },
-  { id: "food", label: "음식/식품" },
-  { id: "mobile-voucher", label: "모바일 금액권/할인권" },
+  { id: "food", label: "식품" },
+  { id: "electronics", label: "전자기기" },
+  { id: "overseas", label: "해외핫딜" },
+  { id: "festa", label: "할인 페스타" },
 ];
 
 const fallbackDeals = [];
@@ -23,6 +24,7 @@ const state = {
   compliance: [],
   user: null,
   syncStatus: "로컬 모드",
+  selectedDealId: null,
 };
 
 const categoryTabs = document.getElementById("category-tabs");
@@ -44,6 +46,9 @@ const addKeywordButton = document.getElementById("add-keyword");
 const keywordList = document.getElementById("keyword-list");
 const requestNotificationButton = document.getElementById("request-notification");
 const notificationStatus = document.getElementById("notification-status");
+const detailModal = document.getElementById("deal-detail-modal");
+const detailContent = document.getElementById("deal-detail-content");
+const detailTitle = document.getElementById("deal-detail-title");
 
 let authClient = null;
 let dbClient = null;
@@ -61,6 +66,37 @@ function loadUserScopedState() {
 
 function toKrw(amount) {
   return new Intl.NumberFormat("ko-KR").format(amount) + "원";
+}
+
+function displayPrice(deal) {
+  if (deal.priceText) {
+    return deal.priceText;
+  }
+  if (deal.price > 0) {
+    return toKrw(deal.price);
+  }
+  return "가격 확인";
+}
+
+function getCategoryLabel(categoryId) {
+  return categories.find((category) => category.id === categoryId)?.label || "기타";
+}
+
+function timeAgo(dateString) {
+  const diffMinutes = Math.max(0, Math.floor((Date.now() - new Date(dateString).getTime()) / (1000 * 60)));
+  if (diffMinutes < 1) return "방금 전";
+  if (diffMinutes < 60) return `${diffMinutes}분 전`;
+  if (diffMinutes < 24 * 60) return `${Math.floor(diffMinutes / 60)}시간 전`;
+  return `${Math.floor(diffMinutes / (24 * 60))}일 전`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function hoursLeft(dateString) {
@@ -267,7 +303,7 @@ function filteredDeals() {
         state.selectedCategory === "all" || deal.category === state.selectedCategory;
       const sourceMatch = state.selectedSource === "all" || deal.source === state.selectedSource;
       const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
-      const searchable = `${deal.title} ${deal.source} ${tags.join(" ")}`.toLowerCase();
+      const searchable = `${deal.title} ${deal.productName || ""} ${deal.summary || ""} ${deal.source} ${deal.platform || ""} ${tags.join(" ")}`.toLowerCase();
       const searchMatch = searchable.includes(state.search.toLowerCase());
       return categoryMatch && sourceMatch && searchMatch;
     })
@@ -330,24 +366,36 @@ function renderDeals() {
       return `<article class="deal-item">
         <div class="deal-top">
           <div>
-            <h3>${deal.title}</h3>
+            <h3>${escapeHtml(deal.title)}</h3>
             <div class="deal-meta">
-              <span class="tag">${categories.find((c) => c.id === deal.category)?.label}</span>
-              <span class="tag">${deal.source}</span>
-              <span class="tag">할인 ${deal.discount}%</span>
-              <span class="tag">마감 ${hoursLeft(deal.expiresAt)}시간 전</span>
+              <span class="tag tag-strong">${getCategoryLabel(deal.category)}</span>
+              ${deal.platform ? `<span class="tag">플랫폼 ${escapeHtml(deal.platform)}</span>` : ""}
+              <span class="tag">출처 ${escapeHtml(deal.source)}</span>
+              ${deal.sourceCategory ? `<span class="tag">${escapeHtml(deal.sourceCategory)}</span>` : ""}
             </div>
           </div>
-          <div class="price">${toKrw(deal.price)}</div>
+          <div class="price">${escapeHtml(displayPrice(deal))}</div>
         </div>
-        <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${tag}</span>`).join("")}</div>
+        <p class="deal-summary">${escapeHtml(deal.summary || "핵심 정보 요약이 준비되지 않았습니다.")}</p>
+        <div class="deal-submeta">
+          <span>${timeAgo(deal.createdAt)}</span>
+          ${deal.shipping ? `<span>배송 ${escapeHtml(deal.shipping)}</span>` : ""}
+          ${deal.discount ? `<span>할인 ${deal.discount}%</span>` : ""}
+        </div>
+        <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}</div>
         <div class="link-row">
-          <a href="${deal.url}" target="_blank" rel="noreferrer">원문 보기</a>
+          <button data-detail="${deal.id}" type="button">자세히 보기</button>
           <button data-bookmark="${deal.id}">${bookmarked ? "스크랩 해제" : "스크랩"}</button>
         </div>
       </article>`;
     })
     .join("");
+
+  dealList.querySelectorAll("button[data-detail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openDealDetail(Number(button.dataset.detail));
+    });
+  });
 
   dealList.querySelectorAll("button[data-bookmark]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -360,9 +408,80 @@ function renderDeals() {
   });
 }
 
+function openDealDetail(id) {
+  state.selectedDealId = id;
+  renderDetailModal();
+}
+
+function closeDealDetail() {
+  state.selectedDealId = null;
+  renderDetailModal();
+}
+
+function renderDetailModal() {
+  if (!detailModal || !detailContent || !detailTitle) {
+    return;
+  }
+
+  const deal = deals.find((item) => item.id === state.selectedDealId);
+  if (!deal) {
+    detailModal.hidden = true;
+    detailTitle.textContent = "";
+    detailContent.innerHTML = "";
+    return;
+  }
+
+  detailModal.hidden = false;
+  detailTitle.textContent = deal.title;
+  const points = Array.isArray(deal.summaryPoints) ? deal.summaryPoints : [];
+  const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
+
+  detailContent.innerHTML = `
+    <div class="detail-meta-row">
+      <span class="tag tag-strong">${getCategoryLabel(deal.category)}</span>
+      ${deal.platform ? `<span class="tag">플랫폼 ${escapeHtml(deal.platform)}</span>` : ""}
+      <span class="tag">출처 ${escapeHtml(deal.source)}</span>
+      ${deal.sourceCategory ? `<span class="tag">${escapeHtml(deal.sourceCategory)}</span>` : ""}
+    </div>
+    <p class="detail-summary">${escapeHtml(deal.summary || "")}</p>
+    <div class="detail-grid">
+      <div>
+        <span class="detail-label">가격</span>
+        <strong>${escapeHtml(displayPrice(deal))}</strong>
+      </div>
+      <div>
+        <span class="detail-label">배송</span>
+        <strong>${escapeHtml(deal.shipping || "원문 확인")}</strong>
+      </div>
+      <div>
+        <span class="detail-label">업데이트</span>
+        <strong>${escapeHtml(new Date(deal.createdAt).toLocaleString("ko-KR"))}</strong>
+      </div>
+      <div>
+        <span class="detail-label">남은 시간</span>
+        <strong>${hoursLeft(deal.expiresAt)}시간</strong>
+      </div>
+    </div>
+    ${points.length > 0 ? `<ul class="detail-points">${points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
+    <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}</div>
+    <div class="detail-actions">
+      <a href="${deal.url}" target="_blank" rel="noreferrer">커뮤니티 글 보기</a>
+      <button type="button" data-close-detail>닫기</button>
+    </div>
+  `;
+
+  detailContent.querySelectorAll("[data-close-detail]").forEach((button) => {
+    button.addEventListener("click", closeDealDetail);
+  });
+}
+
 function renderTags() {
   const uniqueTags = [...new Set(deals.flatMap((deal) => (Array.isArray(deal.eventTags) ? deal.eventTags : [])))];
-  tagCloud.innerHTML = uniqueTags.map((tag) => `<span class="tag">#${tag}</span>`).join("");
+  if (uniqueTags.length === 0) {
+    tagCloud.innerHTML = '<span class="small">표시할 태그가 아직 없습니다.</span>';
+    return;
+  }
+  tagCloud.innerHTML = uniqueTags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("");
 }
 
 function renderAlertKeywords() {
@@ -460,7 +579,7 @@ function renderBookmarks() {
     return;
   }
 
-  bookmarkList.innerHTML = bookmarkedDeals.map((deal) => `<li>${deal.title}</li>`).join("");
+  bookmarkList.innerHTML = bookmarkedDeals.map((deal) => `<li>${escapeHtml(deal.title)}</li>`).join("");
 }
 
 function bindEvents() {
@@ -539,6 +658,20 @@ function bindEvents() {
       alert(`로그아웃 실패: ${error.message}`);
     }
   });
+
+  if (detailModal) {
+    detailModal.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLElement && event.target.dataset.closeDetail !== undefined) {
+        closeDealDetail();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && state.selectedDealId !== null) {
+      closeDealDetail();
+    }
+  });
 }
 
 function render() {
@@ -550,6 +683,7 @@ function render() {
   renderAlertKeywords();
   renderNotificationStatus();
   renderDataStatus();
+  renderDetailModal();
   maybeNotifyDeals();
 }
 

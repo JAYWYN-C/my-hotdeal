@@ -264,9 +264,30 @@ select {
   font-size: 0.76rem;
 }
 
+.tag-strong {
+  background: color-mix(in oklab, var(--accent) 14%, white 86%);
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .price {
   font-weight: 700;
   color: var(--accent);
+}
+
+.deal-summary {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.deal-submeta {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.84rem;
 }
 
 .link-row {
@@ -320,6 +341,106 @@ select {
   color: var(--muted);
 }
 
+.deal-detail-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 20;
+}
+
+.deal-detail-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(20, 20, 24, 0.46);
+}
+
+.deal-detail-panel {
+  position: relative;
+  width: min(760px, calc(100% - 1.5rem));
+  max-height: min(88vh, 920px);
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  padding: 1.1rem;
+}
+
+.deal-detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.deal-detail-header h2 {
+  margin: 0.3rem 0 0;
+}
+
+.deal-detail-content {
+  margin-top: 1rem;
+}
+
+.detail-meta-row {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.detail-summary {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.detail-grid div {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.detail-points {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.detail-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.detail-actions a,
+.detail-actions button {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @keyframes rise {
   from {
     transform: translateY(6px);
@@ -349,5 +470,13 @@ select {
   .deal-top {
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deal-detail-header {
+    flex-direction: column;
   }
 }

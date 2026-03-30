@@ -1,5 +1,5 @@
 {
-  "policyVersion": "1.1.0",
+  "policyVersion": "1.2.0",
   "mode": "public-list-only",
   "sources": [
     {
@@ -10,9 +10,9 @@
       "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu",
       "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
       "boardId": "ppomppu",
-      "maxItems": 40,
+      "maxItems": 18,
       "titlePrefixes": ["뽐뿌게시판"],
-      "notes": "공개 뽐뿌 게시판 목록에서 최근 딜 제목/링크만 수집"
+      "notes": "공개 뽐뿌 핫딜 목록 수집"
     },
     {
       "name": "해외뽐뿌",
@@ -22,9 +22,9 @@
       "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu4",
       "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
       "boardId": "ppomppu4",
-      "maxItems": 40,
+      "maxItems": 18,
       "titlePrefixes": ["해외뽐뿌"],
-      "notes": "공개 해외뽐뿌 목록에서 최근 딜 제목/링크만 수집"
+      "notes": "공개 해외뽐뿌 목록 수집"
     },
     {
       "name": "알리뽐뿌",
@@ -34,9 +34,79 @@
       "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu8",
       "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
       "boardId": "ppomppu8",
-      "maxItems": 40,
+      "maxItems": 18,
       "titlePrefixes": ["알리뽐뿌"],
-      "notes": "공개 알리뽐뿌 목록에서 최근 딜 제목/링크만 수집"
+      "notes": "공개 알리뽐뿌 목록 수집"
+    },
+    {
+      "name": "FM코리아",
+      "type": "page",
+      "enabled": true,
+      "collector": "fmkorea-board",
+      "listUrl": "https://www.fmkorea.com/hotdeal",
+      "allowedDomains": ["www.fmkorea.com", "fmkorea.com"],
+      "maxItems": 18,
+      "notes": "공개 FM코리아 핫딜 목록 수집"
+    },
+    {
+      "name": "개드립",
+      "type": "page",
+      "enabled": true,
+      "collector": "dogdrip-board",
+      "listUrl": "https://www.dogdrip.net/hotdeal",
+      "allowedDomains": ["www.dogdrip.net", "dogdrip.net"],
+      "maxItems": 18,
+      "notes": "공개 개드립 핫딜 목록 수집"
+    },
+    {
+      "name": "루리웹",
+      "type": "page",
+      "enabled": true,
+      "collector": "ruliweb-board",
+      "listUrl": "https://bbs.ruliweb.com/market/board/1020",
+      "allowedDomains": ["bbs.ruliweb.com", "ruliweb.com"],
+      "maxItems": 18,
+      "notes": "공개 루리웹 핫딜 목록 수집"
+    },
+    {
+      "name": "딜바다 국내",
+      "type": "page",
+      "enabled": true,
+      "collector": "dealbada-board",
+      "listUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic",
+      "allowedDomains": ["www.dealbada.com", "dealbada.com"],
+      "maxItems": 18,
+      "notes": "공개 딜바다 국내 핫딜 목록 수집"
+    },
+    {
+      "name": "딜바다 해외",
+      "type": "page",
+      "enabled": true,
+      "collector": "dealbada-board",
+      "listUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea",
+      "allowedDomains": ["www.dealbada.com", "dealbada.com"],
+      "maxItems": 18,
+      "notes": "공개 딜바다 해외 핫딜 목록 수집"
+    },
+    {
+      "name": "쿨엔조이",
+      "type": "page",
+      "enabled": true,
+      "collector": "coolenjoy-board",
+      "listUrl": "https://coolenjoy.net/bbs/jirum",
+      "allowedDomains": ["coolenjoy.net", "www.coolenjoy.net"],
+      "maxItems": 18,
+      "notes": "공개 쿨엔조이 알뜰정보 목록 수집"
+    },
+    {
+      "name": "퀘이사존",
+      "type": "page",
+      "enabled": false,
+      "collector": "quasarzone-board",
+      "listUrl": "https://quasarzone.com/bbs/qb_saleinfo",
+      "allowedDomains": ["quasarzone.com"],
+      "maxItems": 18,
+      "notes": "2026-03-30 기준 Cloudflare 403 확인. 우회 없는 안정 수집 불가"
     },
     {
       "name": "아카라이브",
@@ -46,41 +116,19 @@
       "listUrl": "https://arca.live/b/hotdeal",
       "allowedDomains": ["arca.live"],
       "channel": "hotdeal",
-      "maxItems": 40,
+      "maxItems": 18,
       "titlePrefixes": ["핫딜채널"],
-      "notes": "2026-03-30 기준 Cloudflare 403 확인. 공개 읽기용 엔드포인트 확보 전까지 비활성화"
+      "notes": "2026-03-30 기준 Cloudflare challenge 403 확인"
     },
     {
-      "name": "11번가",
-      "type": "rss",
+      "name": "클리앙",
+      "type": "page",
       "enabled": false,
-      "feedUrl": "https://example.com/11st-official-feed.xml",
-      "allowedDomains": ["www.11st.co.kr", "11st.co.kr"],
-      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
-    },
-    {
-      "name": "옥션",
-      "type": "rss",
-      "enabled": false,
-      "feedUrl": "https://example.com/auction-official-feed.xml",
-      "allowedDomains": ["www.auction.co.kr", "auction.co.kr"],
-      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
-    },
-    {
-      "name": "SSG",
-      "type": "rss",
-      "enabled": false,
-      "feedUrl": "https://example.com/ssg-official-feed.xml",
-      "allowedDomains": ["www.ssg.com", "ssg.com"],
-      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
-    },
-    {
-      "name": "컬리",
-      "type": "rss",
-      "enabled": false,
-      "feedUrl": "https://example.com/kurly-official-feed.xml",
-      "allowedDomains": ["www.kurly.com", "kurly.com"],
-      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
+      "collector": "clien-board",
+      "listUrl": "https://www.clien.net/service/board/jirum",
+      "allowedDomains": ["www.clien.net", "clien.net"],
+      "maxItems": 18,
+      "notes": "2026-03-30 기준 403 Forbidden 확인"
     }
   ]
 }

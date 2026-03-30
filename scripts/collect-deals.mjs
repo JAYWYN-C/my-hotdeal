@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -48,6 +48,37 @@ const excludedKeywords = [
   "공시",
   "리포트",
   "분석"
+];
+
+const knownPlatformKeywords = [
+  "11번가",
+  "네이버",
+  "네이버쇼핑",
+  "네이버스토어",
+  "쿠팡",
+  "쿠팡로켓",
+  "g마켓",
+  "지마켓",
+  "옥션",
+  "롯데온",
+  "오늘의집",
+  "무신사",
+  "컬리",
+  "토스",
+  "버거킹",
+  "배달의민족",
+  "배민",
+  "컴포즈",
+  "메가커피",
+  "스타벅스",
+  "cj더마켓",
+  "스토브",
+  "삼성닷컴",
+  "amazon",
+  "woot",
+  "ebay",
+  "aliexpress",
+  "알리",
 ];
 
 function sleep(ms) {
@@ -283,6 +314,88 @@ function normalizeProductLabel(productLabel) {
     .trim();
 }
 
+function normalizeShippingLabel(shippingText) {
+  return cleanText(shippingText)
+    .replace(/\b무배\b/g, "무료")
+    .replace(/\b무료배송\b/g, "무료")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isLikelyPlatformLabel(label) {
+  const cleaned = normalizeSiteLabel(label).toLowerCase();
+  if (!cleaned) return false;
+  if (/무료|쿠폰|특가|행사|공동구매|핫딜|공지|코인특가|가격/.test(cleaned)) return false;
+  if (cleaned.length > 18) return false;
+  return knownPlatformKeywords.some((keyword) => cleaned.includes(keyword.toLowerCase()));
+}
+
+function defaultPlatformForSource(source) {
+  if (source === "알리뽐뿌") return "알리익스프레스";
+  return "";
+}
+
+function extractPriceText(text) {
+  const match = cleanText(text).match(/(가격별상이|다양|[0-9]{1,3}(?:,\s*[0-9]{3})*원|[0-9]{1,7}원)/i);
+  if (!match) return "";
+  const value = match[1].replace(/,\s+/g, ",");
+  return value;
+}
+
+function extractShippingText(text) {
+  const match = cleanText(text).match(
+    /(무료배송(?:\([^)]*\))?|무료배송|무료|무배|조건부\s*배송|직배(?:무료)?|배송비\s*[0-9,]+원|해외배송|착불)/i
+  );
+  return normalizeShippingLabel(match?.[1] || "");
+}
+
+function parseRelativeTimeText(timeText) {
+  const value = cleanText(timeText);
+  if (!value) return "";
+  if (/^\d{1,2}:\d{2}(?::\d{2})?$/.test(value)) return timeTextToIso(value);
+
+  const now = Date.now();
+  const minuteMatch = value.match(/(\d+)\s*분\s*전/);
+  if (minuteMatch) return new Date(now - Number(minuteMatch[1]) * 60 * 1000).toISOString();
+
+  const hourMatch = value.match(/(\d+)\s*시간\s*전/);
+  if (hourMatch) return new Date(now - Number(hourMatch[1]) * 60 * 60 * 1000).toISOString();
+
+  const dayMatch = value.match(/(\d+)\s*일\s*전/);
+  if (dayMatch) return new Date(now - Number(dayMatch[1]) * 24 * 60 * 60 * 1000).toISOString();
+
+  if (/방금/.test(value)) return new Date(now).toISOString();
+  return "";
+}
+
+function parseTitleMetadata(rawTitle) {
+  const cleanedTitle = stripLeadingNoise(stripTags(rawTitle));
+  let productPart = cleanedTitle;
+  let platform = "";
+
+  const mallMatch = productPart.match(/^\[([^\]]+)\]\s*(.+)$/);
+  if (mallMatch && isLikelyPlatformLabel(mallMatch[1])) {
+    platform = normalizeSiteLabel(mallMatch[1]);
+    productPart = mallMatch[2];
+  }
+
+  let metaText = "";
+  const metaMatch = productPart.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
+  if (metaMatch && /(?:\d|원|무료|무배|배송|직배|쿠폰|할인|적립|멤버십|다양)/.test(metaMatch[2])) {
+    productPart = metaMatch[1];
+    metaText = normalizeMetaChunk(metaMatch[2]);
+  }
+
+  const productName = normalizeProductLabel(productPart);
+  return {
+    platform,
+    productName,
+    metaText,
+    listedPrice: extractPriceText(metaText) || extractPriceText(cleanedTitle),
+    shipping: extractShippingText(metaText) || extractShippingText(cleanedTitle),
+  };
+}
+
 function formatUnifiedTitle(productLabel, detailParts) {
   const product = normalizeProductLabel(productLabel) || "핫딜";
   const parts = detailParts.map((part) => cleanText(part)).filter(Boolean);
@@ -304,68 +417,134 @@ function stripLeadingNoise(title, prefixes = []) {
 }
 
 function normalizeDealTitle(rawTitle, source = {}) {
-  let title = stripLeadingNoise(stripTags(rawTitle), source.titlePrefixes || []);
-
-  if (/^\[[^\]]+\]\s*\([^()]+\)$/.test(title)) {
-    return title;
-  }
-
-  title = title
-    .replace(/\s+-\s+[^-]+$/, "")
-    .replace(/\s+\d+$/, "")
-    .replace(/(\d),\s+(?=\d)/g, "$1,")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  const mallMatch = title.match(/^\[([^\]]+)\]\s*(.+?)(?:\s*\(([^()]+)\))?$/);
-  if (mallMatch) {
-    const [, mall, itemName, meta] = mallMatch;
-    const detailParts = [];
-    if (meta) detailParts.push(normalizeMetaChunk(meta));
-    detailParts.push(normalizeSiteLabel(mall));
-    return formatUnifiedTitle(itemName, detailParts);
-  }
-
-  const genericMetaMatch = title.match(/^(.+?)\s*\(([^()]+)\)$/);
-  if (genericMetaMatch && /(?:\d|무료|무배|배송|직배|쿠폰)/.test(genericMetaMatch[2])) {
-    return formatUnifiedTitle(genericMetaMatch[1], [normalizeMetaChunk(genericMetaMatch[2]), normalizeSiteLabel(source.name)]);
-  }
-
-  return formatUnifiedTitle(title, [normalizeSiteLabel(source.name)]);
+  const meta = parseTitleMetadata(stripLeadingNoise(stripTags(rawTitle), source.titlePrefixes || []));
+  const detailParts = [meta.listedPrice, meta.shipping, meta.platform].filter(Boolean);
+  return formatUnifiedTitle(meta.productName || rawTitle, detailParts.length > 0 ? detailParts : [normalizeSiteLabel(source.name)]);
 }
 
-function inferCategory(title) {
-  const t = title.toLowerCase();
-  const gameElectronicsKeywords = ["닌텐도", "플스", "ps5", "모니터", "ssd", "갤럭시", "아이폰", "노트북", "전자", "게임"];
-  const foodKeywords = ["라면", "밀키트", "치킨", "피자", "과자", "커피", "식품", "음식", "배달"];
-  const voucherKeywords = ["기프티콘", "상품권", "금액권", "쿠폰", "할인권", "e카드"];
-
-  if (voucherKeywords.some((k) => t.includes(k))) return "mobile-voucher";
-  if (foodKeywords.some((k) => t.includes(k))) return "food";
-  if (gameElectronicsKeywords.some((k) => t.includes(k))) return "game-electronics";
-  return "game-electronics";
-}
-
-function inferEventTags(title) {
-  const tags = [];
-  const map = [
-    ["삼성", "삼성행사"],
-    ["닌텐도", "닌텐도프로모션"],
-    ["배민", "배민쿠폰"],
-    ["카드", "카드사이벤트"],
-    ["라이브", "라이브특가"]
+function inferCategory(title, hints = {}) {
+  const haystack = `${title} ${hints.sourceCategory || ""} ${hints.platform || ""} ${hints.source || ""}`.toLowerCase();
+  const foodKeywords = [
+    "먹거리",
+    "식품",
+    "음료",
+    "커피",
+    "고등어",
+    "전복",
+    "돼지",
+    "소고기",
+    "갈비탕",
+    "오메가3",
+    "양파",
+    "고구마",
+    "올리브오일",
+    "아이스크림",
+    "우유",
+    "쿠키",
+    "과자",
+    "초코",
+    "햇반",
+    "스낵",
+    "만두",
+    "현미밥",
+    "비엔나",
+    "흑돼지",
+    "오이",
+    "치킨",
+    "피자",
+    "버거",
+    "라면",
+    "만두",
+    "장어",
+    "고기",
+    "쌀",
+    "과일",
+    "수산",
+    "배달",
+    "밀키트",
+    "간식",
+    "도시락",
+  ];
+  const electronicsKeywords = [
+    "전자",
+    "pc",
+    "모니터",
+    "ssd",
+    "그래픽카드",
+    "노트북",
+    "아이폰",
+    "갤럭시 s",
+    "갤럭시s",
+    "갤럭시 탭",
+    "갤럭시탭",
+    "갤럭시 버즈",
+    "갤럭시버즈",
+    "갤럭시북",
+    "플스",
+    "ps5",
+    "닌텐도",
+    "apple watch",
+    "에어팟",
+    "이어폰",
+    "가전",
+    "냉장고",
+    "세탁기",
+    "청소기",
+    "tv",
+  ];
+  const overseasKeywords = ["해외", "직구", "알리", "aliexpress", "amazon", "해외핫딜"];
+  const festaKeywords = [
+    "이벤트",
+    "페스타",
+    "멤버십",
+    "적립",
+    "카드",
+    "쿠폰",
+    "세일정보",
+    "할인권",
+    "행사",
+    "프로모션",
+    "네이버페이",
+    "토스",
+    "페이",
   ];
 
+  if (overseasKeywords.some((keyword) => haystack.includes(keyword))) return "overseas";
+  if (foodKeywords.some((keyword) => haystack.includes(keyword))) return "food";
+  if (electronicsKeywords.some((keyword) => haystack.includes(keyword))) return "electronics";
+  if (festaKeywords.some((keyword) => haystack.includes(keyword))) return "festa";
+  return "festa";
+}
+
+function inferEventTags(title, hints = {}) {
+  const tags = [];
+  const map = [
+    ["멤버십", "멤버십"],
+    ["카드", "카드할인"],
+    ["쿠폰", "쿠폰"],
+    ["적립", "적립"],
+    ["배민", "배달앱"],
+    ["네이버페이", "페이적립"],
+    ["삼성", "삼성"],
+    ["라이브", "라이브특가"],
+    ["커피", "커피"],
+    ["치킨", "치킨"],
+    ["라면", "라면"],
+    ["장어", "수산"]
+  ];
+
+  const haystack = `${title} ${hints.platform || ""} ${hints.sourceCategory || ""}`.toLowerCase();
   for (const [needle, tag] of map) {
-    if (title.includes(needle)) tags.push(tag);
+    if (haystack.includes(needle.toLowerCase())) tags.push(tag);
   }
 
-  if (tags.length === 0) tags.push("일반행사");
+  if (tags.length === 0 && hints.category === "food") tags.push("식품");
+  if (tags.length === 0 && hints.category === "festa") tags.push("할인페스타");
   return tags;
 }
 
 function estimatePrice(title) {
-  const match = title.match(/([0-9]{1,3}(?:,\s*[0-9]{3})+|[0-9]{4,7})원?/);
+  const match = title.match(/([0-9]{1,3}(?:,\s*[0-9]{3})+|[0-9]{1,7})원/);
   if (!match) return 0;
   return Number(match[1].replaceAll(",", "").replace(/\s+/g, ""));
 }
@@ -373,6 +552,30 @@ function estimatePrice(title) {
 function estimateDiscount(title) {
   const match = title.match(/([1-9][0-9]?)%/);
   return match ? Number(match[1]) : 0;
+}
+
+function buildSummary(item) {
+  const product = item.productName || normalizeProductLabel(item.title);
+  const sourceCategory = cleanText(item.sourceCategory);
+  const platform = cleanText(item.platform);
+  const price = cleanText(item.listedPrice);
+  const shipping = cleanText(item.shipping);
+  const categoryLead = sourceCategory ? `${sourceCategory} 딜` : "핫딜";
+  const trailing = [price, shipping].filter(Boolean).join(", ");
+  const basis = [platform ? `${platform} 기준` : "", trailing ? `${trailing} 조건` : ""].filter(Boolean).join(" ");
+  return cleanText(
+    `${item.source}에 올라온 ${categoryLead}입니다. ${product} 정보는 ${basis || "원문 기준"}으로 확인됐습니다.`
+  );
+}
+
+function buildSummaryPoints(item) {
+  return [
+    item.platform ? `플랫폼: ${item.platform}` : "",
+    item.listedPrice ? `가격: ${item.listedPrice}` : "",
+    item.shipping ? `배송: ${item.shipping}` : "",
+    item.sourceCategory ? `원문 분류: ${item.sourceCategory}` : "",
+    item.source ? `출처: ${item.source}` : "",
+  ].filter(Boolean);
 }
 
 async function loadExistingDealsIndex() {
@@ -427,14 +630,68 @@ function resolvePublishedTime(item, existingDeal, fallbackRank = 0) {
   return Date.now() - fallbackRank * 60 * 1000;
 }
 
+function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publishedTimeInput = null) {
+  const publishedTime = publishedTimeInput ?? resolvePublishedTime(item, existingDeal, item.rank ?? fallbackRank);
+  const now = Date.now();
+  const createdAt = new Date(publishedTime).toISOString();
+  const existingExpires = new Date(existingDeal?.expiresAt || "").getTime();
+  const defaultEnd = publishedTime + 1000 * 60 * 60 * DEFAULT_ITEM_TTL_HOURS;
+  const expiresAt = new Date(
+    Math.max(now + 1000 * 60 * 60 * 3, defaultEnd, Number.isNaN(existingExpires) ? 0 : existingExpires)
+  ).toISOString();
+  const parsedTitleMeta = parseTitleMetadata(item.title);
+  const meta = {
+    ...parsedTitleMeta,
+    platform: cleanText(item.platform) || parsedTitleMeta.platform || defaultPlatformForSource(item.source),
+    productName: cleanText(item.productName) || parsedTitleMeta.productName,
+    listedPrice: cleanText(item.listedPrice) || parsedTitleMeta.listedPrice,
+    shipping: normalizeShippingLabel(item.shipping) || parsedTitleMeta.shipping,
+    sourceCategory: cleanText(item.sourceCategory),
+  };
+  const detailParts = [meta.listedPrice, meta.shipping, meta.platform].filter(Boolean);
+  const unifiedTitle = formatUnifiedTitle(
+    meta.productName || item.title,
+    detailParts.length > 0 ? detailParts : [normalizeSiteLabel(item.source)]
+  );
+  const category = inferCategory(`${item.title} ${meta.productName}`, {
+    source: item.source,
+    sourceCategory: meta.sourceCategory,
+    platform: meta.platform,
+  });
+  const price = estimatePrice(meta.listedPrice || item.title);
+
+  return {
+    id: 0,
+    title: unifiedTitle,
+    productName: meta.productName || normalizeProductLabel(item.title),
+    category,
+    source: item.source,
+    platform: meta.platform,
+    price,
+    priceText: meta.listedPrice || (price > 0 ? `${price.toLocaleString("ko-KR")}원` : ""),
+    shipping: meta.shipping,
+    discount: estimateDiscount(item.title),
+    createdAt,
+    expiresAt,
+    eventTags: inferEventTags(item.title, {
+      category,
+      platform: meta.platform,
+      sourceCategory: meta.sourceCategory,
+    }),
+    sourceCategory: meta.sourceCategory,
+    summary: cleanText(item.summary) || buildSummary({ ...item, ...meta }),
+    summaryPoints: Array.isArray(item.summaryPoints) && item.summaryPoints.length > 0 ? item.summaryPoints : buildSummaryPoints({ ...item, ...meta }),
+    url: canonicalizeUrl(item.link),
+  };
+}
+
 function normalize(items, existingIndex) {
   const dedup = new Set();
-  const now = Date.now();
 
   return items
     .map((item, idx) => {
-      const title = normalizeDealTitle(item.title, item.sourceConfig);
       const link = canonicalizeUrl(item.link);
+      const title = normalizeDealTitle(item.title, item.sourceConfig);
       const existingDeal = findExistingDeal(existingIndex, item.source, title, link);
       const publishedTime = resolvePublishedTime(item, existingDeal, item.rank ?? idx);
       return { ...item, title, link, existingDeal, publishedTime };
@@ -448,24 +705,7 @@ function normalize(items, existingIndex) {
     })
     .sort((a, b) => b.publishedTime - a.publishedTime)
     .slice(0, MAX_ITEMS)
-    .map((item, idx) => {
-      const createdAt = new Date(item.publishedTime).toISOString();
-      const existingExpires = new Date(item.existingDeal?.expiresAt || "").getTime();
-      const defaultEnd = item.publishedTime + 1000 * 60 * 60 * DEFAULT_ITEM_TTL_HOURS;
-      const expiresAt = new Date(Math.max(now + 1000 * 60 * 60 * 3, defaultEnd, Number.isNaN(existingExpires) ? 0 : existingExpires)).toISOString();
-      return {
-        id: idx + 1,
-        title: item.title,
-        category: inferCategory(item.title),
-        source: item.source,
-        price: estimatePrice(item.title),
-        discount: estimateDiscount(item.title),
-        createdAt,
-        expiresAt,
-        eventTags: inferEventTags(item.title),
-        url: item.link
-      };
-    });
+    .map((item, idx) => ({ ...normalizeDealRecord(item, item.existingDeal, idx, item.publishedTime), id: idx + 1 }));
 }
 
 function parsePpomppuBoard(html, source) {
@@ -488,12 +728,187 @@ function parsePpomppuBoard(html, source) {
     if (!title || title.length < 4 || seen.has(link)) continue;
 
     const timeText = parseFirst(rowHtml, /<time[^>]+class=['"]baseList-time['"][^>]*>([^<]+)<\/time>/i);
+    const titleMeta = parseTitleMetadata(title);
     seen.add(link);
     items.push({
       title,
       link,
+      platform: titleMeta.platform,
+      productName: titleMeta.productName,
+      listedPrice: titleMeta.listedPrice,
+      shipping: titleMeta.shipping,
       pubDate: timeTextToIso(timeText) || extractNearbyPubDate(rowHtml, 0),
       rank: items.length
+    });
+
+    if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
+  }
+
+  return items;
+}
+
+function parseRuliwebBoard(html, source) {
+  const items = [];
+  const seen = new Set();
+  const rowPattern = /<tr[^>]+class=['"][^'"]*\btable_body\b[^'"]*['"][\s\S]*?<\/tr>/gi;
+
+  for (const rowMatch of html.matchAll(rowPattern)) {
+    const rowHtml = rowMatch[0];
+    const hrefMatch = rowHtml.match(/<a[^>]+class=['"][^'"]*subject_link[^'"]*['"][^>]+href=(["'])([^"']+)\1/i);
+    const link = toAbsoluteUrl(hrefMatch?.[2] || "", source.listUrl);
+    const title = parseFirst(rowHtml, /<a[^>]+class=['"][^'"]*subject_link[^'"]*['"][^>]*>([\s\S]*?)<\/a>/i);
+    const sourceCategory = stripTags(
+      parseFirst(rowHtml, /<td[^>]+class=['"][^'"]*\bdivsn\b[^'"]*['"][^>]*>([\s\S]*?)<\/td>/i)
+    );
+    if (/공지/.test(title) || /공지/.test(sourceCategory)) continue;
+    if (!title || !link || seen.has(link)) continue;
+
+    const titleMeta = parseTitleMetadata(title);
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      platform: titleMeta.platform,
+      productName: titleMeta.productName,
+      listedPrice: titleMeta.listedPrice,
+      shipping: titleMeta.shipping,
+      sourceCategory,
+      pubDate: timeTextToIso(parseFirst(rowHtml, /<td[^>]+class=['"]time['"][^>]*>([^<]+)<\/td>/i)) || extractNearbyPubDate(rowHtml, 0),
+      rank: items.length,
+    });
+
+    if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
+  }
+
+  return items;
+}
+
+function parseDealbadaBoard(html, source) {
+  const items = [];
+  const seen = new Set();
+  const rowPattern = /<tr[\s\S]*?<\/tr>/gi;
+
+  for (const rowMatch of html.matchAll(rowPattern)) {
+    const rowHtml = rowMatch[0];
+    if (!/bo_table=deal_/i.test(rowHtml) || /bo_notice|공지/i.test(rowHtml)) continue;
+
+    const hrefMatch = rowHtml.match(/<a[^>]+href=(["'])([^"']*bo_table=deal_[^"']*wr_id=\d+[^"']*)\1/i);
+    const href = hrefMatch?.[2] || "";
+    const title = parseFirst(rowHtml, /<td[^>]+class=['"][^'"]*td_subject[^'"]*['"][\s\S]*?<a[^>]*>([\s\S]*?)<\/a>/i);
+    const link = toAbsoluteUrl(href, source.listUrl);
+    if (!title || !link || seen.has(link)) continue;
+
+    const titleMeta = parseTitleMetadata(title);
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      platform: titleMeta.platform,
+      productName: titleMeta.productName,
+      listedPrice: titleMeta.listedPrice,
+      shipping: titleMeta.shipping,
+      sourceCategory: stripTags(parseFirst(rowHtml, /<td[^>]+class=['"][^'"]*td_cate[^'"]*['"][^>]*>([\s\S]*?)<\/td>/i)),
+      pubDate: timeTextToIso(parseFirst(rowHtml, /<td[^>]+class=['"][^'"]*td_date[^'"]*['"][^>]*>([^<]+)<\/td>/i)) || extractNearbyPubDate(rowHtml, 0),
+      rank: items.length,
+    });
+
+    if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
+  }
+
+  return items;
+}
+
+function parseCoolenjoyBoard(html, source) {
+  const items = [];
+  const seen = new Set();
+  const linkPattern =
+    /<a[^>]+href=(["'])((?:https?:\/\/coolenjoy\.net)?\/bbs\/jirum\/\d+[^"']*)\1[^>]+class=['"][^'"]*na-subject[^'"]*['"][^>]*>([\s\S]*?)<\/a>/gi;
+
+  for (const match of html.matchAll(linkPattern)) {
+    const link = toAbsoluteUrl(match[2], source.listUrl);
+    const title = stripTags(match[3]);
+    if (!title || !link || seen.has(link)) continue;
+
+    const snippet = html.slice(Math.max(0, (match.index ?? 0) - 350), Math.min(html.length, (match.index ?? 0) + 700));
+    const titleMeta = parseTitleMetadata(title);
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      platform: titleMeta.platform,
+      productName: titleMeta.productName,
+      listedPrice: parseFirst(snippet, /<font[^>]*>([^<]*원)<\/font>/i) || titleMeta.listedPrice,
+      shipping: titleMeta.shipping,
+      sourceCategory: stripTags(parseFirst(snippet, /<div[^>]+id=['"]abcd['"][^>]*>([^<]+)<\/div>/i)),
+      pubDate: timeTextToIso(parseFirst(snippet, /\b(\d{1,2}:\d{2})\b/)) || extractNearbyPubDate(snippet, 0),
+      rank: items.length,
+    });
+
+    if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
+  }
+
+  return items;
+}
+
+function parseFmkoreaBoard(html, source) {
+  const items = [];
+  const seen = new Set();
+  const linkPattern =
+    /<a[^>]+href=(["'])(\/\d+)\1[^>]*class=['"][^'"]*hotdeal_var8[^'"]*['"][^>]*>[\s\S]*?<span class=['"]ellipsis-target['"]>([\s\S]*?)<\/span>/gi;
+
+  for (const match of html.matchAll(linkPattern)) {
+    const link = toAbsoluteUrl(match[2], source.listUrl);
+    const title = stripTags(match[3]);
+    if (!title || !link || seen.has(link)) continue;
+
+    const snippet = html.slice(Math.max(0, (match.index ?? 0) - 120), Math.min(html.length, (match.index ?? 0) + 450));
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      platform: parseFirst(snippet, /쇼핑몰:\s*<a[^>]*class=['"]strong['"][^>]*>([\s\S]*?)<\/a>/i),
+      productName: title,
+      listedPrice: parseFirst(snippet, /가격:\s*<a[^>]*class=['"]strong['"][^>]*>([\s\S]*?)<\/a>/i),
+      shipping: normalizeShippingLabel(parseFirst(snippet, /배송:\s*<a[^>]*class=['"]strong['"][^>]*>([\s\S]*?)<\/a>/i)),
+      sourceCategory: stripTags(parseFirst(snippet, /<span class=['"]category['"][^>]*>\s*<a[^>]*>([\s\S]*?)<\/a>/i)),
+      pubDate:
+        timeTextToIso(parseFirst(snippet, /<span class=['"]regdate['"][^>]*>\s*([^<\n]+?)(?:<!--|<\/span>)/i)) ||
+        extractNearbyPubDate(snippet, 0),
+      rank: items.length,
+    });
+
+    if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
+  }
+
+  return items;
+}
+
+function parseDogdripBoard(html, source) {
+  const items = [];
+  const seen = new Set();
+  const linkPattern = /<a[^>]+href=(["'])(\/hotdeal\/\d+[^"']*)\1[^>]+class=['"][^'"]*title-link[^'"]*['"][^>]*>([\s\S]*?)<\/a>/gi;
+
+  for (const match of html.matchAll(linkPattern)) {
+    const link = toAbsoluteUrl(match[2], source.listUrl);
+    const title = stripTags(match[3]);
+    if (!title || /핫딜 게시판 안내/.test(title) || !link || seen.has(link)) continue;
+
+    const snippet = html.slice(Math.max(0, (match.index ?? 0) - 160), Math.min(html.length, (match.index ?? 0) + 760));
+    const titleMeta = parseTitleMetadata(title);
+    const relativeTime = parseFirst(snippet, /<i class=['"][^'"]*fa-clock[^'"]*['"]><\/i>\s*([^<]+)/i);
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      platform: titleMeta.platform,
+      productName: titleMeta.productName,
+      listedPrice: titleMeta.listedPrice,
+      shipping: titleMeta.shipping,
+      sourceCategory:
+        parseFirst(snippet, /<span[^>]*>\s*\[([^\]]+)\]\s*<\/span>/i) ||
+        parseFirst(snippet, /<span[^>]+text-muted[^>]*>\s*\[([^\]]+)\]\s*<\/span>/i),
+      pubDate: parseRelativeTimeText(relativeTime) || extractNearbyPubDate(snippet, 0),
+      rank: items.length,
     });
 
     if (items.length >= (source.maxItems || DEFAULT_PAGE_ITEM_LIMIT)) break;
@@ -543,6 +958,11 @@ async function collectSourceItems(source) {
   if (source.type === "page") {
     const html = await fetchText(source.listUrl);
     if (source.collector === "ppomppu-board") return parsePpomppuBoard(html, source);
+    if (source.collector === "ruliweb-board") return parseRuliwebBoard(html, source);
+    if (source.collector === "dealbada-board") return parseDealbadaBoard(html, source);
+    if (source.collector === "coolenjoy-board") return parseCoolenjoyBoard(html, source);
+    if (source.collector === "fmkorea-board") return parseFmkoreaBoard(html, source);
+    if (source.collector === "dogdrip-board") return parseDogdripBoard(html, source);
     if (source.collector === "arca-board") return parseArcaBoard(html, source);
     throw new Error(`Unsupported collector: ${source.collector || "unknown"}`);
   }
@@ -554,14 +974,15 @@ function filterCollectedItems(items, source) {
   return items
     .map((item) => ({
       ...item,
-      title: normalizeDealTitle(item.title, source),
+      rawTitle: cleanText(item.title),
+      title: cleanText(item.title),
       link: canonicalizeUrl(item.link),
       source: source.name,
       sourceConfig: source
     }))
     .filter((item) => item.title && item.link)
     .filter((item) => isAllowedUrl(item.link, source.allowedDomains || []))
-    .filter((item) => isLikelyDeal(item.title))
+    .filter((item) => item.platform || item.listedPrice || item.shipping || isLikelyDeal(item.rawTitle || item.title))
     .filter((item) => matchesIncludeKeywords(item.title, source.includeKeywords || []));
 }
 
@@ -607,7 +1028,22 @@ async function main() {
   console.log(`[collect] saved ${deals.length} deals to ${dataPath}`);
 }
 
-main().catch((error) => {
-  console.error("[collect] fatal", error);
-  process.exitCode = 1;
-});
+function isDirectExecution() {
+  const entryPath = process.argv[1];
+  if (!entryPath) return false;
+  return import.meta.url === pathToFileURL(path.resolve(entryPath)).href;
+}
+
+export {
+  inferCategory,
+  normalizeDealRecord,
+  parseDogdripBoard,
+  parseFmkoreaBoard,
+};
+
+if (isDirectExecution()) {
+  main().catch((error) => {
+    console.error("[collect] fatal", error);
+    process.exitCode = 1;
+  });
+}

@@ -106,7 +106,7 @@ export function formatAlertEmail(alert) {
   const shipping = deal.shipping || "배송 정보 확인";
   const purchaseUrl = deal.purchaseUrl || "";
   const originalUrl = deal.originalUrl || deal.url || "";
-  const subject = `[자취생 핫딜.zip] ${alert.keyword} 키워드 매칭 - ${deal.title}`;
+  const subject = `[자취핫딜.zip] ${alert.keyword} 키워드 매칭 - ${deal.title}`;
 
   const lines = [
     `${deal.title}`,
@@ -178,7 +178,7 @@ function getRuntimeConfig(env = process.env) {
     privateKey: env.FIREBASE_PRIVATE_KEY ? env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n") : "",
     resendApiKey: env.RESEND_API_KEY || "",
     alertFromEmail: env.ALERT_FROM_EMAIL || "",
-    alertFromName: env.ALERT_FROM_NAME || "자취생 핫딜.zip",
+    alertFromName: env.ALERT_FROM_NAME || "자취핫딜.zip",
   };
 
   const ready =

@@ -38,7 +38,7 @@ jobs:
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
-          ALERT_FROM_NAME: 자취생 핫딜.zip
+          ALERT_FROM_NAME: 자취핫딜.zip
         run: node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json
 
       - name: Commit updated deals

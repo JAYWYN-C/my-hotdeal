@@ -1,9 +1,13 @@
 const categories = [
   { id: "all", label: "전체" },
   { id: "produce", label: "야채·과일" },
+  { id: "meat", label: "고기" },
+  { id: "fish", label: "생선" },
+  { id: "dairy", label: "유제품" },
   { id: "frozen", label: "냉동식품" },
   { id: "dessert", label: "디저트" },
   { id: "food-other", label: "기타 식품" },
+  { id: "kitchen", label: "주방용품" },
   { id: "household", label: "생활용품" },
   { id: "cleaning", label: "청소용품" },
   { id: "travel", label: "여행" },
@@ -32,11 +36,14 @@ const state = {
   compliance: [],
   user: null,
   syncStatus: "로컬 모드",
+  authMode: "loading",
   selectedDealId: null,
 };
 
 const homeButton = document.getElementById("home-button");
 const homeTitle = document.getElementById("home-title");
+const menuButton = document.getElementById("menu-button");
+const headerMenu = document.getElementById("header-menu");
 const categoryTabs = document.getElementById("category-tabs");
 const sourceSelect = document.getElementById("source-select");
 const sortSelect = document.getElementById("sort-select");
@@ -63,6 +70,8 @@ const detailHeaderActions = document.getElementById("detail-header-actions");
 const savingNowList = document.getElementById("saving-now-list");
 const foodSavingList = document.getElementById("food-saving-list");
 const livingSavingList = document.getElementById("living-saving-list");
+const alertsPanel = document.getElementById("alerts-panel");
+const bookmarkPanel = document.getElementById("bookmark-panel");
 
 let authClient = null;
 let dbClient = null;
@@ -144,7 +153,22 @@ function getStatusLabel(deal) {
 }
 
 function getDisplayTags(deal) {
-  return [...new Set([getCategoryLabel(deal.category), deal.platform, deal.source].filter(Boolean))];
+  return [
+    { label: getCategoryLabel(deal.category), tone: "category" },
+    { label: deal.platform, tone: "platform" },
+    { label: deal.source, tone: "source" },
+  ].filter((tag, index, array) => {
+    if (!tag.label) {
+      return false;
+    }
+    return array.findIndex((candidate) => candidate.label === tag.label && candidate.tone === tag.tone) === index;
+  });
+}
+
+function renderDealTags(tags) {
+  return tags
+    .map((tag) => `<span class="tag tag-${tag.tone}">${escapeHtml(tag.label)}</span>`)
+    .join("");
 }
 
 function persistBookmarks() {
@@ -234,6 +258,22 @@ function queueCloudSync() {
 }
 
 function renderAuthStatus() {
+  if (state.authMode === "missing-config") {
+    authStatus.textContent = "Google 로그인 설정 필요";
+    googleLogin.disabled = true;
+    googleLogout.hidden = true;
+    googleLogin.hidden = false;
+    return;
+  }
+
+  if (state.authMode === "error") {
+    authStatus.textContent = "Google 로그인 연결 오류";
+    googleLogin.disabled = true;
+    googleLogout.hidden = true;
+    googleLogin.hidden = false;
+    return;
+  }
+
   if (!authClient) {
     authStatus.textContent = "비회원으로 둘러보는 중";
     googleLogin.disabled = true;
@@ -271,7 +311,7 @@ async function initializeFirebaseAuth() {
   if (!config || !config.apiKey || !config.authDomain || !config.projectId || !config.appId) {
     authClient = null;
     dbClient = null;
-    setSyncStatus("로컬 모드");
+    state.authMode = "missing-config";
     renderAuthStatus();
     return;
   }
@@ -306,6 +346,7 @@ async function initializeFirebaseAuth() {
     };
 
     onAuthStateChanged(auth, async (user) => {
+      state.authMode = "ready";
       state.user = user || null;
       loadUserScopedState();
       if (state.user) {
@@ -320,7 +361,7 @@ async function initializeFirebaseAuth() {
     console.warn("Firebase auth initialization failed.", error);
     authClient = null;
     dbClient = null;
-    setSyncStatus("로컬 모드");
+    state.authMode = "error";
     renderAuthStatus();
   }
 }
@@ -383,11 +424,24 @@ function filteredDeals() {
     });
 }
 
+function setHeaderMenuOpen(isOpen) {
+  if (!headerMenu || !menuButton) {
+    return;
+  }
+  headerMenu.hidden = !isOpen;
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+}
+
+function scrollToSection(section) {
+  section?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function resetToHome() {
   state.search = "";
   state.selectedSource = "all";
   state.selectedCategory = "all";
   state.sort = "latest";
+  setHeaderMenuOpen(false);
   closeDealDetail();
   if (searchInput) searchInput.value = "";
   if (sourceSelect) sourceSelect.value = "all";
@@ -441,12 +495,12 @@ function renderDashboardHighlights() {
   );
   renderMiniDealList(
     foodSavingList,
-    pickDashboardDeals((deal) => ["produce", "frozen", "dessert", "food-other"].includes(deal.category)),
+    pickDashboardDeals((deal) => ["produce", "meat", "fish", "dairy", "frozen", "dessert", "food-other"].includes(deal.category)),
     "식비 절약 딜을 준비 중입니다."
   );
   renderMiniDealList(
     livingSavingList,
-    pickDashboardDeals((deal) => ["household", "cleaning", "voucher", "festa"].includes(deal.category)),
+    pickDashboardDeals((deal) => ["kitchen", "household", "cleaning", "voucher", "festa"].includes(deal.category)),
     "생활비 절약 딜을 준비 중입니다."
   );
 }
@@ -502,7 +556,7 @@ function renderDeals() {
           <div>
             <h3>${escapeHtml(deal.title)}</h3>
             <div class="deal-meta">
-              ${tags.map((tag, index) => `<span class="tag ${index === 0 ? "tag-strong" : ""}">${escapeHtml(tag)}</span>`).join("")}
+              ${renderDealTags(tags)}
             </div>
           </div>
           <div class="price">${escapeHtml(displayPrice(deal))}</div>
@@ -559,7 +613,7 @@ function renderDetailModal() {
     detailTitle.textContent = "";
     detailContent.innerHTML = "";
     if (detailHeaderActions) {
-      detailHeaderActions.innerHTML = '<button class="btn btn-ghost" type="button" data-close-detail>닫기</button>';
+      detailHeaderActions.innerHTML = '<button class="detail-header-link" type="button" data-close-detail>닫기</button>';
       detailHeaderActions.querySelector("[data-close-detail]")?.addEventListener("click", closeDealDetail);
     }
     return;
@@ -576,8 +630,9 @@ function renderDetailModal() {
 
   if (detailHeaderActions) {
     detailHeaderActions.innerHTML = `
-      ${originalUrl ? `<a href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" class="btn btn-ghost">원본글 보러가기</a>` : ""}
-      <button class="btn btn-ghost" type="button" data-close-detail>닫기</button>
+      ${originalUrl ? `<a href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" class="detail-header-link">원본글</a>
+      <span class="detail-header-divider" aria-hidden="true">|</span>` : ""}
+      <button class="detail-header-link" type="button" data-close-detail>닫기</button>
     `;
     detailHeaderActions.querySelectorAll("[data-close-detail]").forEach((button) => {
       button.addEventListener("click", closeDealDetail);
@@ -586,7 +641,7 @@ function renderDetailModal() {
 
   detailContent.innerHTML = `
     <div class="detail-meta-row">
-      ${tags.map((tag, index) => `<span class="tag ${index === 0 ? "tag-strong" : ""}">${escapeHtml(tag)}</span>`).join("")}
+      ${renderDealTags(tags)}
       ${statusLabel ? `<span class="tag">${escapeHtml(statusLabel)}</span>` : ""}
     </div>
     <p class="detail-summary">${escapeHtml(deal.summary || "")}</p>
@@ -730,6 +785,22 @@ function renderBookmarks() {
 function bindEvents() {
   homeButton?.addEventListener("click", resetToHome);
   homeTitle?.addEventListener("click", resetToHome);
+  menuButton?.addEventListener("click", () => {
+    setHeaderMenuOpen(Boolean(headerMenu?.hidden));
+  });
+
+  headerMenu?.querySelectorAll("[data-menu-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-menu-target");
+      if (target === "alerts") {
+        scrollToSection(alertsPanel);
+        keywordInput?.focus();
+      } else if (target === "bookmarks") {
+        scrollToSection(bookmarkPanel);
+      }
+      setHeaderMenuOpen(false);
+    });
+  });
 
   sourceSelect.addEventListener("change", () => {
     state.selectedSource = sourceSelect.value;
@@ -819,9 +890,25 @@ function bindEvents() {
   }
 
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && headerMenu && !headerMenu.hidden) {
+      setHeaderMenuOpen(false);
+    }
     if (event.key === "Escape" && state.selectedDealId !== null) {
       closeDealDetail();
     }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Node)) {
+      return;
+    }
+    if (!headerMenu || headerMenu.hidden) {
+      return;
+    }
+    if (headerMenu.contains(event.target) || menuButton?.contains(event.target)) {
+      return;
+    }
+    setHeaderMenuOpen(false);
   });
 }
 

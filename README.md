@@ -1,4 +1,4 @@
-# 자취생 핫딜.zip
+# 자취핫딜.zip
 
 정적 웹 + GitHub Actions 기반 자취생 절약 대시보드입니다.
 
@@ -43,6 +43,7 @@
 2. Firebase Auth(Google) 활성화
 3. Firestore 생성
 4. `userPreferences/{uid}` 문서에 `alertKeywords`, `emailAlertsEnabled`, `email` 필드가 저장되도록 로그인 흐름 사용
+5. Firebase Console > Authentication > Settings > Authorized domains에 `jaywyn-c.github.io`와 `localhost` 추가
 
 예시:
 ```js
@@ -53,6 +54,12 @@ window.FIREBASE_CONFIG = {
   appId: "..."
 };
 ```
+
+GitHub Pages 배포용 저장소 변수:
+- `FIREBASE_API_KEY`
+- `FIREBASE_AUTH_DOMAIN`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_APP_ID`
 
 ## GitHub Actions 시크릿
 - `FIREBASE_PROJECT_ID`

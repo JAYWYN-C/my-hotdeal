@@ -451,9 +451,109 @@ function normalizeDealTitle(rawTitle, source = {}) {
 function inferCategory(title, hints = {}) {
   const haystack = `${title} ${hints.sourceCategory || ""} ${hints.platform || ""} ${hints.source || ""}`.toLowerCase();
   const produceKeywords = ["양파", "오이", "고구마", "과일", "사과", "샐러드", "채소", "농산물", "천혜향", "귤", "토마토", "당근", "감자", "양배추", "마늘"];
+  const meatKeywords = [
+    "삼겹살",
+    "목살",
+    "갈비",
+    "한우",
+    "한돈",
+    "돼지고기",
+    "돼지",
+    "소고기",
+    "소불고기",
+    "불고기",
+    "닭가슴살",
+    "닭다리",
+    "닭정육",
+    "닭볶음탕",
+    "닭갈비",
+    "오리고기",
+    "오리훈제",
+    "오리로스",
+    "차돌",
+    "우삼겹",
+    "대패",
+    "스테이크",
+    "항정살",
+    "돈마호크",
+    "육회",
+    "갈비탕",
+    "흑돼지",
+    "돔베고기",
+  ];
+  const fishKeywords = [
+    "생선",
+    "수산",
+    "해산물",
+    "장어",
+    "연어",
+    "참치",
+    "고등어",
+    "갈치",
+    "명태",
+    "오징어",
+    "문어",
+    "낙지",
+    "주꾸미",
+    "새우",
+    "전복",
+    "굴비",
+    "굴",
+    "조개",
+    "꽃게",
+    "대게",
+    "킹크랩",
+    "새조개",
+    "홍합",
+    "멍게",
+    "어묵",
+    "회",
+  ];
   const frozenKeywords = ["냉동", "만두", "냉동식품", "핫도그", "너겟", "도시락", "피자", "볶음밥"];
-  const dessertKeywords = ["아이스크림", "쿠키", "과자", "초코", "디저트", "베이커리", "카스타드", "와플", "커피", "아카페라", "아메리카노", "엑설런트", "끌레도르"];
-  const householdKeywords = ["휴지", "수납", "주방", "욕실", "생필품", "생활용품", "멀티탭", "후라이팬", "용기", "쓰레기통"];
+  const dessertKeywords = ["아이스크림", "쿠키", "과자", "초코", "디저트", "베이커리", "카스타드", "와플", "커피", "아카페라", "아메리카노", "엑설런트", "끌레도르", "케이크"];
+  const dairyKeywords = [
+    "우유",
+    "치즈",
+    "요거트",
+    "요구르트",
+    "그릭요거트",
+    "버터",
+    "생크림",
+    "휘핑크림",
+    "크림치즈",
+    "리코타",
+    "모짜렐라",
+    "모차렐라",
+    "체다",
+    "파르메산",
+    "분유",
+    "연유",
+  ];
+  const dairyExcludedKeywords = ["두유", "soy", "식물성", "오트", "oat", "아몬드브리즈", "almond"];
+  const kitchenKeywords = [
+    "주방",
+    "후라이팬",
+    "프라이팬",
+    "냄비",
+    "식기",
+    "접시",
+    "컵",
+    "텀블러",
+    "머그",
+    "도마",
+    "칼",
+    "조리도구",
+    "주걱",
+    "국자",
+    "수저",
+    "숟가락",
+    "젓가락",
+    "밀폐용기",
+    "반찬통",
+    "채반",
+    "키친툴",
+  ];
+  const householdKeywords = ["휴지", "화장지", "수납", "수납함", "욕실", "생필품", "생활용품", "멀티탭", "쓰레기통", "정리박스", "정리함"];
   const cleaningKeywords = ["청소", "세제", "세정", "곰팡이", "청소포", "테이프클리너", "클리너", "세척"];
   const travelKeywords = ["항공", "숙박", "렌터카", "렌트카", "여행", "호텔", "리조트", "패스", "티켓"];
   const voucherKeywords = ["상품권", "기프티콘", "금액권", "포인트 전환", "문화상품권", "신세계", "스타벅스 카드"];
@@ -514,10 +614,17 @@ function inferCategory(title, hints = {}) {
   if (gameKeywords.some((keyword) => haystack.includes(keyword))) return "game";
   if (electronicsKeywords.some((keyword) => haystack.includes(keyword))) return "electronics";
   if (cleaningKeywords.some((keyword) => haystack.includes(keyword))) return "cleaning";
+  if (kitchenKeywords.some((keyword) => haystack.includes(keyword))) return "kitchen";
   if (householdKeywords.some((keyword) => haystack.includes(keyword))) return "household";
   if (produceKeywords.some((keyword) => haystack.includes(keyword))) return "produce";
+  if (fishKeywords.some((keyword) => haystack.includes(keyword))) return "fish";
+  if (meatKeywords.some((keyword) => haystack.includes(keyword))) return "meat";
   if (frozenKeywords.some((keyword) => haystack.includes(keyword))) return "frozen";
   if (dessertKeywords.some((keyword) => haystack.includes(keyword))) return "dessert";
+  if (
+    dairyKeywords.some((keyword) => haystack.includes(keyword)) &&
+    !dairyExcludedKeywords.some((keyword) => haystack.includes(keyword))
+  ) return "dairy";
   if (/먹거리|식품|음료|전복|돼지|소고기|갈비탕|오메가3|올리브오일|우유|햇반|현미밥|비엔나|흑돼지|치킨|라면|장어|고기|쌀|수산|배달|밀키트|간식|두유|건강식품|프로틴|사이다|막걸리|약주|육개장|삼계탕|밀면|짜장|국수|면류/.test(haystack)) return "food-other";
   if (festaKeywords.some((keyword) => haystack.includes(keyword))) return "festa";
   return "festa";
@@ -545,7 +652,7 @@ function inferEventTags(title, hints = {}) {
     if (haystack.includes(needle.toLowerCase())) tags.push(tag);
   }
 
-  if (tags.length === 0 && ["produce", "frozen", "dessert", "food-other"].includes(hints.category)) tags.push("식품");
+  if (tags.length === 0 && ["produce", "meat", "fish", "dairy", "frozen", "dessert", "food-other"].includes(hints.category)) tags.push("식품");
   if (tags.length === 0 && hints.category === "festa") tags.push("할인페스타");
   return tags;
 }

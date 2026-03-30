@@ -32,6 +32,17 @@ jobs:
           mkdir -p public
           cp -R index.html styles.css app.js data README.md public/
 
+      - name: Write Firebase web config
+        run: |
+          cat > public/firebase-config.js <<EOF
+          window.FIREBASE_CONFIG = {
+            apiKey: "${{ vars.FIREBASE_API_KEY }}",
+            authDomain: "${{ vars.FIREBASE_AUTH_DOMAIN }}",
+            projectId: "${{ vars.FIREBASE_PROJECT_ID }}",
+            appId: "${{ vars.FIREBASE_APP_ID }}"
+          };
+          EOF
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

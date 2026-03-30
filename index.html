@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자취생 핫딜.zip</title>
+    <title>자취핫딜.zip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,23 +18,53 @@
 
     <header class="hero">
       <div class="hero-nav">
-        <button id="home-button" class="btn btn-ghost" type="button">홈</button>
+        <div class="hero-actions">
+          <button id="home-button" class="btn btn-ghost" type="button">홈</button>
+          <button id="google-login" class="btn btn-primary" type="button">로그인</button>
+          <button id="google-logout" class="btn btn-ghost" type="button" hidden>로그아웃</button>
+          <div class="menu-wrap">
+            <button
+              id="menu-button"
+              class="btn btn-ghost"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="header-menu"
+            >
+              메뉴
+            </button>
+            <div id="header-menu" class="header-menu" hidden>
+              <button type="button" data-menu-target="alerts">이메일 알림 설정</button>
+              <button type="button" data-menu-target="bookmarks">스크랩 보기</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="eyebrow">자취생을 위한 다중 커뮤니티 핫딜 큐레이션</p>
-      <h1><button id="home-title" class="brand-link" type="button">자취생 핫딜.zip</button></h1>
-      <p class="hero-sub">
-        세상 모든 할인과 핫딜을 빠르게 확인하고, 자취생의 생활비를 아껴주는 특가를 놓치지 마세요.
-      </p>
-      <div class="hero-cta">
-        <button id="google-login" class="btn btn-primary">Google로 로그인</button>
-        <button id="google-logout" class="btn btn-ghost" type="button">로그아웃</button>
-        <button id="toggle-alert" class="btn btn-ghost">이메일 알림 켜기</button>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow">자취생을 위한 다중 커뮤니티 핫딜 큐레이션</p>
+          <h1><button id="home-title" class="brand-link" type="button">자취핫딜.zip</button></h1>
+          <p class="hero-sub">
+            세상 모든 할인과 핫딜을 빠르게 확인하고, 자취생의 생활비를 아껴주는 특가를 놓치지 마세요.
+          </p>
+          <p class="helper hero-note">
+            넓은 화면에서는 더 많이 보고, 모바일에서는 자연스럽게 줄어드는 밀도 높은 레이아웃으로 정리했습니다.
+          </p>
+        </div>
+        <aside class="hero-panel" aria-label="빠른 상태">
+          <div class="hero-panel-item">
+            <span class="hero-panel-label">로그인 상태</span>
+            <p id="auth-status" class="hero-panel-value"></p>
+          </div>
+          <div class="hero-panel-item">
+            <span class="hero-panel-label">마지막 핫딜 업데이트</span>
+            <p id="sync-status" class="hero-panel-value"></p>
+          </div>
+          <p class="hero-panel-note">
+            상단 메뉴에서 이메일 알림 설정과 스크랩을 바로 열 수 있습니다.
+          </p>
+        </aside>
       </div>
-      <p id="auth-status" class="helper"></p>
-      <p id="sync-status" class="helper"></p>
-      <p class="helper">
-        비회원도 둘러볼 수 있고, 로그인하면 스크랩과 키워드 메일 알림을 구글 계정으로 바로 이어서 쓸 수 있습니다.
-      </p>
     </header>
 
     <main class="layout">
@@ -81,7 +111,7 @@
             </select>
           </label>
         </div>
-        <div class="alert-manager">
+        <div id="alerts-panel" class="alert-manager menu-section-target">
           <label>
             알림 키워드 추가
             <div class="alert-input-row">
@@ -90,6 +120,7 @@
             </div>
           </label>
           <div class="alert-actions">
+            <button id="toggle-alert" class="btn btn-ghost" type="button">이메일 알림 켜기</button>
             <button id="request-notification" class="btn btn-ghost" type="button">브라우저 알림 권한 요청</button>
             <span id="notification-status" class="small"></span>
           </div>
@@ -114,7 +145,7 @@
           </p>
           <div id="event-tags" class="tag-cloud"></div>
         </article>
-        <article>
+        <article id="bookmark-panel" class="menu-section-target">
           <h2>스크랩</h2>
           <p class="small">로그인하면 스크랩과 키워드를 계정 기준으로 이어서 관리할 수 있습니다.</p>
           <ul id="bookmark-list" class="bookmark-list"></ul>

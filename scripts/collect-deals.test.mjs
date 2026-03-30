@@ -219,11 +219,20 @@ test("inferCategory maps resident food groups and overseas deals", () => {
   assert.equal(inferCategory("[쿠팡] 비비고 진한고기만두 (냉동), 400g, 4개", { sourceCategory: "식품" }), "frozen");
   assert.equal(inferCategory("[오늘의집] 엑설런트 오리지널 6개", { sourceCategory: "식품" }), "dessert");
   assert.equal(inferCategory("[네이버쇼핑] 서울우유 무가당 블랙9곡 두유 190ml 20팩", { sourceCategory: "식품" }), "food-other");
-  assert.equal(inferCategory("[네이버쇼핑] 풍천민물장어 1kg 손질후 700g + 소스2종 생강채 13,600원 (무료배송)", { sourceCategory: "식품" }), "food-other");
+  assert.equal(inferCategory("[네이버쇼핑] 상하목장 유기농 우유 24팩", { sourceCategory: "식품" }), "dairy");
+  assert.equal(inferCategory("[컬리] 그릭요거트 400g 2통", { sourceCategory: "식품" }), "dairy");
+  assert.equal(inferCategory("[네이버쇼핑] 풍천민물장어 1kg 손질후 700g + 소스2종 생강채 13,600원 (무료배송)", { sourceCategory: "식품" }), "fish");
+  assert.equal(inferCategory("[쿠팡] 한돈 삼겹살 구이용 1kg", { sourceCategory: "식품" }), "meat");
+  assert.equal(inferCategory("[쿠팡] 냉동 삼겹살 구이용 1kg", { sourceCategory: "식품" }), "meat");
+  assert.equal(inferCategory("[네이버쇼핑] 냉동 연어 스테이크 800g", { sourceCategory: "식품" }), "fish");
   assert.equal(inferCategory("[4910] 하이뮨 프로틴 밸런스 액티브 22g 바닐라봉봉 ZERO 250ml 18입", { platform: "4910", source: "FM코리아" }), "food-other");
   assert.equal(inferCategory("[네이버] 제주 구좌 흙 왕당근 5kg", { sourceCategory: "식품" }), "produce");
   assert.equal(inferCategory("[루리웹] 더 미식 유니짜장 4인분(5,220원/배송3,000원)", { sourceCategory: "식품" }), "food-other");
   assert.equal(inferCategory("[G마켓] YOGA SLIM 7 14ILL10 83JX0018KR", { platform: "G마켓", source: "FM코리아" }), "electronics");
+  assert.equal(inferCategory("[쿠팡] 후라이팬 28cm 2종 세트", { sourceCategory: "생활" }), "kitchen");
+  assert.equal(inferCategory("[오늘의집] 밀폐용기 10종 세트", { sourceCategory: "생활" }), "kitchen");
+  assert.equal(inferCategory("[쿠팡] 3겹 화장지 30롤", { sourceCategory: "생활" }), "household");
+  assert.equal(inferCategory("[오늘의집] 수납함 정리박스 4개", { sourceCategory: "생활" }), "household");
 });
 
 test("extractPurchaseUrlFromHtml finds source purchase links", () => {

@@ -99,6 +99,28 @@ test("normalizeDealRecord keeps price shipping and platform in title", () => {
   assert.equal(deal.source, "FM코리아");
 });
 
+test("normalizeDealRecord keeps summary neutral and surfaces special conditions", () => {
+  const deal = normalizeDealRecord(
+    {
+      title: "[네이버쇼핑] 풍천민물장어 1kg 손질후 700g + 소스2종 생강채 13,600원 (무료배송(멤버십)) 선착순 100명 3/30까지",
+      source: "개드립",
+      sourceCategory: "식품",
+      platform: "네이버쇼핑",
+      listedPrice: "13,600원",
+      shipping: "무료배송(멤버십)",
+      link: "https://www.dogdrip.net/hotdeal/693549878?sort_index=popular&page=1",
+      pubDate: "2026-03-30T19:31:00+09:00",
+    },
+    null,
+    0,
+  );
+
+  assert.doesNotMatch(deal.summary, /개드립에 올라온|딜입니다/);
+  assert.match(deal.summary, /13,600원/);
+  assert.ok(deal.summaryPoints.some((point) => point.includes("선착순")));
+  assert.ok(deal.summaryPoints.some((point) => point.includes("3/30")));
+});
+
 test("inferCategory routes sale events to festa", () => {
   assert.equal(inferCategory("네이버페이 멤버십 적립 이벤트", { sourceCategory: "세일정보" }), "festa");
   assert.equal(inferCategory("알리익스프레스 SSD 특가", { source: "해외뽐뿌" }), "overseas");

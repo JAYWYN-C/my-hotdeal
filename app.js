@@ -440,8 +440,6 @@ function renderDetailModal() {
     <div class="detail-meta-row">
       <span class="tag tag-strong">${getCategoryLabel(deal.category)}</span>
       ${deal.platform ? `<span class="tag">플랫폼 ${escapeHtml(deal.platform)}</span>` : ""}
-      <span class="tag">출처 ${escapeHtml(deal.source)}</span>
-      ${deal.sourceCategory ? `<span class="tag">${escapeHtml(deal.sourceCategory)}</span>` : ""}
     </div>
     <p class="detail-summary">${escapeHtml(deal.summary || "")}</p>
     <div class="detail-grid">
@@ -660,6 +658,9 @@ function bindEvents() {
   });
 
   if (detailModal) {
+    detailModal.querySelectorAll("[data-close-detail]").forEach((button) => {
+      button.addEventListener("click", closeDealDetail);
+    });
     detailModal.addEventListener("click", (event) => {
       if (event.target instanceof HTMLElement && event.target.dataset.closeDetail !== undefined) {
         closeDealDetail();

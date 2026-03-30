@@ -556,26 +556,50 @@ function estimateDiscount(title) {
 
 function buildSummary(item) {
   const product = item.productName || normalizeProductLabel(item.title);
-  const sourceCategory = cleanText(item.sourceCategory);
   const platform = cleanText(item.platform);
   const price = cleanText(item.listedPrice);
   const shipping = cleanText(item.shipping);
-  const categoryLead = sourceCategory ? `${sourceCategory} 딜` : "핫딜";
-  const trailing = [price, shipping].filter(Boolean).join(", ");
-  const basis = [platform ? `${platform} 기준` : "", trailing ? `${trailing} 조건` : ""].filter(Boolean).join(" ");
-  return cleanText(
-    `${item.source}에 올라온 ${categoryLead}입니다. ${product} 정보는 ${basis || "원문 기준"}으로 확인됐습니다.`
-  );
+  const pricing = [price, shipping].filter(Boolean).join(", ");
+  const conditions = extractDealConditions(item.rawTitle || item.title);
+  const segments = [
+    `${product} 특가입니다.`,
+    platform ? `${platform}${pricing ? ` 기준 ${pricing}` : " 기준"}${pricing ? "" : ""}.` : pricing ? `${pricing}.` : "",
+    conditions.length > 0 ? `조건: ${conditions.join(", ")}.` : "",
+  ].filter(Boolean);
+  return cleanText(segments.join(" "));
 }
 
 function buildSummaryPoints(item) {
+  const conditions = extractDealConditions(item.rawTitle || item.title);
   return [
     item.platform ? `플랫폼: ${item.platform}` : "",
     item.listedPrice ? `가격: ${item.listedPrice}` : "",
     item.shipping ? `배송: ${item.shipping}` : "",
-    item.sourceCategory ? `원문 분류: ${item.sourceCategory}` : "",
-    item.source ? `출처: ${item.source}` : "",
+    ...conditions.map((condition) => `조건: ${condition}`),
   ].filter(Boolean);
+}
+
+function extractDealConditions(text) {
+  const cleaned = cleanText(text);
+  if (!cleaned) return [];
+
+  const datePattern =
+    "(?:20\\d{2}[/-](?:0?[1-9]|1[0-2])[/-](?:0?[1-9]|[12]\\d|3[01])|(?:0?[1-9]|1[0-2])[/-](?:0?[1-9]|[12]\\d|3[01]))";
+  const patterns = [
+    /(선착순\s*\d+\s*(?:명|개|건)?)/gi,
+    /(한정수량|수량한정|오늘만|주말한정)/gi,
+    new RegExp(`((${datePattern})(?:\\s*[~-]\\s*(${datePattern}))?\\s*까지)`, "gi"),
+  ];
+
+  const found = [];
+  for (const pattern of patterns) {
+    for (const match of cleaned.matchAll(pattern)) {
+      const value = cleanText(match[1] || match[0]);
+      if (!value) continue;
+      if (!found.includes(value)) found.push(value);
+    }
+  }
+  return found.slice(0, 3);
 }
 
 async function loadExistingDealsIndex() {

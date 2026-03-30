@@ -5,68 +5,7 @@ const categories = [
   { id: "mobile-voucher", label: "모바일 금액권/할인권" },
 ];
 
-const fallbackDeals = [
-  {
-    id: 1,
-    title: "닌텐도 스위치 OLED 번들 특가",
-    category: "game-electronics",
-    source: "뽐뿌",
-    price: 389000,
-    discount: 26,
-    createdAt: "2026-03-30T09:00:00+09:00",
-    expiresAt: "2026-03-31T23:59:00+09:00",
-    eventTags: ["닌텐도프로모션", "카드사이벤트"],
-    url: "https://www.ppomppu.co.kr/",
-  },
-  {
-    id: 2,
-    title: "삼성 갤럭시 버즈 행사 쿠폰",
-    category: "game-electronics",
-    source: "아카라이브",
-    price: 99000,
-    discount: 35,
-    createdAt: "2026-03-30T08:10:00+09:00",
-    expiresAt: "2026-03-30T22:00:00+09:00",
-    eventTags: ["삼성행사"],
-    url: "https://arca.live/",
-  },
-  {
-    id: 3,
-    title: "CJ 밀키트 1+1 주말 특가",
-    category: "food",
-    source: "네이버",
-    price: 12900,
-    discount: 42,
-    createdAt: "2026-03-29T20:00:00+09:00",
-    expiresAt: "2026-04-01T23:59:00+09:00",
-    eventTags: ["네이버쇼핑라이브", "브랜드위크"],
-    url: "https://shopping.naver.com/",
-  },
-  {
-    id: 4,
-    title: "배민 상품권 5만원권 10% 할인",
-    category: "mobile-voucher",
-    source: "맘카페",
-    price: 45000,
-    discount: 10,
-    createdAt: "2026-03-30T07:55:00+09:00",
-    expiresAt: "2026-03-30T18:00:00+09:00",
-    eventTags: ["배민쿠폰", "선착순"],
-    url: "https://cafe.naver.com/",
-  },
-  {
-    id: 5,
-    title: "스타벅스 e카드 교환권 15% 할인",
-    category: "mobile-voucher",
-    source: "뽐뿌",
-    price: 8500,
-    discount: 15,
-    createdAt: "2026-03-30T06:35:00+09:00",
-    expiresAt: "2026-03-31T12:00:00+09:00",
-    eventTags: ["기프티콘특가"],
-    url: "https://www.ppomppu.co.kr/",
-  },
-];
+const fallbackDeals = [];
 
 let deals = [...fallbackDeals];
 

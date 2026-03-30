@@ -1,22 +1,54 @@
 {
-  "policyVersion": "1.0.0",
-  "mode": "rss-only",
+  "policyVersion": "1.1.0",
+  "mode": "public-list-only",
   "sources": [
     {
-      "name": "네이버쇼핑",
-      "type": "rss",
+      "name": "뽐뿌",
+      "type": "page",
       "enabled": true,
-      "feedUrl": "https://rss.blog.naver.com/naver_shopping.xml",
-      "allowedDomains": ["blog.naver.com"],
-      "notes": "공개 RSS만 수집. 원문 링크/출처 유지."
+      "collector": "ppomppu-board",
+      "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu",
+      "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
+      "boardId": "ppomppu",
+      "maxItems": 40,
+      "titlePrefixes": ["뽐뿌게시판"],
+      "notes": "공개 뽐뿌 게시판 목록에서 최근 딜 제목/링크만 수집"
     },
     {
-      "name": "네이버",
-      "type": "rss",
+      "name": "해외뽐뿌",
+      "type": "page",
       "enabled": true,
-      "feedUrl": "https://rss.blog.naver.com/naver_diary.xml",
-      "allowedDomains": ["blog.naver.com"],
-      "notes": "공개 RSS만 수집. 비딜성 콘텐츠는 필터링."
+      "collector": "ppomppu-board",
+      "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu4",
+      "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
+      "boardId": "ppomppu4",
+      "maxItems": 40,
+      "titlePrefixes": ["해외뽐뿌"],
+      "notes": "공개 해외뽐뿌 목록에서 최근 딜 제목/링크만 수집"
+    },
+    {
+      "name": "알리뽐뿌",
+      "type": "page",
+      "enabled": true,
+      "collector": "ppomppu-board",
+      "listUrl": "https://www.ppomppu.co.kr/zboard/zboard.php?id=ppomppu8",
+      "allowedDomains": ["www.ppomppu.co.kr", "ppomppu.co.kr"],
+      "boardId": "ppomppu8",
+      "maxItems": 40,
+      "titlePrefixes": ["알리뽐뿌"],
+      "notes": "공개 알리뽐뿌 목록에서 최근 딜 제목/링크만 수집"
+    },
+    {
+      "name": "아카라이브",
+      "type": "page",
+      "enabled": false,
+      "collector": "arca-board",
+      "listUrl": "https://arca.live/b/hotdeal",
+      "allowedDomains": ["arca.live"],
+      "channel": "hotdeal",
+      "maxItems": 40,
+      "titlePrefixes": ["핫딜채널"],
+      "notes": "2026-03-30 기준 Cloudflare 403 확인. 공개 읽기용 엔드포인트 확보 전까지 비활성화"
     },
     {
       "name": "11번가",
@@ -24,14 +56,6 @@
       "enabled": false,
       "feedUrl": "https://example.com/11st-official-feed.xml",
       "allowedDomains": ["www.11st.co.kr", "11st.co.kr"],
-      "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
-    },
-    {
-      "name": "G마켓",
-      "type": "rss",
-      "enabled": false,
-      "feedUrl": "https://example.com/gmarket-official-feed.xml",
-      "allowedDomains": ["www.gmarket.co.kr", "gmarket.co.kr"],
       "notes": "공식 RSS/API 제공 여부 확인 후 활성화"
     },
     {

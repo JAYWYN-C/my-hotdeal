@@ -1,106 +1,728 @@
 {
-  "generatedAt": "2026-03-30T09:09:28.083Z",
+  "generatedAt": "2026-03-30T10:04:05.181Z",
   "policy": {
-    "mode": "rss-only",
-    "policyVersion": "1.0.0",
-    "sourceCount": 2
+    "mode": "public-list-only",
+    "policyVersion": "1.1.0",
+    "sourceCount": 3,
+    "recentWindowHours": 336
   },
   "compliance": [
     {
-      "source": "네이버쇼핑",
+      "source": "뽐뿌",
       "status": "ok",
-      "collected": 1
+      "collected": 21
     },
     {
-      "source": "네이버",
+      "source": "해외뽐뿌",
       "status": "ok",
-      "collected": 5
+      "collected": 12
+    },
+    {
+      "source": "알리뽐뿌",
+      "status": "ok",
+      "collected": 17
     }
   ],
   "deals": [
     {
       "id": 1,
-      "title": "10월 18일 네쇼페 읽어드립니다 (feat. 오늘의 특가 대공개) 다이슨 / 설화수 / 네슬레 / 동아제약 / 쿠쿠 / 브리타 외",
+      "title": "[미스터제타 세정제 매직클리너/다목적 모음] (11,570원~ / 무료 / 롯데온)",
       "category": "game-electronics",
-      "source": "네이버쇼핑",
-      "price": 0,
+      "source": "뽐뿌",
+      "price": 11570,
       "discount": 0,
-      "createdAt": "2023-10-18T02:52:38.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T10:03:55.000Z",
+      "expiresAt": "2026-04-02T10:03:55.000Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/nplus_store/223239884710?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693210"
     },
     {
       "id": 2,
-      "title": "밴드 붐은 온다⭐️ 새로워진 밴드에서 모이면 Npay 최대 100만 원!",
+      "title": "[버틸 유청분리기 2.6L 그릭요거트 메이커] (23,900원 / 무료 / 11번가)",
       "category": "game-electronics",
-      "source": "네이버",
-      "price": 0,
+      "source": "뽐뿌",
+      "price": 23900,
       "discount": 0,
-      "createdAt": "2025-11-03T09:00:00.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T10:00:47.000Z",
+      "expiresAt": "2026-04-02T10:00:47.000Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/naverofficial/224060090385?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693209"
     },
     {
       "id": 3,
-      "title": "[오픈톡] 전국 수험생 응원하고, Npay 2만 원 받아 가세요!",
+      "title": "[국산 자포니카 민물장어 1kg] (20,200원 / 무배 / 네이버)",
       "category": "game-electronics",
-      "source": "네이버",
-      "price": 0,
+      "source": "뽐뿌",
+      "price": 20200,
       "discount": 0,
-      "createdAt": "2025-10-31T00:00:00.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T09:59:21.000Z",
+      "expiresAt": "2026-04-02T09:59:21.000Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/naverofficial/224057929606?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693208"
     },
     {
       "id": 4,
-      "title": "[스페셜로고] '독도의 날' 로고 제작 이야기 - 도원 작가",
+      "title": "[프리미엄 돼지고기 구이용 갈매기살 500g x 4팩 총 2kg] (21,060원 / 무료 / 알리뽐뿌)",
       "category": "game-electronics",
-      "source": "네이버",
-      "price": 0,
+      "source": "알리뽐뿌",
+      "price": 21060,
       "discount": 0,
-      "createdAt": "2025-10-24T06:00:00.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T09:59:10.000Z",
+      "expiresAt": "2026-04-02T09:59:10.000Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/naverofficial/224048964973?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85822"
     },
     {
       "id": 5,
-      "title": "취향껏 콘텐츠 봤을 뿐인데, Npay 최대 1만 원!",
+      "title": "[프로젝트엠 코튼 반팔티 4PACK] (19,900원 / 39,900원이상무료 / 굿웨어몰)",
       "category": "game-electronics",
-      "source": "네이버",
-      "price": 0,
+      "source": "뽐뿌",
+      "price": 19900,
       "discount": 0,
-      "createdAt": "2025-10-14T05:45:16.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T09:57:25.000Z",
+      "expiresAt": "2026-04-02T09:57:25.000Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/naverofficial/224040857208?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693207"
     },
     {
       "id": 6,
-      "title": "네이버 혜택농장에서는 응원만 해도 Npay 지급! (+EVENT)",
+      "title": "[Tempur-Pedic Custom Comfort Bed Pillow and Cooling..] ($48 / Free / walmart)",
       "category": "game-electronics",
-      "source": "네이버",
+      "source": "해외뽐뿌",
       "price": 0,
       "discount": 0,
-      "createdAt": "2025-07-31T02:00:00.000Z",
-      "expiresAt": "2026-03-31T21:09:28.083Z",
+      "createdAt": "2026-03-30T09:52:25.301Z",
+      "expiresAt": "2026-04-02T09:52:25.301Z",
       "eventTags": [
         "일반행사"
       ],
-      "url": "https://blog.naver.com/naverofficial/223953442722?fromRss=true&trackingCode=rss"
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126851"
+    },
+    {
+      "id": 7,
+      "title": "[해신수산 완도활전복 특 10-11미 1kg] (18,100원 / 무료 / 롯데온)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 18100,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:51:10.000Z",
+      "expiresAt": "2026-04-02T09:52:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693206"
+    },
+    {
+      "id": 8,
+      "title": "[트립트랩] (199달러 직배무료 / 아마존)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:49:25.301Z",
+      "expiresAt": "2026-04-02T09:49:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126848"
+    },
+    {
+      "id": 9,
+      "title": "[제로 맥주 체험딜 4캔] (100원 / 2,400원 / 네이버)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 2400,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:47:49.000Z",
+      "expiresAt": "2026-04-02T09:51:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693205"
+    },
+    {
+      "id": 10,
+      "title": "[Apple Watch Series 9] ($229 / $9.99 / WOOT)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:47:25.301Z",
+      "expiresAt": "2026-04-02T09:47:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126844"
+    },
+    {
+      "id": 11,
+      "title": "[Pre-order iPhone 17e] ($599.00 / $10.99 / apple)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:46:25.301Z",
+      "expiresAt": "2026-04-02T09:46:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126843"
+    },
+    {
+      "id": 12,
+      "title": "[adidas kids Tiro 24 Winter Jacket Kids] (33달러 / 미국내무료 / ebay.com)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:45:25.301Z",
+      "expiresAt": "2026-04-02T09:45:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126842"
+    },
+    {
+      "id": 13,
+      "title": "[양념돼지왕구이 1.8kg] (12,940원 / 조건부 무료배송 / TEMU)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 12940,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:44:25.301Z",
+      "expiresAt": "2026-04-02T09:44:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126839"
+    },
+    {
+      "id": 14,
+      "title": "[지리산물하나 무라밸 2L 24입] (7,787원 / 3000원 유료배송 / TEMU)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 7787,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:43:25.301Z",
+      "expiresAt": "2026-04-02T09:43:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126837"
+    },
+    {
+      "id": 15,
+      "title": "[Crucial P5 Plus 2TB Gen4 NVMe M.2 SSD] (179.03 / 무배 / AMAZON)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:42:25.301Z",
+      "expiresAt": "2026-04-02T09:42:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126833"
+    },
+    {
+      "id": 16,
+      "title": "[코인특가) 레노버 샤오신 패드 12.7 정품 케이스($10.4) 키보드 케이스] ($10.4 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:41:47.000Z",
+      "expiresAt": "2026-04-02T09:41:47.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85821"
+    },
+    {
+      "id": 17,
+      "title": "[레드미REDMI Watch 6 스마트워치] (109,800원 / 무료 / 크로켓)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 109800,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:41:38.000Z",
+      "expiresAt": "2026-04-02T09:50:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693204"
+    },
+    {
+      "id": 18,
+      "title": "[NIKE DUNK HIGH RETRO] (쿠폰 적용 후 Men $87.18 and Women $75.98 / 미국내무배 / NIKE)",
+      "category": "mobile-voucher",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:41:25.301Z",
+      "expiresAt": "2026-04-02T09:41:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126832"
+    },
+    {
+      "id": 19,
+      "title": "[Ipad Pro 13-inch, 256GB Wi-Fi + Celluar (M4 Chip) Standard Glass] (899.99 / 미국내 무료배송 / Costco)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:40:25.301Z",
+      "expiresAt": "2026-04-02T09:40:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126831"
+    },
+    {
+      "id": 20,
+      "title": "[레노버 샤오신 패드 12.7 정품 케이스($10.4) 키보드 케이스] ($10.4 / 코인특가)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:39:10.905Z",
+      "expiresAt": "2026-04-02T09:39:10.905Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85802"
+    },
+    {
+      "id": 21,
+      "title": "[글라코 유막제거, 발수코팅제 단품 및 세트 국내배송] (9,703원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 9703,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:38:10.906Z",
+      "expiresAt": "2026-04-02T09:38:10.906Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85801"
+    },
+    {
+      "id": 22,
+      "title": "[JBL JBLFLIPES2AM Flip Essential 2] ($18.9 / free / ebay)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:37:25.301Z",
+      "expiresAt": "2026-04-02T09:37:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126827"
+    },
+    {
+      "id": 23,
+      "title": "[[]PC방 핫도그 디럭스버거 160G X5개/10개]] (13,164원 / 무료 / 알리뽐뿌 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 13164,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:37:10.906Z",
+      "expiresAt": "2026-04-02T09:37:10.906Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85800"
+    },
+    {
+      "id": 24,
+      "title": "[르샤트라 초고농축 섬유유연제 5.67L] (12,434원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 12434,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:35:10.906Z",
+      "expiresAt": "2026-04-02T09:35:10.906Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85797"
+    },
+    {
+      "id": 25,
+      "title": "[B&W PX7 S2] ($99 / $6 / WOOT)",
+      "category": "game-electronics",
+      "source": "해외뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:34:25.301Z",
+      "expiresAt": "2026-04-02T09:34:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126823"
+    },
+    {
+      "id": 26,
+      "title": "[Delux M800 미니 무선 게이밍 마우스] ($17,43 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:33:10.906Z",
+      "expiresAt": "2026-04-02T09:33:10.906Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85795"
+    },
+    {
+      "id": 27,
+      "title": "[엑스트라버진 올리브오일 42포+리유저블백] (16,900원 / 무료 / 11번가)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 16900,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:26:08.000Z",
+      "expiresAt": "2026-04-02T09:49:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693203"
+    },
+    {
+      "id": 28,
+      "title": "[천원마트 특가) QCY Buds TWS 블루투스 5.3 무선 이어폰] ($8.11 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:23:35.000Z",
+      "expiresAt": "2026-04-02T09:23:35.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85820"
+    },
+    {
+      "id": 29,
+      "title": "[하누소 갈비탕 700g 5팩+고기소스] (27,330원 / 무료 / 롯데온)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 27330,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:16:39.000Z",
+      "expiresAt": "2026-04-02T09:48:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693202"
+    },
+    {
+      "id": 30,
+      "title": "[천연펄프 미용티슈 300매 6입 2개 각티슈] (17,150원 / 무배 / G마켓)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 17150,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:15:51.000Z",
+      "expiresAt": "2026-04-02T09:47:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693201"
+    },
+    {
+      "id": 31,
+      "title": "[제주도 흑돼지 돔베고기 500g 2팩] (12,900원 / 무료 / 카카오)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 12900,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:14:43.000Z",
+      "expiresAt": "2026-04-02T09:46:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693200"
+    },
+    {
+      "id": 32,
+      "title": "[블루라이트 차단 안경 모음] (다양 / 무배 / 네이버)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:13:33.000Z",
+      "expiresAt": "2026-04-02T09:45:25.300Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693199"
+    },
+    {
+      "id": 33,
+      "title": "[빙그레 끌레도르 아이스크림 4종 24개] (26,940원 / 무료 / 롯데온)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 26940,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:11:52.000Z",
+      "expiresAt": "2026-04-02T09:44:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693198"
+    },
+    {
+      "id": 34,
+      "title": "[컬러풀 2.5인치 SSD 512GB] (85,380원 / 무료배송 / G마켓)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 85380,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:06:07.000Z",
+      "expiresAt": "2026-04-02T09:43:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693197"
+    },
+    {
+      "id": 35,
+      "title": "[코오롱 오토드 음식물처리기 3.5L] (카드 188,720원 / 지마켓)",
+      "category": "food",
+      "source": "뽐뿌",
+      "price": 188720,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:04:59.000Z",
+      "expiresAt": "2026-04-02T09:42:25.301Z",
+      "eventTags": [
+        "카드사이벤트"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693196"
+    },
+    {
+      "id": 36,
+      "title": "[국내산 한돈 앞다리 1kg] (11,340원 / 무료 / 지마켓)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 11340,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:03:25.000Z",
+      "expiresAt": "2026-04-02T09:41:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693195"
+    },
+    {
+      "id": 37,
+      "title": "[곱이고운 소곱창 160g + 소스 20g 외 다양] (4,900원 / 무료 / CJ온스타일)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 4900,
+      "discount": 0,
+      "createdAt": "2026-03-30T09:01:02.000Z",
+      "expiresAt": "2026-04-02T09:40:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693194"
+    },
+    {
+      "id": 38,
+      "title": "[천호엔케어 데일리 알부민 스틱 골드 20g 15포 5박스] (23,400원 / 무배 / g마켓)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 23400,
+      "discount": 0,
+      "createdAt": "2026-03-30T08:58:33.000Z",
+      "expiresAt": "2026-04-02T09:39:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693193"
+    },
+    {
+      "id": 39,
+      "title": "[GAKYU 국내제작 리빙박스/팬트리 정리함] (1,786원~ / 3만이상 무배 / 오늘의집)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 1786,
+      "discount": 0,
+      "createdAt": "2026-03-30T08:54:25.000Z",
+      "expiresAt": "2026-04-02T09:38:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693192"
+    },
+    {
+      "id": 40,
+      "title": "[스미브 락토바이오 염색 새치 샴푸 200ml] (25,017원 / 무료 / 온누리)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 25017,
+      "discount": 0,
+      "createdAt": "2026-03-30T08:53:36.000Z",
+      "expiresAt": "2026-04-02T09:37:25.301Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693191"
+    },
+    {
+      "id": 41,
+      "title": "[모션 센서 LED 조명 USB 충전식] ($6.51 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T08:47:29.000Z",
+      "expiresAt": "2026-04-02T08:47:29.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85818"
+    },
+    {
+      "id": 42,
+      "title": "[한돈 대패 냉동 삼겹살 2kg 냉삼 암돼지] (30,798원 / 무배 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 30798,
+      "discount": 0,
+      "createdAt": "2026-03-30T08:39:38.000Z",
+      "expiresAt": "2026-04-02T08:39:38.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85817"
+    },
+    {
+      "id": 43,
+      "title": "[Hagibis 접이식 알루미늄 360 회전 태블릿 거치대] ($10.22 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T07:14:17.000Z",
+      "expiresAt": "2026-04-02T07:14:17.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85812"
+    },
+    {
+      "id": 44,
+      "title": "[데니쉬 셀렉션 버터쿠키 454g, 2개] (13,590원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 13590,
+      "discount": 0,
+      "createdAt": "2026-03-30T06:59:17.000Z",
+      "expiresAt": "2026-04-02T06:59:17.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85811"
+    },
+    {
+      "id": 45,
+      "title": "[페스츄리 오징어 버터오징어 100g+100g] (6,595원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 6595,
+      "discount": 0,
+      "createdAt": "2026-03-30T06:52:07.000Z",
+      "expiresAt": "2026-04-02T06:52:07.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85810"
+    },
+    {
+      "id": 46,
+      "title": "[1+1 메르헨트 버블 대용량 500ml 약알칼리 클렌징폼] (12,553원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 12553,
+      "discount": 0,
+      "createdAt": "2026-03-30T06:20:50.000Z",
+      "expiresAt": "2026-04-02T06:20:50.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85809"
+    },
+    {
+      "id": 47,
+      "title": "[사세 크리스피 순살 가라아게 1kg 2봉] (19,920원 / 무료 / 11번가)",
+      "category": "game-electronics",
+      "source": "뽐뿌",
+      "price": 19920,
+      "discount": 0,
+      "createdAt": "2026-03-30T05:59:52.000Z",
+      "expiresAt": "2026-04-02T05:59:52.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693153"
+    },
+    {
+      "id": 48,
+      "title": "[4월 Choice Day 정보 안내] (뽐뿌 전용 할인코드,결제할인 / 알리익스프레스)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 0,
+      "discount": 0,
+      "createdAt": "2026-03-30T03:10:57.000Z",
+      "expiresAt": "2026-04-02T03:10:57.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85807"
+    },
+    {
+      "id": 49,
+      "title": "[경주 황리단길 십원빵 치즈 단팥 골라담기 360g (120g X 3개입)] (8,132원 / 무료 / 알리뽐뿌)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 8132,
+      "discount": 0,
+      "createdAt": "2026-03-29T22:05:24.000Z",
+      "expiresAt": "2026-04-01T22:05:24.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85806"
+    },
+    {
+      "id": 50,
+      "title": "[비타랩스 밀크씨슬 2통(13,459원), 올인원 멀티비타민 2통(13,855원), 마...] (최저가)",
+      "category": "game-electronics",
+      "source": "알리뽐뿌",
+      "price": 13459,
+      "discount": 0,
+      "createdAt": "2026-03-29T18:06:07.000Z",
+      "expiresAt": "2026-04-01T18:06:07.000Z",
+      "eventTags": [
+        "일반행사"
+      ],
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85805"
     }
   ]
 }

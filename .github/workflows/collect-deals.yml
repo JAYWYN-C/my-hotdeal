@@ -3,7 +3,7 @@ name: collect-deals
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
@@ -22,6 +22,24 @@ jobs:
 
       - name: Collect deals
         run: node scripts/collect-deals.mjs
+
+      - name: Capture previous deals snapshot
+        run: |
+          if git cat-file -e HEAD:data/deals.json 2>/dev/null; then
+            git show HEAD:data/deals.json > /tmp/previous-deals.json
+          else
+            printf '{"generatedAt":null,"deals":[]}\n' > /tmp/previous-deals.json
+          fi
+
+      - name: Send keyword alerts
+        env:
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_CLIENT_EMAIL: ${{ secrets.FIREBASE_CLIENT_EMAIL }}
+          FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
+          ALERT_FROM_NAME: 자취생 핫딜.zip
+        run: node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json
 
       - name: Commit updated deals
         uses: stefanzweifel/git-auto-commit-action@v5

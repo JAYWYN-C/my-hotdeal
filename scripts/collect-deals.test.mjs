@@ -78,7 +78,7 @@ test("parseDogdripBoard extracts hotdeal entries and category labels", () => {
   assert.match(item.title, /풍천민물장어/);
 });
 
-test("normalizeDealRecord keeps price shipping and platform in title", () => {
+test("normalizeDealRecord formats title as [platform] product name", () => {
   const deal = normalizeDealRecord(
     {
       title: "양반 100밥 현미밥, 130g, 30개",
@@ -95,8 +95,8 @@ test("normalizeDealRecord keeps price shipping and platform in title", () => {
     0,
   );
 
-  assert.equal(deal.title, "[양반 100밥 현미밥, 130g, 30개] (18,750원 / 무료 / 쿠팡)");
-  assert.equal(deal.category, "food");
+  assert.equal(deal.title, "[쿠팡] 양반 100밥 현미밥, 130g, 30개");
+  assert.equal(deal.category, "food-other");
   assert.equal(deal.platform, "쿠팡");
   assert.equal(deal.source, "FM코리아");
 });
@@ -166,8 +166,64 @@ test("normalizeDealRecord only keeps deadline when source text actually contains
 
   assert.equal(withoutDeadline.deadlineAt, "");
   assert.equal(withoutDeadline.expiresAt, "");
+  assert.equal(withoutDeadline.statusText, "");
   assert.equal(withDeadline.deadlineText, "3/30까지");
   assert.equal(withDeadline.deadlineAt, "2026-03-30T14:59:59.000Z");
+  assert.equal(withDeadline.statusText, "");
+});
+
+test("normalizeDealRecord uses 선착순 status when there is no explicit deadline", () => {
+  const deal = normalizeDealRecord(
+    {
+      title: "[네이버쇼핑] 풍천민물장어 1kg 선착순 100명 한정수량",
+      source: "개드립",
+      sourceCategory: "식품",
+      platform: "네이버쇼핑",
+      listedPrice: "13,600원",
+      shipping: "무료배송",
+      link: "https://www.dogdrip.net/hotdeal/693549878?sort_index=popular&page=1",
+      pubDate: "2026-03-30T19:31:00+09:00",
+    },
+    null,
+    0,
+  );
+
+  assert.equal(deal.deadlineAt, "");
+  assert.equal(deal.deadlineText, "");
+  assert.equal(deal.statusText, "선착순");
+});
+
+test("normalizeDealRecord keeps original community URL separately", () => {
+  const deal = normalizeDealRecord(
+    {
+      title: "풍천민물장어 1kg",
+      source: "개드립",
+      sourceCategory: "식품",
+      platform: "네이버쇼핑",
+      listedPrice: "13,600원",
+      shipping: "무료배송",
+      link: "https://www.dogdrip.net/hotdeal/693549878?sort_index=popular&page=1",
+      purchaseUrl: "https://brand.naver.com/santafarmer/products/5471769389",
+      pubDate: "2026-03-30T19:31:00+09:00",
+    },
+    null,
+    0,
+  );
+
+  assert.equal(deal.originalUrl, "https://www.dogdrip.net/hotdeal/693549878?sort_index=popular&page=1");
+  assert.equal(deal.purchaseUrl, "https://brand.naver.com/santafarmer/products/5471769389");
+});
+
+test("inferCategory maps resident food groups and overseas deals", () => {
+  assert.equal(inferCategory("[네이버쇼핑] 국산 자색양파 5kg 특상", { sourceCategory: "식품" }), "produce");
+  assert.equal(inferCategory("[쿠팡] 비비고 진한고기만두 (냉동), 400g, 4개", { sourceCategory: "식품" }), "frozen");
+  assert.equal(inferCategory("[오늘의집] 엑설런트 오리지널 6개", { sourceCategory: "식품" }), "dessert");
+  assert.equal(inferCategory("[네이버쇼핑] 서울우유 무가당 블랙9곡 두유 190ml 20팩", { sourceCategory: "식품" }), "food-other");
+  assert.equal(inferCategory("[네이버쇼핑] 풍천민물장어 1kg 손질후 700g + 소스2종 생강채 13,600원 (무료배송)", { sourceCategory: "식품" }), "food-other");
+  assert.equal(inferCategory("[4910] 하이뮨 프로틴 밸런스 액티브 22g 바닐라봉봉 ZERO 250ml 18입", { platform: "4910", source: "FM코리아" }), "food-other");
+  assert.equal(inferCategory("[네이버] 제주 구좌 흙 왕당근 5kg", { sourceCategory: "식품" }), "produce");
+  assert.equal(inferCategory("[루리웹] 더 미식 유니짜장 4인분(5,220원/배송3,000원)", { sourceCategory: "식품" }), "food-other");
+  assert.equal(inferCategory("[G마켓] YOGA SLIM 7 14ILL10 83JX0018KR", { platform: "G마켓", source: "FM코리아" }), "electronics");
 });
 
 test("extractPurchaseUrlFromHtml finds source purchase links", () => {
@@ -217,4 +273,7 @@ test("inferCategory routes sale events to festa", () => {
   assert.equal(inferCategory("네이버페이 멤버십 적립 이벤트", { sourceCategory: "세일정보" }), "festa");
   assert.equal(inferCategory("알리익스프레스 SSD 특가", { source: "해외뽐뿌" }), "overseas");
   assert.equal(inferCategory("삼성 게이밍 모니터 특가", {}), "electronics");
+  assert.equal(inferCategory("신세계 상품권 할인 판매", {}), "voucher");
+  assert.equal(inferCategory("제주 항공권 특가", {}), "travel");
+  assert.equal(inferCategory("스팀 봄 세일 게임 할인", {}), "game");
 });

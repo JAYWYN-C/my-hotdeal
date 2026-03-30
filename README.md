@@ -1,20 +1,21 @@
-# hotdeal
+# 자취생 핫딜.zip
 
-정적 웹 + GitHub Actions 기반 핫딜 서비스입니다.
+정적 웹 + GitHub Actions 기반 자취생 절약 대시보드입니다.
 
 ## 링크
 - 서비스: https://jaywyn-c.github.io/my-hotdeal/
 - 저장소: https://github.com/JAYWYN-C/my-hotdeal
 
 ## 핵심 기능
-- 5개 카테고리: 전체, 식품, 전자기기, 해외핫딜, 할인 페스타
+- 자취생용 카테고리: 전체, 야채·과일, 냉동식품, 디저트, 기타 식품, 생활용품, 청소용품, 여행, 상품권, 게임, 전자기기, 해외핫딜, 할인페스타
 - 자동 수집 데이터 표시: `data/deals.json`
 - 공개 핫딜 커뮤니티 목록 페이지 기준 자동 수집
-- 제목 정규화: `[제품명] (가격 / 배송 / 플랫폼)` 중심으로 통일 노출
-- 카드에서 플랫폼/출처를 분리 표기하고 `자세히 보기`에서 요약 + 원문 커뮤니티 글 연결
+- 제목 정규화: `[플랫폼] 상품명`
+- 카드/상세 태그는 `카테고리 / 플랫폼 / 출처` 값을 그대로 표시
+- 상세 보기에서 `구매하러 가기`와 `원본글 보러가기`를 함께 제공
 - 검색/정렬/소스 필터/스크랩
-- 키워드 알림(브라우저 알림)
 - Google 로그인 + Firestore 사용자 설정 동기화
+- 키워드 메일 알림 + 브라우저 알림
 
 ## 실행
 1. 브라우저에서 `index.html` 열기
@@ -22,8 +23,9 @@
 
 ## 자동 수집
 - 워크플로: `.github/workflows/collect-deals.yml`
-- 주기: 3시간마다
+- 주기: 1시간마다
 - 수동 실행: `node scripts/collect-deals.mjs`
+- 알림 발송: `node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json`
 - 소스 설정: `config/sources.json`
 - 현재 활성 소스: 뽐뿌, 해외뽐뿌, 알리뽐뿌, FM코리아, 개드립, 루리웹, 딜바다 국내, 딜바다 해외, 쿨엔조이
 - 2026-03-30 기준 비활성 소스: 퀘이사존(`HTTP 403`), 아카라이브(`Cloudflare challenge 403`), 클리앙(`HTTP 403`)
@@ -40,6 +42,7 @@
 1. `firebase-config.js`에 실제 Firebase 설정값 입력
 2. Firebase Auth(Google) 활성화
 3. Firestore 생성
+4. `userPreferences/{uid}` 문서에 `alertKeywords`, `emailAlertsEnabled`, `email` 필드가 저장되도록 로그인 흐름 사용
 
 예시:
 ```js
@@ -50,6 +53,15 @@ window.FIREBASE_CONFIG = {
   appId: "..."
 };
 ```
+
+## GitHub Actions 시크릿
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_CLIENT_EMAIL`
+- `FIREBASE_PRIVATE_KEY`
+- `RESEND_API_KEY`
+- `ALERT_FROM_EMAIL`
+
+수집 워크플로는 새 딜을 만든 뒤 Firestore 구독 문서와 비교해서, 로그인한 Google 메일 주소로 키워드 매칭 메일을 즉시 발송합니다.
 
 ## 운영 문서
 - 법적/수집 정책: [LEGAL_SOURCES.md](LEGAL_SOURCES.md)

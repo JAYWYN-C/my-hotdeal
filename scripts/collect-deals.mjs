@@ -423,10 +423,10 @@ function parseTitleMetadata(rawTitle) {
   };
 }
 
-function formatUnifiedTitle(productLabel, detailParts) {
+function formatUnifiedTitle(productLabel, platformLabel = "") {
   const product = normalizeProductLabel(productLabel) || "핫딜";
-  const parts = detailParts.map((part) => cleanText(part)).filter(Boolean);
-  return `[${product}] (${parts.join(" / ")})`;
+  const platform = normalizeSiteLabel(platformLabel) || "미확인";
+  return `[${platform}] ${product}`;
 }
 
 function stripLeadingNoise(title, prefixes = []) {
@@ -445,53 +445,19 @@ function stripLeadingNoise(title, prefixes = []) {
 
 function normalizeDealTitle(rawTitle, source = {}) {
   const meta = parseTitleMetadata(stripLeadingNoise(stripTags(rawTitle), source.titlePrefixes || []));
-  const detailParts = [meta.listedPrice, meta.shipping, meta.platform].filter(Boolean);
-  return formatUnifiedTitle(meta.productName || rawTitle, detailParts.length > 0 ? detailParts : [normalizeSiteLabel(source.name)]);
+  return formatUnifiedTitle(meta.productName || rawTitle, meta.platform || normalizeSiteLabel(source.name));
 }
 
 function inferCategory(title, hints = {}) {
   const haystack = `${title} ${hints.sourceCategory || ""} ${hints.platform || ""} ${hints.source || ""}`.toLowerCase();
-  const foodKeywords = [
-    "먹거리",
-    "식품",
-    "음료",
-    "커피",
-    "고등어",
-    "전복",
-    "돼지",
-    "소고기",
-    "갈비탕",
-    "오메가3",
-    "양파",
-    "고구마",
-    "올리브오일",
-    "아이스크림",
-    "우유",
-    "쿠키",
-    "과자",
-    "초코",
-    "햇반",
-    "스낵",
-    "만두",
-    "현미밥",
-    "비엔나",
-    "흑돼지",
-    "오이",
-    "치킨",
-    "피자",
-    "버거",
-    "라면",
-    "만두",
-    "장어",
-    "고기",
-    "쌀",
-    "과일",
-    "수산",
-    "배달",
-    "밀키트",
-    "간식",
-    "도시락",
-  ];
+  const produceKeywords = ["양파", "오이", "고구마", "과일", "사과", "샐러드", "채소", "농산물", "천혜향", "귤", "토마토", "당근", "감자", "양배추", "마늘"];
+  const frozenKeywords = ["냉동", "만두", "냉동식품", "핫도그", "너겟", "도시락", "피자", "볶음밥"];
+  const dessertKeywords = ["아이스크림", "쿠키", "과자", "초코", "디저트", "베이커리", "카스타드", "와플", "커피", "아카페라", "아메리카노", "엑설런트", "끌레도르"];
+  const householdKeywords = ["휴지", "수납", "주방", "욕실", "생필품", "생활용품", "멀티탭", "후라이팬", "용기", "쓰레기통"];
+  const cleaningKeywords = ["청소", "세제", "세정", "곰팡이", "청소포", "테이프클리너", "클리너", "세척"];
+  const travelKeywords = ["항공", "숙박", "렌터카", "렌트카", "여행", "호텔", "리조트", "패스", "티켓"];
+  const voucherKeywords = ["상품권", "기프티콘", "금액권", "포인트 전환", "문화상품권", "신세계", "스타벅스 카드"];
+  const gameKeywords = ["스팀", "닌텐도", "ps5", "플스", "xbox", "게임", "콘솔", "타이틀"];
   const electronicsKeywords = [
     "전자",
     "pc",
@@ -506,13 +472,19 @@ function inferCategory(title, hints = {}) {
     "갤럭시탭",
     "갤럭시 버즈",
     "갤럭시버즈",
+    "갤럭시워치",
     "갤럭시북",
+    "yoga",
+    "thinkpad",
+    "씽크패드",
+    "워치",
     "플스",
     "ps5",
     "닌텐도",
     "apple watch",
     "에어팟",
     "이어폰",
+    "모니터암",
     "가전",
     "냉장고",
     "세탁기",
@@ -537,8 +509,16 @@ function inferCategory(title, hints = {}) {
   ];
 
   if (overseasKeywords.some((keyword) => haystack.includes(keyword))) return "overseas";
-  if (foodKeywords.some((keyword) => haystack.includes(keyword))) return "food";
+  if (travelKeywords.some((keyword) => haystack.includes(keyword))) return "travel";
+  if (voucherKeywords.some((keyword) => haystack.includes(keyword))) return "voucher";
+  if (gameKeywords.some((keyword) => haystack.includes(keyword))) return "game";
   if (electronicsKeywords.some((keyword) => haystack.includes(keyword))) return "electronics";
+  if (cleaningKeywords.some((keyword) => haystack.includes(keyword))) return "cleaning";
+  if (householdKeywords.some((keyword) => haystack.includes(keyword))) return "household";
+  if (produceKeywords.some((keyword) => haystack.includes(keyword))) return "produce";
+  if (frozenKeywords.some((keyword) => haystack.includes(keyword))) return "frozen";
+  if (dessertKeywords.some((keyword) => haystack.includes(keyword))) return "dessert";
+  if (/먹거리|식품|음료|전복|돼지|소고기|갈비탕|오메가3|올리브오일|우유|햇반|현미밥|비엔나|흑돼지|치킨|라면|장어|고기|쌀|수산|배달|밀키트|간식|두유|건강식품|프로틴|사이다|막걸리|약주|육개장|삼계탕|밀면|짜장|국수|면류/.test(haystack)) return "food-other";
   if (festaKeywords.some((keyword) => haystack.includes(keyword))) return "festa";
   return "festa";
 }
@@ -565,7 +545,7 @@ function inferEventTags(title, hints = {}) {
     if (haystack.includes(needle.toLowerCase())) tags.push(tag);
   }
 
-  if (tags.length === 0 && hints.category === "food") tags.push("식품");
+  if (tags.length === 0 && ["produce", "frozen", "dessert", "food-other"].includes(hints.category)) tags.push("식품");
   if (tags.length === 0 && hints.category === "festa") tags.push("할인페스타");
   return tags;
 }
@@ -777,6 +757,13 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     : extractDeadlineInfo(textForDeadline, publishedTime);
   const deadlineAt = derivedDeadline.deadlineAt || cleanText(existingDeal?.deadlineAt);
   const deadlineText = derivedDeadline.deadlineText || cleanText(existingDeal?.deadlineText);
+  const conditions = extractDealConditions(textForDeadline);
+  const statusText =
+    deadlineAt
+      ? ""
+      : conditions.some((condition) => /선착순|한정수량|수량한정|오늘만|주말한정/i.test(condition))
+        ? "선착순"
+        : "";
   const meta = {
     ...parsedTitleMeta,
     platform: cleanText(item.platform) || parsedTitleMeta.platform || defaultPlatformForSource(item.source),
@@ -785,11 +772,7 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     shipping: normalizeShippingLabel(item.shipping) || parsedTitleMeta.shipping,
     sourceCategory: cleanText(item.sourceCategory),
   };
-  const detailParts = [meta.listedPrice, meta.shipping, meta.platform].filter(Boolean);
-  const unifiedTitle = formatUnifiedTitle(
-    meta.productName || item.title,
-    detailParts.length > 0 ? detailParts : [normalizeSiteLabel(item.source)]
-  );
+  const unifiedTitle = formatUnifiedTitle(meta.productName || item.title, meta.platform || normalizeSiteLabel(item.source));
   const category = inferCategory(`${item.title} ${meta.productName}`, {
     source: item.source,
     sourceCategory: meta.sourceCategory,
@@ -811,6 +794,7 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     createdAt,
     deadlineAt,
     deadlineText,
+    statusText,
     expiresAt: deadlineAt,
     eventTags: inferEventTags(item.title, {
       category,
@@ -820,6 +804,7 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     sourceCategory: meta.sourceCategory,
     summary: cleanText(item.summary) || buildSummary({ ...item, ...meta }),
     summaryPoints: Array.isArray(item.summaryPoints) && item.summaryPoints.length > 0 ? item.summaryPoints : buildSummaryPoints({ ...item, ...meta }),
+    originalUrl: canonicalizeUrl(item.link),
     purchaseUrl: canonicalizeUrl(item.purchaseUrl || existingDeal?.purchaseUrl || ""),
     url: canonicalizeUrl(item.link),
   };

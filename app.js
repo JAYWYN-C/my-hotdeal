@@ -1,9 +1,17 @@
 const categories = [
   { id: "all", label: "전체" },
-  { id: "food", label: "식품" },
+  { id: "produce", label: "야채·과일" },
+  { id: "frozen", label: "냉동식품" },
+  { id: "dessert", label: "디저트" },
+  { id: "food-other", label: "기타 식품" },
+  { id: "household", label: "생활용품" },
+  { id: "cleaning", label: "청소용품" },
+  { id: "travel", label: "여행" },
+  { id: "voucher", label: "상품권" },
+  { id: "game", label: "게임" },
   { id: "electronics", label: "전자기기" },
   { id: "overseas", label: "해외핫딜" },
-  { id: "festa", label: "할인 페스타" },
+  { id: "festa", label: "할인페스타" },
 ];
 
 const fallbackDeals = [];
@@ -27,6 +35,8 @@ const state = {
   selectedDealId: null,
 };
 
+const homeButton = document.getElementById("home-button");
+const homeTitle = document.getElementById("home-title");
 const categoryTabs = document.getElementById("category-tabs");
 const sourceSelect = document.getElementById("source-select");
 const sortSelect = document.getElementById("sort-select");
@@ -49,6 +59,10 @@ const notificationStatus = document.getElementById("notification-status");
 const detailModal = document.getElementById("deal-detail-modal");
 const detailContent = document.getElementById("deal-detail-content");
 const detailTitle = document.getElementById("deal-detail-title");
+const detailHeaderActions = document.getElementById("detail-header-actions");
+const savingNowList = document.getElementById("saving-now-list");
+const foodSavingList = document.getElementById("food-saving-list");
+const livingSavingList = document.getElementById("living-saving-list");
 
 let authClient = null;
 let dbClient = null;
@@ -62,6 +76,7 @@ function loadUserScopedState() {
   state.bookmarks = JSON.parse(localStorage.getItem(storageKey("hotdeal-bookmarks")) || "[]");
   state.alertKeywords = JSON.parse(localStorage.getItem(storageKey("hotdeal-alert-keywords")) || "[]");
   state.notifiedKeys = JSON.parse(localStorage.getItem(storageKey("hotdeal-notified-keys")) || "[]");
+  state.alertsEnabled = JSON.parse(localStorage.getItem(storageKey("hotdeal-alerts-enabled")) || "false");
 }
 
 function toKrw(amount) {
@@ -76,6 +91,17 @@ function displayPrice(deal) {
     return toKrw(deal.price);
   }
   return "가격 확인";
+}
+
+function formatGeneratedAt(dateString) {
+  if (!dateString) return "업데이트 정보 없음";
+  return new Date(dateString).toLocaleString("ko-KR", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
 }
 
 function getCategoryLabel(categoryId) {
@@ -109,6 +135,18 @@ function getDeadlineTime(deal) {
   return Number.isNaN(value) ? null : value;
 }
 
+function getStatusLabel(deal) {
+  const deadlineTime = getDeadlineTime(deal);
+  if (deadlineTime !== null) {
+    return `${hoursLeft(new Date(deadlineTime).toISOString())}시간 남음`;
+  }
+  return deal.statusText || "";
+}
+
+function getDisplayTags(deal) {
+  return [...new Set([getCategoryLabel(deal.category), deal.platform, deal.source].filter(Boolean))];
+}
+
 function persistBookmarks() {
   localStorage.setItem(storageKey("hotdeal-bookmarks"), JSON.stringify(state.bookmarks));
   queueCloudSync("bookmarks");
@@ -117,14 +155,12 @@ function persistBookmarks() {
 function persistAlertState() {
   localStorage.setItem(storageKey("hotdeal-alert-keywords"), JSON.stringify(state.alertKeywords));
   localStorage.setItem(storageKey("hotdeal-notified-keys"), JSON.stringify(state.notifiedKeys));
+  localStorage.setItem(storageKey("hotdeal-alerts-enabled"), JSON.stringify(state.alertsEnabled));
   queueCloudSync("alerts");
 }
 
 function setSyncStatus(text) {
   state.syncStatus = text;
-  if (syncStatus) {
-    syncStatus.textContent = `동기화 상태: ${text}`;
-  }
 }
 
 async function pullCloudPreferences(uid) {
@@ -148,9 +184,12 @@ async function pullCloudPreferences(uid) {
     state.alertKeywords = Array.isArray(data.alertKeywords)
       ? data.alertKeywords.map((value) => String(value)).filter((value) => value.length > 0)
       : state.alertKeywords;
+    state.alertsEnabled =
+      typeof data.emailAlertsEnabled === "boolean" ? data.emailAlertsEnabled : state.alertsEnabled;
 
     localStorage.setItem(storageKey("hotdeal-bookmarks"), JSON.stringify(state.bookmarks));
     localStorage.setItem(storageKey("hotdeal-alert-keywords"), JSON.stringify(state.alertKeywords));
+    localStorage.setItem(storageKey("hotdeal-alerts-enabled"), JSON.stringify(state.alertsEnabled));
     setSyncStatus("클라우드 동기화됨");
   } catch (error) {
     console.warn("Failed to pull cloud preferences.", error);
@@ -171,6 +210,8 @@ async function pushCloudPreferences() {
       {
         bookmarks: state.bookmarks,
         alertKeywords: state.alertKeywords,
+        emailAlertsEnabled: state.alertsEnabled,
+        email: state.user.email || "",
         updatedAt: dbClient.serverTimestamp(),
       },
       { merge: true }
@@ -194,23 +235,35 @@ function queueCloudSync() {
 
 function renderAuthStatus() {
   if (!authClient) {
-    authStatus.textContent = "Firebase 설정 전: 데모 모드";
-    googleLogout.disabled = true;
-    googleLogin.disabled = false;
+    authStatus.textContent = "비회원으로 둘러보는 중";
+    googleLogin.disabled = true;
+    googleLogout.hidden = true;
+    googleLogin.hidden = false;
     return;
   }
 
   if (state.user) {
     const label = state.user.displayName || state.user.email || "로그인 사용자";
-    authStatus.textContent = `로그인됨: ${label}`;
+    authStatus.textContent = `${label} 계정으로 이용 중`;
     googleLogin.disabled = true;
     googleLogout.disabled = false;
+    googleLogin.hidden = true;
+    googleLogout.hidden = false;
     return;
   }
 
-  authStatus.textContent = "비로그인 상태";
+  authStatus.textContent = "비회원으로 둘러보는 중";
   googleLogin.disabled = false;
   googleLogout.disabled = true;
+  googleLogin.hidden = false;
+  googleLogout.hidden = true;
+}
+
+function renderAlertToggle() {
+  if (!toggleAlert) {
+    return;
+  }
+  toggleAlert.textContent = state.alertsEnabled ? "이메일 알림 켜짐" : "이메일 알림 켜기";
 }
 
 async function initializeFirebaseAuth() {
@@ -330,6 +383,74 @@ function filteredDeals() {
     });
 }
 
+function resetToHome() {
+  state.search = "";
+  state.selectedSource = "all";
+  state.selectedCategory = "all";
+  state.sort = "latest";
+  closeDealDetail();
+  if (searchInput) searchInput.value = "";
+  if (sourceSelect) sourceSelect.value = "all";
+  if (sortSelect) sortSelect.value = "latest";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  render();
+}
+
+function pickDashboardDeals(predicate, limit = 4) {
+  return [...deals]
+    .filter(predicate)
+    .sort((a, b) => {
+      const purchaseScore = Number(Boolean(b.purchaseUrl)) - Number(Boolean(a.purchaseUrl));
+      if (purchaseScore !== 0) return purchaseScore;
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    })
+    .slice(0, limit);
+}
+
+function renderMiniDealList(target, items, emptyText) {
+  if (!target) return;
+  if (items.length === 0) {
+    target.innerHTML = `<p class="small">${emptyText}</p>`;
+    return;
+  }
+
+  target.innerHTML = items
+    .map(
+      (deal) => `<button class="mini-deal" type="button" data-detail="${deal.id}">
+        <span class="mini-deal-title">${escapeHtml(deal.title)}</span>
+        <span class="mini-deal-meta">
+          <span>${escapeHtml(displayPrice(deal))}</span>
+          ${getStatusLabel(deal) ? `<span>${escapeHtml(getStatusLabel(deal))}</span>` : ""}
+        </span>
+      </button>`
+    )
+    .join("");
+
+  target.querySelectorAll("[data-detail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openDealDetail(Number(button.dataset.detail));
+    });
+  });
+}
+
+function renderDashboardHighlights() {
+  renderMiniDealList(
+    savingNowList,
+    pickDashboardDeals((deal) => Boolean(deal.purchaseUrl)),
+    "지금 추천할 특가가 아직 없습니다."
+  );
+  renderMiniDealList(
+    foodSavingList,
+    pickDashboardDeals((deal) => ["produce", "frozen", "dessert", "food-other"].includes(deal.category)),
+    "식비 절약 딜을 준비 중입니다."
+  );
+  renderMiniDealList(
+    livingSavingList,
+    pickDashboardDeals((deal) => ["household", "cleaning", "voucher", "festa"].includes(deal.category)),
+    "생활비 절약 딜을 준비 중입니다."
+  );
+}
+
 function renderSourceOptions() {
   const uniqueSources = [...new Set(deals.map((deal) => deal.source))].sort((a, b) => a.localeCompare(b, "ko"));
   const hasSelectedSource = state.selectedSource === "all" || uniqueSources.includes(state.selectedSource);
@@ -374,16 +495,14 @@ function renderDeals() {
   dealList.innerHTML = list
     .map((deal) => {
       const bookmarked = state.bookmarks.includes(deal.id);
-      const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
+      const tags = getDisplayTags(deal);
+      const statusLabel = getStatusLabel(deal);
       return `<article class="deal-item">
         <div class="deal-top">
           <div>
             <h3>${escapeHtml(deal.title)}</h3>
             <div class="deal-meta">
-              <span class="tag tag-strong">${getCategoryLabel(deal.category)}</span>
-              ${deal.platform ? `<span class="tag">플랫폼 ${escapeHtml(deal.platform)}</span>` : ""}
-              <span class="tag">출처 ${escapeHtml(deal.source)}</span>
-              ${deal.sourceCategory ? `<span class="tag">${escapeHtml(deal.sourceCategory)}</span>` : ""}
+              ${tags.map((tag, index) => `<span class="tag ${index === 0 ? "tag-strong" : ""}">${escapeHtml(tag)}</span>`).join("")}
             </div>
           </div>
           <div class="price">${escapeHtml(displayPrice(deal))}</div>
@@ -392,9 +511,8 @@ function renderDeals() {
         <div class="deal-submeta">
           <span>${timeAgo(deal.createdAt)}</span>
           ${deal.shipping ? `<span>배송 ${escapeHtml(deal.shipping)}</span>` : ""}
-          ${deal.discount ? `<span>할인 ${deal.discount}%</span>` : ""}
+          ${statusLabel ? `<span>${escapeHtml(statusLabel)}</span>` : ""}
         </div>
-        <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}</div>
         <div class="link-row">
           <button data-detail="${deal.id}" type="button">자세히 보기</button>
           <button data-bookmark="${deal.id}">${bookmarked ? "스크랩 해제" : "스크랩"}</button>
@@ -440,20 +558,36 @@ function renderDetailModal() {
     detailModal.hidden = true;
     detailTitle.textContent = "";
     detailContent.innerHTML = "";
+    if (detailHeaderActions) {
+      detailHeaderActions.innerHTML = '<button class="btn btn-ghost" type="button" data-close-detail>닫기</button>';
+      detailHeaderActions.querySelector("[data-close-detail]")?.addEventListener("click", closeDealDetail);
+    }
     return;
   }
 
   detailModal.hidden = false;
   detailTitle.textContent = deal.title;
   const points = Array.isArray(deal.summaryPoints) ? deal.summaryPoints : [];
-  const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
+  const tags = getDisplayTags(deal);
   const deadlineTime = getDeadlineTime(deal);
   const purchaseUrl = deal.purchaseUrl || "";
+  const originalUrl = deal.originalUrl || deal.url || "";
+  const statusLabel = !deadlineTime ? deal.statusText || "" : "";
+
+  if (detailHeaderActions) {
+    detailHeaderActions.innerHTML = `
+      ${originalUrl ? `<a href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" class="btn btn-ghost">원본글 보러가기</a>` : ""}
+      <button class="btn btn-ghost" type="button" data-close-detail>닫기</button>
+    `;
+    detailHeaderActions.querySelectorAll("[data-close-detail]").forEach((button) => {
+      button.addEventListener("click", closeDealDetail);
+    });
+  }
 
   detailContent.innerHTML = `
     <div class="detail-meta-row">
-      <span class="tag tag-strong">${getCategoryLabel(deal.category)}</span>
-      ${deal.platform ? `<span class="tag">플랫폼 ${escapeHtml(deal.platform)}</span>` : ""}
+      ${tags.map((tag, index) => `<span class="tag ${index === 0 ? "tag-strong" : ""}">${escapeHtml(tag)}</span>`).join("")}
+      ${statusLabel ? `<span class="tag">${escapeHtml(statusLabel)}</span>` : ""}
     </div>
     <p class="detail-summary">${escapeHtml(deal.summary || "")}</p>
     <div class="detail-grid">
@@ -463,7 +597,7 @@ function renderDetailModal() {
       </div>
       <div>
         <span class="detail-label">배송</span>
-        <strong>${escapeHtml(deal.shipping || "원문 확인")}</strong>
+        <strong>${escapeHtml(deal.shipping || "배송 정보 없음")}</strong>
       </div>
       <div>
         <span class="detail-label">업데이트</span>
@@ -475,7 +609,6 @@ function renderDetailModal() {
       </div>` : ""}
     </div>
     ${points.length > 0 ? `<ul class="detail-points">${points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
-    <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}</div>
     <div class="detail-actions">
       ${purchaseUrl ? `<a href="${escapeHtml(purchaseUrl)}" target="_blank" rel="noreferrer">구매하러 가기</a>` : ""}
       <button type="button" data-close-detail>닫기</button>
@@ -493,7 +626,7 @@ function renderTags() {
     tagCloud.innerHTML = '<span class="small">표시할 태그가 아직 없습니다.</span>';
     return;
   }
-  tagCloud.innerHTML = uniqueTags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("");
+  tagCloud.innerHTML = uniqueTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
 }
 
 function renderAlertKeywords() {
@@ -505,7 +638,7 @@ function renderAlertKeywords() {
   keywordList.innerHTML = state.alertKeywords
     .map(
       (keyword) =>
-        `<span class="keyword-pill">#${keyword}<button data-remove-keyword="${keyword}" type="button">x</button></span>`
+        `<span class="keyword-pill">${escapeHtml(keyword)}<button data-remove-keyword="${keyword}" type="button">x</button></span>`
     )
     .join("");
 
@@ -575,12 +708,12 @@ function maybeNotifyDeals() {
 }
 
 function renderDataStatus() {
-  const generatedLabel = state.generatedAt
-    ? new Date(state.generatedAt).toLocaleString("ko-KR")
-    : "로컬 샘플 데이터";
   const okCount = state.compliance.filter((item) => item.status === "ok").length;
   const failCount = state.compliance.filter((item) => item.status !== "ok").length;
-  dataStatus.textContent = `데이터 시각: ${generatedLabel} · 수집 모드: ${state.policyMode} · 소스 상태: 성공 ${okCount} / 실패 ${failCount} · 알림 키워드 ${state.alertKeywords.length}개`;
+  if (syncStatus) {
+    syncStatus.textContent = `마지막 핫딜 업데이트: ${formatGeneratedAt(state.generatedAt)}`;
+  }
+  dataStatus.textContent = `최근 딜 ${deals.length}건 · 소스 상태 성공 ${okCount} / 실패 ${failCount} · 알림 키워드 ${state.alertKeywords.length}개`;
 }
 
 function renderBookmarks() {
@@ -595,24 +728,28 @@ function renderBookmarks() {
 }
 
 function bindEvents() {
+  homeButton?.addEventListener("click", resetToHome);
+  homeTitle?.addEventListener("click", resetToHome);
+
   sourceSelect.addEventListener("change", () => {
     state.selectedSource = sourceSelect.value;
-    renderDeals();
+    render();
   });
 
   sortSelect.addEventListener("change", () => {
     state.sort = sortSelect.value;
-    renderDeals();
+    render();
   });
 
   searchInput.addEventListener("input", () => {
     state.search = searchInput.value.trim();
-    renderDeals();
+    render();
   });
 
   toggleAlert.addEventListener("click", () => {
     state.alertsEnabled = !state.alertsEnabled;
-    toggleAlert.textContent = state.alertsEnabled ? "키워드 알림 켜짐" : "키워드 알림 켜기";
+    persistAlertState();
+    renderAlertToggle();
     maybeNotifyDeals();
   });
 
@@ -650,7 +787,6 @@ function bindEvents() {
 
   googleLogin.addEventListener("click", async () => {
     if (!authClient) {
-      alert("firebase-config.js를 설정하면 Google 로그인이 활성화됩니다.");
       return;
     }
     try {
@@ -690,8 +826,10 @@ function bindEvents() {
 }
 
 function render() {
+  renderDashboardHighlights();
   renderSourceOptions();
   renderCategoryTabs();
+  renderAlertToggle();
   renderDeals();
   renderTags();
   renderBookmarks();
@@ -702,6 +840,7 @@ function render() {
   maybeNotifyDeals();
 }
 
+loadUserScopedState();
 bindEvents();
 Promise.all([loadDeals(), initializeFirebaseAuth()]).then(() => {
   render();

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>핫딜모음</title>
+    <title>자취생 핫딜.zip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,24 +17,48 @@
     <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
 
     <header class="hero">
+      <div class="hero-nav">
+        <button id="home-button" class="btn btn-ghost" type="button">홈</button>
+      </div>
       <p class="eyebrow">자취생을 위한 다중 커뮤니티 핫딜 큐레이션</p>
-      <h1>핫딜모음</h1>
+      <h1><button id="home-title" class="brand-link" type="button">자취생 핫딜.zip</button></h1>
       <p class="hero-sub">
-        FM코리아, 뽐뿌, 개드립, 루리웹, 딜바다, 쿨엔조이의 공개 핫딜을 모아 보고, 플랫폼과 출처를 나눠서 빠르게 확인하세요.
+        세상 모든 할인과 핫딜을 빠르게 확인하고, 자취생의 생활비를 아껴주는 특가를 놓치지 마세요.
       </p>
       <div class="hero-cta">
         <button id="google-login" class="btn btn-primary">Google로 로그인</button>
         <button id="google-logout" class="btn btn-ghost" type="button">로그아웃</button>
-        <button id="toggle-alert" class="btn btn-ghost">키워드 알림 켜기</button>
+        <button id="toggle-alert" class="btn btn-ghost">이메일 알림 켜기</button>
       </div>
       <p id="auth-status" class="helper"></p>
       <p id="sync-status" class="helper"></p>
       <p class="helper">
-        비회원 열람 가능 · 회원은 스크랩/알림 가능 · 카드에서는 요약만 보고 자세히 보기에서 원문으로 이동
+        비회원도 둘러볼 수 있고, 로그인하면 스크랩과 키워드 메일 알림을 구글 계정으로 바로 이어서 쓸 수 있습니다.
       </p>
     </header>
 
     <main class="layout">
+      <section class="card dashboard">
+        <div class="section-title-row">
+          <h2>생활비 절약 대시보드</h2>
+          <span class="chip">지금 사두면 아끼는 딜</span>
+        </div>
+        <div class="dashboard-grid">
+          <article class="dashboard-panel">
+            <h3>지금 아끼기 좋은 딜</h3>
+            <div id="saving-now-list" class="mini-deal-list"></div>
+          </article>
+          <article class="dashboard-panel">
+            <h3>식비 절약 딜</h3>
+            <div id="food-saving-list" class="mini-deal-list"></div>
+          </article>
+          <article class="dashboard-panel">
+            <h3>생활비 절약 딜</h3>
+            <div id="living-saving-list" class="mini-deal-list"></div>
+          </article>
+        </div>
+      </section>
+
       <section class="controls card">
         <div class="tabs" id="category-tabs"></div>
         <div class="filter-row">
@@ -75,7 +99,7 @@
 
       <section class="card">
         <div class="section-title-row">
-          <h2>실시간 자취 핫딜</h2>
+          <h2>최근 올라온 핫딜</h2>
           <span id="deal-count" class="chip"></span>
         </div>
         <p id="data-status" class="small"></p>
@@ -92,14 +116,14 @@
         </article>
         <article>
           <h2>스크랩</h2>
-          <p class="small">로컬 저장 기반 데모입니다.</p>
+          <p class="small">로그인하면 스크랩과 키워드를 계정 기준으로 이어서 관리할 수 있습니다.</p>
           <ul id="bookmark-list" class="bookmark-list"></ul>
         </article>
       </section>
     </main>
 
     <footer class="footer">
-      <p>공개 목록 기준으로 수집하며, 상세 페이지는 원 커뮤니티 글로 이어집니다.</p>
+      <p>공개 목록 기준으로 수집하며, 구매 링크와 원본글을 함께 확인할 수 있습니다.</p>
     </footer>
 
     <div id="deal-detail-modal" class="deal-detail-modal" hidden>
@@ -110,7 +134,9 @@
             <p class="eyebrow">자세히 보기</p>
             <h2 id="deal-detail-title"></h2>
           </div>
-          <button class="btn btn-ghost" type="button" data-close-detail>닫기</button>
+          <div class="detail-header-actions" id="detail-header-actions">
+            <button class="btn btn-ghost" type="button" data-close-detail>닫기</button>
+          </div>
         </div>
         <div id="deal-detail-content" class="deal-detail-content"></div>
       </section>

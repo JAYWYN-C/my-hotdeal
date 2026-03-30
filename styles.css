@@ -117,7 +117,8 @@ h2,
 
 h1 {
   margin: 0.45rem 0 0.35rem;
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
 }
 
 .brand-link {
@@ -376,11 +377,12 @@ select {
 .tabs button {
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.5rem 0.85rem;
+  padding: 0.62rem 1rem;
   background: var(--surface);
   cursor: pointer;
   white-space: nowrap;
   color: var(--ink);
+  font-size: 1.02rem;
 }
 
 .tabs button.active {
@@ -525,6 +527,17 @@ select {
   gap: 0.35rem;
 }
 
+.bookmark-item {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
 .small {
   font-size: 0.9rem;
   color: var(--muted);
@@ -629,37 +642,34 @@ select {
 }
 
 .detail-summary {
-  margin: 0.9rem 0 0;
+  margin: 0.95rem 0 0;
   color: var(--muted);
   line-height: 1.7;
 }
 
-.detail-grid {
+.detail-facts {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--line);
+}
+
+.detail-fact {
+  display: grid;
+  grid-template-columns: 5.2rem minmax(0, 1fr);
   gap: 0.8rem;
+  align-items: baseline;
 }
 
-.detail-grid div {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--surface-soft);
-  padding: 0.8rem;
-  display: grid;
-  gap: 0.25rem;
-}
-
-.detail-label {
-  font-size: 0.8rem;
+.detail-fact-label {
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
-.detail-points {
-  margin: 1rem 0 0;
-  padding-left: 1.1rem;
-  display: grid;
-  gap: 0.45rem;
+.detail-fact-value {
+  font-size: 1.08rem;
+  line-height: 1.45;
 }
 
 .detail-actions {
@@ -747,13 +757,14 @@ select {
     gap: 0.4rem;
   }
 
-  .detail-grid {
-    grid-template-columns: 1fr;
-  }
-
   .detail-header-actions {
     justify-content: flex-end;
     align-self: start;
+  }
+
+  .detail-fact {
+    grid-template-columns: 1fr;
+    gap: 0.18rem;
   }
 
   .detail-actions a,

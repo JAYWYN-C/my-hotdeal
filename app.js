@@ -1,8 +1,7 @@
 const categories = [
   { id: "all", label: "전체" },
   { id: "produce", label: "야채·과일" },
-  { id: "meat", label: "고기" },
-  { id: "fish", label: "생선" },
+  { id: "meat", label: "고기·생선" },
   { id: "dairy", label: "유제품" },
   { id: "frozen", label: "냉동식품" },
   { id: "dessert", label: "디저트" },
@@ -114,7 +113,8 @@ function formatGeneratedAt(dateString) {
 }
 
 function getCategoryLabel(categoryId) {
-  return categories.find((category) => category.id === categoryId)?.label || "기타";
+  const normalizedCategoryId = categoryId === "fish" ? "meat" : categoryId;
+  return categories.find((category) => category.id === normalizedCategoryId)?.label || "기타";
 }
 
 function timeAgo(dateString) {
@@ -399,7 +399,8 @@ function filteredDeals() {
   return [...deals]
     .filter((deal) => {
       const categoryMatch =
-        state.selectedCategory === "all" || deal.category === state.selectedCategory;
+        state.selectedCategory === "all" ||
+        (deal.category === "fish" ? "meat" : deal.category) === state.selectedCategory;
       const sourceMatch = state.selectedSource === "all" || deal.source === state.selectedSource;
       const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
       const searchable = `${deal.title} ${deal.productName || ""} ${deal.summary || ""} ${deal.source} ${deal.platform || ""} ${tags.join(" ")}`.toLowerCase();
@@ -621,12 +622,21 @@ function renderDetailModal() {
 
   detailModal.hidden = false;
   detailTitle.textContent = deal.title;
-  const points = Array.isArray(deal.summaryPoints) ? deal.summaryPoints : [];
   const tags = getDisplayTags(deal);
   const deadlineTime = getDeadlineTime(deal);
   const purchaseUrl = deal.purchaseUrl || "";
   const originalUrl = deal.originalUrl || deal.url || "";
   const statusLabel = !deadlineTime ? deal.statusText || "" : "";
+  const detailFacts = [
+    { label: "가격", value: displayPrice(deal) },
+    { label: "배송", value: deal.shipping || "배송 정보 없음" },
+    { label: "업데이트", value: new Date(deal.createdAt).toLocaleString("ko-KR") },
+    deadlineTime !== null
+      ? { label: "남은 시간", value: `${hoursLeft(new Date(deadlineTime).toISOString())}시간` }
+      : statusLabel
+        ? { label: "조건", value: statusLabel }
+        : null,
+  ].filter(Boolean);
 
   if (detailHeaderActions) {
     detailHeaderActions.innerHTML = `
@@ -642,28 +652,18 @@ function renderDetailModal() {
   detailContent.innerHTML = `
     <div class="detail-meta-row">
       ${renderDealTags(tags)}
-      ${statusLabel ? `<span class="tag">${escapeHtml(statusLabel)}</span>` : ""}
     </div>
     <p class="detail-summary">${escapeHtml(deal.summary || "")}</p>
-    <div class="detail-grid">
-      <div>
-        <span class="detail-label">가격</span>
-        <strong>${escapeHtml(displayPrice(deal))}</strong>
-      </div>
-      <div>
-        <span class="detail-label">배송</span>
-        <strong>${escapeHtml(deal.shipping || "배송 정보 없음")}</strong>
-      </div>
-      <div>
-        <span class="detail-label">업데이트</span>
-        <strong>${escapeHtml(new Date(deal.createdAt).toLocaleString("ko-KR"))}</strong>
-      </div>
-      ${deadlineTime !== null ? `<div>
-        <span class="detail-label">남은 시간</span>
-        <strong>${hoursLeft(new Date(deadlineTime).toISOString())}시간</strong>
-      </div>` : ""}
+    <div class="detail-facts">
+      ${detailFacts
+        .map(
+          (item) => `<div class="detail-fact">
+            <span class="detail-fact-label">${escapeHtml(item.label)}</span>
+            <strong class="detail-fact-value">${escapeHtml(item.value)}</strong>
+          </div>`
+        )
+        .join("")}
     </div>
-    ${points.length > 0 ? `<ul class="detail-points">${points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
     <div class="detail-actions">
       ${purchaseUrl ? `<a href="${escapeHtml(purchaseUrl)}" target="_blank" rel="noreferrer">구매하러 가기</a>` : ""}
       <button type="button" data-close-detail>닫기</button>
@@ -779,7 +779,21 @@ function renderBookmarks() {
     return;
   }
 
-  bookmarkList.innerHTML = bookmarkedDeals.map((deal) => `<li>${escapeHtml(deal.title)}</li>`).join("");
+  bookmarkList.innerHTML = bookmarkedDeals
+    .map(
+      (deal) => `<li>
+        <button class="bookmark-item" type="button" data-bookmark-detail="${deal.id}">
+          ${escapeHtml(deal.title)}
+        </button>
+      </li>`
+    )
+    .join("");
+
+  bookmarkList.querySelectorAll("button[data-bookmark-detail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openDealDetail(Number(button.dataset.bookmarkDetail));
+    });
+  });
 }
 
 function bindEvents() {

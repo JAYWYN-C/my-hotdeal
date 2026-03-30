@@ -553,7 +553,7 @@ function inferCategory(title, hints = {}) {
     "채반",
     "키친툴",
   ];
-  const householdKeywords = ["휴지", "화장지", "수납", "수납함", "욕실", "생필품", "생활용품", "멀티탭", "쓰레기통", "정리박스", "정리함"];
+  const householdKeywords = ["휴지", "화장지", "수납", "수납함", "욕실", "생필품", "생활용품", "멀티탭", "쓰레기통", "정리박스", "정리함", "선반"];
   const cleaningKeywords = ["청소", "세제", "세정", "곰팡이", "청소포", "테이프클리너", "클리너", "세척"];
   const travelKeywords = ["항공", "숙박", "렌터카", "렌트카", "여행", "호텔", "리조트", "패스", "티켓"];
   const voucherKeywords = ["상품권", "기프티콘", "금액권", "포인트 전환", "문화상품권", "신세계", "스타벅스 카드"];
@@ -617,7 +617,7 @@ function inferCategory(title, hints = {}) {
   if (kitchenKeywords.some((keyword) => haystack.includes(keyword))) return "kitchen";
   if (householdKeywords.some((keyword) => haystack.includes(keyword))) return "household";
   if (produceKeywords.some((keyword) => haystack.includes(keyword))) return "produce";
-  if (fishKeywords.some((keyword) => haystack.includes(keyword))) return "fish";
+  if (fishKeywords.some((keyword) => haystack.includes(keyword))) return "meat";
   if (meatKeywords.some((keyword) => haystack.includes(keyword))) return "meat";
   if (frozenKeywords.some((keyword) => haystack.includes(keyword))) return "frozen";
   if (dessertKeywords.some((keyword) => haystack.includes(keyword))) return "dessert";

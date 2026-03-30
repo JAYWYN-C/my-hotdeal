@@ -104,6 +104,11 @@ function hoursLeft(dateString) {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60)));
 }
 
+function getDeadlineTime(deal) {
+  const value = new Date(deal.deadlineAt || deal.expiresAt || "").getTime();
+  return Number.isNaN(value) ? null : value;
+}
+
 function persistBookmarks() {
   localStorage.setItem(storageKey("hotdeal-bookmarks"), JSON.stringify(state.bookmarks));
   queueCloudSync("bookmarks");
@@ -312,7 +317,14 @@ function filteredDeals() {
         return b.discount - a.discount;
       }
       if (state.sort === "deadline") {
-        return new Date(a.expiresAt) - new Date(b.expiresAt);
+        const deadlineA = getDeadlineTime(a);
+        const deadlineB = getDeadlineTime(b);
+        if (deadlineA === null && deadlineB === null) {
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        }
+        if (deadlineA === null) return 1;
+        if (deadlineB === null) return -1;
+        return deadlineA - deadlineB;
       }
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
@@ -435,6 +447,8 @@ function renderDetailModal() {
   detailTitle.textContent = deal.title;
   const points = Array.isArray(deal.summaryPoints) ? deal.summaryPoints : [];
   const tags = Array.isArray(deal.eventTags) ? deal.eventTags : [];
+  const deadlineTime = getDeadlineTime(deal);
+  const purchaseUrl = deal.purchaseUrl || "";
 
   detailContent.innerHTML = `
     <div class="detail-meta-row">
@@ -455,15 +469,15 @@ function renderDetailModal() {
         <span class="detail-label">업데이트</span>
         <strong>${escapeHtml(new Date(deal.createdAt).toLocaleString("ko-KR"))}</strong>
       </div>
-      <div>
+      ${deadlineTime !== null ? `<div>
         <span class="detail-label">남은 시간</span>
-        <strong>${hoursLeft(deal.expiresAt)}시간</strong>
-      </div>
+        <strong>${hoursLeft(new Date(deadlineTime).toISOString())}시간</strong>
+      </div>` : ""}
     </div>
     ${points.length > 0 ? `<ul class="detail-points">${points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
     <div class="deal-meta">${tags.map((tag) => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}</div>
     <div class="detail-actions">
-      <a href="${deal.url}" target="_blank" rel="noreferrer">커뮤니티 글 보기</a>
+      ${purchaseUrl ? `<a href="${escapeHtml(purchaseUrl)}" target="_blank" rel="noreferrer">구매하러 가기</a>` : ""}
       <button type="button" data-close-detail>닫기</button>
     </div>
   `;

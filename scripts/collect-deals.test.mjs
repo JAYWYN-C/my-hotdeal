@@ -2,6 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  extractDeadlineInfo,
+  extractPurchaseUrlFromHtml,
   inferCategory,
   normalizeDealRecord,
   parseDogdripBoard,
@@ -119,6 +121,96 @@ test("normalizeDealRecord keeps summary neutral and surfaces special conditions"
   assert.match(deal.summary, /13,600원/);
   assert.ok(deal.summaryPoints.some((point) => point.includes("선착순")));
   assert.ok(deal.summaryPoints.some((point) => point.includes("3/30")));
+});
+
+test("extractDeadlineInfo resolves explicit deadlines in KST", () => {
+  const result = extractDeadlineInfo(
+    "풍천민물장어 특가 선착순 100명 3/30까지",
+    "2026-03-30T19:31:00+09:00",
+  );
+
+  assert.equal(result.deadlineText, "3/30까지");
+  assert.equal(result.deadlineAt, "2026-03-30T14:59:59.000Z");
+});
+
+test("normalizeDealRecord only keeps deadline when source text actually contains one", () => {
+  const withoutDeadline = normalizeDealRecord(
+    {
+      title: "양반 100밥 현미밥, 130g, 30개",
+      source: "FM코리아",
+      sourceCategory: "먹거리",
+      platform: "쿠팡",
+      listedPrice: "18,750원",
+      shipping: "무료",
+      link: "https://www.fmkorea.com/9652014980",
+      pubDate: "2026-03-30T19:31:00+09:00",
+    },
+    null,
+    0,
+  );
+
+  const withDeadline = normalizeDealRecord(
+    {
+      title: "[네이버쇼핑] 풍천민물장어 1kg 손질후 700g 13,600원 (무료배송) 3/30까지",
+      source: "개드립",
+      sourceCategory: "식품",
+      platform: "네이버쇼핑",
+      listedPrice: "13,600원",
+      shipping: "무료배송",
+      link: "https://www.dogdrip.net/hotdeal/693549878?sort_index=popular&page=1",
+      pubDate: "2026-03-30T19:31:00+09:00",
+    },
+    null,
+    0,
+  );
+
+  assert.equal(withoutDeadline.deadlineAt, "");
+  assert.equal(withoutDeadline.expiresAt, "");
+  assert.equal(withDeadline.deadlineText, "3/30까지");
+  assert.equal(withDeadline.deadlineAt, "2026-03-30T14:59:59.000Z");
+});
+
+test("extractPurchaseUrlFromHtml finds source purchase links", () => {
+  const ppomppuHtml = `
+    <li class="topTitle-link partner">
+      <a href="https://s.ppomppu.co.kr?idno=ppomppu_693209&target=abc" target="_blank">
+        http://www.11st.co.kr/products/9217825261/share
+      </a>
+    </li>
+  `;
+  const fmkoreaHtml = `
+    <table class="hotdeal_table">
+      <tr>
+        <th scope="row">링크</th>
+        <td>
+          <div class="xe_content">
+            <a href="https://link.coupang.com/a/eetegd" target="_blank" class="hotdeal_url">https://link.coupang.com/a/eetegd</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  `;
+  const dogdripHtml = `
+    <table class="ed table table-striped table-bordered margin-remove">
+      <tr>
+        <th>링크</th>
+        <td><a href="https://brand.naver.com/santafarmer/products/5471769389" target="_blank">https://brand.naver.com/santafarmer/products/5471769389</a></td>
+      </tr>
+    </table>
+  `;
+
+  assert.equal(
+    extractPurchaseUrlFromHtml(ppomppuHtml, { collector: "ppomppu-board" }, "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&no=693209"),
+    "https://s.ppomppu.co.kr/?idno=ppomppu_693209&target=abc",
+  );
+  assert.equal(
+    extractPurchaseUrlFromHtml(fmkoreaHtml, { collector: "fmkorea-board" }, "https://www.fmkorea.com/9652014980"),
+    "https://link.coupang.com/a/eetegd",
+  );
+  assert.equal(
+    extractPurchaseUrlFromHtml(dogdripHtml, { collector: "dogdrip-board" }, "https://www.dogdrip.net/693549878"),
+    "https://brand.naver.com/santafarmer/products/5471769389",
+  );
 });
 
 test("inferCategory routes sale events to festa", () => {

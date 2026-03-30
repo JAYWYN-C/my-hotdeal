@@ -13,7 +13,6 @@ const FETCH_RETRY_COUNT = 3;
 const MAX_ITEMS = 80;
 const RECENT_WINDOW_HOURS = 336;
 const DEFAULT_PAGE_ITEM_LIMIT = 40;
-const DEFAULT_ITEM_TTL_HOURS = 72;
 const SOURCE_TIMEZONE = "Asia/Seoul";
 const SOURCE_TIMEZONE_OFFSET = "+09:00";
 
@@ -255,6 +254,34 @@ function toIsoInSourceTimezone(year, month, day, hour = 0, minute = 0, second = 
   return new Date(
     `${safeYear}-${safeMonth}-${safeDay}T${safeHour}:${safeMinute}:${safeSecond}${SOURCE_TIMEZONE_OFFSET}`
   ).toISOString();
+}
+
+function getSourceDateParts(dateInput = Date.now()) {
+  const targetDate = new Date(dateInput);
+  if (Number.isNaN(targetDate.getTime())) {
+    return getKstToday();
+  }
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: SOURCE_TIMEZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(targetDate);
+
+  return {
+    year: Number(parts.find((part) => part.type === "year")?.value),
+    month: Number(parts.find((part) => part.type === "month")?.value),
+    day: Number(parts.find((part) => part.type === "day")?.value)
+  };
+}
+
+function pickFirstMatchValue(match) {
+  if (!match) return "";
+  for (let index = 1; index < match.length; index += 1) {
+    if (match[index]) return cleanText(match[index]);
+  }
+  return "";
 }
 
 function extractNearbyPubDate(html, startIndex = 0) {
@@ -602,6 +629,88 @@ function extractDealConditions(text) {
   return found.slice(0, 3);
 }
 
+function extractDeadlineInfo(text, publishedTimeInput = Date.now()) {
+  const cleaned = cleanText(text);
+  if (!cleaned) {
+    return { deadlineAt: "", deadlineText: "" };
+  }
+
+  const fullDateMatch = cleaned.match(
+    /(20\d{2})[./-](0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])\s*까지/i
+  );
+  if (fullDateMatch) {
+    const [, year, month, day] = fullDateMatch;
+    return {
+      deadlineAt: toIsoInSourceTimezone(Number(year), Number(month), Number(day), 23, 59, 59),
+      deadlineText: cleanText(fullDateMatch[0]),
+    };
+  }
+
+  const shortDateMatch = cleaned.match(
+    /((0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01]))\s*까지/i
+  );
+  if (shortDateMatch) {
+    const parts = getSourceDateParts(publishedTimeInput);
+    const month = Number(shortDateMatch[2]);
+    const day = Number(shortDateMatch[3]);
+    return {
+      deadlineAt: toIsoInSourceTimezone(parts.year, month, day, 23, 59, 59),
+      deadlineText: cleanText(shortDateMatch[0]),
+    };
+  }
+
+  if (/오늘만/.test(cleaned)) {
+    const parts = getSourceDateParts(publishedTimeInput);
+    return {
+      deadlineAt: toIsoInSourceTimezone(parts.year, parts.month, parts.day, 23, 59, 59),
+      deadlineText: "오늘만",
+    };
+  }
+
+  return { deadlineAt: "", deadlineText: "" };
+}
+
+function extractPurchaseUrlFromHtml(html, source = {}, baseUrl = "") {
+  const collector = source.collector || "";
+  const patterns = {
+    "ppomppu-board": [
+      /<li[^>]+class=['"][^'"]*topTitle-link[^'"]*['"][\s\S]*?<a[^>]+href=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i
+    ],
+    "ruliweb-board": [
+      /<div[^>]+class=['"][^'"]*source_url[^'"]*['"][\s\S]*?<a[^>]+href=(?:"([^"]*web\.ruliweb\.com\/link\.php[^"]*)"|'([^']*web\.ruliweb\.com\/link\.php[^']*)'|([^\s>]*web\.ruliweb\.com\/link\.php[^\s>]*))/i,
+      /<a[^>]+href=(?:"([^"]*web\.ruliweb\.com\/link\.php[^"]*)"|'([^']*web\.ruliweb\.com\/link\.php[^']*)'|([^\s>]*web\.ruliweb\.com\/link\.php[^\s>]*))/i
+    ],
+    "dealbada-board": [
+      /<section[^>]+id=['"]bo_v_link['"][\s\S]*?<a[^>]+href=(?:"([^"]*\/bbs\/link\.php[^"]*)"|'([^']*\/bbs\/link\.php[^']*)'|([^\s>]*\/bbs\/link\.php[^\s>]*))/i
+    ],
+    "coolenjoy-board": [
+      /<a[^>]+href=(?:"([^"]*\/bbs\/link2\.php[^"]*)"|'([^']*\/bbs\/link2\.php[^']*)'|([^\s>]*\/bbs\/link2\.php[^\s>]*))[^>]*>\s*https?:\/\/[^<]+<\/a>/i,
+      /<a[^>]+href=(?:"([^"]*\/bbs\/link2\.php[^"]*)"|'([^']*\/bbs\/link2\.php[^']*)'|([^\s>]*\/bbs\/link2\.php[^\s>]*))/i
+    ],
+    "fmkorea-board": [
+      /<a[^>]+href=(?:"([^"]+)"|'([^']+)'|([^\s>]+))[^>]*class=['"][^'"]*hotdeal_url[^'"]*['"]/i,
+      /<a[^>]+class=['"][^'"]*hotdeal_url[^'"]*['"][^>]*href=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i
+    ],
+    "dogdrip-board": [
+      /<th[^>]*>\s*링크\s*<\/th>[\s\S]*?<a[^>]+href=(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i,
+      /<a[^>]+href=(?:"((?:https?:)?\/\/brand\.[^"]+)"|'((?:https?:)?\/\/brand\.[^']+)'|(((?:https?:)?\/\/brand\.[^\s>]+)))/i
+    ],
+  };
+
+  for (const pattern of patterns[collector] || []) {
+    const rawUrl = pickFirstMatchValue(html.match(pattern));
+    if (!rawUrl) {
+      continue;
+    }
+    const absoluteUrl = toAbsoluteUrl(rawUrl, baseUrl);
+    if (absoluteUrl) {
+      return canonicalizeUrl(absoluteUrl);
+    }
+  }
+
+  return "";
+}
+
 async function loadExistingDealsIndex() {
   try {
     const raw = await fs.readFile(dataPath, "utf-8");
@@ -656,14 +765,18 @@ function resolvePublishedTime(item, existingDeal, fallbackRank = 0) {
 
 function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publishedTimeInput = null) {
   const publishedTime = publishedTimeInput ?? resolvePublishedTime(item, existingDeal, item.rank ?? fallbackRank);
-  const now = Date.now();
   const createdAt = new Date(publishedTime).toISOString();
-  const existingExpires = new Date(existingDeal?.expiresAt || "").getTime();
-  const defaultEnd = publishedTime + 1000 * 60 * 60 * DEFAULT_ITEM_TTL_HOURS;
-  const expiresAt = new Date(
-    Math.max(now + 1000 * 60 * 60 * 3, defaultEnd, Number.isNaN(existingExpires) ? 0 : existingExpires)
-  ).toISOString();
   const parsedTitleMeta = parseTitleMetadata(item.title);
+  const textForDeadline = [item.deadlineText, item.rawTitle, item.title, item.summary].filter(Boolean).join(" ");
+  const explicitDeadlineTime = new Date(item.deadlineAt || "").getTime();
+  const derivedDeadline = item.deadlineAt
+    ? {
+        deadlineAt: Number.isNaN(explicitDeadlineTime) ? "" : new Date(explicitDeadlineTime).toISOString(),
+        deadlineText: cleanText(item.deadlineText),
+      }
+    : extractDeadlineInfo(textForDeadline, publishedTime);
+  const deadlineAt = derivedDeadline.deadlineAt || cleanText(existingDeal?.deadlineAt);
+  const deadlineText = derivedDeadline.deadlineText || cleanText(existingDeal?.deadlineText);
   const meta = {
     ...parsedTitleMeta,
     platform: cleanText(item.platform) || parsedTitleMeta.platform || defaultPlatformForSource(item.source),
@@ -696,7 +809,9 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     shipping: meta.shipping,
     discount: estimateDiscount(item.title),
     createdAt,
-    expiresAt,
+    deadlineAt,
+    deadlineText,
+    expiresAt: deadlineAt,
     eventTags: inferEventTags(item.title, {
       category,
       platform: meta.platform,
@@ -705,6 +820,7 @@ function normalizeDealRecord(item, existingDeal = null, fallbackRank = 0, publis
     sourceCategory: meta.sourceCategory,
     summary: cleanText(item.summary) || buildSummary({ ...item, ...meta }),
     summaryPoints: Array.isArray(item.summaryPoints) && item.summaryPoints.length > 0 ? item.summaryPoints : buildSummaryPoints({ ...item, ...meta }),
+    purchaseUrl: canonicalizeUrl(item.purchaseUrl || existingDeal?.purchaseUrl || ""),
     url: canonicalizeUrl(item.link),
   };
 }
@@ -1029,11 +1145,38 @@ async function collectFromSources(sourceConfig) {
   return { items: merged, compliance };
 }
 
+async function enrichDealsWithPurchaseLinks(deals, sourceConfig) {
+  const sourceByName = new Map(sourceConfig.sources.map((source) => [source.name, source]));
+  const enriched = [];
+
+  for (const deal of deals) {
+    const source = sourceByName.get(deal.source);
+    if (!source || source.type !== "page" || deal.purchaseUrl || !deal.url) {
+      enriched.push(deal);
+      continue;
+    }
+
+    try {
+      const html = await fetchText(deal.url);
+      enriched.push({
+        ...deal,
+        purchaseUrl: extractPurchaseUrlFromHtml(html, source, deal.url) || deal.purchaseUrl,
+      });
+    } catch {
+      enriched.push(deal);
+    }
+
+    await sleep(250);
+  }
+
+  return enriched;
+}
+
 async function main() {
   const sourceConfig = await loadSourceConfig();
   const existingIndex = await loadExistingDealsIndex();
   const { items, compliance } = await collectFromSources(sourceConfig);
-  const normalized = normalize(items, existingIndex);
+  const normalized = await enrichDealsWithPurchaseLinks(normalize(items, existingIndex), sourceConfig);
   const deals = normalized.length > 0 ? normalized : FALLBACK_DEALS;
 
   const payload = {
@@ -1059,6 +1202,8 @@ function isDirectExecution() {
 }
 
 export {
+  extractDeadlineInfo,
+  extractPurchaseUrlFromHtml,
   inferCategory,
   normalizeDealRecord,
   parseDogdripBoard,

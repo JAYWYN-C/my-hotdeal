@@ -30,7 +30,7 @@ jobs:
       - name: Prepare artifact
         run: |
           mkdir -p public
-          cp -R index.html styles.css app.js data README.md CNAME public/
+          cp -R index.html styles.css app.js data README.md public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

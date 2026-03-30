@@ -9,10 +9,12 @@ const sourcesPath = path.resolve(__dirname, "../config/sources.json");
 
 const DEFAULT_USER_AGENT = "hotdeal-collector/1.1 (+github-actions)";
 const REQUEST_DELAY_MS = 1000;
+const PAGE_REQUEST_DELAY_MS = 350;
 const FETCH_RETRY_COUNT = 3;
-const MAX_ITEMS = 80;
+const MAX_ITEMS = 180;
 const RECENT_WINDOW_HOURS = 336;
 const DEFAULT_PAGE_ITEM_LIMIT = 40;
+const DEFAULT_PAGE_FETCH_LIMIT = 12;
 const SOURCE_TIMEZONE = "Asia/Seoul";
 const SOURCE_TIMEZONE_OFFSET = "+09:00";
 
@@ -276,6 +278,45 @@ function getSourceDateParts(dateInput = Date.now()) {
   };
 }
 
+function parseBoardDateText(dateText, referenceDate = Date.now()) {
+  const value = cleanText(dateText);
+  if (!value) return "";
+
+  const absoluteMatch = value.match(
+    /^(20\d{2})[./-](\d{1,2})[./-](\d{1,2})(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?$/
+  );
+  if (absoluteMatch) {
+    const [, year, month, day, hour = "0", minute = "0", second = "0"] = absoluteMatch;
+    return toIsoInSourceTimezone(Number(year), Number(month), Number(day), Number(hour), Number(minute), Number(second));
+  }
+
+  const shortYearMatch = value.match(
+    /^(\d{2})[./-](\d{1,2})[./-](\d{1,2})(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?$/
+  );
+  if (shortYearMatch) {
+    const [, year, month, day, hour = "0", minute = "0", second = "0"] = shortYearMatch;
+    return toIsoInSourceTimezone(2000 + Number(year), Number(month), Number(day), Number(hour), Number(minute), Number(second));
+  }
+
+  const monthDayMatch = value.match(
+    /^(\d{1,2})[./-](\d{1,2})(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?$/
+  );
+  if (monthDayMatch) {
+    const { year } = getSourceDateParts(referenceDate);
+    const [, month, day, hour = "0", minute = "0", second = "0"] = monthDayMatch;
+    return toIsoInSourceTimezone(year, Number(month), Number(day), Number(hour), Number(minute), Number(second));
+  }
+
+  const timeOnlyMatch = value.match(/^([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?$/);
+  if (timeOnlyMatch) {
+    const { year, month, day } = getSourceDateParts(referenceDate);
+    const [, hour, minute, second = "0"] = timeOnlyMatch;
+    return toIsoInSourceTimezone(year, month, day, Number(hour), Number(minute), Number(second));
+  }
+
+  return "";
+}
+
 function pickFirstMatchValue(match) {
   if (!match) return "";
   for (let index = 1; index < match.length; index += 1) {
@@ -286,39 +327,24 @@ function pickFirstMatchValue(match) {
 
 function extractNearbyPubDate(html, startIndex = 0) {
   const snippet = html.slice(Math.max(0, startIndex - 180), Math.min(html.length, startIndex + 600));
-  const absoluteMatch = snippet.match(
-    /\b(20\d{2})[./-](\d{1,2})[./-](\d{1,2})(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?/
-  );
-  if (absoluteMatch) {
-    const [, year, month, day, hour = "0", minute = "0", second = "0"] = absoluteMatch;
-    return toIsoInSourceTimezone(Number(year), Number(month), Number(day), Number(hour), Number(minute), Number(second));
-  }
+  const patterns = [
+    /\b20\d{2}[./-]\d{1,2}[./-]\d{1,2}(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?\b/,
+    /\b\d{2}[./-]\d{1,2}[./-]\d{1,2}(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?\b/,
+    /\b\d{1,2}[./-]\d{1,2}(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?\b/,
+    /\b([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?\b/,
+  ];
 
-  const shortMatch = snippet.match(
-    /\b(\d{2})[./-](\d{1,2})[./-](\d{1,2})(?:\s+([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?)?/
-  );
-  if (shortMatch) {
-    const [, year, month, day, hour = "0", minute = "0", second = "0"] = shortMatch;
-    return toIsoInSourceTimezone(2000 + Number(year), Number(month), Number(day), Number(hour), Number(minute), Number(second));
-  }
-
-  const timeOnlyMatch = snippet.match(/\b([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?\b/);
-  if (timeOnlyMatch) {
-    const today = getKstToday();
-    const [, hour, minute, second = "0"] = timeOnlyMatch;
-    return toIsoInSourceTimezone(today.year, today.month, today.day, Number(hour), Number(minute), Number(second));
+  for (const pattern of patterns) {
+    const match = snippet.match(pattern);
+    const iso = parseBoardDateText(match?.[0] || "");
+    if (iso) return iso;
   }
 
   return "";
 }
 
 function timeTextToIso(timeText) {
-  const match = cleanText(timeText).match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?$/);
-  if (!match) return "";
-
-  const today = getKstToday();
-  const [, hour, minute, second = "0"] = match;
-  return toIsoInSourceTimezone(today.year, today.month, today.day, Number(hour), Number(minute), Number(second));
+  return parseBoardDateText(timeText);
 }
 
 function normalizeMetaChunk(metaText) {
@@ -393,6 +419,36 @@ function parseRelativeTimeText(timeText) {
 
   if (/방금/.test(value)) return new Date(now).toISOString();
   return "";
+}
+
+function buildPaginatedListUrl(listUrl, page) {
+  const url = new URL(listUrl);
+  if (page <= 1) {
+    url.searchParams.delete("page");
+    return url.toString();
+  }
+
+  url.searchParams.set("page", String(page));
+  return url.toString();
+}
+
+function countRecentItems(items, cutoffTime) {
+  return items.filter((item) => {
+    const publishedTime = new Date(item.pubDate || "").getTime();
+    return !Number.isNaN(publishedTime) && publishedTime >= cutoffTime;
+  }).length;
+}
+
+function shouldStopPaginating(pageItems, collectedRecentCount, targetCount, cutoffTime) {
+  if (pageItems.length === 0) return true;
+  if (collectedRecentCount >= targetCount) return true;
+
+  const newestPublishedTime = Math.max(
+    ...pageItems.map((item) => new Date(item.pubDate || "").getTime()).filter((value) => !Number.isNaN(value))
+  );
+
+  if (newestPublishedTime === -Infinity) return false;
+  return newestPublishedTime < cutoffTime;
 }
 
 function parseTitleMetadata(rawTitle) {
@@ -1177,6 +1233,17 @@ function parseArcaBoard(html, source) {
   return items;
 }
 
+function parseBoardItemsByCollector(html, source) {
+  if (source.collector === "ppomppu-board") return parsePpomppuBoard(html, source);
+  if (source.collector === "ruliweb-board") return parseRuliwebBoard(html, source);
+  if (source.collector === "dealbada-board") return parseDealbadaBoard(html, source);
+  if (source.collector === "coolenjoy-board") return parseCoolenjoyBoard(html, source);
+  if (source.collector === "fmkorea-board") return parseFmkoreaBoard(html, source);
+  if (source.collector === "dogdrip-board") return parseDogdripBoard(html, source);
+  if (source.collector === "arca-board") return parseArcaBoard(html, source);
+  throw new Error(`Unsupported collector: ${source.collector || "unknown"}`);
+}
+
 async function collectSourceItems(source) {
   if (source.type === "rss") {
     const xml = await fetchText(source.feedUrl);
@@ -1188,15 +1255,29 @@ async function collectSourceItems(source) {
   }
 
   if (source.type === "page") {
-    const html = await fetchText(source.listUrl);
-    if (source.collector === "ppomppu-board") return parsePpomppuBoard(html, source);
-    if (source.collector === "ruliweb-board") return parseRuliwebBoard(html, source);
-    if (source.collector === "dealbada-board") return parseDealbadaBoard(html, source);
-    if (source.collector === "coolenjoy-board") return parseCoolenjoyBoard(html, source);
-    if (source.collector === "fmkorea-board") return parseFmkoreaBoard(html, source);
-    if (source.collector === "dogdrip-board") return parseDogdripBoard(html, source);
-    if (source.collector === "arca-board") return parseArcaBoard(html, source);
-    throw new Error(`Unsupported collector: ${source.collector || "unknown"}`);
+    const collected = [];
+    const seen = new Set();
+    const targetCount = source.maxItems || DEFAULT_PAGE_ITEM_LIMIT;
+    const maxPages = source.maxPages || DEFAULT_PAGE_FETCH_LIMIT;
+    const cutoffTime = Date.now() - RECENT_WINDOW_HOURS * 60 * 60 * 1000;
+
+    for (let page = 1; page <= maxPages; page += 1) {
+      const pageUrl = buildPaginatedListUrl(source.listUrl, page);
+      const html = await fetchText(pageUrl);
+      const parsedItems = parseBoardItemsByCollector(html, { ...source, listUrl: pageUrl });
+      const pageItems = parsedItems.filter((item) => {
+        const link = canonicalizeUrl(item.link);
+        if (!link || seen.has(link)) return false;
+        seen.add(link);
+        return true;
+      });
+
+      collected.push(...pageItems);
+      if (shouldStopPaginating(pageItems, countRecentItems(collected, cutoffTime), targetCount, cutoffTime)) break;
+      await sleep(PAGE_REQUEST_DELAY_MS);
+    }
+
+    return collected;
   }
 
   throw new Error(`Unsupported source type: ${source.type}`);
@@ -1294,12 +1375,15 @@ function isDirectExecution() {
 }
 
 export {
+  buildPaginatedListUrl,
   extractDeadlineInfo,
   extractPurchaseUrlFromHtml,
   inferCategory,
   normalizeDealRecord,
+  parseBoardDateText,
   parseDogdripBoard,
   parseFmkoreaBoard,
+  shouldStopPaginating,
 };
 
 if (isDirectExecution()) {

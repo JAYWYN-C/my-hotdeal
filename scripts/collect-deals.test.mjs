@@ -2,12 +2,15 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  buildPaginatedListUrl,
   extractDeadlineInfo,
   extractPurchaseUrlFromHtml,
   inferCategory,
   normalizeDealRecord,
+  parseBoardDateText,
   parseDogdripBoard,
   parseFmkoreaBoard,
+  shouldStopPaginating,
 } from "./collect-deals.mjs";
 
 test("parseFmkoreaBoard extracts platform metadata from list rows", () => {
@@ -76,6 +79,63 @@ test("parseDogdripBoard extracts hotdeal entries and category labels", () => {
   assert.equal(item.platform, "네이버쇼핑");
   assert.equal(item.sourceCategory, "식품");
   assert.match(item.title, /풍천민물장어/);
+});
+
+test("parseBoardDateText handles board date formats used in paginated pages", () => {
+  const referenceDate = new Date("2026-03-31T12:00:00+09:00");
+
+  assert.equal(parseBoardDateText("03-29", referenceDate), "2026-03-28T15:00:00.000Z");
+  assert.equal(parseBoardDateText("26/03/30", referenceDate), "2026-03-29T15:00:00.000Z");
+  assert.equal(parseBoardDateText("2026.03.20", referenceDate), "2026-03-19T15:00:00.000Z");
+});
+
+test("buildPaginatedListUrl normalizes page query updates", () => {
+  assert.equal(
+    buildPaginatedListUrl("https://coolenjoy.net/bbs/jirum", 1),
+    "https://coolenjoy.net/bbs/jirum"
+  );
+  assert.equal(
+    buildPaginatedListUrl("https://coolenjoy.net/bbs/jirum", 3),
+    "https://coolenjoy.net/bbs/jirum?page=3"
+  );
+  assert.equal(
+    buildPaginatedListUrl("https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic", 2),
+    "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&page=2"
+  );
+});
+
+test("shouldStopPaginating stops once pages are older than the recent cutoff", () => {
+  const cutoffTime = new Date("2026-03-25T00:00:00+09:00").getTime();
+
+  assert.equal(
+    shouldStopPaginating(
+      [{ pubDate: "2026-03-24T10:00:00+09:00" }, { pubDate: "2026-03-24T09:00:00+09:00" }],
+      8,
+      18,
+      cutoffTime
+    ),
+    true
+  );
+
+  assert.equal(
+    shouldStopPaginating(
+      [{ pubDate: "2026-03-30T10:00:00+09:00" }, { pubDate: "2026-03-29T09:00:00+09:00" }],
+      8,
+      18,
+      cutoffTime
+    ),
+    false
+  );
+
+  assert.equal(
+    shouldStopPaginating(
+      [{ pubDate: "2026-03-30T10:00:00+09:00" }],
+      18,
+      18,
+      cutoffTime
+    ),
+    true
+  );
 });
 
 test("normalizeDealRecord formats title as [platform] product name", () => {

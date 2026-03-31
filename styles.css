@@ -63,6 +63,13 @@ body {
   flex-wrap: wrap;
 }
 
+.hero-actions .btn {
+  min-height: 52px;
+  min-width: 94px;
+  padding: 0.72rem 1.2rem;
+  font-size: 1rem;
+}
+
 .menu-wrap {
   position: relative;
 }
@@ -154,8 +161,8 @@ h2 {
 
 .hero-main {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(304px, 344px);
+  gap: 1.25rem;
   align-items: start;
 }
 
@@ -206,7 +213,7 @@ h2 {
 
 .hero-panel {
   width: 100%;
-  max-width: 380px;
+  max-width: 344px;
   justify-self: end;
   border: 0;
   border-radius: 0;
@@ -220,7 +227,8 @@ h2 {
 .hero-panel-item {
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 0.95rem 1rem;
+  min-height: 88px;
+  padding: 0.9rem 0.95rem;
   background: var(--surface);
 }
 
@@ -264,24 +272,30 @@ h2 {
   padding: 1.25rem;
 }
 
+.dashboard .section-title-row {
+  justify-content: flex-start;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 0.95rem;
+  gap: 0.9rem;
+  margin-top: 0.8rem;
 }
 
 .dashboard-panel {
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 0.95rem;
+  padding: 0.82rem 0.85rem;
+  border-radius: 16px;
   background: var(--surface-soft);
 }
 
 .dashboard-panel h3 {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.55rem;
   font-family: "Do Hyeon", sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   letter-spacing: 0.02em;
 }
 
@@ -292,9 +306,9 @@ h2 {
 
 .mini-deal {
   border: 1px solid var(--line);
-  border-radius: 14px;
   background: var(--surface-strong);
-  padding: 0.82rem;
+  padding: 0.72rem;
+  border-radius: 12px;
   text-align: left;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(10, 36, 114, 0.04);

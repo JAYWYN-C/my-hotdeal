@@ -108,8 +108,14 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.doesNotMatch(css, /linear-gradient|radial-gradient/i);
   assert.match(css, /width:\s*min\(1260px,\s*calc\(100% - 2\.75rem\)\)/i);
   assert.match(css, /\.hero-copy\s*\{[^}]*display:\s*grid;[^}]*align-content:\s*start;/s);
-  assert.match(css, /\.hero-main\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*minmax\(320px,\s*380px\);[^}]*gap:\s*1\.5rem;/s);
-  assert.match(css, /\.hero-panel\s*\{[^}]*max-width:\s*380px;[^}]*justify-self:\s*end;[^}]*border:\s*0;[^}]*background:\s*transparent;[^}]*padding:\s*0;/s);
+  assert.match(css, /\.hero-main\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*minmax\(304px,\s*344px\);[^}]*gap:\s*1\.25rem;/s);
+  assert.match(css, /\.hero-actions\s+\.btn\s*\{[^}]*min-height:\s*52px;[^}]*min-width:\s*94px;[^}]*font-size:\s*1rem;/s);
+  assert.match(css, /\.hero-panel\s*\{[^}]*max-width:\s*344px;[^}]*justify-self:\s*end;[^}]*border:\s*0;[^}]*background:\s*transparent;[^}]*padding:\s*0;/s);
+  assert.match(css, /\.hero-panel-item\s*\{[^}]*min-height:\s*88px;[^}]*padding:\s*0\.9rem 0\.95rem;/s);
+  assert.match(css, /\.dashboard\s+\.section-title-row\s*\{[^}]*justify-content:\s*flex-start;[^}]*gap:\s*0\.7rem;/s);
+  assert.match(css, /\.dashboard-panel\s*\{[^}]*padding:\s*0\.82rem 0\.85rem;[^}]*border-radius:\s*16px;/s);
+  assert.match(css, /\.dashboard-panel h3\s*\{[^}]*font-size:\s*0\.98rem;/s);
+  assert.match(css, /\.mini-deal\s*\{[^}]*padding:\s*0\.72rem;[^}]*border-radius:\s*12px;/s);
   assert.match(css, /h1\s*\{[\s\S]*font-size:\s*clamp\(3rem,\s*6vw,\s*5rem\)/i);
   assert.match(css, /h2\s*\{[\s\S]*font-size:\s*clamp\(1\.7rem,\s*2\.8vw,\s*2\.2rem\)/i);
   assert.match(css, /\.tabs button\s*\{[\s\S]*padding:\s*0\.72rem 1\.12rem;[\s\S]*font-size:\s*1\.14rem;/i);

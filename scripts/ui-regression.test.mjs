@@ -113,7 +113,8 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /\.hero-panel\s*\{[^}]*max-width:\s*344px;[^}]*justify-self:\s*end;[^}]*border:\s*0;[^}]*background:\s*transparent;[^}]*padding:\s*0;/s);
   assert.match(css, /\.hero-panel-item\s*\{[^}]*min-height:\s*88px;[^}]*padding:\s*0\.9rem 0\.95rem;/s);
   assert.match(css, /\.dashboard\s+\.section-title-row\s*\{[^}]*justify-content:\s*flex-start;[^}]*gap:\s*0\.7rem;/s);
-  assert.match(css, /\.dashboard-grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(260px,\s*320px\)\);[^}]*justify-content:\s*flex-start;[^}]*gap:\s*0\.85rem;/s);
+  assert.match(css, /\.dashboard-grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(220px,\s*1fr\)\);[^}]*gap:\s*0\.85rem;/s);
+  assert.doesNotMatch(css, /\.dashboard-grid\s*\{[^}]*justify-content:\s*flex-start;/s);
   assert.match(css, /\.dashboard-panel\s*\{[^}]*padding:\s*0\.82rem 0\.85rem;[^}]*border-radius:\s*16px;/s);
   assert.match(css, /\.dashboard-panel h3\s*\{[^}]*font-size:\s*0\.98rem;/s);
   assert.match(css, /\.mini-deal\s*\{[^}]*padding:\s*0\.72rem;[^}]*border-radius:\s*12px;/s);

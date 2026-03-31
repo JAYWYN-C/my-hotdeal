@@ -173,13 +173,19 @@ test("vercel deploy ignores repository-only files", async () => {
 test("footer visitor counters use shared countapi keys and right-aligned layout", async () => {
   const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
   const css = await fs.readFile(new URL("../styles.css", import.meta.url), "utf-8");
+  const api = await fs.readFile(new URL("../api/visitor-stats.js", import.meta.url), "utf-8");
   assert.match(js, /const footerVisitorToday = document\.getElementById\("footer-visitor-today"\);/);
   assert.match(js, /const footerVisitorTotal = document\.getElementById\("footer-visitor-total"\);/);
   assert.match(js, /function renderVisitorStats\(/);
   assert.match(js, /function syncVisitorStats\(/);
-  assert.match(js, /https:\/\/api\.countapi\.xyz/);
+  assert.match(js, /fetch\(\s*`\.\/*api\/visitor-stats\?scope=\$\{encodeURIComponent\(scope\)\}&mode=\$\{encodeURIComponent\(mode\)\}&date=\$\{encodeURIComponent\(dateKey\)\}`\s*\)/);
+  assert.doesNotMatch(js, /https:\/\/api\.countapi\.xyz/);
   assert.match(js, /hotdeal-visitor-total-counted/);
   assert.match(js, /hotdeal-visitor-day/);
+  assert.match(api, /https:\/\/api\.countapi\.xyz/);
+  assert.match(api, /scope === "today"/);
+  assert.match(api, /scope === "total"/);
+  assert.match(api, /Access-Control-Allow-Origin/);
   assert.match(css, /\.footer\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*space-between;/s);
   assert.match(css, /\.footer-visitor-stats\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*flex-end;/s);
 });

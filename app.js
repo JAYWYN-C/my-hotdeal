@@ -140,16 +140,11 @@ function getKstDateKey() {
   return `${year}-${month}-${day}`;
 }
 
-function getVisitorNamespace() {
-  const hostname = (window.location.hostname || "local").toLowerCase().replace(/[^a-z0-9-]/g, "-");
-  return `jachwi-hotdeal-${hostname}`;
-}
-
 async function requestVisitorCount(key, mode = "get") {
-  const namespace = getVisitorNamespace();
-  const endpoint = mode === "hit" ? "hit" : "get";
+  const scope = key === "visitors-total" ? "total" : "today";
+  const dateKey = scope === "today" ? key.replace(/^visitors-/, "") : "";
   const response = await fetch(
-    `https://api.countapi.xyz/${endpoint}/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`
+    `./api/visitor-stats?scope=${encodeURIComponent(scope)}&mode=${encodeURIComponent(mode)}&date=${encodeURIComponent(dateKey)}`
   );
   if (!response.ok) {
     throw new Error(`visitor counter request failed: ${response.status}`);

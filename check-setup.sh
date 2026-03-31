@@ -1,6 +1,8 @@
 #!/bin/bash
 # Verify hotdeal Firebase setup status
 
+CONFIGURED=false
+
 echo "🔍 Checking Hotdeal Firebase Setup..."
 echo ""
 
@@ -18,21 +20,30 @@ echo ""
 
 # Check deployment status
 echo "2️⃣  API Status:"
-CONFIG=$(curl -s https://jachwi-hotdeal.vercel.app/api/firebase-config 2>/dev/null)
+API_RESPONSE=$(curl -sS -w "\n%{http_code}" https://jachwi-hotdeal.vercel.app/api/firebase-config 2>/dev/null || true)
+API_STATUS=$(echo "$API_RESPONSE" | tail -n1)
+CONFIG=$(echo "$API_RESPONSE" | sed '$d')
 
-if [ $? -eq 0 ]; then
+if [ "$API_STATUS" = "200" ] && echo "$CONFIG" | jq -e . >/dev/null 2>&1; then
   CONFIGURED=$(echo "$CONFIG" | jq -r '.configured // false')
-  
+
   if [ "$CONFIGURED" = "true" ]; then
     echo "   ✅ Login is ACTIVE"
     echo "   Config:"
     echo "$CONFIG" | jq '.config' | sed 's/^/      /'
   else
-    MISSING=$(echo "$CONFIG" | jq -r '.missingKeys[]' 2>/dev/null | wc -l)
+    MISSING_LIST=$(echo "$CONFIG" | jq -r '.missingKeys[]?' 2>/dev/null)
+    MISSING=$(echo "$MISSING_LIST" | sed '/^$/d' | wc -l | tr -d ' ')
     echo "   ❌ Login is INACTIVE"
     echo "   Missing $MISSING environment variables:"
-    echo "$CONFIG" | jq -r '.missingKeys[]' 2>/dev/null | sed 's/^/      - /'
+    if [ -n "$MISSING_LIST" ]; then
+      echo "$MISSING_LIST" | sed 's/^/      - /'
+    fi
   fi
+elif [ -n "$API_STATUS" ] && [ "$API_STATUS" != "000" ]; then
+  echo "   ❌ API responded with HTTP $API_STATUS"
+  echo "   Response preview:"
+  echo "$CONFIG" | head -n 5 | sed 's/^/      /'
 else
   echo "   ❌ Could not reach API"
 fi

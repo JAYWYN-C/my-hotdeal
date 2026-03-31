@@ -3,6 +3,77 @@ function setCommonHeaders(res) {
   res.setHeader("Content-Type", "application/json; charset=utf-8");
 }
 
+function getRedisClient() {
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
+  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
+  if (!url || !token) {
+    return null;
+  }
+
+  try {
+    const { Redis } = require("@upstash/redis");
+    return new Redis({ url, token });
+  } catch {
+    return null;
+  }
+}
+
+const redisClient = getRedisClient();
+const memoryStore = global.__HOTDEAL_PREFS_STORE__ || new Map();
+global.__HOTDEAL_PREFS_STORE__ = memoryStore;
+
+function userPrefKey(uid) {
+  return `hotdeal:userPreferences:${uid}`;
+}
+
+function defaultPreference(email = "") {
+  return {
+    bookmarks: [],
+    alertKeywords: [],
+    emailAlertsEnabled: false,
+    email,
+    updatedAt: Date.now(),
+  };
+}
+
+async function readPreference(uid, email) {
+  if (redisClient) {
+    try {
+      const raw = await redisClient.get(userPrefKey(uid));
+      if (!raw) {
+        return { storage: "kv", data: defaultPreference(email) };
+      }
+
+      if (typeof raw === "string") {
+        return { storage: "kv", data: JSON.parse(raw) };
+      }
+
+      return { storage: "kv", data: raw };
+    } catch {
+      // Fallback to memory mode when KV is temporarily unavailable.
+    }
+  }
+
+  return {
+    storage: "memory",
+    data: memoryStore.get(uid) || defaultPreference(email),
+  };
+}
+
+async function writePreference(uid, data) {
+  if (redisClient) {
+    try {
+      await redisClient.set(userPrefKey(uid), JSON.stringify(data));
+      return "kv";
+    } catch {
+      // Fallback to memory mode when KV is temporarily unavailable.
+    }
+  }
+
+  memoryStore.set(uid, data);
+  return "memory";
+}
+
 function parseCookies(req) {
   const raw = req.headers?.cookie || "";
   const result = {};
@@ -52,9 +123,6 @@ async function readJsonBody(req) {
   }
 }
 
-const memoryStore = global.__HOTDEAL_PREFS_STORE__ || new Map();
-global.__HOTDEAL_PREFS_STORE__ = memoryStore;
-
 module.exports = async (req, res) => {
   setCommonHeaders(res);
 
@@ -72,15 +140,10 @@ module.exports = async (req, res) => {
   }
 
   if (req.method === "GET") {
-    const data = memoryStore.get(session.uid) || {
-      bookmarks: [],
-      alertKeywords: [],
-      emailAlertsEnabled: false,
-      email: session.email || "",
-      updatedAt: Date.now(),
-    };
+    const result = await readPreference(session.uid, session.email || "");
+    const data = result.data;
     res.statusCode = 200;
-    res.end(JSON.stringify({ ok: true, data }));
+    res.end(JSON.stringify({ ok: true, storage: result.storage, data }));
     return;
   }
 
@@ -91,7 +154,8 @@ module.exports = async (req, res) => {
   }
 
   const body = await readJsonBody(req);
-  const prev = memoryStore.get(session.uid) || {};
+  const prevResult = await readPreference(session.uid, session.email || "");
+  const prev = prevResult.data || {};
 
   const next = {
     bookmarks: Array.isArray(body?.bookmarks)
@@ -114,7 +178,7 @@ module.exports = async (req, res) => {
     updatedAt: Date.now(),
   };
 
-  memoryStore.set(session.uid, next);
+  const storage = await writePreference(session.uid, next);
   res.statusCode = 200;
-  res.end(JSON.stringify({ ok: true, data: next }));
+  res.end(JSON.stringify({ ok: true, storage, data: next }));
 };

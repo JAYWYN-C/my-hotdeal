@@ -469,7 +469,7 @@ function resetToHome() {
   render();
 }
 
-function pickDashboardDeals(predicate, limit = 4) {
+function pickDashboardDeals(predicate, limit = 3) {
   return [...deals]
     .filter(predicate)
     .sort((a, b) => {

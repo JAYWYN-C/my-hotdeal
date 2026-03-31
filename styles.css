@@ -293,28 +293,28 @@ h2 {
 
 .dashboard-panel {
   border: 1px solid var(--line);
-  padding: 0.82rem 0.85rem;
-  border-radius: 16px;
+  padding: 0.62rem 0.68rem;
+  border-radius: 14px;
   background: var(--surface-soft);
 }
 
 .dashboard-panel h3 {
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.42rem;
   font-family: "Do Hyeon", sans-serif;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   letter-spacing: 0.02em;
 }
 
 .mini-deal-list {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.5rem;
 }
 
 .mini-deal {
   border: 1px solid var(--line);
   background: var(--surface-strong);
-  padding: 0.72rem;
-  border-radius: 12px;
+  padding: 0.52rem 0.58rem;
+  border-radius: 10px;
   text-align: left;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(10, 36, 114, 0.04);
@@ -323,15 +323,16 @@ h2 {
 .mini-deal-title {
   display: block;
   font-weight: 700;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.3;
 }
 
 .mini-deal-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin-top: 0.45rem;
-  font-size: 0.82rem;
+  margin-top: 0.28rem;
+  font-size: 0.74rem;
   color: var(--muted);
 }
 

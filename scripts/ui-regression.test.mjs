@@ -10,6 +10,7 @@ test("detail modal keeps hidden state with explicit CSS rule", async () => {
 test("app exposes a home reset handler and compact original post action", async () => {
   const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
   assert.match(js, /function resetToHome\(/);
+  assert.match(js, /function pickDashboardDeals\(predicate, limit = 3\)/);
   assert.match(js, /function renderDealTags\(/);
   assert.match(js, /function setHeaderMenuOpen\(/);
   assert.match(js, /function scrollToSection\(/);
@@ -116,9 +117,11 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /\.dashboard\s+\.chip\s*\{[^}]*padding:\s*0\.08rem 0\.42rem;[^}]*font-size:\s*0\.68rem;[^}]*line-height:\s*1\.15;/s);
   assert.match(css, /\.dashboard-grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(220px,\s*1fr\)\);[^}]*gap:\s*0\.85rem;/s);
   assert.doesNotMatch(css, /\.dashboard-grid\s*\{[^}]*justify-content:\s*flex-start;/s);
-  assert.match(css, /\.dashboard-panel\s*\{[^}]*padding:\s*0\.82rem 0\.85rem;[^}]*border-radius:\s*16px;/s);
-  assert.match(css, /\.dashboard-panel h3\s*\{[^}]*font-size:\s*0\.98rem;/s);
-  assert.match(css, /\.mini-deal\s*\{[^}]*padding:\s*0\.72rem;[^}]*border-radius:\s*12px;/s);
+  assert.match(css, /\.dashboard-panel\s*\{[^}]*padding:\s*0\.62rem 0\.68rem;[^}]*border-radius:\s*14px;/s);
+  assert.match(css, /\.dashboard-panel h3\s*\{[^}]*font-size:\s*0\.9rem;/s);
+  assert.match(css, /\.mini-deal\s*\{[^}]*padding:\s*0\.52rem 0\.58rem;[^}]*border-radius:\s*10px;/s);
+  assert.match(css, /\.mini-deal-title\s*\{[^}]*font-size:\s*0\.88rem;[^}]*line-height:\s*1\.3/s);
+  assert.match(css, /\.mini-deal-meta\s*\{[^}]*font-size:\s*0\.74rem;/s);
   assert.match(css, /h1\s*\{[\s\S]*font-size:\s*clamp\(3rem,\s*6vw,\s*5rem\)/i);
   assert.match(css, /h2\s*\{[\s\S]*font-size:\s*clamp\(1\.7rem,\s*2\.8vw,\s*2\.2rem\)/i);
   assert.match(css, /\.tabs button\s*\{[\s\S]*padding:\s*0\.72rem 1\.12rem;[\s\S]*font-size:\s*1\.14rem;/i);

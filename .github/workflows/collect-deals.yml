@@ -90,11 +90,19 @@ jobs:
         if: steps.data_changes.outputs.updated == 'true'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
           VERCEL_ORG_ID: team_syq0wmFzcBPUevK11MtmWKJj
           VERCEL_PROJECT_ID: prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga
         run: |
-          if [ -z "$VERCEL_TOKEN" ]; then
-            echo "VERCEL_TOKEN secret missing; skipping Vercel deploy."
+          if [ -n "$VERCEL_TOKEN" ]; then
+            npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope 20220363-7579s-projects
             exit 0
           fi
-          npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope 20220363-7579s-projects
+
+          if [ -n "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
+            exit 0
+          fi
+
+          echo "Missing deploy credentials. Set either VERCEL_TOKEN or VERCEL_DEPLOY_HOOK_URL in repository secrets."
+          exit 1

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Setup - Hotdeal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        .help-text {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .btn-setup {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-setup:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        .btn-setup:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .btn-cancel {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .btn-cancel:hover {
+            background: #e0e0e0;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .info-box strong {
+            color: #333;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Firebase 로그인 설정</h1>
+        <p class="subtitle">Hotdeal 로그인 서비스 활성화</p>
+        
+        <div class="info-box">
+            <strong>📍 Firebase Console에서 가져오기:</strong><br>
+            console.firebase.google.com → 프로젝트 → ⚙️ 설정 → General → Your apps → Web
+        </div>
+
+        <form id="setupForm">
+            <div class="form-group">
+                <label for="apiKey">API Key</label>
+                <input 
+                    type="text" 
+                    id="apiKey" 
+                    placeholder="AIzaSyD_..." 
+                    required
+                >
+                <div class="help-text">firebaseConfig의 apiKey 값</div>
+            </div>
+
+            <div class="form-group">
+                <label for="authDomain">Auth Domain</label>
+                <input 
+                    type="text" 
+                    id="authDomain" 
+                    placeholder="my-project.firebaseapp.com" 
+                    required
+                >
+                <div class="help-text">형식: project-id.firebaseapp.com</div>
+            </div>
+
+            <div class="form-group">
+                <label for="projectId">Project ID</label>
+                <input 
+                    type="text" 
+                    id="projectId" 
+                    placeholder="my-project-12345" 
+                    required
+                >
+                <div class="help-text">문자/숫자 조합의 프로젝트 ID</div>
+            </div>
+
+            <div class="form-group">
+                <label for="appId">App ID</label>
+                <input 
+                    type="text" 
+                    id="appId" 
+                    placeholder="1:123456789012:web:abcdef1234567890" 
+                    required
+                >
+                <div class="help-text">숫자로 시작하는 App ID</div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-setup" id="submitBtn">
+                    🚀 설정 시작
+                </button>
+                <button type="button" class="btn-cancel" onclick="window.history.back()">
+                    취소
+                </button>
+            </div>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>설정 중...</p>
+        </div>
+
+        <div class="status" id="status"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('setupForm');
+        const statusDiv = document.getElementById('status');
+        const loadingDiv = document.getElementById('loading');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const apiKey = document.getElementById('apiKey').value.trim();
+            const authDomain = document.getElementById('authDomain').value.trim();
+            const projectId = document.getElementById('projectId').value.trim();
+            const appId = document.getElementById('appId').value.trim();
+
+            if (!apiKey || !authDomain || !projectId || !appId) {
+                showStatus('모든 값을 입력해주세요.', 'error');
+                return;
+            }
+
+            showLoading(true);
+            submitBtn.disabled = true;
+
+            try {
+                // Show progress
+                showStatus('✓ Firebase 자격증명 저장 중...', 'info');
+                
+                // Save to file
+                const response = await fetch('/api/save-firebase-config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        apiKey,
+                        authDomain,
+                        projectId,
+                        appId
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('설정 저장 실패');
+                }
+
+                showStatus('✓ Vercel에 환경변수 추가 중... (백그라운드)', 'info');
+                
+                // The setup will continue in the background
+                // User can check status with: bash check-setup.sh
+                
+                setTimeout(() => {
+                    showStatus('✅ 설정이 시작되었습니다!\n\n2-3분 후 다음을 실행해주세요:\nbash check-setup.sh\n\n로그인이 활성화되면 https://jachwi-hotdeal.vercel.app을 방문하세요.', 'success');
+                    showLoading(false);
+                }, 1000);
+
+            } catch (error) {
+                showStatus(`❌ 오류: ${error.message}`, 'error');
+                showLoading(false);
+                submitBtn.disabled = false;
+            }
+        });
+
+        function showStatus(message, type) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+
+        function showLoading(show) {
+            loadingDiv.style.display = show ? 'block' : 'none';
+            form.style.display = show ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

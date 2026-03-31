@@ -51,6 +51,25 @@
 5. Firebase Console > Authentication > Settings > Authorized domains에 `jaywyn-c.github.io`와 `localhost` 추가
 6. Vercel 주소를 쓸 경우 `jachwi-hotdeal.vercel.app`도 Authorized domains에 추가
 
+### 로그인 연결 서비스(API)
+- 클라이언트는 Firebase 로그인 후 `/api/auth-session`으로 세션 동기화
+- `firebase-config.js`가 비어 있어도 `/api/firebase-config`에서 런타임 설정을 읽어 로그인 가능
+
+Vercel 환경변수(필수):
+1. `NEXT_PUBLIC_FIREBASE_API_KEY`
+2. `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+3. `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
+4. `NEXT_PUBLIC_FIREBASE_APP_ID`
+
+설정 명령 예시:
+```bash
+npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production
+npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production
+npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production
+npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production
+npx vercel --prod --yes
+```
+
 예시:
 ```js
 window.FIREBASE_CONFIG = {

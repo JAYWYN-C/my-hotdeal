@@ -182,7 +182,10 @@ test("footer visitor counters use shared countapi keys and right-aligned layout"
   assert.doesNotMatch(js, /https:\/\/api\.countapi\.xyz/);
   assert.match(js, /hotdeal-visitor-total-counted/);
   assert.match(js, /hotdeal-visitor-day/);
-  assert.match(api, /https:\/\/api\.countapi\.xyz/);
+  assert.match(api, /require\("@vercel\/functions"\)/);
+  assert.match(api, /getCache\(\)/);
+  assert.match(api, /cache\.set\(/);
+  assert.match(api, /cache\.get\(/);
   assert.match(api, /scope === "today"/);
   assert.match(api, /scope === "total"/);
   assert.match(api, /Access-Control-Allow-Origin/);

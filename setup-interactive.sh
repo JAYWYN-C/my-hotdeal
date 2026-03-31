@@ -40,10 +40,10 @@ echo "🔐 Setting up Firebase on Vercel..."
 echo ""
 
 # Add to Vercel
-npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production "$API_KEY" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production "$AUTH_DOMAIN" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production "$PROJECT_ID" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production "$APP_ID" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production --value "$API_KEY" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production --value "$AUTH_DOMAIN" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production --value "$PROJECT_ID" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production --value "$APP_ID" --yes --force || exit 1
 
 echo ""
 echo "✅ Credentials added to Vercel!"

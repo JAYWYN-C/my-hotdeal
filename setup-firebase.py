@@ -77,32 +77,32 @@ def run_setup(creds):
         subprocess.run([
             'npx', 'vercel', 'env', 'add', 
             'NEXT_PUBLIC_FIREBASE_API_KEY', 'production',
-            creds['apiKey']
-        ], check=True, capture_output=True)
+            '--value', creds['apiKey'], '--yes', '--force'
+        ], check=True, capture_output=False)
         print("   ✅ 완료\n")
         
         print("2️⃣  Auth Domain 추가 중...")
         subprocess.run([
             'npx', 'vercel', 'env', 'add',
             'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN', 'production',
-            creds['authDomain']
-        ], check=True, capture_output=True)
+            '--value', creds['authDomain'], '--yes', '--force'
+        ], check=True, capture_output=False)
         print("   ✅ 완료\n")
         
         print("3️⃣  Project ID 추가 중...")
         subprocess.run([
             'npx', 'vercel', 'env', 'add',
             'NEXT_PUBLIC_FIREBASE_PROJECT_ID', 'production',
-            creds['projectId']
-        ], check=True, capture_output=True)
+            '--value', creds['projectId'], '--yes', '--force'
+        ], check=True, capture_output=False)
         print("   ✅ 완료\n")
         
         print("4️⃣  App ID 추가 중...")
         subprocess.run([
             'npx', 'vercel', 'env', 'add',
             'NEXT_PUBLIC_FIREBASE_APP_ID', 'production',
-            creds['appId']
-        ], check=True, capture_output=True)
+            '--value', creds['appId'], '--yes', '--force'
+        ], check=True, capture_output=False)
         print("   ✅ 완료\n")
         
         print("5️⃣  Vercel에 배포 중...")
@@ -123,7 +123,8 @@ def run_setup(creds):
         
     except subprocess.CalledProcessError as e:
         print(f"\n❌ 오류 발생: {e}")
-        print(f"메시지: {e.stderr}")
+        if e.stderr:
+            print(f"메시지: {e.stderr}")
         return False
     except Exception as e:
         print(f"\n❌ 예상치 못한 오류: {e}")

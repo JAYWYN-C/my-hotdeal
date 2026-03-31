@@ -28,10 +28,10 @@ echo "🔐 Setting up Firebase credentials..."
 echo ""
 
 # Add environment variables
-npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production "$FIREBASE_API_KEY" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production "$FIREBASE_AUTH_DOMAIN" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production "$FIREBASE_PROJECT_ID" || exit 1
-npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production "$FIREBASE_APP_ID" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production --value "$FIREBASE_API_KEY" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production --value "$FIREBASE_AUTH_DOMAIN" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production --value "$FIREBASE_PROJECT_ID" --yes --force || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production --value "$FIREBASE_APP_ID" --yes --force || exit 1
 
 echo ""
 echo "✅ Environment variables set!"

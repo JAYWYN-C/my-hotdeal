@@ -20,16 +20,16 @@ echo ""
 
 # Add environment variables one by one
 echo "Adding NEXT_PUBLIC_FIREBASE_API_KEY..."
-npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production "$API_KEY" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_API_KEY production --value "$API_KEY" --yes --force || exit 1
 
 echo "Adding NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN..."
-npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production "$AUTH_DOMAIN" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN production --value "$AUTH_DOMAIN" --yes --force || exit 1
 
 echo "Adding NEXT_PUBLIC_FIREBASE_PROJECT_ID..."
-npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production "$PROJECT_ID" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_PROJECT_ID production --value "$PROJECT_ID" --yes --force || exit 1
 
 echo "Adding NEXT_PUBLIC_FIREBASE_APP_ID..."
-npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production "$APP_ID" || exit 1
+npx vercel env add NEXT_PUBLIC_FIREBASE_APP_ID production --value "$APP_ID" --yes --force || exit 1
 
 echo ""
 echo "✅ Environment variables set!"
@@ -39,8 +39,8 @@ npx vercel --prod --yes || exit 1
 
 echo ""
 echo "🔍 Verifying setup..."
-sleep 3
-RESULT=$(curl -s https://jachwi-hotdeal.vercel.app/api/firebase-config | jq .configured)
+sleep 5
+RESULT=$(curl -s https://jachwi-hotdeal.vercel.app/api/firebase-config | jq -r '.configured // false')
 
 if [ "$RESULT" = "true" ]; then
   echo "✅ Success! Login is now active."

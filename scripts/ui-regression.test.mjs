@@ -53,6 +53,10 @@ test("header includes top-right home login and menu controls", async () => {
   assert.match(html, /id="header-menu"/);
   assert.match(html, /data-menu-target="alerts"/);
   assert.match(html, /data-menu-target="bookmarks"/);
+  assert.match(html, /id="deal-pagination"/);
+  assert.match(html, /id="page-prev"/);
+  assert.match(html, /id="page-next"/);
+  assert.match(html, /id="page-status"/);
   assert.doesNotMatch(html, /id="data-status"/);
   assert.doesNotMatch(html, /최근 딜 .*소스 상태 성공 .*알림 키워드/);
 });
@@ -65,6 +69,19 @@ test("detail header actions stay on one row", async () => {
   assert.match(css, /\.deal-detail-header h2\s*\{[\s\S]*font-size:\s*clamp\(1\.55rem,\s*3\.2vw,\s*2\.2rem\)/i);
   assert.doesNotMatch(css, /\.deal-detail-header h2\s*\{[\s\S]*font-size:\s*clamp\(1\.85rem,\s*4vw,\s*2\.7rem\)/i);
   assert.doesNotMatch(css, /@media\s*\(max-width:\s*760px\)\s*\{[\s\S]*\.deal-detail-header\s*\{[\s\S]*flex-direction:\s*column/s);
+});
+
+test("deal list uses single-column pagination with 20 items per page", async () => {
+  const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
+  const css = await fs.readFile(new URL("../styles.css", import.meta.url), "utf-8");
+  assert.match(js, /const DEALS_PER_PAGE = 20;/);
+  assert.match(js, /currentPage:\s*1/);
+  assert.match(js, /function paginatedDeals\(/);
+  assert.match(js, /const start = \(state\.currentPage - 1\) \* DEALS_PER_PAGE;/);
+  assert.match(js, /state\.currentPage = 1;/);
+  assert.match(js, /pageStatus\.textContent = `\$\{state\.currentPage\} \/ \$\{totalPages\}페이지`;/);
+  assert.match(css, /\.deal-list\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*1rem;/s);
+  assert.match(css, /\.deal-pagination\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*center;/s);
 });
 
 test("detail body uses a compact text layout instead of repeated info boxes", async () => {
@@ -93,7 +110,6 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /\.hero-copy\s*\{[^}]*display:\s*grid;[^}]*align-content:\s*start;/s);
   assert.match(css, /\.hero-main\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*minmax\(320px,\s*380px\);[^}]*gap:\s*1\.5rem;/s);
   assert.match(css, /\.hero-panel\s*\{[^}]*max-width:\s*380px;[^}]*justify-self:\s*end;[^}]*border:\s*0;[^}]*background:\s*transparent;[^}]*padding:\s*0;/s);
-  assert.match(css, /\.deal-list\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(400px,\s*1fr\)\);[^}]*gap:\s*1rem;/s);
   assert.match(css, /h1\s*\{[\s\S]*font-size:\s*clamp\(3rem,\s*6vw,\s*5rem\)/i);
   assert.match(css, /h2\s*\{[\s\S]*font-size:\s*clamp\(1\.7rem,\s*2\.8vw,\s*2\.2rem\)/i);
   assert.match(css, /\.tabs button\s*\{[\s\S]*padding:\s*0\.72rem 1\.12rem;[\s\S]*font-size:\s*1\.14rem;/i);

@@ -18,6 +18,7 @@ const categories = [
 ];
 
 const fallbackDeals = [];
+const DEALS_PER_PAGE = 20;
 
 let deals = [...fallbackDeals];
 
@@ -26,6 +27,7 @@ const state = {
   selectedSource: "all",
   sort: "latest",
   search: "",
+  currentPage: 1,
   alertsEnabled: false,
   bookmarks: JSON.parse(localStorage.getItem("hotdeal-bookmarks") || "[]"),
   alertKeywords: JSON.parse(localStorage.getItem("hotdeal-alert-keywords") || "[]"),
@@ -49,6 +51,10 @@ const sortSelect = document.getElementById("sort-select");
 const searchInput = document.getElementById("search-input");
 const dealList = document.getElementById("deal-list");
 const dealCount = document.getElementById("deal-count");
+const dealPagination = document.getElementById("deal-pagination");
+const pagePrev = document.getElementById("page-prev");
+const pageNext = document.getElementById("page-next");
+const pageStatus = document.getElementById("page-status");
 const tagCloud = document.getElementById("event-tags");
 const bookmarkList = document.getElementById("bookmark-list");
 const toggleAlert = document.getElementById("toggle-alert");
@@ -424,6 +430,18 @@ function filteredDeals() {
     });
 }
 
+function paginatedDeals(list) {
+  const totalPages = Math.max(1, Math.ceil(list.length / DEALS_PER_PAGE));
+  if (state.currentPage > totalPages) {
+    state.currentPage = totalPages;
+  }
+  const start = (state.currentPage - 1) * DEALS_PER_PAGE;
+  return {
+    totalPages,
+    items: list.slice(start, start + DEALS_PER_PAGE),
+  };
+}
+
 function setHeaderMenuOpen(isOpen) {
   if (!headerMenu || !menuButton) {
     return;
@@ -441,6 +459,7 @@ function resetToHome() {
   state.selectedSource = "all";
   state.selectedCategory = "all";
   state.sort = "latest";
+  state.currentPage = 1;
   setHeaderMenuOpen(false);
   closeDealDetail();
   if (searchInput) searchInput.value = "";
@@ -532,6 +551,7 @@ function renderCategoryTabs() {
   categoryTabs.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
       state.selectedCategory = button.dataset.category;
+      state.currentPage = 1;
       render();
     });
   });
@@ -540,13 +560,17 @@ function renderCategoryTabs() {
 function renderDeals() {
   const list = filteredDeals();
   dealCount.textContent = `${list.length}건`;
+  const { items, totalPages } = paginatedDeals(list);
 
   if (list.length === 0) {
     dealList.innerHTML = '<p class="small">조건에 맞는 딜이 없습니다.</p>';
+    if (dealPagination) {
+      dealPagination.hidden = true;
+    }
     return;
   }
 
-  dealList.innerHTML = list
+  dealList.innerHTML = items
     .map((deal) => {
       const bookmarked = state.bookmarks.includes(deal.id);
       const tags = getDisplayTags(deal);
@@ -590,6 +614,13 @@ function renderDeals() {
       render();
     });
   });
+
+  if (dealPagination && pagePrev && pageNext && pageStatus) {
+    dealPagination.hidden = false;
+    pagePrev.disabled = state.currentPage <= 1;
+    pageNext.disabled = state.currentPage >= totalPages;
+    pageStatus.textContent = `${state.currentPage} / ${totalPages}페이지`;
+  }
 }
 
 function openDealDetail(id) {
@@ -808,17 +839,39 @@ function bindEvents() {
 
   sourceSelect.addEventListener("change", () => {
     state.selectedSource = sourceSelect.value;
+    state.currentPage = 1;
     render();
   });
 
   sortSelect.addEventListener("change", () => {
     state.sort = sortSelect.value;
+    state.currentPage = 1;
     render();
   });
 
   searchInput.addEventListener("input", () => {
     state.search = searchInput.value.trim();
+    state.currentPage = 1;
     render();
+  });
+
+  pagePrev?.addEventListener("click", () => {
+    if (state.currentPage <= 1) {
+      return;
+    }
+    state.currentPage -= 1;
+    renderDeals();
+    window.scrollTo({ top: dealList.offsetTop - 120, behavior: "smooth" });
+  });
+
+  pageNext?.addEventListener("click", () => {
+    const totalPages = Math.max(1, Math.ceil(filteredDeals().length / DEALS_PER_PAGE));
+    if (state.currentPage >= totalPages) {
+      return;
+    }
+    state.currentPage += 1;
+    renderDeals();
+    window.scrollTo({ top: dealList.offsetTop - 120, behavior: "smooth" });
   });
 
   toggleAlert.addEventListener("click", () => {

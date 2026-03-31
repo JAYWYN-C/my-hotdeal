@@ -279,8 +279,9 @@ h2 {
 }
 
 .dashboard .chip {
-  padding: 0.16rem 0.5rem;
-  font-size: 0.76rem;
+  padding: 0.08rem 0.42rem;
+  font-size: 0.68rem;
+  line-height: 1.15;
 }
 
 .dashboard-grid {

@@ -39,6 +39,10 @@ const state = {
   syncStatus: "로컬 모드",
   authMode: "loading",
   selectedDealId: null,
+  visitorStats: {
+    today: null,
+    total: null,
+  },
 };
 
 const homeButton = document.getElementById("home-button");
@@ -67,6 +71,8 @@ const addKeywordButton = document.getElementById("add-keyword");
 const keywordList = document.getElementById("keyword-list");
 const requestNotificationButton = document.getElementById("request-notification");
 const notificationStatus = document.getElementById("notification-status");
+const footerVisitorToday = document.getElementById("footer-visitor-today");
+const footerVisitorTotal = document.getElementById("footer-visitor-total");
 const detailModal = document.getElementById("deal-detail-modal");
 const detailContent = document.getElementById("deal-detail-content");
 const detailTitle = document.getElementById("deal-detail-title");
@@ -115,6 +121,41 @@ function formatGeneratedAt(dateString) {
     hour: "numeric",
     minute: "2-digit",
   });
+}
+
+function formatVisitorCount(value) {
+  return Number.isFinite(value) ? new Intl.NumberFormat("ko-KR").format(value) : "-";
+}
+
+function getKstDateKey() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const year = parts.find((part) => part.type === "year")?.value || "0000";
+  const month = parts.find((part) => part.type === "month")?.value || "00";
+  const day = parts.find((part) => part.type === "day")?.value || "00";
+  return `${year}-${month}-${day}`;
+}
+
+function getVisitorNamespace() {
+  const hostname = (window.location.hostname || "local").toLowerCase().replace(/[^a-z0-9-]/g, "-");
+  return `jachwi-hotdeal-${hostname}`;
+}
+
+async function requestVisitorCount(key, mode = "get") {
+  const namespace = getVisitorNamespace();
+  const endpoint = mode === "hit" ? "hit" : "get";
+  const response = await fetch(
+    `https://api.countapi.xyz/${endpoint}/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`
+  );
+  if (!response.ok) {
+    throw new Error(`visitor counter request failed: ${response.status}`);
+  }
+  const payload = await response.json();
+  return Number(payload?.value);
 }
 
 function getCategoryLabel(categoryId) {
@@ -799,6 +840,52 @@ function maybeNotifyDeals() {
   persistAlertState();
 }
 
+function renderVisitorStats() {
+  if (footerVisitorToday) {
+    footerVisitorToday.textContent = formatVisitorCount(state.visitorStats.today);
+  }
+  if (footerVisitorTotal) {
+    footerVisitorTotal.textContent = formatVisitorCount(state.visitorStats.total);
+  }
+}
+
+async function syncVisitorStats() {
+  if (!footerVisitorToday && !footerVisitorTotal) {
+    return;
+  }
+
+  const visitorDayKey = "hotdeal-visitor-day";
+  const visitorTotalCountedKey = "hotdeal-visitor-total-counted";
+  const todayKey = getKstDateKey();
+  const shouldHitToday = localStorage.getItem(visitorDayKey) !== todayKey;
+  const shouldHitTotal = localStorage.getItem(visitorTotalCountedKey) !== "true";
+
+  const [todayResult, totalResult] = await Promise.allSettled([
+    requestVisitorCount(`visitors-${todayKey}`, shouldHitToday ? "hit" : "get"),
+    requestVisitorCount("visitors-total", shouldHitTotal ? "hit" : "get"),
+  ]);
+
+  if (todayResult.status === "fulfilled" && Number.isFinite(todayResult.value)) {
+    state.visitorStats.today = todayResult.value;
+    if (shouldHitToday) {
+      localStorage.setItem(visitorDayKey, todayKey);
+    }
+  } else if (todayResult.status === "rejected") {
+    console.warn("Failed to load today's visitor count.", todayResult.reason);
+  }
+
+  if (totalResult.status === "fulfilled" && Number.isFinite(totalResult.value)) {
+    state.visitorStats.total = totalResult.value;
+    if (shouldHitTotal) {
+      localStorage.setItem(visitorTotalCountedKey, "true");
+    }
+  } else if (totalResult.status === "rejected") {
+    console.warn("Failed to load total visitor count.", totalResult.reason);
+  }
+
+  renderVisitorStats();
+}
+
 function renderDataStatus() {
   if (syncStatus) {
     syncStatus.textContent = `마지막 핫딜 업데이트: ${formatGeneratedAt(state.generatedAt)}`;
@@ -993,6 +1080,7 @@ function render() {
   renderAlertKeywords();
   renderNotificationStatus();
   renderDataStatus();
+  renderVisitorStats();
   renderDetailModal();
   maybeNotifyDeals();
 }
@@ -1002,4 +1090,5 @@ bindEvents();
 Promise.all([loadDeals(), initializeFirebaseAuth()]).then(() => {
   render();
   renderAuthStatus();
+  syncVisitorStats();
 });

@@ -60,6 +60,8 @@ test("header includes top-right home login and menu controls", async () => {
   assert.match(html, /id="page-status"/);
   assert.doesNotMatch(html, /id="data-status"/);
   assert.doesNotMatch(html, /최근 딜 .*소스 상태 성공 .*알림 키워드/);
+  assert.match(html, /id="footer-visitor-today"/);
+  assert.match(html, /id="footer-visitor-total"/);
 });
 
 test("detail header actions stay on one row", async () => {
@@ -166,4 +168,18 @@ test("vercel deploy ignores repository-only files", async () => {
   assert.match(ignoreFile, /^config$/m);
   assert.match(ignoreFile, /^README\.md$/m);
   assert.match(ignoreFile, /^firebase-config\.example\.js$/m);
+});
+
+test("footer visitor counters use shared countapi keys and right-aligned layout", async () => {
+  const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
+  const css = await fs.readFile(new URL("../styles.css", import.meta.url), "utf-8");
+  assert.match(js, /const footerVisitorToday = document\.getElementById\("footer-visitor-today"\);/);
+  assert.match(js, /const footerVisitorTotal = document\.getElementById\("footer-visitor-total"\);/);
+  assert.match(js, /function renderVisitorStats\(/);
+  assert.match(js, /function syncVisitorStats\(/);
+  assert.match(js, /https:\/\/api\.countapi\.xyz/);
+  assert.match(js, /hotdeal-visitor-total-counted/);
+  assert.match(js, /hotdeal-visitor-day/);
+  assert.match(css, /\.footer\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*space-between;/s);
+  assert.match(css, /\.footer-visitor-stats\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*flex-end;/s);
 });

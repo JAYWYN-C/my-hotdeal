@@ -90,7 +90,9 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /--surface-soft:\s*#f5fbff/i);
   assert.doesNotMatch(css, /linear-gradient|radial-gradient/i);
   assert.match(css, /width:\s*min\(1260px,\s*calc\(100% - 2\.75rem\)\)/i);
-  assert.match(css, /\.hero-main\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1\.35fr\)\s*minmax\(300px,\s*0\.9fr\);[^}]*gap:\s*1\.5rem;/s);
+  assert.match(css, /\.hero-copy\s*\{[^}]*display:\s*grid;[^}]*align-content:\s*start;/s);
+  assert.match(css, /\.hero-main\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*minmax\(320px,\s*380px\);[^}]*gap:\s*1\.5rem;/s);
+  assert.match(css, /\.hero-panel\s*\{[^}]*max-width:\s*380px;[^}]*justify-self:\s*end;[^}]*border:\s*0;[^}]*background:\s*transparent;[^}]*padding:\s*0;/s);
   assert.match(css, /\.deal-list\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(400px,\s*1fr\)\);[^}]*gap:\s*1rem;/s);
   assert.match(css, /h1\s*\{[\s\S]*font-size:\s*clamp\(3rem,\s*6vw,\s*5rem\)/i);
   assert.match(css, /h2\s*\{[\s\S]*font-size:\s*clamp\(1\.7rem,\s*2\.8vw,\s*2\.2rem\)/i);
@@ -98,7 +100,7 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /\.tag-category\s*\{[\s\S]*background:\s*var\(--accent\)/i);
   assert.match(css, /\.tag-platform\s*\{[\s\S]*background:\s*var\(--accent-2\)/i);
   assert.match(css, /\.tag-source\s*\{[\s\S]*color:\s*var\(--muted\)/i);
-  assert.match(css, /@media\s*\(max-width:\s*1100px\)\s*\{[\s\S]*\.hero-main\s*\{[\s\S]*grid-template-columns:\s*1fr;/s);
+  assert.match(css, /@media\s*\(max-width:\s*960px\)\s*\{[\s\S]*\.hero-main\s*\{[\s\S]*grid-template-columns:\s*1fr;/s);
 });
 
 test("pages deploy workflow writes firebase-config.js from repository variables", async () => {

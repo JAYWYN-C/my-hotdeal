@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+
 function setCommonHeaders(res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Content-Type", "application/json; charset=utf-8");
@@ -12,6 +14,22 @@ function parseCookies(req) {
     result[k] = decodeURIComponent(rest.join("="));
   });
   return result;
+}
+
+function makeSessionCookie(value, maxAgeSeconds, isSecure) {
+  const parts = [
+    `hotdeal_session=${encodeURIComponent(value)}`,
+    "Path=/",
+    "HttpOnly",
+    "SameSite=Lax",
+    `Max-Age=${maxAgeSeconds}`,
+  ];
+
+  if (isSecure) {
+    parts.push("Secure");
+  }
+
+  return parts.join("; ");
 }
 
 async function readJsonBody(req) {
@@ -34,20 +52,56 @@ async function readJsonBody(req) {
   }
 }
 
-function makeSessionCookie(value, maxAgeSeconds, isSecure) {
-  const parts = [
-    `hotdeal_session=${encodeURIComponent(value)}`,
-    "Path=/",
-    "HttpOnly",
-    "SameSite=Lax",
-    `Max-Age=${maxAgeSeconds}`,
-  ];
+function getMagicSecret() {
+  return process.env.MAGIC_LINK_SECRET || process.env.AUTH_SESSION_SECRET || "hotdeal-dev-magic-secret";
+}
 
-  if (isSecure) {
-    parts.push("Secure");
+function signPayload(payload, secret) {
+  return crypto.createHmac("sha256", secret).update(payload).digest("hex");
+}
+
+function verifyMagicToken(magicToken) {
+  const secret = getMagicSecret();
+  if (!secret) {
+    throw new Error("magic_secret_missing");
   }
 
-  return parts.join("; ");
+  const parts = String(magicToken || "").split(".");
+  if (parts.length !== 2) {
+    throw new Error("invalid_magic_token");
+  }
+
+  const [encodedPayload, signature] = parts;
+  const expected = signPayload(encodedPayload, secret);
+  if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) {
+    throw new Error("invalid_magic_signature");
+  }
+
+  const payload = JSON.parse(Buffer.from(encodedPayload, "base64url").toString("utf8"));
+  if (!payload?.email || !payload?.exp || Date.now() >= payload.exp) {
+    throw new Error("expired_magic_token");
+  }
+
+  const uid = `mail_${crypto.createHash("sha256").update(String(payload.email)).digest("hex").slice(0, 24)}`;
+  return { uid, email: String(payload.email).toLowerCase() };
+}
+
+function readSessionFromCookie(req) {
+  const cookies = parseCookies(req);
+  const current = cookies.hotdeal_session;
+  if (!current) {
+    return null;
+  }
+
+  try {
+    const payload = JSON.parse(Buffer.from(current, "base64url").toString("utf8"));
+    if (!payload?.uid || !payload?.exp || Date.now() >= payload.exp) {
+      return null;
+    }
+    return payload;
+  } catch {
+    return null;
+  }
 }
 
 async function verifyFirebaseIdToken(idToken, apiKey) {
@@ -87,32 +141,17 @@ module.exports = async (req, res) => {
     String(req.headers["x-forwarded-proto"] || "").includes("https") || process.env.NODE_ENV === "production";
 
   if (req.method === "GET") {
-    const cookies = parseCookies(req);
-    const current = cookies.hotdeal_session;
-    if (!current) {
-      res.statusCode = 200;
-      res.end(JSON.stringify({ authenticated: false }));
-      return;
-    }
-
-    try {
-      const payload = JSON.parse(Buffer.from(current, "base64url").toString("utf8"));
-      if (!payload?.uid || !payload?.exp || Date.now() >= payload.exp) {
-        res.setHeader("Set-Cookie", makeSessionCookie("", 0, isSecure));
-        res.statusCode = 200;
-        res.end(JSON.stringify({ authenticated: false }));
-        return;
-      }
-
-      res.statusCode = 200;
-      res.end(JSON.stringify({ authenticated: true, user: { uid: payload.uid, email: payload.email || "" } }));
-      return;
-    } catch {
+    const payload = readSessionFromCookie(req);
+    if (!payload) {
       res.setHeader("Set-Cookie", makeSessionCookie("", 0, isSecure));
       res.statusCode = 200;
       res.end(JSON.stringify({ authenticated: false }));
       return;
     }
+
+    res.statusCode = 200;
+    res.end(JSON.stringify({ authenticated: true, user: { uid: payload.uid, email: payload.email || "" } }));
+    return;
   }
 
   if (req.method === "DELETE") {
@@ -128,34 +167,36 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || process.env.FIREBASE_API_KEY;
-  if (!apiKey) {
-    res.statusCode = 500;
-    res.end(JSON.stringify({ error: "firebase_api_key_missing" }));
-    return;
-  }
-
   const body = await readJsonBody(req);
+  const magicToken = String(body?.magicToken || "");
   const idToken = String(body?.idToken || "");
-  if (!idToken) {
-    res.statusCode = 400;
-    res.end(JSON.stringify({ error: "id_token_required" }));
-    return;
-  }
 
   try {
-    const user = await verifyFirebaseIdToken(idToken, apiKey);
-    const exp = Date.now() + 60 * 60 * 1000;
-    const sessionPayload = Buffer.from(JSON.stringify({ ...user, exp }), "utf8").toString("base64url");
+    let user = null;
+    if (magicToken) {
+      user = verifyMagicToken(magicToken);
+    } else if (idToken) {
+      const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || process.env.FIREBASE_API_KEY;
+      if (!apiKey) {
+        throw new Error("firebase_api_key_missing");
+      }
+      user = await verifyFirebaseIdToken(idToken, apiKey);
+    } else {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: "auth_token_required" }));
+      return;
+    }
 
-    res.setHeader("Set-Cookie", makeSessionCookie(sessionPayload, 60 * 60, isSecure));
+    const exp = Date.now() + 24 * 60 * 60 * 1000;
+    const sessionPayload = Buffer.from(JSON.stringify({ ...user, exp }), "utf8").toString("base64url");
+    res.setHeader("Set-Cookie", makeSessionCookie(sessionPayload, 24 * 60 * 60, isSecure));
     res.statusCode = 200;
     res.end(JSON.stringify({ ok: true, user }));
   } catch (error) {
     res.statusCode = 401;
     res.end(
       JSON.stringify({
-        error: "invalid_id_token",
+        error: "invalid_auth_token",
         message: error instanceof Error ? error.message : "unknown",
       })
     );

@@ -557,6 +557,13 @@ function renderCategoryTabs() {
   });
 }
 
+function toggleBookmark(id) {
+  const hasId = state.bookmarks.includes(id);
+  state.bookmarks = hasId ? state.bookmarks.filter((item) => item !== id) : [...state.bookmarks, id];
+  persistBookmarks();
+  render();
+}
+
 function renderDeals() {
   const list = filteredDeals();
   dealCount.textContent = `${list.length}건`;
@@ -607,11 +614,7 @@ function renderDeals() {
 
   dealList.querySelectorAll("button[data-bookmark]").forEach((button) => {
     button.addEventListener("click", () => {
-      const id = Number(button.dataset.bookmark);
-      const hasId = state.bookmarks.includes(id);
-      state.bookmarks = hasId ? state.bookmarks.filter((item) => item !== id) : [...state.bookmarks, id];
-      persistBookmarks();
-      render();
+      toggleBookmark(Number(button.dataset.bookmark));
     });
   });
 
@@ -655,6 +658,7 @@ function renderDetailModal() {
   const deadlineTime = getDeadlineTime(deal);
   const purchaseUrl = deal.purchaseUrl || "";
   const originalUrl = deal.originalUrl || deal.url || "";
+  const bookmarked = state.bookmarks.includes(deal.id);
   const statusLabel = !deadlineTime ? deal.statusText || "" : "";
   const detailFacts = [
     { label: "가격", value: displayPrice(deal) },
@@ -690,9 +694,18 @@ function renderDetailModal() {
     </div>
     <div class="detail-actions">
       ${purchaseUrl ? `<a href="${escapeHtml(purchaseUrl)}" target="_blank" rel="noreferrer">구매하러 가기</a>` : ""}
+      <button type="button" data-detail-bookmark="${deal.id}" aria-pressed="${bookmarked}">
+        ${bookmarked ? "스크랩 해제" : "스크랩"}
+      </button>
       <button type="button" data-close-detail>닫기</button>
     </div>
   `;
+
+  detailContent.querySelectorAll("button[data-detail-bookmark]").forEach((button) => {
+    button.addEventListener("click", () => {
+      toggleBookmark(Number(button.dataset.detailBookmark));
+    });
+  });
 
   detailContent.querySelectorAll("[data-close-detail]").forEach((button) => {
     button.addEventListener("click", closeDealDetail);

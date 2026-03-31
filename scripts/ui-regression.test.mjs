@@ -90,6 +90,8 @@ test("detail body uses a compact text layout instead of repeated info boxes", as
   const css = await fs.readFile(new URL("../styles.css", import.meta.url), "utf-8");
   assert.match(js, /class="detail-facts"/);
   assert.match(js, /class="detail-fact-label"/);
+  assert.match(js, /data-detail-bookmark="\$\{deal\.id\}"/);
+  assert.match(js, /detailContent\.querySelectorAll\("button\[data-detail-bookmark\]"\)/);
   assert.doesNotMatch(js, /class="detail-grid"/);
   assert.doesNotMatch(js, /class="detail-points"/);
   assert.match(css, /\.detail-facts\s*\{[^}]*display:\s*grid;/s);

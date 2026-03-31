@@ -41,8 +41,51 @@ jobs:
           ALERT_FROM_NAME: 자취핫딜.zip
         run: node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json
 
+      - name: Detect updated deals data
+        id: data_changes
+        run: |
+          if git diff --quiet -- data/deals.json; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Commit updated deals
+        if: steps.data_changes.outputs.updated == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update deals data"
           file_pattern: data/deals.json
+
+      - name: Write Firebase web config for Vercel
+        if: steps.data_changes.outputs.updated == 'true'
+        run: |
+          cat > firebase-config.js <<EOF
+          window.FIREBASE_CONFIG = {
+            apiKey: "${{ vars.FIREBASE_API_KEY }}",
+            authDomain: "${{ vars.FIREBASE_AUTH_DOMAIN }}",
+            projectId: "${{ vars.FIREBASE_PROJECT_ID }}",
+            appId: "${{ vars.FIREBASE_APP_ID }}"
+          };
+          EOF
+
+      - name: Restore Vercel project link
+        if: steps.data_changes.outputs.updated == 'true'
+        run: |
+          mkdir -p .vercel
+          cat > .vercel/project.json <<EOF
+          {"projectId":"prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga","orgId":"team_syq0wmFzcBPUevK11MtmWKJj","projectName":"jachwi-hotdeal"}
+          EOF
+
+      - name: Deploy refreshed site to Vercel
+        if: steps.data_changes.outputs.updated == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: team_syq0wmFzcBPUevK11MtmWKJj
+          VERCEL_PROJECT_ID: prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN secret missing; skipping Vercel deploy."
+            exit 0
+          fi
+          npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope 20220363-7579s-projects

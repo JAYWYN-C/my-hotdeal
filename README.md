@@ -27,6 +27,7 @@
 - 주기: 1시간마다
 - 수동 실행: `node scripts/collect-deals.mjs`
 - 알림 발송: `node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json`
+- 변경 감지 시 Vercel 프로덕션도 다시 배포
 - 소스 설정: `config/sources.json`
 - 현재 활성 소스: 뽐뿌, 해외뽐뿌, 알리뽐뿌, FM코리아, 개드립, 루리웹, 딜바다 국내, 딜바다 해외, 쿨엔조이
 - 2026-03-30 기준 비활성 소스: 퀘이사존(`HTTP 403`), 아카라이브(`Cloudflare challenge 403`), 클리앙(`HTTP 403`)
@@ -72,6 +73,7 @@ GitHub Pages 배포용 저장소 변수:
 - `FIREBASE_PRIVATE_KEY`
 - `RESEND_API_KEY`
 - `ALERT_FROM_EMAIL`
+- `VERCEL_TOKEN`
 
 수집 워크플로는 새 딜을 만든 뒤 Firestore 구독 문서와 비교해서, 로그인한 Google 메일 주소로 키워드 매칭 메일을 즉시 발송합니다.
 

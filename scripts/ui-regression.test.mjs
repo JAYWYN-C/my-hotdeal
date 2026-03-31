@@ -108,6 +108,16 @@ test("pages deploy workflow writes firebase-config.js from repository variables"
   assert.match(workflow, /FIREBASE_APP_ID/);
 });
 
+test("collect workflow can redeploy refreshed data to vercel", async () => {
+  const workflow = await fs.readFile(new URL("../.github/workflows/collect-deals.yml", import.meta.url), "utf-8");
+  assert.match(workflow, /id:\s*data_changes/);
+  assert.match(workflow, /VERCEL_TOKEN/);
+  assert.match(workflow, /VERCEL_ORG_ID/);
+  assert.match(workflow, /VERCEL_PROJECT_ID/);
+  assert.match(workflow, /npx --yes vercel deploy --prod --yes --token "\$VERCEL_TOKEN"/);
+  assert.match(workflow, /steps\.data_changes\.outputs\.updated == 'true'/);
+});
+
 test("vercel deploy ignores repository-only files", async () => {
   const ignoreFile = await fs.readFile(new URL("../.vercelignore", import.meta.url), "utf-8");
   assert.match(ignoreFile, /^\.github$/m);

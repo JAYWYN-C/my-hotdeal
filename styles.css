@@ -278,6 +278,11 @@ h2 {
   flex-wrap: wrap;
 }
 
+.dashboard .chip {
+  padding: 0.16rem 0.5rem;
+  font-size: 0.76rem;
+}
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

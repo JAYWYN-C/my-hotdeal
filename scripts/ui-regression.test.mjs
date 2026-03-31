@@ -145,11 +145,17 @@ test("pages deploy workflow writes firebase-config.js from repository variables"
 test("collect workflow can redeploy refreshed data to vercel", async () => {
   const workflow = await fs.readFile(new URL("../.github/workflows/collect-deals.yml", import.meta.url), "utf-8");
   assert.match(workflow, /id:\s*data_changes/);
+  assert.match(workflow, /git config user\.name "github-actions\[bot\]"/);
+  assert.match(workflow, /git config user\.email "41898282\+github-actions\[bot\]@users\.noreply\.github\.com"/);
+  assert.match(workflow, /git add data\/deals\.json/);
+  assert.match(workflow, /git commit -m "chore: update deals data"/);
+  assert.match(workflow, /git push origin HEAD:main/);
   assert.match(workflow, /VERCEL_TOKEN/);
   assert.match(workflow, /VERCEL_ORG_ID/);
   assert.match(workflow, /VERCEL_PROJECT_ID/);
   assert.match(workflow, /npx --yes vercel deploy --prod --yes --token "\$VERCEL_TOKEN"/);
   assert.match(workflow, /steps\.data_changes\.outputs\.updated == 'true'/);
+  assert.doesNotMatch(workflow, /stefanzweifel\/git-auto-commit-action@v5/);
 });
 
 test("vercel deploy ignores repository-only files", async () => {

@@ -27,7 +27,8 @@ test("app exposes a home reset handler and compact original post action", async 
   assert.match(js, /data-bookmark-detail="\$\{deal\.id\}"/);
   assert.match(js, /bookmarkList\.querySelectorAll\("button\[data-bookmark-detail\]"\)/);
   assert.match(js, /class="detail-header-link">원본글</);
-  assert.match(js, /detail-header-divider/);
+  assert.doesNotMatch(js, /detail-header-divider/);
+  assert.doesNotMatch(js, /detailHeaderActions\.innerHTML = '<button class="detail-header-link" type="button" data-close-detail>닫기<\/button>'/);
   assert.doesNotMatch(js, /원본글 보러가기/);
 });
 
@@ -52,6 +53,8 @@ test("header includes top-right home login and menu controls", async () => {
   assert.match(html, /id="header-menu"/);
   assert.match(html, /data-menu-target="alerts"/);
   assert.match(html, /data-menu-target="bookmarks"/);
+  assert.doesNotMatch(html, /id="data-status"/);
+  assert.doesNotMatch(html, /최근 딜 .*소스 상태 성공 .*알림 키워드/);
 });
 
 test("detail header actions stay on one row", async () => {
@@ -59,6 +62,8 @@ test("detail header actions stay on one row", async () => {
   assert.match(css, /\.deal-detail-header\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*auto;[^}]*\}/s);
   assert.match(css, /\.detail-header-actions\s*\{[^}]*display:\s*flex;[^}]*flex-wrap:\s*nowrap;[^}]*\}/s);
   assert.match(css, /\.detail-header-link\s*\{[^}]*text-decoration:\s*none;[^}]*\}/s);
+  assert.match(css, /\.deal-detail-header h2\s*\{[\s\S]*font-size:\s*clamp\(1\.55rem,\s*3\.2vw,\s*2\.2rem\)/i);
+  assert.doesNotMatch(css, /\.deal-detail-header h2\s*\{[\s\S]*font-size:\s*clamp\(1\.85rem,\s*4vw,\s*2\.7rem\)/i);
   assert.doesNotMatch(css, /@media\s*\(max-width:\s*760px\)\s*\{[\s\S]*\.deal-detail-header\s*\{[\s\S]*flex-direction:\s*column/s);
 });
 
@@ -87,7 +92,8 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /width:\s*min\(1400px,\s*calc\(100% - 1\.5rem\)\)/i);
   assert.match(css, /\.deal-list\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(360px,\s*1fr\)\)/s);
   assert.match(css, /h1\s*\{[\s\S]*font-size:\s*clamp\(3rem,\s*6vw,\s*5rem\)/i);
-  assert.match(css, /\.tabs button\s*\{[\s\S]*padding:\s*0\.62rem 1rem;[\s\S]*font-size:\s*1\.02rem;/i);
+  assert.match(css, /h2\s*\{[\s\S]*font-size:\s*clamp\(1\.7rem,\s*2\.8vw,\s*2\.2rem\)/i);
+  assert.match(css, /\.tabs button\s*\{[\s\S]*padding:\s*0\.72rem 1\.12rem;[\s\S]*font-size:\s*1\.14rem;/i);
   assert.match(css, /\.tag-category\s*\{[\s\S]*background:\s*var\(--accent\)/i);
   assert.match(css, /\.tag-platform\s*\{[\s\S]*background:\s*var\(--accent-2\)/i);
   assert.match(css, /\.tag-source\s*\{[\s\S]*color:\s*var\(--muted\)/i);
@@ -100,4 +106,14 @@ test("pages deploy workflow writes firebase-config.js from repository variables"
   assert.match(workflow, /FIREBASE_AUTH_DOMAIN/);
   assert.match(workflow, /FIREBASE_PROJECT_ID/);
   assert.match(workflow, /FIREBASE_APP_ID/);
+});
+
+test("vercel deploy ignores repository-only files", async () => {
+  const ignoreFile = await fs.readFile(new URL("../.vercelignore", import.meta.url), "utf-8");
+  assert.match(ignoreFile, /^\.github$/m);
+  assert.match(ignoreFile, /^docs$/m);
+  assert.match(ignoreFile, /^scripts$/m);
+  assert.match(ignoreFile, /^config$/m);
+  assert.match(ignoreFile, /^README\.md$/m);
+  assert.match(ignoreFile, /^firebase-config\.example\.js$/m);
 });

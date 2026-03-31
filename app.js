@@ -56,7 +56,6 @@ const googleLogin = document.getElementById("google-login");
 const googleLogout = document.getElementById("google-logout");
 const authStatus = document.getElementById("auth-status");
 const syncStatus = document.getElementById("sync-status");
-const dataStatus = document.getElementById("data-status");
 const keywordInput = document.getElementById("keyword-input");
 const addKeywordButton = document.getElementById("add-keyword");
 const keywordList = document.getElementById("keyword-list");
@@ -614,8 +613,7 @@ function renderDetailModal() {
     detailTitle.textContent = "";
     detailContent.innerHTML = "";
     if (detailHeaderActions) {
-      detailHeaderActions.innerHTML = '<button class="detail-header-link" type="button" data-close-detail>닫기</button>';
-      detailHeaderActions.querySelector("[data-close-detail]")?.addEventListener("click", closeDealDetail);
+      detailHeaderActions.innerHTML = "";
     }
     return;
   }
@@ -640,13 +638,8 @@ function renderDetailModal() {
 
   if (detailHeaderActions) {
     detailHeaderActions.innerHTML = `
-      ${originalUrl ? `<a href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" class="detail-header-link">원본글</a>
-      <span class="detail-header-divider" aria-hidden="true">|</span>` : ""}
-      <button class="detail-header-link" type="button" data-close-detail>닫기</button>
+      ${originalUrl ? `<a href="${escapeHtml(originalUrl)}" target="_blank" rel="noreferrer" class="detail-header-link">원본글</a>` : ""}
     `;
-    detailHeaderActions.querySelectorAll("[data-close-detail]").forEach((button) => {
-      button.addEventListener("click", closeDealDetail);
-    });
   }
 
   detailContent.innerHTML = `
@@ -763,12 +756,9 @@ function maybeNotifyDeals() {
 }
 
 function renderDataStatus() {
-  const okCount = state.compliance.filter((item) => item.status === "ok").length;
-  const failCount = state.compliance.filter((item) => item.status !== "ok").length;
   if (syncStatus) {
     syncStatus.textContent = `마지막 핫딜 업데이트: ${formatGeneratedAt(state.generatedAt)}`;
   }
-  dataStatus.textContent = `최근 딜 ${deals.length}건 · 소스 상태 성공 ${okCount} / 실패 ${failCount} · 알림 키워드 ${state.alertKeywords.length}개`;
 }
 
 function renderBookmarks() {

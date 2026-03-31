@@ -121,6 +121,12 @@ h1 {
   line-height: 1;
 }
 
+h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  line-height: 1.12;
+}
+
 .brand-link {
   border: 0;
   background: transparent;
@@ -377,12 +383,12 @@ select {
 .tabs button {
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.62rem 1rem;
+  padding: 0.72rem 1.12rem;
   background: var(--surface);
   cursor: pointer;
   white-space: nowrap;
   color: var(--ink);
-  font-size: 1.02rem;
+  font-size: 1.14rem;
 }
 
 .tabs button.active {
@@ -543,10 +549,6 @@ select {
   color: var(--muted);
 }
 
-#data-status {
-  margin: 0.3rem 0 0.5rem;
-}
-
 .footer {
   padding: 0.7rem 0 2rem;
   color: var(--muted);
@@ -606,7 +608,7 @@ select {
 
 .deal-detail-header h2 {
   margin: 0.3rem 0 0;
-  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.2rem);
   line-height: 1.22;
   word-break: keep-all;
   overflow-wrap: anywhere;

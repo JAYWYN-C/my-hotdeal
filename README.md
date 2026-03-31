@@ -3,8 +3,9 @@
 정적 웹 + GitHub Actions 기반 자취생 절약 대시보드입니다.
 
 ## 링크
-- 서비스: https://jaywyn-c.github.io/my-hotdeal/
+- 서비스: https://jachwi-hotdeal.vercel.app/
 - 저장소: https://github.com/JAYWYN-C/my-hotdeal
+- 기존 GitHub Pages 주소: https://jaywyn-c.github.io/my-hotdeal/
 
 ## 핵심 기능
 - 자취생용 카테고리: 전체, 야채·과일, 냉동식품, 디저트, 기타 식품, 생활용품, 청소용품, 여행, 상품권, 게임, 전자기기, 해외핫딜, 할인페스타
@@ -31,12 +32,15 @@
 - 2026-03-30 기준 비활성 소스: 퀘이사존(`HTTP 403`), 아카라이브(`Cloudflare challenge 403`), 클리앙(`HTTP 403`)
 
 ## 배포
-- 워크플로: `.github/workflows/deploy-pages.yml`
-- `main` 푸시 시 자동 배포
+- 현재 운영 주소: `https://jachwi-hotdeal.vercel.app/`
+- 수동 배포: `npx --yes vercel deploy --prod --scope 20220363-7579s-projects`
+- GitHub Pages 워크플로: `.github/workflows/deploy-pages.yml`
+- GitHub 저장소 자동 연결은 아직 미완료
+  - Vercel 계정에 GitHub Login Connection을 추가해야 `my-hotdeal` 저장소와 자동 배포 연결 가능
 
 ## 커스텀 도메인(선택)
-- 현재는 기본 Pages 주소(`jaywyn-c.github.io/my-hotdeal`) 사용
-- 나중에 본인 도메인이 생기면 `CNAME` 파일 추가 후 연결
+- 현재는 Vercel 기본 주소(`jachwi-hotdeal.vercel.app`) 사용
+- 나중에 본인 도메인이 생기면 Vercel Domains에서 연결 가능
 
 ## Firebase 설정
 1. `firebase-config.js`에 실제 Firebase 설정값 입력
@@ -44,6 +48,7 @@
 3. Firestore 생성
 4. `userPreferences/{uid}` 문서에 `alertKeywords`, `emailAlertsEnabled`, `email` 필드가 저장되도록 로그인 흐름 사용
 5. Firebase Console > Authentication > Settings > Authorized domains에 `jaywyn-c.github.io`와 `localhost` 추가
+6. Vercel 주소를 쓸 경우 `jachwi-hotdeal.vercel.app`도 Authorized domains에 추가
 
 예시:
 ```js

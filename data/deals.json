@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T17:46:30.938Z",
+  "generatedAt": "2026-04-01T18:52:13.550Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -86,7 +86,7 @@
       "id": 2,
       "title": "[루리웹] Depths Of Horror: Mushroom Day (무료)",
       "productName": "Depths Of Horror: Mushroom Day (무료)",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -98,8 +98,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "Depths Of Horror: Mushroom Day (무료) 특가입니다. 무료.",
       "summaryPoints": [
         "배송: 무료"
@@ -757,13 +759,13 @@
     },
     {
       "id": 25,
-      "title": "[롯데온] 25년 햅쌀 드림 향진주 쌀 10kg 단일품종 당일도정",
-      "productName": "25년 햅쌀 드림 향진주 쌀 10kg 단일품종 당일도정",
-      "category": "food-other",
+      "title": "[지마켓] 대건명가 돼지국밥 630g 5팩",
+      "productName": "대건명가 돼지국밥 630g 5팩",
+      "category": "meat",
       "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 28920,
-      "priceText": "28,920원",
+      "platform": "지마켓",
+      "price": 20830,
+      "priceText": "20,830원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-03-31T15:00:00.000Z",
@@ -775,15 +777,15 @@
         "식품"
       ],
       "sourceCategory": "",
-      "summary": "25년 햅쌀 드림 향진주 쌀 10kg 단일품종 당일도정 특가입니다. 롯데온 기준 28,920원, 무료.",
+      "summary": "대건명가 돼지국밥 630g 5팩 특가입니다. 지마켓 기준 20,830원, 무료.",
       "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 28,920원",
+        "플랫폼: 지마켓",
+        "가격: 20,830원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693550",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693550&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjU3NDI0MDgwMw==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693550"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693733",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693733&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDQ5MjUxNDk1Mg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693733"
     },
     {
       "id": 26,
@@ -1225,32 +1227,6 @@
     },
     {
       "id": 42,
-      "title": "[루리웹] 신한 기프트샵 4월 럭키박스",
-      "productName": "신한 기프트샵 4월 럭키박스",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-03-31T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
-      "summary": "신한 기프트샵 4월 럭키박스 특가입니다.",
-      "summaryPoints": [],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/102951?",
-      "purchaseUrl": "",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/102951?"
-    },
-    {
-      "id": 43,
       "title": "[알리] 프란다스 접이식 캠핑 의자 1+1 26,912원",
       "productName": "프란다스 접이식 캠핑 의자 1+1 26,912원",
       "category": "overseas",
@@ -1277,7 +1253,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102967?"
     },
     {
-      "id": 44,
+      "id": 43,
       "title": "[네이버] 구글플레이 기프트코드9%(다양/무료)",
       "productName": "구글플레이 기프트코드9%(다양/무료)",
       "category": "voucher",
@@ -1305,7 +1281,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102964?"
     },
     {
-      "id": 45,
+      "id": 44,
       "title": "[쿠팡] BSN 신타6 아이솔레이트 바닐라맛,초코맛 최저가84,020/8...",
       "productName": "BSN 신타6 아이솔레이트 바닐라맛,초코맛 최저가84,020/8...",
       "category": "dessert",
@@ -1333,7 +1309,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102962?"
     },
     {
-      "id": 46,
+      "id": 45,
       "title": "[롯데온] 빙그레 더단백 드링크 7종 250ml 42팩 (46,760원/...",
       "productName": "빙그레 더단백 드링크 7종 250ml 42팩 (46,760원/...",
       "category": "festa",
@@ -1362,7 +1338,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102961?"
     },
     {
-      "id": 47,
+      "id": 46,
       "title": "[g마켓] 스위치2 포코피아 88,000원/3,000원",
       "productName": "스위치2 포코피아 88,000원/3,000원",
       "category": "game",
@@ -1389,7 +1365,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102960?"
     },
     {
-      "id": 48,
+      "id": 47,
       "title": "[알리] 데이터 프로그 Y5A 스위치2 및 윈도우용 (30.98달러)",
       "productName": "데이터 프로그 Y5A 스위치2 및 윈도우용 (30.98달러)",
       "category": "overseas",
@@ -1415,7 +1391,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102959?"
     },
     {
-      "id": 49,
+      "id": 48,
       "title": "[루리웹] 포코피아 (88,000/무료)",
       "productName": "포코피아 (88,000/무료)",
       "category": "game",
@@ -1441,7 +1417,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102958?"
     },
     {
-      "id": 50,
+      "id": 49,
       "title": "[알리] 오리코 USB 클립허브 ($9.34/무료)",
       "productName": "오리코 USB 클립허브 ($9.34/무료)",
       "category": "overseas",
@@ -1468,7 +1444,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102957?"
     },
     {
-      "id": 51,
+      "id": 50,
       "title": "[루리웹] 포코피아 (88,000 / 무배)",
       "productName": "포코피아 (88,000 / 무배)",
       "category": "game",
@@ -1492,6 +1468,32 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/102956?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fm.e-himart.co.kr%2Fapp%2Fgoods%2FgoodsDetail%3FgoodsNo%3D0062809245%26gtmPos%3D%25ED%2586%25B5%25ED%2595%25A9%25EA%25B2%2580%25EC%2583%2589-%25EA%25B2%2580%25EC%2583%2589%25EA%25B3%25BC%25EC%25A0%2595%26jsClck%3DY&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102956?"
+    },
+    {
+      "id": 51,
+      "title": "[루리웹] 스위치2 마카셋 단품 (688,000 / 무배)",
+      "productName": "스위치2 마카셋 단품 (688,000 / 무배)",
+      "category": "game",
+      "source": "루리웹",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-03-31T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "게임H/W",
+      "summary": "스위치2 마카셋 단품 (688,000 / 무배) 특가입니다. 무배.",
+      "summaryPoints": [
+        "배송: 무배"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/102955?",
+      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fwww.e-himart.co.kr%2Fapp%2Fgoods%2FgoodsDetail%3FgoodsNo%3D0049455367&bbs=1020",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/102955?"
     },
     {
       "id": 52,

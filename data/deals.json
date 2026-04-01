@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T19:56:47.512Z",
+  "generatedAt": "2026-04-01T20:39:59.738Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,8 +56,36 @@
   "deals": [
     {
       "id": 1,
-      "title": "[네이버쇼핑] 사세 매콤 점보 닭다리 1.3kg",
-      "productName": "사세 매콤 점보 닭다리 1.3kg",
+      "title": "[알리뽐뿌] 롯데 펩시콜라 제로슈거 라임 업소용 245ml x 16캔",
+      "productName": "롯데 펩시콜라 제로슈거 라임 업소용 245ml x 16캔",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 9173,
+      "priceText": "9,173원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-01T20:31:10.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "롯데 펩시콜라 제로슈거 라임 업소용 245ml x 16캔 특가입니다. 알리뽐뿌 기준 9,173원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 9,173원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85948",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_85948&target=aHR0cHM6Ly9hLmFsaWV4cHJlc3MuY29tL19jM3JCZ2pzTg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85948"
+    },
+    {
+      "id": 2,
+      "title": "[네이버쇼핑] 사세 매콤 점보 닭다리 1.3kg (12,000원/무료)",
+      "productName": "사세 매콤 점보 닭다리 1.3kg (12,000원/무료)",
       "category": "meat",
       "source": "루리웹",
       "platform": "네이버쇼핑",
@@ -74,7 +102,7 @@
         "식품"
       ],
       "sourceCategory": "음식",
-      "summary": "사세 매콤 점보 닭다리 1.3kg 특가입니다. 네이버쇼핑 기준 12,000원, 무료.",
+      "summary": "사세 매콤 점보 닭다리 1.3kg (12,000원/무료) 특가입니다. 네이버쇼핑 기준 12,000원, 무료.",
       "summaryPoints": [
         "플랫폼: 네이버쇼핑",
         "가격: 12,000원",
@@ -85,7 +113,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102975?"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "[뽐뿌] Depths Of Horror: Mushroom Day",
       "productName": "Depths Of Horror: Mushroom Day",
       "category": "festa",
@@ -113,7 +141,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693820"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "[루리웹] Depths Of Horror: Mushroom Day (무료)",
       "productName": "Depths Of Horror: Mushroom Day (무료)",
       "category": "festa",
@@ -141,7 +169,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102974?"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "[루리웹] 고객 감사 외식 통합전 최대 50% 할인",
       "productName": "고객 감사 외식 통합전 최대 50% 할인",
       "category": "festa",
@@ -167,7 +195,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102973?"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "[옥션] 총각김치 2kg",
       "productName": "총각김치 2kg",
       "category": "festa",
@@ -197,7 +225,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693819"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "[쿠팡] 천하장사 더블링 뿌링치즈 파우치, 400g 4,480원",
       "productName": "천하장사 더블링 뿌링치즈 파우치, 400g 4,480원",
       "category": "dairy",
@@ -226,7 +254,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102969?"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "[옥션] 착한낙지 135g 6팩 + 비법소스 6팩",
       "productName": "착한낙지 135g 6팩 + 비법소스 6팩",
       "category": "meat",
@@ -256,7 +284,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693818"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "[옥션] 하남쭈꾸미 500g 5팩",
       "productName": "하남쭈꾸미 500g 5팩",
       "category": "festa",
@@ -286,7 +314,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693817"
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "[11번가] 백다다기 오이 4.5kg",
       "productName": "백다다기 오이 4.5kg",
       "category": "produce",
@@ -316,7 +344,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693816"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "[네이버] 화려한우 투뿔 육회200gx2팩 15920원 (체감가12500...",
       "productName": "화려한우 투뿔 육회200gx2팩 15920원 (체감가12500...",
       "category": "meat",
@@ -345,7 +373,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/102968?"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "[옥션] 햇양파,삼겹살,블루베리,당면,올리브오일,진라면,떡국떡,두유,미니멜츠,백년수산,돈까스,고래사,다진마늘",
       "productName": "햇양파,삼겹살,블루베리,당면,올리브오일,진라면,떡국떡,두유,미니멜츠,백년수산,돈까스,고래사,다진마늘",
       "category": "produce",
@@ -375,7 +403,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693815"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "[알리뽐뿌] 지능형 팬 장착 냉각 쿠션 카시트",
       "productName": "지능형 팬 장착 냉각 쿠션 카시트",
       "category": "overseas",
@@ -402,7 +430,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85947"
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "[네이버] (네멤) 무항생제 특란 30구",
       "productName": "(네멤) 무항생제 특란 30구",
       "category": "festa",
@@ -432,7 +460,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693814"
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "[뽐뿌] 산지직송 청정 황토밭 무안 양배추 2kg (크기랜덤발송) 3,850원 / 무료배송",
       "productName": "산지직송 청정 황토밭 무안 양배추 2kg (크기랜덤발송) 3,850원 / 무료배송",
       "category": "produce",
@@ -461,7 +489,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693813"
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "[토스] 아이스 군고구마 70g 10봉",
       "productName": "아이스 군고구마 70g 10봉",
       "category": "produce",
@@ -491,7 +519,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693812"
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "[뽐뿌] 자포니카 민물장어, 초벌장어, 현대수산김",
       "productName": "자포니카 민물장어, 초벌장어, 현대수산김",
       "category": "meat",
@@ -520,7 +548,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693811"
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "[네이버] 바나바잎 식후혈당 영양제 임박특가 3박스",
       "productName": "바나바잎 식후혈당 영양제 임박특가 3박스",
       "category": "festa",
@@ -550,7 +578,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693810"
     },
     {
-      "id": 18,
+      "id": 19,
       "title": "[G마켓] 1+1 탁상용 BLDC선풍기 3단풍속 회전헤드 4000mah",
       "productName": "1+1 탁상용 BLDC선풍기 3단풍속 회전헤드 4000mah",
       "category": "meat",
@@ -580,7 +608,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693809"
     },
     {
-      "id": 19,
+      "id": 20,
       "title": "[네이버] 올인원 멀티비타민 미네랄 30정 3박스, 3개월분",
       "productName": "올인원 멀티비타민 미네랄 30정 3박스, 3개월분",
       "category": "festa",
@@ -610,7 +638,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693808"
     },
     {
-      "id": 20,
+      "id": 21,
       "title": "[네이버] 투쁠 한우 육회 200g + 200g + 간장소스 1봉",
       "productName": "투쁠 한우 육회 200g + 200g + 간장소스 1봉",
       "category": "meat",
@@ -640,7 +668,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693807"
     },
     {
-      "id": 21,
+      "id": 22,
       "title": "[뽐뿌] 대구 동인동 매운 갈비찜 1-2인분 800g",
       "productName": "대구 동인동 매운 갈비찜 1-2인분 800g",
       "category": "meat",
@@ -669,7 +697,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693806"
     },
     {
-      "id": 22,
+      "id": 23,
       "title": "[네이버] 매콤점보닭다리 1.3kg",
       "productName": "매콤점보닭다리 1.3kg",
       "category": "meat",
@@ -699,7 +727,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693805"
     },
     {
-      "id": 23,
+      "id": 24,
       "title": "[네이버] 한우 1++ 육회 400g + 달콤소스",
       "productName": "한우 1++ 육회 400g + 달콤소스",
       "category": "meat",
@@ -729,7 +757,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693804"
     },
     {
-      "id": 24,
+      "id": 25,
       "title": "[G마켓] 달구벌 돼지 생막창 500g (소스100g포함) 2봉 총1kg 9,980원",
       "productName": "달구벌 돼지 생막창 500g (소스100g포함) 2봉 총1kg 9,980원",
       "category": "meat",
@@ -759,7 +787,7 @@
       "url": "https://www.dogdrip.net/hotdeal/693909445?sort_index=popular&page=1"
     },
     {
-      "id": 25,
+      "id": 26,
       "title": "[네이버쇼핑] 푸드페스타 쿠폰 매일 00시, 10시 선착순 발급! 0원",
       "productName": "푸드페스타 쿠폰 매일 00시, 10시 선착순 발급! 0원",
       "category": "food-other",
@@ -788,15 +816,15 @@
       "url": "https://www.dogdrip.net/hotdeal/693901458?sort_index=popular&page=1"
     },
     {
-      "id": 26,
-      "title": "[지마켓] 폴햄 남녀 맨투맨 5종 택1",
-      "productName": "폴햄 남녀 맨투맨 5종 택1",
+      "id": 27,
+      "title": "[롯데온] 박시한 쉬폰블라우스 1+1 2장",
+      "productName": "박시한 쉬폰블라우스 1+1 2장",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 14190,
-      "priceText": "14,190원",
-      "shipping": "무료",
+      "platform": "롯데온",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
       "discount": 0,
       "createdAt": "2026-03-31T15:00:00.000Z",
       "deadlineAt": "",
@@ -807,18 +835,17 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "폴햄 남녀 맨투맨 5종 택1 특가입니다. 지마켓 기준 14,190원, 무료.",
+      "summary": "박시한 쉬폰블라우스 1+1 2장 특가입니다. 롯데온 기준 무배.",
       "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 14,190원",
-        "배송: 무료"
+        "플랫폼: 롯데온",
+        "배송: 무배"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693719",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693719&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDcxMDA4OTkwMA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693719"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693785",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_693785&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjYzNzU0Nzc0OD9lbnRyeVBvaW50PWJv&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=693785"
     },
     {
-      "id": 27,
+      "id": 28,
       "title": "[알리뽐뿌] Baseus LED 책상 램프",
       "productName": "Baseus LED 책상 램프",
       "category": "overseas",
@@ -845,7 +872,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85946"
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "[알리뽐뿌] 커널스 씨네마 팝콘 카라멜맛 75g x 8개입 1박스",
       "productName": "커널스 씨네마 팝콘 카라멜맛 75g x 8개입 1박스",
       "category": "overseas",
@@ -873,7 +900,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85945"
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "[알리뽐뿌] 시원밥상 바삭한 고추부각 300g",
       "productName": "시원밥상 바삭한 고추부각 300g",
       "category": "overseas",
@@ -901,7 +928,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85943"
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "[알리뽐뿌] 제이씨현 UDEA IPS모니터 24\"(87,120원), 27\"(94,245원)/무료",
       "productName": "제이씨현 UDEA IPS모니터 24\"(87,120원), 27\"(94,245원)/무료",
       "category": "overseas",
@@ -929,7 +956,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85942"
     },
     {
-      "id": 31,
+      "id": 32,
       "title": "[알리뽐뿌] Waterplus 구강세정기($18), 쉼표365 불소치약 250gx8(17,180원), 이중미...",
       "productName": "Waterplus 구강세정기($18), 쉼표365 불소치약 250gx8(17,180원), 이중미...",
       "category": "overseas",
@@ -956,7 +983,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85940"
     },
     {
-      "id": 32,
+      "id": 33,
       "title": "[알리뽐뿌] 수제고구마스틱 1kg(8,792원), 마블링소고기1kg(12,143원)외/무료",
       "productName": "수제고구마스틱 1kg(8,792원), 마블링소고기1kg(12,143원)외/무료",
       "category": "overseas",
@@ -984,7 +1011,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85937"
     },
     {
-      "id": 33,
+      "id": 34,
       "title": "[알리뽐뿌] 아메리칸스탠다드 AI 아쿠아 퓨어히트2 비데(21만원/무배) 아카라 스마트 도어...",
       "productName": "아메리칸스탠다드 AI 아쿠아 퓨어히트2 비데(21만원/무배) 아카라 스마트 도어...",
       "category": "overseas",
@@ -1011,7 +1038,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85936"
     },
     {
-      "id": 34,
+      "id": 35,
       "title": "[알리뽐뿌] Alpicool NLS 차량용 캠핑용 냉장고 듀얼 존",
       "productName": "Alpicool NLS 차량용 캠핑용 냉장고 듀얼 존",
       "category": "overseas",
@@ -1038,7 +1065,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85935"
     },
     {
-      "id": 35,
+      "id": 36,
       "title": "[알리뽐뿌] 동원 리챔 200g 10캔",
       "productName": "동원 리챔 200g 10캔",
       "category": "overseas",
@@ -1066,7 +1093,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85934"
     },
     {
-      "id": 36,
+      "id": 37,
       "title": "[알리뽐뿌] 12인치 업소용 대형 선풍기(2.6만), 리모컨 벽걸이 선풍기 업소용(2.6만), ...",
       "productName": "12인치 업소용 대형 선풍기(2.6만), 리모컨 벽걸이 선풍기 업소용(2.6만), ...",
       "category": "overseas",
@@ -1092,7 +1119,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85933"
     },
     {
-      "id": 37,
+      "id": 38,
       "title": "[알리뽐뿌] DOCO 음이온 헤어 드라이어",
       "productName": "DOCO 음이온 헤어 드라이어",
       "category": "overseas",
@@ -1117,33 +1144,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85932",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_85932&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDc1MzI3MjI3OTAuaHRtbA==&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85932"
-    },
-    {
-      "id": 38,
-      "title": "[알리뽐뿌] 미국산 초이스등급 소갈비살 5팩 26,962원",
-      "productName": "미국산 초이스등급 소갈비살 5팩 26,962원",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 26962,
-      "priceText": "26,962원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-03-31T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "미국산 초이스등급 소갈비살 5팩 26,962원 특가입니다. 알리뽐뿌 기준 26,962원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 26,962원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85931",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_85931&target=aHR0cHM6Ly9hLmFsaWV4cHJlc3MuY29tL19jM3EwNGltRA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=85931"
     },
     {
       "id": 39,

@@ -34,7 +34,7 @@
 
 ## 배포
 - 현재 운영 주소: `https://jachwi-hotdeal.vercel.app/`
-- 수동 배포: `npx --yes vercel deploy --prod --scope 20220363-7579s-projects`
+- 수동 배포: `npx --yes vercel deploy --prod`
 - GitHub Pages 워크플로: `.github/workflows/deploy-pages.yml`
 - GitHub 저장소 자동 연결은 아직 미완료
   - Vercel 계정에 GitHub Login Connection을 추가해야 `my-hotdeal` 저장소와 자동 배포 연결 가능

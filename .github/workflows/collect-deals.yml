@@ -95,7 +95,7 @@ jobs:
           VERCEL_PROJECT_ID: prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga
         run: |
           if [ -n "$VERCEL_TOKEN" ]; then
-            npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN" --scope 20220363-7579s-projects
+            npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN"
             exit 0
           fi
 

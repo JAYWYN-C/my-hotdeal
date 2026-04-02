@@ -55,3 +55,17 @@ jobs:
 
             git push origin HEAD:main
           fi
+
+      - name: Trigger Vercel deployment hook
+        if: steps.data_changes.outputs.updated == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL is not set. Skipping deploy hook trigger."
+            exit 0
+          fi
+
+          # Trigger a fresh deployment so latest data/deals.json is visible on the site.
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
+          echo "Vercel deploy hook triggered."

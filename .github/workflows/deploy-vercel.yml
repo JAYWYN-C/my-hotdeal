@@ -1,0 +1,70 @@
+name: deploy-vercel
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/deals.json"
+      - "api/**"
+      - "lib/**"
+      - "index.html"
+      - "app.js"
+      - "styles.css"
+      - "vercel.json"
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Resolve Vercel project IDs
+        env:
+          VERCEL_ORG_ID_INPUT: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID_INPUT: ${{ vars.VERCEL_PROJECT_ID }}
+        run: |
+          ORG_ID="$VERCEL_ORG_ID_INPUT"
+          PROJECT_ID="$VERCEL_PROJECT_ID_INPUT"
+
+          # Fallback to linked project metadata when repo vars are not configured.
+          if [ -z "$ORG_ID" ] || [ -z "$PROJECT_ID" ]; then
+            if [ -f .vercel/project.json ]; then
+              ORG_ID=$(jq -r '.orgId' .vercel/project.json)
+              PROJECT_ID=$(jq -r '.projectId' .vercel/project.json)
+            fi
+          fi
+
+          if [ -z "$ORG_ID" ] || [ "$ORG_ID" = "null" ] || [ -z "$PROJECT_ID" ] || [ "$PROJECT_ID" = "null" ]; then
+            echo "Missing Vercel project IDs."
+            echo "Set repo variables VERCEL_ORG_ID / VERCEL_PROJECT_ID or add .vercel/project.json"
+            exit 1
+          fi
+
+          echo "VERCEL_ORG_ID=$ORG_ID" >> "$GITHUB_ENV"
+          echo "VERCEL_PROJECT_ID=$PROJECT_ID" >> "$GITHUB_ENV"
+
+      - name: Deploy to Vercel Production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "Missing GitHub Actions secret: VERCEL_TOKEN"
+            echo "Add it in repo settings to enable automatic production deployment."
+            exit 1
+          fi
+
+          npm i -g vercel@latest
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"

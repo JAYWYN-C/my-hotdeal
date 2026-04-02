@@ -39,6 +39,7 @@ const state = {
   syncStatus: "로컬 모드",
   authMode: "loading",
   selectedDealId: null,
+  customDeals: [],
   visitorStats: {
     today: null,
     total: null,

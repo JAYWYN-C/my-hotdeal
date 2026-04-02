@@ -141,6 +141,9 @@ test("styles use the approved resident dashboard palette", async () => {
   assert.match(css, /\.tag-platform\s*\{[\s\S]*background:\s*var\(--accent-2\)/i);
   assert.match(css, /\.tag-source\s*\{[\s\S]*color:\s*var\(--muted\)/i);
   assert.match(css, /@media\s*\(max-width:\s*960px\)\s*\{[\s\S]*\.hero-main\s*\{[\s\S]*grid-template-columns:\s*1fr;/s);
+  assert.match(css, /@media\s*\(max-width:\s*760px\)\s*\{[\s\S]*\.hero-actions\s*\{[\s\S]*display:\s*grid;[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\);/s);
+  assert.match(css, /@media\s*\(max-width:\s*760px\)\s*\{[\s\S]*\.hero-actions\s+\.btn\s*\{[\s\S]*width:\s*100%;[\s\S]*min-width:\s*0;/s);
+  assert.match(css, /@media\s*\(max-width:\s*760px\)\s*\{[\s\S]*\.menu-wrap\s*\{[\s\S]*grid-column:\s*1 \/ -1;[\s\S]*width:\s*100%;/s);
 });
 
 test("pages deploy workflow writes firebase-config.js from repository variables", async () => {

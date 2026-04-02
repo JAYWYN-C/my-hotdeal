@@ -996,15 +996,21 @@ h3,
     justify-content: stretch;
   }
 
-  .hero-actions .btn,
-  .menu-wrap,
-  .menu-wrap .btn {
+  .hero-actions .btn {
     width: 100%;
     min-width: 0;
   }
 
   .menu-wrap {
     display: block;
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .menu-wrap .btn {
+    width: 100%;
+    min-width: 0;
   }
 
   .header-menu {

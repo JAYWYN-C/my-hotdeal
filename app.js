@@ -62,10 +62,6 @@ const pageStatus = document.getElementById("page-status");
 const tagCloud = document.getElementById("event-tags");
 const bookmarkList = document.getElementById("bookmark-list");
 const toggleAlert = document.getElementById("toggle-alert");
-const googleLogin = document.getElementById("google-login");
-const emailLogin = document.getElementById("email-login");
-const emailSignup = document.getElementById("email-signup");
-const googleLogout = document.getElementById("google-logout");
 const authStatus = document.getElementById("auth-status");
 const syncStatus = document.getElementById("sync-status");
 const keywordInput = document.getElementById("keyword-input");
@@ -301,45 +297,7 @@ function queueCloudSync() {
 }
 
 function renderAuthStatus() {
-  if (state.authMode === "missing-config") {
-    authStatus.textContent = "Google 로그인 설정 필요";
-    googleLogin.disabled = true;
-    googleLogout.hidden = true;
-    googleLogin.hidden = false;
-    return;
-  }
-
-  if (state.authMode === "error") {
-    authStatus.textContent = "Google 로그인 연결 오류";
-    googleLogin.disabled = true;
-    googleLogout.hidden = true;
-    googleLogin.hidden = false;
-    return;
-  }
-
-  if (!authClient) {
-    authStatus.textContent = "비회원으로 둘러보는 중";
-    googleLogin.disabled = true;
-    googleLogout.hidden = true;
-    googleLogin.hidden = false;
-    return;
-  }
-
-  if (state.user) {
-    const label = state.user.displayName || state.user.email || "로그인 사용자";
-    authStatus.textContent = `${label} 계정으로 이용 중`;
-    googleLogin.disabled = true;
-    googleLogout.disabled = false;
-    googleLogin.hidden = true;
-    googleLogout.hidden = false;
-    return;
-  }
-
-  authStatus.textContent = "비회원으로 둘러보는 중";
-  googleLogin.disabled = false;
-  googleLogout.disabled = true;
-  googleLogin.hidden = false;
-  googleLogout.hidden = true;
+  authStatus.textContent = "로그인 기능은 사용하지 않습니다.";
 }
 
 function renderAlertToggle() {
@@ -1010,27 +968,6 @@ function bindEvents() {
     maybeNotifyDeals();
   });
 
-  googleLogin.addEventListener("click", async () => {
-    if (!authClient) {
-      return;
-    }
-    try {
-      await authClient.signIn();
-    } catch (error) {
-      alert(`로그인 실패: ${error.message}`);
-    }
-  });
-
-  googleLogout.addEventListener("click", async () => {
-    if (!authClient) {
-      return;
-    }
-    try {
-      await authClient.signOut();
-    } catch (error) {
-      alert(`로그아웃 실패: ${error.message}`);
-    }
-  });
 
   if (detailModal) {
     detailModal.querySelectorAll("[data-close-detail]").forEach((button) => {

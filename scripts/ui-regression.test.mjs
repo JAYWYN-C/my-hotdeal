@@ -33,12 +33,7 @@ test("app exposes a home reset handler and compact original post action", async 
   assert.doesNotMatch(js, /원본글 보러가기/);
 });
 
-test("app surfaces missing Google auth config clearly", async () => {
-  const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
-  assert.match(js, /Google 로그인 설정 필요/);
-});
-
-test("header includes top-right home login and menu controls", async () => {
+test("header includes only home and menu controls", async () => {
   const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf-8");
   assert.match(html, /<title>자취핫딜\.zip<\/title>/);
   assert.match(html, />자취핫딜\.zip</);
@@ -49,7 +44,6 @@ test("header includes top-right home login and menu controls", async () => {
   assert.match(html, /자세히 보기에서 구매 링크와 원본글을 바로 확인하세요\./);
   assert.doesNotMatch(html, /넓은 화면에서는 더 많이 보고, 모바일에서는 자연스럽게 줄어드는 밀도 높은 레이아웃으로 정리했습니다\./);
   assert.match(html, /id="home-button"/);
-  assert.match(html, /id="google-login"/);
   assert.match(html, /id="menu-button"/);
   assert.match(html, /id="header-menu"/);
   assert.match(html, /data-menu-target="alerts"/);
@@ -62,6 +56,10 @@ test("header includes top-right home login and menu controls", async () => {
   assert.doesNotMatch(html, /최근 딜 .*소스 상태 성공 .*알림 키워드/);
   assert.match(html, /id="footer-visitor-today"/);
   assert.match(html, /id="footer-visitor-total"/);
+  assert.doesNotMatch(html, /id="google-login"/);
+  assert.doesNotMatch(html, /id="email-login"/);
+  assert.doesNotMatch(html, /id="email-signup"/);
+  assert.doesNotMatch(html, /id="google-logout"/);
 });
 
 test("detail header actions stay on one row", async () => {
@@ -152,12 +150,10 @@ test("collect workflow can redeploy refreshed data to vercel", async () => {
   assert.match(workflow, /git add data\/deals\.json/);
   assert.match(workflow, /git commit -m "chore: update deals data"/);
   assert.match(workflow, /git push origin HEAD:main/);
-  assert.match(workflow, /VERCEL_TOKEN/);
-  assert.match(workflow, /VERCEL_ORG_ID/);
-  assert.match(workflow, /VERCEL_PROJECT_ID/);
-  assert.match(workflow, /npx --yes vercel deploy --prod --yes --token "\$VERCEL_TOKEN"/);
   assert.match(workflow, /steps\.data_changes\.outputs\.updated == 'true'/);
   assert.doesNotMatch(workflow, /stefanzweifel\/git-auto-commit-action@v5/);
+  assert.doesNotMatch(workflow, /vercel deploy/);
+  assert.doesNotMatch(workflow, /VERCEL_TOKEN/);
 });
 
 test("vercel deploy ignores repository-only files", async () => {
@@ -182,10 +178,10 @@ test("footer visitor counters use shared countapi keys and right-aligned layout"
   assert.doesNotMatch(js, /https:\/\/api\.countapi\.xyz/);
   assert.match(js, /hotdeal-visitor-total-counted/);
   assert.match(js, /hotdeal-visitor-day/);
-  assert.match(api, /require\("@vercel\/functions"\)/);
-  assert.match(api, /getCache\(\)/);
-  assert.match(api, /cache\.set\(/);
-  assert.match(api, /cache\.get\(/);
+  assert.match(api, /const COUNT_API_BASE = "https:\/\/api\.countapi\.xyz";/);
+  assert.match(api, /module\.exports = async \(req, res\) => \{/);
+  assert.match(api, /setCommonHeaders\(res\)/);
+  assert.match(api, /sanitizeHost\(value\)/);
   assert.match(api, /scope === "today"/);
   assert.match(api, /scope === "total"/);
   assert.match(api, /Access-Control-Allow-Origin/);

@@ -25,24 +25,6 @@ jobs:
       - name: Collect deals
         run: node scripts/collect-deals.mjs
 
-      - name: Capture previous deals snapshot
-        run: |
-          if git cat-file -e HEAD:data/deals.json 2>/dev/null; then
-            git show HEAD:data/deals.json > /tmp/previous-deals.json
-          else
-            printf '{"generatedAt":null,"deals":[]}\n' > /tmp/previous-deals.json
-          fi
-
-      - name: Send keyword alerts
-        env:
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          FIREBASE_CLIENT_EMAIL: ${{ secrets.FIREBASE_CLIENT_EMAIL }}
-          FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
-          ALERT_FROM_NAME: 자취핫딜.zip
-        run: node scripts/send-keyword-alerts.mjs --previous /tmp/previous-deals.json --current data/deals.json
-
       - name: Detect updated deals data
         id: data_changes
         run: |
@@ -65,50 +47,3 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-
-      - name: Write Firebase web config for Vercel
-        if: steps.data_changes.outputs.updated == 'true'
-        run: |
-          cat > firebase-config.js <<EOF
-          window.FIREBASE_CONFIG = {
-            apiKey: "${{ vars.FIREBASE_API_KEY }}",
-            authDomain: "${{ vars.FIREBASE_AUTH_DOMAIN }}",
-            projectId: "${{ vars.FIREBASE_PROJECT_ID }}",
-            appId: "${{ vars.FIREBASE_APP_ID }}"
-          };
-          EOF
-
-      - name: Restore Vercel project link
-        if: steps.data_changes.outputs.updated == 'true'
-        run: |
-          mkdir -p .vercel
-          cat > .vercel/project.json <<EOF
-          {"projectId":"prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga","orgId":"team_syq0wmFzcBPUevK11MtmWKJj","projectName":"jachwi-hotdeal"}
-          EOF
-
-      - name: Deploy refreshed site to Vercel
-        if: steps.data_changes.outputs.updated == 'true'
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
-          VERCEL_ORG_ID: team_syq0wmFzcBPUevK11MtmWKJj
-          VERCEL_PROJECT_ID: prj_EIypHTz0vQ0q2SPgbrBq0gHWvoga
-        run: |
-          if [ -n "$VERCEL_TOKEN" ]; then
-            if ! npx --yes vercel whoami --token "$VERCEL_TOKEN" >/tmp/vercel-whoami.txt 2>&1; then
-              echo "Skipping Vercel deploy because VERCEL_TOKEN is invalid or expired."
-              cat /tmp/vercel-whoami.txt
-              exit 0
-            fi
-
-            npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN"
-            exit 0
-          fi
-
-          if [ -n "$VERCEL_DEPLOY_HOOK_URL" ]; then
-            curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
-            exit 0
-          fi
-
-          echo "Skipping Vercel deploy because no deploy credentials are configured."
-          exit 0

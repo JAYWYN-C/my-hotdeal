@@ -1075,3 +1075,13 @@ h3,
     margin-left: 0;
   }
 }
+
+@media (max-width: 520px) {
+  .hero-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-wrap {
+    grid-column: auto;
+  }
+}

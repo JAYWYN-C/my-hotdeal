@@ -1,3 +1,26 @@
 firebase-config.js
 !api/firebase-config.js
 .vercel
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Credential files
+*credentials*.json
+*secrets*.json
+firebase-credentials.json
+firebase-config.*.json
+
+# IDE secrets
+.vscode/settings.local.json
+
+# Temporary/temporary credential files
+.tmp_*
+*.tmp.json
+*.bak
+*.backup

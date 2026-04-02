@@ -44,8 +44,10 @@ test("header includes only home and menu controls", async () => {
   assert.match(html, /자세히 보기에서 구매 링크와 원본글을 바로 확인하세요\./);
   assert.doesNotMatch(html, /넓은 화면에서는 더 많이 보고, 모바일에서는 자연스럽게 줄어드는 밀도 높은 레이아웃으로 정리했습니다\./);
   assert.match(html, /id="home-button"/);
+  assert.match(html, /id="register-deal-button"/);
   assert.match(html, /id="menu-button"/);
   assert.match(html, /id="header-menu"/);
+  assert.match(html, /data-menu-target="register"/);
   assert.match(html, /data-menu-target="alerts"/);
   assert.match(html, /data-menu-target="bookmarks"/);
   assert.match(html, /id="deal-pagination"/);
@@ -60,6 +62,8 @@ test("header includes only home and menu controls", async () => {
   assert.doesNotMatch(html, /id="email-login"/);
   assert.doesNotMatch(html, /id="email-signup"/);
   assert.doesNotMatch(html, /id="google-logout"/);
+  assert.match(html, /id="deal-register-modal"/);
+  assert.match(html, /id="deal-register-form"/);
 });
 
 test("detail header actions stay on one row", async () => {
@@ -76,13 +80,19 @@ test("deal list uses single-column pagination with 20 items per page", async () 
   const js = await fs.readFile(new URL("../app.js", import.meta.url), "utf-8");
   const css = await fs.readFile(new URL("../styles.css", import.meta.url), "utf-8");
   assert.match(js, /const DEALS_PER_PAGE = 20;/);
+  assert.match(js, /const CUSTOM_DEALS_STORAGE_KEY = "hotdeal-custom-deals";/);
   assert.match(js, /currentPage:\s*1/);
   assert.match(js, /function paginatedDeals\(/);
   assert.match(js, /const start = \(state\.currentPage - 1\) \* DEALS_PER_PAGE;/);
   assert.match(js, /state\.currentPage = 1;/);
   assert.match(js, /pageStatus\.textContent = `\$\{state\.currentPage\} \/ \$\{totalPages\}페이지`;/);
+  assert.match(js, /function openRegisterDealModal\(/);
+  assert.match(js, /function createCustomDealFromForm\(/);
+  assert.match(js, /state\.customDeals = loadStoredCustomDeals\(\);/);
   assert.match(css, /\.deal-list\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*1rem;/s);
   assert.match(css, /\.deal-pagination\s*\{[^}]*display:\s*flex;[^}]*justify-content:\s*center;/s);
+  assert.match(css, /\.deal-register-modal\s*\{[^}]*position:\s*fixed;[^}]*place-items:\s*center;/s);
+  assert.match(css, /\.register-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\);[^}]*gap:\s*0\.85rem;/s);
 });
 
 test("detail body uses a compact text layout instead of repeated info boxes", async () => {

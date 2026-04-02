@@ -1,6 +1,19 @@
 {
   "name": "hotdeal",
   "private": true,
+  "scripts": {
+    "test": "node scripts/ui-regression.test.mjs",
+    "test:watch": "node scripts/ui-regression.test.mjs --watch",
+    "security:audit": "bash scripts/security-audit.sh",
+    "security:check-deps": "node scripts/check-dependencies.js",
+    "security:validate-headers": "node scripts/validate-headers.js",
+    "security:all": "npm run security:audit && npm run security:check-deps && npm run security:validate-headers",
+    "security:setup-hooks": "bash scripts/setup-hooks.sh",
+    "security:check-secrets": "bash scripts/check-secrets.sh",
+    "prepare": "npm run security:setup-hooks 2>/dev/null || true",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix"
+  },
   "dependencies": {
     "@upstash/redis": "^1.37.0",
     "@vercel/functions": "^2.2.12"

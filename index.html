@@ -20,6 +20,7 @@
       <div class="hero-nav">
         <div class="hero-actions">
           <button id="home-button" class="btn btn-ghost" type="button">홈</button>
+          <button id="register-deal-button" class="btn btn-primary" type="button">직접 등록</button>
           <div class="menu-wrap">
             <button
               id="menu-button"
@@ -32,6 +33,7 @@
               메뉴
             </button>
             <div id="header-menu" class="header-menu" hidden>
+              <button type="button" data-menu-target="register">핫딜 직접 등록</button>
               <button type="button" data-menu-target="alerts">이메일 알림 설정</button>
               <button type="button" data-menu-target="bookmarks">스크랩 보기</button>
             </div>
@@ -177,6 +179,82 @@
           </div>
         </div>
         <div id="deal-detail-content" class="deal-detail-content"></div>
+      </section>
+    </div>
+
+    <div id="deal-register-modal" class="deal-register-modal" hidden>
+      <button class="deal-register-backdrop" type="button" data-close-register aria-label="직접 등록 닫기"></button>
+      <section class="deal-register-panel" role="dialog" aria-modal="true" aria-labelledby="deal-register-title">
+        <div class="deal-detail-header">
+          <div>
+            <p class="eyebrow">직접 등록</p>
+            <h2 id="deal-register-title">새 핫딜 추가</h2>
+          </div>
+          <div class="detail-header-actions">
+            <button class="btn btn-ghost" type="button" data-close-register>닫기</button>
+          </div>
+        </div>
+        <form id="deal-register-form" class="deal-register-form">
+          <div class="register-grid">
+            <label>
+              제목
+              <input id="register-title" name="title" type="text" placeholder="예: [쿠팡] 냉동삼겹살 특가" required />
+            </label>
+            <label>
+              가격
+              <input id="register-price" name="price" type="text" inputmode="numeric" placeholder="예: 12900" />
+            </label>
+            <label>
+              카테고리
+              <select id="register-category" name="category">
+                <option value="produce">야채·과일</option>
+                <option value="meat">고기·생선</option>
+                <option value="dairy">유제품</option>
+                <option value="frozen">냉동식품</option>
+                <option value="dessert">디저트</option>
+                <option value="food-other" selected>기타 식품</option>
+                <option value="kitchen">주방용품</option>
+                <option value="household">생활용품</option>
+                <option value="cleaning">청소용품</option>
+                <option value="travel">여행</option>
+                <option value="voucher">상품권</option>
+                <option value="game">게임</option>
+                <option value="electronics">전자기기</option>
+                <option value="overseas">해외핫딜</option>
+                <option value="festa">할인페스타</option>
+              </select>
+            </label>
+            <label>
+              출처
+              <input id="register-source" name="source" type="text" value="직접 등록" />
+            </label>
+            <label>
+              플랫폼
+              <input id="register-platform" name="platform" type="text" placeholder="예: 쿠팡, 지마켓" />
+            </label>
+            <label>
+              구매 링크
+              <input id="register-purchase-url" name="purchaseUrl" type="url" placeholder="https://" />
+            </label>
+            <label>
+              원본글 링크
+              <input id="register-original-url" name="originalUrl" type="url" placeholder="https://" />
+            </label>
+            <label>
+              배송
+              <input id="register-shipping" name="shipping" type="text" placeholder="예: 무배" />
+            </label>
+          </div>
+          <label>
+            요약
+            <textarea id="register-summary" name="summary" rows="4" placeholder="핵심 조건을 짧게 적어주세요." required></textarea>
+          </label>
+          <div class="register-actions">
+            <button class="btn btn-primary" type="submit">등록하기</button>
+            <button class="btn btn-ghost" type="button" data-close-register>취소</button>
+          </div>
+          <p class="small register-note">등록한 항목은 이 브라우저에 저장되고, 목록 상단에 바로 표시됩니다.</p>
+        </form>
       </section>
     </div>
 

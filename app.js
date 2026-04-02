@@ -377,14 +377,37 @@ function getNotificationPermission() {
 
 async function loadDeals() {
   try {
-    const response = await fetch("./data/deals.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Failed to load deals.json: ${response.status}`);
+    const now = Date.now();
+    const dataSources = [
+      `./data/deals.json?ts=${now}`,
+      `https://raw.githubusercontent.com/JAYWYN-C/my-hotdeal/main/data/deals.json?ts=${now}`,
+    ];
+
+    let payload = null;
+    let lastError = null;
+
+    for (const sourceUrl of dataSources) {
+      try {
+        const response = await fetch(sourceUrl, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`Failed to load deals.json from ${sourceUrl}: ${response.status}`);
+        }
+
+        const candidate = await response.json();
+        if (Array.isArray(candidate?.deals) && candidate.deals.length > 0) {
+          payload = candidate;
+          break;
+        }
+      } catch (error) {
+        lastError = error;
+      }
     }
-    const payload = await response.json();
-    if (Array.isArray(payload.deals) && payload.deals.length > 0) {
-      deals = payload.deals;
+
+    if (!payload) {
+      throw lastError || new Error("No valid deals payload found.");
     }
+
+    deals = payload.deals;
     state.generatedAt = payload.generatedAt || null;
     state.policyMode = payload.policy?.mode || "rss-only";
     state.compliance = Array.isArray(payload.compliance) ? payload.compliance : [];

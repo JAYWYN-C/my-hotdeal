@@ -1,5 +1,3 @@
-const COUNT_API_BASE = "https://api.countapi.xyz";
-
 function setCommonHeaders(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Cache-Control", "no-store");
@@ -10,17 +8,7 @@ function sanitizeHost(value) {
   return String(value || "local")
     .toLowerCase()
     .replace(/:\d+$/, "")
-    .replace(/[^a-z0-9-]/g, "-");
-}
-
-function getCounterKey(scope, date) {
-  if (scope === "today") {
-    return /^20\d{2}-\d{2}-\d{2}$/.test(date) ? `visitors-${date}` : null;
-  }
-  if (scope === "total") {
-    return "visitors-total";
-  }
-  return null;
+    .replace(/[^a-z0-9.-]/g, "");
 }
 
 module.exports = async (req, res) => {
@@ -32,19 +20,8 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const mode = req.query?.mode === "hit" ? "hit" : "get";
-  const scope = req.query?.scope === "today" ? "today" : req.query?.scope === "total" ? "total" : "";
-  const date = String(req.query?.date || "");
-  const key = getCounterKey(scope, date);
-
-  if (!key) {
-    res.statusCode = 400;
-    res.end(JSON.stringify({ error: "invalid_scope" }));
-    return;
-  }
-
-  const namespace = `jachwi-hotdeal-${sanitizeHost(req.headers.host)}`;
-  const url = `${COUNT_API_BASE}/${mode}/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`;
+  const domain = sanitizeHost(req.headers["x-forwarded-host"] || req.headers.host);
+  const url = `https://visitor.6developer.com/visit?domain=${encodeURIComponent(domain)}`;
 
   try {
     const response = await fetch(url);
@@ -56,7 +33,12 @@ module.exports = async (req, res) => {
 
     const payload = await response.json();
     res.statusCode = 200;
-    res.end(JSON.stringify({ value: Number(payload?.value) || 0 }));
+    res.end(
+      JSON.stringify({
+        today: Number(payload?.todayCount) || 0,
+        total: Number(payload?.totalCount) || 0,
+      })
+    );
   } catch (error) {
     res.statusCode = 502;
     res.end(

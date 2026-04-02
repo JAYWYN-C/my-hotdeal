@@ -126,32 +126,6 @@ function formatVisitorCount(value) {
   return Number.isFinite(value) ? new Intl.NumberFormat("ko-KR").format(value) : "-";
 }
 
-function getKstDateKey() {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Seoul",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(new Date());
-  const year = parts.find((part) => part.type === "year")?.value || "0000";
-  const month = parts.find((part) => part.type === "month")?.value || "00";
-  const day = parts.find((part) => part.type === "day")?.value || "00";
-  return `${year}-${month}-${day}`;
-}
-
-async function requestVisitorCount(key, mode = "get") {
-  const scope = key === "visitors-total" ? "total" : "today";
-  const dateKey = scope === "today" ? key.replace(/^visitors-/, "") : "";
-  const response = await fetch(
-    `./api/visitor-stats?scope=${encodeURIComponent(scope)}&mode=${encodeURIComponent(mode)}&date=${encodeURIComponent(dateKey)}`
-  );
-  if (!response.ok) {
-    throw new Error(`visitor counter request failed: ${response.status}`);
-  }
-  const payload = await response.json();
-  return Number(payload?.value);
-}
-
 function getCategoryLabel(categoryId) {
   const normalizedCategoryId = categoryId === "fish" ? "meat" : categoryId;
   return categories.find((category) => category.id === normalizedCategoryId)?.label || "기타";
@@ -832,36 +806,17 @@ async function syncVisitorStats() {
   if (!footerVisitorToday && !footerVisitorTotal) {
     return;
   }
-
-  const visitorDayKey = "hotdeal-visitor-day";
-  const visitorTotalCountedKey = "hotdeal-visitor-total-counted";
-  const todayKey = getKstDateKey();
-  const shouldHitToday = localStorage.getItem(visitorDayKey) !== todayKey;
-  const shouldHitTotal = localStorage.getItem(visitorTotalCountedKey) !== "true";
-
-  const [todayResult, totalResult] = await Promise.allSettled([
-    requestVisitorCount(`visitors-${todayKey}`, shouldHitToday ? "hit" : "get"),
-    requestVisitorCount("visitors-total", shouldHitTotal ? "hit" : "get"),
-  ]);
-
-  if (todayResult.status === "fulfilled" && Number.isFinite(todayResult.value)) {
-    state.visitorStats.today = todayResult.value;
-    if (shouldHitToday) {
-      localStorage.setItem(visitorDayKey, todayKey);
+  try {
+    const response = await fetch("./api/visitor-stats");
+    if (!response.ok) {
+      throw new Error(`visitor counter request failed: ${response.status}`);
     }
-  } else if (todayResult.status === "rejected") {
-    console.warn("Failed to load today's visitor count.", todayResult.reason);
+    const payload = await response.json();
+    state.visitorStats.today = Number(payload?.today);
+    state.visitorStats.total = Number(payload?.total);
+  } catch (error) {
+    console.warn("Failed to load visitor stats.", error);
   }
-
-  if (totalResult.status === "fulfilled" && Number.isFinite(totalResult.value)) {
-    state.visitorStats.total = totalResult.value;
-    if (shouldHitTotal) {
-      localStorage.setItem(visitorTotalCountedKey, "true");
-    }
-  } else if (totalResult.status === "rejected") {
-    console.warn("Failed to load total visitor count.", totalResult.reason);
-  }
-
   renderVisitorStats();
 }
 

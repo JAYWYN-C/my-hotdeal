@@ -34,8 +34,9 @@ jobs:
           VERCEL_ORG_ID_INPUT: ${{ vars.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID_INPUT: ${{ vars.VERCEL_PROJECT_ID }}
         run: |
-          ORG_ID="$VERCEL_ORG_ID_INPUT"
-          PROJECT_ID="$VERCEL_PROJECT_ID_INPUT"
+          # Non-secret defaults for this repository's linked Vercel project.
+          ORG_ID="${VERCEL_ORG_ID_INPUT:-team_syq0wmFzcBPUevK11MtmWKJj}"
+          PROJECT_ID="${VERCEL_PROJECT_ID_INPUT:-prj_Dun3xAXir5YnIClJYbgoXUgj9Bup}"
 
           # Fallback to linked project metadata when repo vars are not configured.
           if [ -z "$ORG_ID" ] || [ -z "$PROJECT_ID" ]; then

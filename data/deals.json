@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T17:47:54.834Z",
+  "generatedAt": "2026-04-06T19:04:09.774Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,9 +56,66 @@
   "deals": [
     {
       "id": 1,
+      "title": "[뽐뿌] 락토핏골드 360포, 아임비타 이뮨샷 50병",
+      "productName": "락토핏골드 360포, 아임비타 이뮨샷 50병",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-06T18:45:24.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "락토핏골드 360포, 아임비타 이뮨샷 50병 특가입니다. 무료.",
+      "summaryPoints": [
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694978",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694978&target=aHR0cHM6Ly9ja2RoY21hbGwuY28ua3IvcHJkVmlldy5kbz9wcmRDb2RlPUcyNjAzMjYxNzE4XzAwODg=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694978"
+    },
+    {
+      "id": 2,
+      "title": "[뽐뿌] 오리온 와우스낵 등 인기 미니과자 세트 모음전 / 포카칩 스윙칩 오감자 꼬북칩 미쯔 초코칩 눈을감자 고래밥 초코송이 오징어땅콩",
+      "productName": "오리온 와우스낵 등 인기 미니과자 세트 모음전 / 포카칩 스윙칩 오감자 꼬북칩 미쯔 초코칩 눈을감자 고래밥 초코송이 오징어땅콩",
+      "category": "produce",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 10900,
+      "priceText": "10,900원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-06T17:53:40.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "오리온 와우스낵 등 인기 미니과자 세트 모음전 / 포카칩 스윙칩 오감자 꼬북칩 미쯔 초코칩 눈을감자 고래밥 초코송이 오징어땅콩 특가입니다. 10,900원, 무배.",
+      "summaryPoints": [
+        "가격: 10,900원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694977",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694977&target=aHR0cHM6Ly9zdG9yZS5rYWthby5jb20vb3Jpb25zdG9yZS9wcm9kdWN0cy8yMTMyMTc3NjY/c2hhcmVMaW5rVXVpZD01THI1bDFpeWU5UmFLelVOJnJlZj1TSEFSRV9BRg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694977"
+    },
+    {
+      "id": 3,
       "title": "[루리웹] Chamber Survival (무료)",
       "productName": "Chamber Survival (무료)",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -70,8 +127,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "Chamber Survival (무료) 특가입니다. 무료.",
       "summaryPoints": [
         "배송: 무료"
@@ -81,7 +140,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103127?"
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "[뽐뿌] Chamber Survival",
       "productName": "Chamber Survival",
       "category": "festa",
@@ -109,7 +168,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694976"
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "[G마켓] 블랙야크 기능성 7종 티셔츠",
       "productName": "블랙야크 기능성 7종 티셔츠",
       "category": "festa",
@@ -138,7 +197,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694975"
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "[알리뽐뿌] 스마트 센서 휴지통 C충전($8.28)/무료",
       "productName": "스마트 센서 휴지통 C충전($8.28)/무료",
       "category": "overseas",
@@ -165,7 +224,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86136"
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "[롯데온] 듀먼 강아지 화식 50g 35팩",
       "productName": "듀먼 강아지 화식 50g 35팩",
       "category": "festa",
@@ -195,7 +254,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694974"
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "[오늘의집] 대추방울토마토 2kg 로얄과 1박스",
       "productName": "대추방울토마토 2kg 로얄과 1박스",
       "category": "produce",
@@ -225,7 +284,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694973"
     },
     {
-      "id": 7,
+      "id": 9,
       "title": "[11번가] 구워먹는 치즈 400g 2개",
       "productName": "구워먹는 치즈 400g 2개",
       "category": "dairy",
@@ -255,7 +314,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694972"
     },
     {
-      "id": 8,
+      "id": 10,
       "title": "[롯데온] 이지 와이드 데님 팬츠 그레이",
       "productName": "이지 와이드 데님 팬츠 그레이",
       "category": "festa",
@@ -285,7 +344,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694971"
     },
     {
-      "id": 9,
+      "id": 11,
       "title": "[옥션] 저온압착 홍주부 350ml + 350ml",
       "productName": "저온압착 홍주부 350ml + 350ml",
       "category": "festa",
@@ -315,7 +374,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694970"
     },
     {
-      "id": 10,
+      "id": 12,
       "title": "[g마켓] 국내산 파김치 2kg",
       "productName": "국내산 파김치 2kg",
       "category": "festa",
@@ -345,7 +404,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694969"
     },
     {
-      "id": 11,
+      "id": 13,
       "title": "[뽐뿌] 디스커버리 립스탑 하이넥 바람막이",
       "productName": "디스커버리 립스탑 하이넥 바람막이",
       "category": "festa",
@@ -374,7 +433,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694968"
     },
     {
-      "id": 12,
+      "id": 14,
       "title": "[11번가] 스타벅스 캡슐커피 네스프레소 캡슐 3+3+3개 90피스",
       "productName": "스타벅스 캡슐커피 네스프레소 캡슐 3+3+3개 90피스",
       "category": "dessert",
@@ -404,7 +463,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694967"
     },
     {
-      "id": 13,
+      "id": 15,
       "title": "[G마켓옥션] 맘스터치 김풍 콜라보 제품 교환권 4종 15% 할인",
       "productName": "맘스터치 김풍 콜라보 제품 교환권 4종 15% 할인",
       "category": "festa",
@@ -433,7 +492,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694966"
     },
     {
-      "id": 14,
+      "id": 16,
       "title": "[네이버] 가드맨 귀덮개 자외선차단마스크",
       "productName": "가드맨 귀덮개 자외선차단마스크",
       "category": "festa",
@@ -463,7 +522,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694965"
     },
     {
-      "id": 15,
+      "id": 17,
       "title": "[G마켓] 킨텀 1인용 무선 가정용 충전식 휴대용 칫솔살균기 소독기",
       "productName": "킨텀 1인용 무선 가정용 충전식 휴대용 칫솔살균기 소독기",
       "category": "festa",
@@ -493,7 +552,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694964"
     },
     {
-      "id": 16,
+      "id": 18,
       "title": "[11번가] 크리넥스 순수 프리미엄 3겹 화장지 35m 24롤 2팩",
       "productName": "크리넥스 순수 프리미엄 3겹 화장지 35m 24롤 2팩",
       "category": "household",
@@ -521,7 +580,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694963"
     },
     {
-      "id": 17,
+      "id": 19,
       "title": "[네이버페이] 일일적립, 클릭 38원, 라이브예고 8원",
       "productName": "일일적립, 클릭 38원, 라이브예고 8원",
       "category": "festa",
@@ -552,7 +611,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103126?"
     },
     {
-      "id": 18,
+      "id": 20,
       "title": "[지마켓] 맘스터치 매직풍 신메뉴 15% 할인 & 앱할인 (4/7~)",
       "productName": "맘스터치 매직풍 신메뉴 15% 할인 & 앱할인 (4/7~)",
       "category": "festa",
@@ -570,7 +629,7 @@
       "eventTags": [
         "할인페스타"
       ],
-      "sourceCategory": "음식",
+      "sourceCategory": "BEST",
       "summary": "맘스터치 매직풍 신메뉴 15% 할인 & 앱할인 (4/7~) 특가입니다. 지마켓 기준.",
       "summaryPoints": [
         "플랫폼: 지마켓"
@@ -580,7 +639,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103125?"
     },
     {
-      "id": 19,
+      "id": 21,
       "title": "[11번가] 유기농 햇 고구마 3kg/5kg 혼합 [ 최종가 8,660원 / 무료배송 ]",
       "productName": "유기농 햇 고구마 3kg/5kg 혼합 [ 최종가 8,660원 / 무료배송 ]",
       "category": "produce",
@@ -610,69 +669,9 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694962"
     },
     {
-      "id": 20,
-      "title": "[옥션] 메디팜 입큰 12.5 퍼퓸 파우더 선팩트",
-      "productName": "메디팜 입큰 12.5 퍼퓸 파우더 선팩트",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "옥션",
-      "price": 10890,
-      "priceText": "10,890원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-06T15:09:31.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "메디팜 입큰 12.5 퍼퓸 파우더 선팩트 특가입니다. 옥션 기준 10,890원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 옥션",
-        "가격: 10,890원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694961",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694961&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/SXRlbU5vPUI3MzMxNDI2Nzc=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694961"
-    },
-    {
-      "id": 21,
-      "title": "[롯데온] 케라시스 클리닉 샴푸 980ml 3개 골라담기 + 180ml 미니어처",
-      "productName": "케라시스 클리닉 샴푸 980ml 3개 골라담기 + 180ml 미니어처",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 11660,
-      "priceText": "11,660원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-06T15:09:11.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "케라시스 클리닉 샴푸 980ml 3개 골라담기 + 180ml 미니어처 특가입니다. 롯데온 기준 11,660원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 11,660원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694960",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694960&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjYzNTM4OTYwNA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694960"
-    },
-    {
       "id": 22,
-      "title": "[11번가] 롯데리아 세트 21% 할인",
-      "productName": "롯데리아 세트 21% 할인",
+      "title": "[11번가] 롯데리아 세트 21% 할인 (4/7~13)",
+      "productName": "롯데리아 세트 21% 할인 (4/7~13)",
       "category": "festa",
       "source": "루리웹",
       "platform": "11번가",
@@ -689,7 +688,7 @@
         "할인페스타"
       ],
       "sourceCategory": "BEST",
-      "summary": "롯데리아 세트 21% 할인 특가입니다. 11번가 기준.",
+      "summary": "롯데리아 세트 21% 할인 (4/7~13) 특가입니다. 11번가 기준.",
       "summaryPoints": [
         "플랫폼: 11번가"
       ],
@@ -723,9 +722,9 @@
         "플랫폼: 네이버페이",
         "가격: 38원"
       ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/694942009?page=1&sort_index=popular",
+      "originalUrl": "https://www.dogdrip.net/hotdeal/694942009?sort_index=popular&page=1",
       "purchaseUrl": "https://new-m.pay.naver.com/historybenefit/home",
-      "url": "https://www.dogdrip.net/hotdeal/694942009?page=1&sort_index=popular"
+      "url": "https://www.dogdrip.net/hotdeal/694942009?sort_index=popular&page=1"
     },
     {
       "id": 24,
@@ -753,20 +752,20 @@
         "플랫폼: 네이버페이",
         "가격: 15원"
       ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/694808228?page=1&sort_index=popular",
+      "originalUrl": "https://www.dogdrip.net/hotdeal/694808228?sort_index=popular&page=1",
       "purchaseUrl": "https://campaign2.naver.com/npay/v2/click-point/?eventId=cr_2026040107_2604_1214",
-      "url": "https://www.dogdrip.net/hotdeal/694808228?page=1&sort_index=popular"
+      "url": "https://www.dogdrip.net/hotdeal/694808228?sort_index=popular&page=1"
     },
     {
       "id": 25,
-      "title": "[지마켓] 코카콜라+환타오렌지 190ml 60캔 (각 30캔)",
-      "productName": "코카콜라+환타오렌지 190ml 60캔 (각 30캔)",
-      "category": "festa",
+      "title": "[지마켓] 동원참치 라이트스탠다드150g원터치 8캔",
+      "productName": "동원참치 라이트스탠다드150g원터치 8캔",
+      "category": "meat",
       "source": "뽐뿌",
       "platform": "지마켓",
-      "price": 20550,
-      "priceText": "20,550원",
-      "shipping": "무료",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
       "discount": 0,
       "createdAt": "2026-04-05T15:00:00.000Z",
       "deadlineAt": "",
@@ -774,18 +773,17 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [
-        "할인페스타"
+        "식품"
       ],
       "sourceCategory": "",
-      "summary": "코카콜라+환타오렌지 190ml 60캔 (각 30캔) 특가입니다. 지마켓 기준 20,550원, 무료.",
+      "summary": "동원참치 라이트스탠다드150g원터치 8캔 특가입니다. 지마켓 기준 무배.",
       "summaryPoints": [
         "플랫폼: 지마켓",
-        "가격: 20,550원",
-        "배송: 무료"
+        "배송: 무배"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694737",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694737&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9MjM1MjU4MDg3MA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694737"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694794",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694794&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvazJOOGZDQ0ZDQg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694794"
     },
     {
       "id": 26,
@@ -1221,9 +1219,9 @@
         "플랫폼: 네이버페이",
         "가격: 93원"
       ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/694755762?page=1&sort_index=popular",
+      "originalUrl": "https://www.dogdrip.net/hotdeal/694755762?sort_index=popular&page=1",
       "purchaseUrl": "https://new-m.pay.naver.com/historybenefit/home",
-      "url": "https://www.dogdrip.net/hotdeal/694755762?page=1&sort_index=popular"
+      "url": "https://www.dogdrip.net/hotdeal/694755762?sort_index=popular&page=1"
     },
     {
       "id": 42,
@@ -1268,7 +1266,7 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [],
-      "sourceCategory": "BEST",
+      "sourceCategory": "PC/가전",
       "summary": "코인딜 샤오미 미지아 정밀 전동 드라이버 세트 25,134원 특가입니다. 알리 기준 25,134원.",
       "summaryPoints": [
         "플랫폼: 알리",

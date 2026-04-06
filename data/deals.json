@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T21:07:39.441Z",
+  "generatedAt": "2026-04-06T22:03:12.750Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,6 +56,36 @@
   "deals": [
     {
       "id": 1,
+      "title": "[옥션] 메가커피 아이스 아메리카노 20%",
+      "productName": "메가커피 아이스 아메리카노 20%",
+      "category": "dessert",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 1600,
+      "priceText": "1,600원",
+      "shipping": "무료",
+      "discount": 20,
+      "createdAt": "2026-04-06T21:26:39.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "커피"
+      ],
+      "sourceCategory": "",
+      "summary": "메가커피 아이스 아메리카노 20% 특가입니다. 옥션 기준 1,600원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 1,600원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694980",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694980&target=aHR0cHM6Ly9taXRlbS5hdWN0aW9uLmNvLmtyL3ZpcD9pdGVtTm89RjUyMDk4MzIyNQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694980"
+    },
+    {
+      "id": 2,
       "title": "[알리뽐뿌] 맥콜 제로 1.5L*12PET",
       "productName": "맥콜 제로 1.5L*12PET",
       "category": "overseas",
@@ -83,7 +113,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86137"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "[뽐뿌] 락토핏골드 360포, 아임비타 이뮨샷 50병, 락토핏코어 360포",
       "productName": "락토핏골드 360포, 아임비타 이뮨샷 50병, 락토핏코어 360포",
       "category": "festa",
@@ -111,7 +141,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694978"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "[뽐뿌] 오리온 와우스낵 등 인기 미니과자 세트 모음전 / 포카칩 스윙칩 오감자 꼬북칩 미쯔 초코칩 눈을감자 고래밥 초코송이 오징어땅콩",
       "productName": "오리온 와우스낵 등 인기 미니과자 세트 모음전 / 포카칩 스윙칩 오감자 꼬북칩 미쯔 초코칩 눈을감자 고래밥 초코송이 오징어땅콩",
       "category": "produce",
@@ -140,7 +170,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694977"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "[루리웹] Chamber Survival (무료)",
       "productName": "Chamber Survival (무료)",
       "category": "festa",
@@ -168,7 +198,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103127?"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "[뽐뿌] Chamber Survival",
       "productName": "Chamber Survival",
       "category": "festa",
@@ -196,7 +226,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694976"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "[G마켓] 블랙야크 기능성 7종 티셔츠",
       "productName": "블랙야크 기능성 7종 티셔츠",
       "category": "festa",
@@ -225,7 +255,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694975"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "[알리뽐뿌] 스마트 센서 휴지통 C충전($8.28)/무료",
       "productName": "스마트 센서 휴지통 C충전($8.28)/무료",
       "category": "overseas",
@@ -252,7 +282,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86136"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "[롯데온] 듀먼 강아지 화식 50g 35팩",
       "productName": "듀먼 강아지 화식 50g 35팩",
       "category": "festa",
@@ -282,7 +312,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694974"
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "[오늘의집] 대추방울토마토 2kg 로얄과 1박스",
       "productName": "대추방울토마토 2kg 로얄과 1박스",
       "category": "produce",
@@ -312,7 +342,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694973"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "[11번가] 구워먹는 치즈 400g 2개",
       "productName": "구워먹는 치즈 400g 2개",
       "category": "dairy",
@@ -342,7 +372,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694972"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "[롯데온] 이지 와이드 데님 팬츠 그레이",
       "productName": "이지 와이드 데님 팬츠 그레이",
       "category": "festa",
@@ -372,7 +402,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694971"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "[옥션] 저온압착 홍주부 350ml + 350ml",
       "productName": "저온압착 홍주부 350ml + 350ml",
       "category": "festa",
@@ -402,7 +432,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694970"
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "[g마켓] 국내산 파김치 2kg",
       "productName": "국내산 파김치 2kg",
       "category": "festa",
@@ -432,7 +462,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694969"
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "[뽐뿌] 디스커버리 립스탑 하이넥 바람막이",
       "productName": "디스커버리 립스탑 하이넥 바람막이",
       "category": "festa",
@@ -461,7 +491,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694968"
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "[11번가] 스타벅스 캡슐커피 네스프레소 캡슐 3+3+3개 90피스",
       "productName": "스타벅스 캡슐커피 네스프레소 캡슐 3+3+3개 90피스",
       "category": "dessert",
@@ -491,7 +521,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694967"
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "[G마켓옥션] 맘스터치 김풍 콜라보 제품 교환권 4종 15% 할인",
       "productName": "맘스터치 김풍 콜라보 제품 교환권 4종 15% 할인",
       "category": "festa",
@@ -520,7 +550,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694966"
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "[네이버] 가드맨 귀덮개 자외선차단마스크",
       "productName": "가드맨 귀덮개 자외선차단마스크",
       "category": "festa",
@@ -550,7 +580,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694965"
     },
     {
-      "id": 18,
+      "id": 19,
       "title": "[G마켓] 킨텀 1인용 무선 가정용 충전식 휴대용 칫솔살균기 소독기",
       "productName": "킨텀 1인용 무선 가정용 충전식 휴대용 칫솔살균기 소독기",
       "category": "festa",
@@ -580,7 +610,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694964"
     },
     {
-      "id": 19,
+      "id": 20,
       "title": "[11번가] 크리넥스 순수 프리미엄 3겹 화장지 35m 24롤 2팩",
       "productName": "크리넥스 순수 프리미엄 3겹 화장지 35m 24롤 2팩",
       "category": "household",
@@ -608,7 +638,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694963"
     },
     {
-      "id": 20,
+      "id": 21,
       "title": "[네이버페이] 일일적립, 클릭 38원, 라이브예고 8원",
       "productName": "일일적립, 클릭 38원, 라이브예고 8원",
       "category": "festa",
@@ -639,7 +669,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103126?"
     },
     {
-      "id": 21,
+      "id": 22,
       "title": "[지마켓] 맘스터치 매직풍 신메뉴 15% 할인 & 앱할인 (4/7~)",
       "productName": "맘스터치 매직풍 신메뉴 15% 할인 & 앱할인 (4/7~)",
       "category": "festa",
@@ -665,36 +695,6 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103125?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fitem.gmarket.co.kr%2FItem%3Fspm%3Dgmktpc.searchlistcategory_minishop.0.0.518014a4nUCEgp%26goodsCode%3D4713119503&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103125?"
-    },
-    {
-      "id": 22,
-      "title": "[11번가] 유기농 햇 고구마 3kg/5kg 혼합 [ 최종가 8,660원 / 무료배송 ]",
-      "productName": "유기농 햇 고구마 3kg/5kg 혼합 [ 최종가 8,660원 / 무료배송 ]",
-      "category": "produce",
-      "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 8660,
-      "priceText": "8,660원",
-      "shipping": "무료배송",
-      "discount": 0,
-      "createdAt": "2026-04-06T15:11:13.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "유기농 햇 고구마 3kg/5kg 혼합 [ 최종가 8,660원 / 무료배송 ] 특가입니다. 11번가 기준 8,660원, 무료배송.",
-      "summaryPoints": [
-        "플랫폼: 11번가",
-        "가격: 8,660원",
-        "배송: 무료배송"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694962",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694962&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy83NzY3ODc5NTU2&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694962"
     },
     {
       "id": 23,
@@ -786,13 +786,13 @@
     },
     {
       "id": 26,
-      "title": "[롯데온] 파워에이드900ml 12입 (11,440원/무료) 토스롯데삼성 10,640원",
-      "productName": "파워에이드900ml 12입 (11,440원/무료) 토스롯데삼성 10,640원",
-      "category": "festa",
+      "title": "[롯데온] 바리스타룰스 무라벨 커피 3종 350ml 20개",
+      "productName": "바리스타룰스 무라벨 커피 3종 350ml 20개",
+      "category": "dessert",
       "source": "뽐뿌",
       "platform": "롯데온",
-      "price": 11440,
-      "priceText": "11,440원",
+      "price": 15970,
+      "priceText": "15,970원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-04-05T15:00:00.000Z",
@@ -801,18 +801,18 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [
-        "삼성"
+        "커피"
       ],
       "sourceCategory": "",
-      "summary": "파워에이드900ml 12입 (11,440원/무료) 토스롯데삼성 10,640원 특가입니다. 롯데온 기준 11,440원, 무료.",
+      "summary": "바리스타룰스 무라벨 커피 3종 350ml 20개 특가입니다. 롯데온 기준 15,970원, 무료.",
       "summaryPoints": [
         "플랫폼: 롯데온",
-        "가격: 11,440원",
+        "가격: 15,970원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694765",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694765&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vbS9wcm9kdWN0L0xPMjU0OTY1ODk1Mg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694765"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694696",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_694696&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjY1MDczNjQwMQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=694696"
     },
     {
       "id": 27,

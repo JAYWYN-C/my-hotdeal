@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T17:53:16.001Z",
+  "generatedAt": "2026-04-10T18:57:10.149Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -118,7 +118,7 @@
       "id": 3,
       "title": "[루리웹] LivingForest",
       "productName": "LivingForest",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -130,8 +130,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "LivingForest 특가입니다. 무료.",
       "summaryPoints": [
         "배송: 무료"
@@ -699,14 +701,14 @@
     },
     {
       "id": 23,
-      "title": "[뽐뿌] 옥션) 스파클생수 500ml 100병 무라벨생수",
-      "productName": "옥션) 스파클생수 500ml 100병 무라벨생수",
+      "title": "[지마켓] 16브릭스 고당도 블랙 사파이어포도 2kg",
+      "productName": "16브릭스 고당도 블랙 사파이어포도 2kg",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "",
-      "price": 0,
-      "priceText": "",
-      "shipping": "무배",
+      "platform": "지마켓",
+      "price": 15840,
+      "priceText": "15,840원",
+      "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-04-09T15:00:00.000Z",
       "deadlineAt": "",
@@ -717,13 +719,15 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "옥션) 스파클생수 500ml 100병 무라벨생수 특가입니다. 무배.",
+      "summary": "16브릭스 고당도 블랙 사파이어포도 2kg 특가입니다. 지마켓 기준 15,840원, 무료.",
       "summaryPoints": [
-        "배송: 무배"
+        "플랫폼: 지마켓",
+        "가격: 15,840원",
+        "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=695929",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_695929&target=aHR0cHM6Ly9tb2JpbGUuYXVjdGlvbi5jby5rci9lZ28uYXNweD90PXZwJnA9Qzc0MzUyMjk4Nw==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=695929"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=695869",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_695869&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc0NvZGU9NDcxNzUxNjAzMg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=695869"
     },
     {
       "id": 24,
@@ -1305,35 +1309,6 @@
     },
     {
       "id": 45,
-      "title": "[루리웹] 스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비...",
-      "productName": "스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비...",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "",
-      "price": 68450,
-      "priceText": "68450원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-09T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "카드할인",
-        "삼성"
-      ],
-      "sourceCategory": "BEST",
-      "summary": "스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비... 특가입니다. 68450원.",
-      "summaryPoints": [
-        "가격: 68450원"
-      ],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103253?",
-      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fm.ssg.com%2Fitem%2FitemView.ssg%3FitemId%3D1000688026094&bbs=1020",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/103253?"
-    },
-    {
-      "id": 46,
       "title": "[알리] 커널스 씨네마팝콘 카라멜맛 75gx8개 6,600원, 믹스팝콘 7...",
       "productName": "커널스 씨네마팝콘 카라멜맛 75gx8개 6,600원, 믹스팝콘 7...",
       "category": "overseas",
@@ -1360,7 +1335,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103260?"
     },
     {
-      "id": 47,
+      "id": 46,
       "title": "[알리] 코인딜 국내제조&배송 참기름 들기름 각1병 총2병 8,397원 ...",
       "productName": "코인딜 국내제조&배송 참기름 들기름 각1병 총2병 8,397원 ...",
       "category": "overseas",
@@ -1387,7 +1362,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103258?"
     },
     {
-      "id": 48,
+      "id": 47,
       "title": "[알리] 4월 새로고침 세일 할인코드 결제할인 (4월 13일~4월 19일...",
       "productName": "4월 새로고침 세일 할인코드 결제할인 (4월 13일~4월 19일...",
       "category": "overseas",
@@ -1411,6 +1386,35 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103254?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fs.click.aliexpress.com%2Fe%2F_c3Ulzusl&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103254?"
+    },
+    {
+      "id": 48,
+      "title": "[루리웹] 스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비...",
+      "productName": "스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비...",
+      "category": "game",
+      "source": "루리웹",
+      "platform": "",
+      "price": 68450,
+      "priceText": "68450원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "카드할인",
+        "삼성"
+      ],
+      "sourceCategory": "게임S/W",
+      "summary": "스위치2 젤다의 전설 왕눈 68450원(삼성카드청구할인/배송비... 특가입니다. 68450원.",
+      "summaryPoints": [
+        "가격: 68450원"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103253?",
+      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fm.ssg.com%2Fitem%2FitemView.ssg%3FitemId%3D1000688026094&bbs=1020",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/103253?"
     },
     {
       "id": 49,

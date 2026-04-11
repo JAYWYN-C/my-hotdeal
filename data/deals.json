@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-11T15:37:51.559Z",
+  "generatedAt": "2026-04-11T16:41:16.902Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,6 +56,65 @@
   "deals": [
     {
       "id": 1,
+      "title": "[cj더마켓] 햇반.스팸",
+      "productName": "햇반.스팸",
+      "category": "food-other",
+      "source": "뽐뿌",
+      "platform": "cj더마켓",
+      "price": 0,
+      "priceText": "다양",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-11T16:34:32.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "햇반.스팸 특가입니다. cj더마켓 기준 다양, 무료.",
+      "summaryPoints": [
+        "플랫폼: cj더마켓",
+        "가격: 다양",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696205",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696205&target=aHR0cHM6Ly93d3cuY2p0aGVtYXJrZXQuY29tL3RoZS9wcm9kdWN0L3Byb2R1Y3QtbWFpbj9wcmRDZD00MDIxMzI5MyZzcGNsQ3RncklkPSZjdGdySWQ9JnBsbklkPTMwMDAwMiZhcmVhTnVtPTE=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696205"
+    },
+    {
+      "id": 2,
+      "title": "[뽐뿌] 파김치 1kg 국내산",
+      "productName": "파김치 1kg 국내산",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 8900,
+      "priceText": "8,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-11T15:55:34.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "파김치 1kg 국내산 특가입니다. 8,900원, 무료.",
+      "summaryPoints": [
+        "가격: 8,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696204",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696204&target=aHR0cHM6Ly9zdG9yZS5rYWthby5jb20vZWFjaG90aGVyMTk3Ni9wcm9kdWN0cy82MDMzNzg2MzA/c2hhcmVMaW5rVXVpZD1nVTVaWUdvM3ZYMFd5aG5TJnJlZj1TSEFSRV9BRg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696204"
+    },
+    {
+      "id": 3,
       "title": "[개드립] 10gb+10gb 알뜰요금제 12개월 110원",
       "productName": "10gb+10gb 알뜰요금제 12개월 110원",
       "category": "festa",
@@ -83,7 +142,37 @@
       "url": "https://www.dogdrip.net/hotdeal/695871496?sort_index=popular&page=1"
     },
     {
-      "id": 2,
+      "id": 4,
+      "title": "[옥션] 국내산 수제 저당 제육볶음 200g 5팩",
+      "productName": "국내산 수제 저당 제육볶음 200g 5팩",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 19460,
+      "priceText": "19,460원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-11T15:34:40.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "국내산 수제 저당 제육볶음 200g 5팩 특가입니다. 옥션 기준 19,460원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 19,460원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696203",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696203&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/aXRlbW5vPUY0Nzk3MzkxODE=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696203"
+    },
+    {
+      "id": 5,
       "title": "[CJ더마켓] 바로쓰는 적립금 룰렛",
       "productName": "바로쓰는 적립금 룰렛",
       "category": "festa",
@@ -113,7 +202,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696202"
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "[토스] 동원샘물 생수 라벨랜덤 2L 12개",
       "productName": "동원샘물 생수 라벨랜덤 2L 12개",
       "category": "festa",
@@ -143,7 +232,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696201"
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "[롯데온] 맛보장 신대장떡볶이 230g 4팩",
       "productName": "맛보장 신대장떡볶이 230g 4팩",
       "category": "festa",
@@ -173,7 +262,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696200"
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "[롯데온] 월드컵 메리제인 운동화",
       "productName": "월드컵 메리제인 운동화",
       "category": "kitchen",
@@ -201,7 +290,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696199"
     },
     {
-      "id": 6,
+      "id": 9,
       "title": "[네이버페이] 일일적립, 클릭 25원, 라이브예고 1원",
       "productName": "일일적립, 클릭 25원, 라이브예고 1원",
       "category": "festa",
@@ -232,7 +321,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103279?"
     },
     {
-      "id": 7,
+      "id": 10,
       "title": "[옥션] 무안 26년 조생양파 5kg 소미니 짱아찌용",
       "productName": "무안 26년 조생양파 5kg 소미니 짱아찌용",
       "category": "produce",
@@ -262,7 +351,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696198"
     },
     {
-      "id": 8,
+      "id": 11,
       "title": "[11번가] 알페신 카페인 하이브리드 샴푸 1+1",
       "productName": "알페신 카페인 하이브리드 샴푸 1+1",
       "category": "festa",
@@ -292,7 +381,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696197"
     },
     {
-      "id": 9,
+      "id": 12,
       "title": "[옥션] 국내산 돼지 내장 모둠 간 허파 울대 염통 오소리감투 2kg",
       "productName": "국내산 돼지 내장 모둠 간 허파 울대 염통 오소리감투 2kg",
       "category": "meat",
@@ -322,7 +411,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696196"
     },
     {
-      "id": 10,
+      "id": 13,
       "title": "[옥션] 참외 가정용 5kg 혼합과",
       "productName": "참외 가정용 5kg 혼합과",
       "category": "festa",
@@ -352,7 +441,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696195"
     },
     {
-      "id": 11,
+      "id": 14,
       "title": "[롯데온] 상하목장 유기농 멸균 우유 125ml 48팩",
       "productName": "상하목장 유기농 멸균 우유 125ml 48팩",
       "category": "dairy",
@@ -382,7 +471,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696194"
     },
     {
-      "id": 12,
+      "id": 15,
       "title": "[G마켓] 니코 스탠드형 에어서큘레이터 DLF-CS80NK",
       "productName": "니코 스탠드형 에어서큘레이터 DLF-CS80NK",
       "category": "festa",
@@ -412,7 +501,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696193"
     },
     {
-      "id": 13,
+      "id": 16,
       "title": "[오늘의집] 임박 립톤 제로슈거 아이스티 복숭아 60T 2개",
       "productName": "임박 립톤 제로슈거 아이스티 복숭아 60T 2개",
       "category": "festa",
@@ -442,7 +531,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696192"
     },
     {
-      "id": 14,
+      "id": 17,
       "title": "[지마켓] 슈퍼 비타민C 3000 3박스(300포) 10개월",
       "productName": "슈퍼 비타민C 3000 3박스(300포) 10개월",
       "category": "festa",
@@ -472,7 +561,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696191"
     },
     {
-      "id": 15,
+      "id": 18,
       "title": "[지마켓] 부사 세척사과 4KG 소과",
       "productName": "부사 세척사과 4KG 소과",
       "category": "cleaning",
@@ -500,7 +589,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696190"
     },
     {
-      "id": 16,
+      "id": 19,
       "title": "[11번가] 웨이브x티빙 더블이용권 1개월권",
       "productName": "웨이브x티빙 더블이용권 1개월권",
       "category": "festa",
@@ -530,37 +619,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696189"
     },
     {
-      "id": 17,
-      "title": "[롯데온] 카파 반팔 유니 5컬러 택1",
-      "productName": "카파 반팔 유니 5컬러 택1",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 6900,
-      "priceText": "6,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-11T15:00:22.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "카파 반팔 유니 5컬러 택1 특가입니다. 롯데온 기준 6,900원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 6,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696188",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696188&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L2J1bmRsZS9MTzI0NDY3NTUxMDI=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696188"
-    },
-    {
-      "id": 18,
+      "id": 20,
       "title": "[개드립] 5G망 완전무제한요금제(12개월) 42,000포인트 지급 58,000원",
       "productName": "5G망 완전무제한요금제(12개월) 42,000포인트 지급 58,000원",
       "category": "festa",
@@ -589,15 +648,15 @@
       "url": "https://www.dogdrip.net/hotdeal/695709645?sort_index=popular&page=1"
     },
     {
-      "id": 19,
-      "title": "[롯데온] GAP인증 유러피안 샐러드용 채소 모음 1kg",
-      "productName": "GAP인증 유러피안 샐러드용 채소 모음 1kg",
-      "category": "produce",
+      "id": 21,
+      "title": "[롯데온] 쿠루토가 메탈 M5-KH 수능샤프 오토매틱 자동샤프",
+      "productName": "쿠루토가 메탈 M5-KH 수능샤프 오토매틱 자동샤프",
+      "category": "festa",
       "source": "뽐뿌",
       "platform": "롯데온",
-      "price": 4970,
-      "priceText": "4,970원",
-      "shipping": "무배",
+      "price": 29900,
+      "priceText": "29,900원",
+      "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-04-10T15:00:00.000Z",
       "deadlineAt": "",
@@ -605,77 +664,18 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [
-        "식품"
+        "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "GAP인증 유러피안 샐러드용 채소 모음 1kg 특가입니다. 롯데온 기준 4,970원, 무배.",
+      "summary": "쿠루토가 메탈 M5-KH 수능샤프 오토매틱 자동샤프 특가입니다. 롯데온 기준 29,900원, 무료.",
       "summaryPoints": [
         "플랫폼: 롯데온",
-        "가격: 4,970원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696102",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696102&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjY0NzkwODIwMT9lbnRyeVBvaW50PWJv&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696102"
-    },
-    {
-      "id": 20,
-      "title": "[11번가] 슈펜 봄 신상 BEST 모음",
-      "productName": "슈펜 봄 신상 BEST 모음",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 0,
-      "priceText": "다양",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-10T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "슈펜 봄 신상 BEST 모음 특가입니다. 11번가 기준 다양, 무료.",
-      "summaryPoints": [
-        "플랫폼: 11번가",
-        "가격: 다양",
+        "가격: 29,900원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696187",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696187&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy84OTI4ODgzNTE1&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696187"
-    },
-    {
-      "id": 21,
-      "title": "[뽐뿌] 좋은상황 상황버섯진액 80ml x 30포",
-      "productName": "좋은상황 상황버섯진액 80ml x 30포",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 76950,
-      "priceText": "76,950원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-10T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "좋은상황 상황버섯진액 80ml x 30포 특가입니다. 76,950원, 무료.",
-      "summaryPoints": [
-        "가격: 76,950원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696186",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696186&target=aHR0cHM6Ly93d3cubG90dGVpbWFsbC5jb20vZ29vZHMvdmlld0dvb2RzRGV0YWlsLmxvdHRlP2dvb2RzX25vPTMyODM4MDU0Njg=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696186"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696064",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696064&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjY0NjQwMzQ5OQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=110&no=696064"
     },
     {
       "id": 22,

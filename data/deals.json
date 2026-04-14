@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T12:00:51.072Z",
+  "generatedAt": "2026-04-14T14:01:23.166Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -20,7 +20,7 @@
     {
       "source": "알리뽐뿌",
       "status": "ok",
-      "collected": 14
+      "collected": 17
     },
     {
       "source": "FM코리아",
@@ -56,122 +56,943 @@
   "deals": [
     {
       "id": 1,
-      "title": "[롯데온] 아이로드 TX1 S2 시즌2 FHD 2채널 와이파이 블랙박스 32GB",
-      "productName": "아이로드 TX1 S2 시즌2 FHD 2채널 와이파이 블랙박스 32GB",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 80680,
-      "priceText": "80,680원",
+      "title": "[알리뽐뿌] 초콜릿 브라우니 크리스프 40g, 5개",
+      "productName": "초콜릿 브라우니 크리스프 40g, 5개",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 4806,
+      "priceText": "4,806원",
       "shipping": "무료",
       "discount": 0,
-      "createdAt": "2026-04-14T11:53:27.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "아이로드 TX1 S2 시즌2 FHD 2채널 와이파이 블랙박스 32GB 특가입니다. 롯데온 기준 80,680원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 80,680원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696879",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696879&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjU3OTg1MzQyMg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696879"
-    },
-    {
-      "id": 2,
-      "title": "[지마켓] GNC 밀크시슬 1300mg 120정",
-      "productName": "GNC 밀크시슬 1300mg 120정",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 58590,
-      "priceText": "58,590원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:48:13.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "GNC 밀크시슬 1300mg 120정 특가입니다. 지마켓 기준 58,590원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 58,590원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696878",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696878&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDY5MDg2NTkwNg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696878"
-    },
-    {
-      "id": 3,
-      "title": "[11번가] 인기 생활 잡화 선착순 한정 핫딜",
-      "productName": "인기 생활 잡화 선착순 한정 핫딜",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:47:45.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "인기 생활 잡화 선착순 한정 핫딜 특가입니다. 11번가 기준.",
-      "summaryPoints": [
-        "플랫폼: 11번가"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696877",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696877&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85MjcxNjYyMzM0&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696877"
-    },
-    {
-      "id": 4,
-      "title": "[롯데온] 크로스오버 27QD166CM QHD 120Hz 모니터",
-      "productName": "크로스오버 27QD166CM QHD 120Hz 모니터",
-      "category": "electronics",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 154460,
-      "priceText": "154,460원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:45:42.000Z",
+      "createdAt": "2026-04-14T13:56:50.000Z",
       "deadlineAt": "",
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
       "eventTags": [],
       "sourceCategory": "",
-      "summary": "크로스오버 27QD166CM QHD 120Hz 모니터 특가입니다. 롯데온 기준 154,460원, 무료.",
+      "summary": "초콜릿 브라우니 크리스프 40g, 5개 특가입니다. 알리뽐뿌 기준 4,806원, 무료.",
       "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 154,460원",
+        "플랫폼: 알리뽐뿌",
+        "가격: 4,806원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696876",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696876&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjQ4NTk0OTE5OQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696876"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86509",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86509&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTAyNDA0MTgyOTEuaHRtbD8=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86509"
+    },
+    {
+      "id": 2,
+      "title": "[롯데온] 와이드팬츠 1+1 남여공용 밴딩 슬랙스",
+      "productName": "와이드팬츠 1+1 남여공용 밴딩 슬랙스",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "롯데온",
+      "price": 23870,
+      "priceText": "23,870원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:55:39.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "와이드팬츠 1+1 남여공용 밴딩 슬랙스 특가입니다. 롯데온 기준 23,870원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 롯데온",
+        "가격: 23,870원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696898",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696898&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjQ1MjY0MTk3Mg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696898"
+    },
+    {
+      "id": 3,
+      "title": "[알리뽐뿌] 휴비딕 가정용 의료기기 저주파 마사지기 (19,206원) 웨이브 펄스 미니 EM...",
+      "productName": "휴비딕 가정용 의료기기 저주파 마사지기 (19,206원) 웨이브 펄스 미니 EM...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 19206,
+      "priceText": "19,206원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:53:08.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "휴비딕 가정용 의료기기 저주파 마사지기 (19,206원) 웨이브 펄스 미니 EM... 특가입니다. 알리뽐뿌 기준 19,206원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 19,206원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86508",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86508&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTAyMDc1MDYxODEuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86508"
+    },
+    {
+      "id": 4,
+      "title": "[알리뽐뿌] 역대급]국산 발목양말10켤레(6,026원),국산 남여중목면양말 10켤레(6,757원),국산 더...",
+      "productName": "역대급]국산 발목양말10켤레(6,026원),국산 남여중목면양말 10켤레(6,757원),국산 더...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 6026,
+      "priceText": "6,026원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:52:12.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "역대급]국산 발목양말10켤레(6,026원),국산 남여중목면양말 10켤레(6,757원),국산 더... 특가입니다. 알리뽐뿌 기준 6,026원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 6,026원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86507",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86507&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDMzMzcwNTM5NDQuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86507"
     },
     {
       "id": 5,
+      "title": "[뽐뿌] 인스파이어 스플래시 베이 패키지",
+      "productName": "인스파이어 스플래시 베이 패키지",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 272800,
+      "priceText": "272,800원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:49:22.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "인스파이어 스플래시 베이 패키지 특가입니다. 272,800원, 무료.",
+      "summaryPoints": [
+        "가격: 272,800원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696897",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696897&target=aHR0cHM6Ly9tb20tbW9tLm5ldC9zaG9wL3Nob3djYXNlcy82OWQ3NzVhODA4ZWNhZTBjYTdhNDk5ZjM=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696897"
+    },
+    {
+      "id": 6,
+      "title": "[알리뽐뿌] 특가) 전자식비데 코나에코홈(7.8만), 이누스 직수건조 방수비데(11.6만), 아메리칸스...",
+      "productName": "특가) 전자식비데 코나에코홈(7.8만), 이누스 직수건조 방수비데(11.6만), 아메리칸스...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:45:33.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "특가) 전자식비데 코나에코홈(7.8만), 이누스 직수건조 방수비데(11.6만), 아메리칸스... 특가입니다. 알리뽐뿌 기준.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86506",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86506&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDk3OTIwNzQ3MjEuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86506"
+    },
+    {
+      "id": 7,
+      "title": "[11번가] 의자 롤테이블",
+      "productName": "의자 롤테이블",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 29000,
+      "priceText": "29,000원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:42:08.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "의자 롤테이블 특가입니다. 11번가 기준 29,000원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 29,000원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696896",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696896&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy8xNjIxNDU4MjMy&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696896"
+    },
+    {
+      "id": 8,
+      "title": "[알리뽐뿌] 역대급) 한예지 PLAY 여행티슈 70매 18입(4,415원), 무표백 대나무 뽑아쓰는 키...",
+      "productName": "역대급) 한예지 PLAY 여행티슈 70매 18입(4,415원), 무표백 대나무 뽑아쓰는 키...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 4415,
+      "priceText": "4,415원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:42:07.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "역대급) 한예지 PLAY 여행티슈 70매 18입(4,415원), 무표백 대나무 뽑아쓰는 키... 특가입니다. 알리뽐뿌 기준 4,415원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 4,415원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86505",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86505&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTE4OTc0MzQ5MjMuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86505"
+    },
+    {
+      "id": 9,
+      "title": "[뽐뿌] 지마켓) 뷰카 고불소 치약 110g 4개 + 칫솔2개",
+      "productName": "지마켓) 뷰카 고불소 치약 110g 4개 + 칫솔2개",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:35:42.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "지마켓) 뷰카 고불소 치약 110g 4개 + 칫솔2개 특가입니다. 무배.",
+      "summaryPoints": [
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696895",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696895&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IveWoyQjBicmZFQg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696895"
+    },
+    {
+      "id": 10,
+      "title": "[11번가] 제주 카라향 2.5kg 로얄과",
+      "productName": "제주 카라향 2.5kg 로얄과",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 14900,
+      "priceText": "14,900원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:21:10.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "제주 카라향 2.5kg 로얄과 특가입니다. 11번가 기준 14,900원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 14,900원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696894",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696894&target=aHR0cDovL20uMTFzdC5jby5rci9wcm9kdWN0cy9tYS85MjI1NDA1NjM5&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696894"
+    },
+    {
+      "id": 11,
+      "title": "[알리뽐뿌] 프리미엄 소갈비살 1kg 미국산 (24,028원) 곱창세트 소 초벌 곱창구이...",
+      "productName": "프리미엄 소갈비살 1kg 미국산 (24,028원) 곱창세트 소 초벌 곱창구이...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 24028,
+      "priceText": "24,028원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:17:46.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "프리미엄 소갈비살 1kg 미국산 (24,028원) 곱창세트 소 초벌 곱창구이... 특가입니다. 알리뽐뿌 기준 24,028원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 24,028원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86504",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86504&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTAyMTYyODgwNDYuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86504"
+    },
+    {
+      "id": 12,
+      "title": "[알리뽐뿌] 주방 후드 스팀 클리너 ($21/무배), 차량 스팀클리너($14.5/무배), 1500W 스팀청...",
+      "productName": "주방 후드 스팀 클리너 ($21/무배), 차량 스팀클리너($14.5/무배), 1500W 스팀청...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:06:52.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "주방 후드 스팀 클리너 ($21/무배), 차량 스팀클리너($14.5/무배), 1500W 스팀청... 특가입니다. 알리뽐뿌 기준 무배.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86503",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86503&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDUxMjM4NTQ2NzguaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86503"
+    },
+    {
+      "id": 13,
+      "title": "[알리뽐뿌] SOLAKAKA SM820 무선 마우스 RGB 충전식 도크",
+      "productName": "SOLAKAKA SM820 무선 마우스 RGB 충전식 도크",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T13:04:13.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "SOLAKAKA SM820 무선 마우스 RGB 충전식 도크 특가입니다. 알리뽐뿌 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86502",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86502&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDkxMTc4NzYxMzEuaHRtbD8=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86502"
+    },
+    {
+      "id": 14,
+      "title": "[옥션] 월남관 수제 녹두전 1kg+1kg",
+      "productName": "월남관 수제 녹두전 1kg+1kg",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 19900,
+      "priceText": "19,900원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:59:07.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "월남관 수제 녹두전 1kg+1kg 특가입니다. 옥션 기준 19,900원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 19,900원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696893",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696893&target=aHR0cHM6Ly9taXRlbS5hdWN0aW9uLmNvLmtyL3ZpcD9pdGVtTm89RjQ3OTEwMTEyOQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696893"
+    },
+    {
+      "id": 15,
+      "title": "[뽐뿌] Nintendo Switch 2 + 닌텐도 스위치2 휴대용 케이스",
+      "productName": "[닌텐도] Nintendo Switch 2 + 닌텐도 스위치2 휴대용 케이스",
+      "category": "game",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 652800,
+      "priceText": "652,800원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:54:27.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "[닌텐도] Nintendo Switch 2 + 닌텐도 스위치2 휴대용 케이스 특가입니다. 652,800원, 무료배송.",
+      "summaryPoints": [
+        "가격: 652,800원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696892",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696892&target=aHR0cHM6Ly9naWZ0Lmtha2FvLmNvbS9wcm9kdWN0LzEzMTYyODMzP2Jhbm5lcl9pZD0xNDQxJmNhbXBhaWduX2NvZGU9bnVsbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696892"
+    },
+    {
+      "id": 16,
+      "title": "[네이버] 일양약품 쏘팔메토 90캡슐 프리미엄",
+      "productName": "일양약품 쏘팔메토 90캡슐 프리미엄",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "네이버",
+      "price": 17000,
+      "priceText": "17,000원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:51:45.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "일양약품 쏘팔메토 90캡슐 프리미엄 특가입니다. 네이버 기준 17,000원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 17,000원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696891",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696891&target=aHR0cHM6Ly9zbWFydHN0b3JlLm5hdmVyLmNvbS8xYWtvcmVhL3Byb2R1Y3RzLzEyMzE0NjIyOTU3&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696891"
+    },
+    {
+      "id": 17,
+      "title": "[알리뽐뿌] 6In1 5색 샤프볼펜 6개",
+      "productName": "6In1 5색 샤프볼펜 6개",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:47:54.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "6In1 5색 샤프볼펜 6개 특가입니다. 알리뽐뿌 기준 무배.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86501",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86501&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDcxNzEwNzI0NjMuaHRtbD8=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86501"
+    },
+    {
+      "id": 18,
+      "title": "[11번가] 한돈 꽃삼겹살 500g 2팩",
+      "productName": "한돈 꽃삼겹살 500g 2팩",
+      "category": "meat",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 14900,
+      "priceText": "14,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:47:48.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "한돈 꽃삼겹살 500g 2팩 특가입니다. 11번가 기준 14,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 14,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696890",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696890&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85MjMzNDE2MDg2&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696890"
+    },
+    {
+      "id": 19,
+      "title": "[알리뽐뿌] BAS 탈취제 컴팩트 140g 코튼향",
+      "productName": "BAS 탈취제 컴팩트 140g 코튼향",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 5439,
+      "priceText": "5,439원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:44:14.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "BAS 탈취제 컴팩트 140g 코튼향 특가입니다. 알리뽐뿌 기준 5,439원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 5,439원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86500",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86500&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDgzNTIwMDQ4NzYuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86500"
+    },
+    {
+      "id": 20,
+      "title": "[알리뽐뿌] ]초코무초 미니 20개입* 5봉지(7,750원) 비첸지 패스트리 크림 25g* 3개(5,4...",
+      "productName": "]초코무초 미니 20개입* 5봉지(7,750원) 비첸지 패스트리 크림 25g* 3개(5,4...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 7750,
+      "priceText": "7,750원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:33:24.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "]초코무초 미니 20개입* 5봉지(7,750원) 비첸지 패스트리 크림 25g* 3개(5,4... 특가입니다. 알리뽐뿌 기준 7,750원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 7,750원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86499",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86499&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTIwMjcwMDQxODMuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86499"
+    },
+    {
+      "id": 21,
+      "title": "[알리뽐뿌] 미국산 볶음땅콩 500g(3,571원), 미국산 호두 500g(4,940원), 자색 ...",
+      "productName": "미국산 볶음땅콩 500g(3,571원), 미국산 호두 500g(4,940원), 자색 ...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 3571,
+      "priceText": "3,571원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:29:16.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "미국산 볶음땅콩 500g(3,571원), 미국산 호두 500g(4,940원), 자색 ... 특가입니다. 알리뽐뿌 기준 3,571원.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 3,571원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86498",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86498&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDg3MDUwMDcwMTMuaHRtbD8=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86498"
+    },
+    {
+      "id": 22,
+      "title": "[지마켓] 장미 10송이 생화",
+      "productName": "장미 10송이 생화",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "지마켓",
+      "price": 7740,
+      "priceText": "7,740원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:29:11.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "장미 10송이 생화 특가입니다. 지마켓 기준 7,740원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 7,740원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696889",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696889&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9MzA2MDIzNTY3Ng==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696889"
+    },
+    {
+      "id": 23,
+      "title": "[네이버] 소문떡 콘치즈설기 총 24개입",
+      "productName": "소문떡 콘치즈설기 총 24개입",
+      "category": "dairy",
+      "source": "뽐뿌",
+      "platform": "네이버",
+      "price": 17800,
+      "priceText": "17,800원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:22:34.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "소문떡 콘치즈설기 총 24개입 특가입니다. 네이버 기준 17,800원.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 17,800원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696888",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696888&target=aHR0cHM6Ly9icmFuZC5uYXZlci5jb20vc29tdW50dGVvay9wcm9kdWN0cy8xMzEwNTIzNDM5Mw==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696888"
+    },
+    {
+      "id": 24,
+      "title": "[네이버] 코드랩 높이조절 듀얼모니터 받침대",
+      "productName": "코드랩 높이조절 듀얼모니터 받침대",
+      "category": "electronics",
+      "source": "뽐뿌",
+      "platform": "네이버",
+      "price": 28900,
+      "priceText": "28,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:18:17.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "코드랩 높이조절 듀얼모니터 받침대 특가입니다. 네이버 기준 28,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 28,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696887",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696887&target=aHR0cHM6Ly9uYXZlci5tZS94UUpaNm80Vw==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696887"
+    },
+    {
+      "id": 25,
+      "title": "[옥션] 탑텐키즈 남아여아 팬츠 균일가",
+      "productName": "탑텐키즈 남아여아 팬츠 균일가",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 11600,
+      "priceText": "11,600원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:14:58.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "탑텐키즈 남아여아 팬츠 균일가 특가입니다. 옥션 기준 11,600원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 11,600원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696886",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696886&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/SXRlbU5vPUY1MjI3MjIyMzY=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696886"
+    },
+    {
+      "id": 26,
+      "title": "[네이버] L자형 패브릭 100W C타입 PD 초고속 충전 케이블 1.2M",
+      "productName": "L자형 패브릭 100W C타입 PD 초고속 충전 케이블 1.2M",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "네이버",
+      "price": 2900,
+      "priceText": "2,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:13:25.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "L자형 패브릭 100W C타입 PD 초고속 충전 케이블 1.2M 특가입니다. 네이버 기준 2,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 2,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696885",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696885&target=aHR0cHM6Ly9zbWFydHN0b3JlLm5hdmVyLmNvbS9tb2xhbmNhbm8vcHJvZHVjdHMvMTMzNzA1NTY3MTE=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696885"
+    },
+    {
+      "id": 27,
+      "title": "[알리뽐뿌] FPV 미니 Rc카 ($13.9/무배), 1/16 16103 드리프트 RC카(...",
+      "productName": "FPV 미니 Rc카 ($13.9/무배), 1/16 16103 드리프트 RC카(...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:13:16.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "FPV 미니 Rc카 ($13.9/무배), 1/16 16103 드리프트 RC카(... 특가입니다. 알리뽐뿌 기준 무배.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86497",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86497&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTE5MjcxNjExMjMuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86497"
+    },
+    {
+      "id": 28,
+      "title": "[11번가] 국내산 오이부추김치 2kg",
+      "productName": "국내산 오이부추김치 2kg",
+      "category": "produce",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 9900,
+      "priceText": "9,900원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:08:10.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "국내산 오이부추김치 2kg 특가입니다. 11번가 기준 9,900원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 9,900원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696884",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696884&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy84MzgzMjkxNjM3&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696884"
+    },
+    {
+      "id": 29,
+      "title": "[뽐뿌] 닌텐도 스위치 인기 타이틀 모음 25종 중 택1",
+      "productName": "닌텐도 스위치 인기 타이틀 모음 25종 중 택1",
+      "category": "game",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 45720,
+      "priceText": "45,720원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:07:43.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "닌텐도 스위치 인기 타이틀 모음 25종 중 택1 특가입니다. 45,720원, 무료배송.",
+      "summaryPoints": [
+        "가격: 45,720원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696883",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696883&target=aHR0cHM6Ly9ra28udG8vNHFkVHRTSVZ6TQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696883"
+    },
+    {
+      "id": 30,
+      "title": "[지마켓] 부사사과 7kg 33-41과 가정용 중소과",
+      "productName": "부사사과 7kg 33-41과 가정용 중소과",
+      "category": "produce",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 18960,
+      "priceText": "18,960원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:07:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "부사사과 7kg 33-41과 가정용 중소과 특가입니다. 지마켓 기준 18,960원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 18,960원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568859&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=568859&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568859&page=1"
+    },
+    {
+      "id": 31,
+      "title": "[알리뽐뿌] LIGO 100% 땅콩버터 453g 2개입",
+      "productName": "LIGO 100% 땅콩버터 453g 2개입",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 8378,
+      "priceText": "8,378원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:02:40.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "LIGO 100% 땅콩버터 453g 2개입 특가입니다. 알리뽐뿌 기준 8,378원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 8,378원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86496",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86496&target=aHR0cHM6Ly93d3cuYWxpZXhwcmVzcy5jb20vaXRlbS8xMDA1MDA5Mjg2MzMwMjgyLmh0bWw=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86496"
+    },
+    {
+      "id": 32,
+      "title": "[11번가] 맥콜 제로 250ml X 60캔",
+      "productName": "맥콜 제로 250ml X 60캔",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 20720,
+      "priceText": "20,720원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:02:30.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "맥콜 제로 250ml X 60캔 특가입니다. 11번가 기준 20,720원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 20,720원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696881",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696881&target=aHR0cDovL20uMTFzdC5jby5rci9wcm9kdWN0cy9tYS85MjYxNDYxODY5&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696881"
+    },
+    {
+      "id": 33,
+      "title": "[뽐뿌] 비앙스 VONI 회전책장",
+      "productName": "비앙스 VONI 회전책장",
+      "category": "meat",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 344400,
+      "priceText": "344,400원",
+      "shipping": "착불",
+      "discount": 0,
+      "createdAt": "2026-04-14T12:02:21.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "비앙스 VONI 회전책장 특가입니다. 344,400원, 착불.",
+      "summaryPoints": [
+        "가격: 344,400원",
+        "배송: 착불"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696880",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696880&target=aHR0cHM6Ly93d3cuaG1hbGwuY29tL21kL2RwYS9nb0NvdW50RG93bj9iZm10Tm89MjAyNjA0MTQ2MDE0&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696880"
+    },
+    {
+      "id": 34,
       "title": "[알리뽐뿌] 버블비어 맥주거품기 핸디형 초음파 크림맥주제조기 최저가",
       "productName": "버블비어 맥주거품기 핸디형 초음파 크림맥주제조기 최저가",
       "category": "overseas",
@@ -199,155 +1020,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86494"
     },
     {
-      "id": 6,
-      "title": "[뽐뿌] 주디앤 반팔 파자마 6종",
-      "productName": "주디앤 반팔 파자마 6종",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 18900,
-      "priceText": "18,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:40:57.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "주디앤 반팔 파자마 6종 특가입니다. 18,900원, 무료.",
-      "summaryPoints": [
-        "가격: 18,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696875",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696875&target=aHR0cHM6Ly9zaG9wcGluZ2xpdmUua2FrYW8uY29tL2xpdmUvNTQ4MjA=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696875"
-    },
-    {
-      "id": 7,
-      "title": "[롯데온] 리챔 오리지널 10개",
-      "productName": "리챔 오리지널 10개",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 20070,
-      "priceText": "20,070원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:36:34.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "리챔 오리지널 10개 특가입니다. 롯데온 기준 20,070원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 20,070원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696874",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696874&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjY0NTYzODUxNw==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696874"
-    },
-    {
-      "id": 8,
-      "title": "[뽐뿌] 컨셉원 프리미엄 TR 와이드 슬랙스",
-      "productName": "컨셉원 프리미엄 TR 와이드 슬랙스",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 20600,
-      "priceText": "20,600원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:34:54.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "컨셉원 프리미엄 TR 와이드 슬랙스 특가입니다. 20,600원, 무료.",
-      "summaryPoints": [
-        "가격: 20,600원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696873",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696873&target=aHR0cHM6Ly93d3cuY29uY2VwdHMxb25lLmNvLmtyL3Nob3AvZGV0YWlsLnBocD9wbm89RUFDMjk0OUI4QjkwQkU1MDZGNzdEQjc1MEVGMDU0MTc=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696873"
-    },
-    {
-      "id": 9,
-      "title": "[G마켓] 주세페 주스티 3메달 발사믹 식초 2병",
-      "productName": "주세페 주스티 3메달 발사믹 식초 2병",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 76090,
-      "priceText": "76,090원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:33:28.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "주세페 주스티 3메달 발사믹 식초 2병 특가입니다. G마켓 기준 76,090원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 76,090원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696872",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696872&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvTHUycGdSWEw0&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696872"
-    },
-    {
-      "id": 10,
-      "title": "[옥션] 조선3대명주 감홍로 40도 400ml 도자기",
-      "productName": "조선3대명주 감홍로 40도 400ml 도자기",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "옥션",
-      "price": 34310,
-      "priceText": "34,310원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:30:48.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "조선3대명주 감홍로 40도 400ml 도자기 특가입니다. 옥션 기준 34,310원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 옥션",
-        "가격: 34,310원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696871",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696871&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/SXRlbU5vPUI2Njc0OTIyODI=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696871"
-    },
-    {
-      "id": 11,
+      "id": 35,
       "title": "[11번가] 인기 잡화 선착순 한정 핫딜",
       "productName": "인기 잡화 선착순 한정 핫딜",
       "category": "festa",
@@ -377,7 +1050,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568858&page=1"
     },
     {
-      "id": 12,
+      "id": 36,
       "title": "[알리뽐뿌] AMD 레이저 5475u 젠머신 미니PC",
       "productName": "AMD 레이저 5475u 젠머신 미니PC",
       "category": "overseas",
@@ -404,118 +1077,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86493"
     },
     {
-      "id": 13,
-      "title": "[지마켓] 월드컵 슬립온 루칸트 운동화",
-      "productName": "월드컵 슬립온 루칸트 운동화",
-      "category": "kitchen",
-      "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 14700,
-      "priceText": "14,700원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:25:01.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "월드컵 슬립온 루칸트 운동화 특가입니다. 지마켓 기준 14,700원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 14,700원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696870",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696870&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9MTMyMjA1MjEzNg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696870"
-    },
-    {
-      "id": 14,
-      "title": "[알리뽐뿌] 역대가]샤오신패드 11인치 2025 6GB 128GB($87.79)/무배",
-      "productName": "역대가]샤오신패드 11인치 2025 6GB 128GB($87.79)/무배",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:23:22.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "역대가]샤오신패드 11인치 2025 6GB 128GB($87.79)/무배 특가입니다. 알리뽐뿌 기준 무배.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86492",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86492&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDk4MzMwMDYwNzIuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86492"
-    },
-    {
-      "id": 15,
-      "title": "[알리뽐뿌] 역대코인딜) 몸통오징어 맥반석구이 150g+청양마요 소스(4,403원), 명태알포 300g(7,6...",
-      "productName": "역대코인딜) 몸통오징어 맥반석구이 150g+청양마요 소스(4,403원), 명태알포 300g(7,6...",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 4403,
-      "priceText": "4,403원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:21:46.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "역대코인딜) 몸통오징어 맥반석구이 150g+청양마요 소스(4,403원), 명태알포 300g(7,6... 특가입니다. 알리뽐뿌 기준 4,403원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 4,403원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86491",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86491&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDY0NzE2MTI0MDMuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86491"
-    },
-    {
-      "id": 16,
-      "title": "[뽐뿌] 1+1 휴대용 핸디 미니 무선 선풍기",
-      "productName": "1+1 휴대용 핸디 미니 무선 선풍기",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 8900,
-      "priceText": "8,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:21:05.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "1+1 휴대용 핸디 미니 무선 선풍기 특가입니다. 8,900원, 무료.",
-      "summaryPoints": [
-        "가격: 8,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696869",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696869&target=aHR0cHM6Ly9naWZ0Lmtha2FvLmNvbS9wcm9kdWN0LzExNzg0MTk2&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696869"
-    },
-    {
-      "id": 17,
+      "id": 37,
       "title": "[해외뽐뿌] 액화방지 360도회전 초고온 1300도 화력 부탄 가스 토치",
       "productName": "액화방지 360도회전 초고온 1300도 화력 부탄 가스 토치",
       "category": "overseas",
@@ -542,153 +1104,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126865"
     },
     {
-      "id": 18,
-      "title": "[롯데온] 주연테크 사무용 완본체 5500GT+윈11 PRO",
-      "productName": "주연테크 사무용 완본체 5500GT+윈11 PRO",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 679000,
-      "priceText": "679,000원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:11:51.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "주연테크 사무용 완본체 5500GT+윈11 PRO 특가입니다. 롯데온 기준 679,000원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 679,000원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696867",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696867&target=aHR0cHM6Ly9zLmxvdHRlb24uY29tL3RUalFnZTlhNHU=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696867"
-    },
-    {
-      "id": 19,
-      "title": "[뽐뿌] 블랙야크키즈 경량 바람막이자켓",
-      "productName": "블랙야크키즈 경량 바람막이자켓",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 25420,
-      "priceText": "25,420원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:04:59.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "블랙야크키즈 경량 바람막이자켓 특가입니다. 25,420원, 무료.",
-      "summaryPoints": [
-        "가격: 25,420원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696866",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696866&target=aHR0cHM6Ly9uYXZlci5tZS9JSURtc3YyVw==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696866"
-    },
-    {
-      "id": 20,
-      "title": "[지마켓] 스테비아 대추방울토마토 2kg (500g x4팩)",
-      "productName": "스테비아 대추방울토마토 2kg (500g x4팩)",
-      "category": "produce",
-      "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 12580,
-      "priceText": "12,580원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:03:33.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "스테비아 대추방울토마토 2kg (500g x4팩) 특가입니다. 지마켓 기준 12,580원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 12,580원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696865",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696865&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDY0NzA3MDYzNQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696865"
-    },
-    {
-      "id": 21,
-      "title": "[뽐뿌] 옥션) 동해건조 반건조 오징어 5미 550g",
-      "productName": "옥션) 동해건조 반건조 오징어 5미 550g",
-      "category": "meat",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 15800,
-      "priceText": "15,800원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:01:10.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "옥션) 동해건조 반건조 오징어 5미 550g 특가입니다. 15,800원, 무배.",
-      "summaryPoints": [
-        "가격: 15,800원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696863",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696863&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9kZXRhaWx2aWV3LmFzcHg/aXRlbW5vPUY1MTQyNjQ0NDAmQkNPREU9&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696863"
-    },
-    {
-      "id": 22,
-      "title": "[11번가] 풍년 주물 프라이팬 26cm",
-      "productName": "풍년 주물 프라이팬 26cm",
-      "category": "kitchen",
-      "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 9800,
-      "priceText": "9,800원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T11:00:14.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "풍년 주물 프라이팬 26cm 특가입니다. 11번가 기준 9,800원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 11번가",
-        "가격: 9,800원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696862",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696862&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85MjYyNDY4NzIx&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696862"
-    },
-    {
-      "id": 23,
+      "id": 38,
       "title": "[롯데온] 컬럼비아 공용 30L 소자 2 트레일하이크 백팩 YU0364",
       "productName": "컬럼비아 공용 30L 소자 2 트레일하이크 백팩 YU0364",
       "category": "festa",
@@ -718,63 +1134,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568857&page=1"
     },
     {
-      "id": 24,
-      "title": "[뽐뿌] 쿨터치 여름용 브리프 3팩",
-      "productName": "쿨터치 여름용 브리프 3팩",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 14800,
-      "priceText": "14,800원",
-      "shipping": "무료배송",
-      "discount": 0,
-      "createdAt": "2026-04-14T10:58:09.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "쿨터치 여름용 브리프 3팩 특가입니다. 14,800원, 무료배송.",
-      "summaryPoints": [
-        "가격: 14,800원",
-        "배송: 무료배송"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696861",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696861&target=aHR0cHM6Ly93d3cuZ2lvcmRhbm8uY28ua3Ivc2hvcC9kZXRhaWwucGhwP3Bubz1GQ0NDMUI1NzY4NkE2RjYwQTEzOTAwQzY0NUFBQzRDMSZjbm8wMjE=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696861"
-    },
-    {
-      "id": 25,
-      "title": "[알리뽐뿌] 아산 맑은쌀 삼광 특등급 20kg",
-      "productName": "아산 맑은쌀 삼광 특등급 20kg",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 53794,
-      "priceText": "53,794원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T10:49:43.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "아산 맑은쌀 삼광 특등급 20kg 특가입니다. 알리뽐뿌 기준 53,794원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 53,794원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86489",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86489&target=aHR0cHM6Ly9hLmFsaWV4cHJlc3MuY29tL19jM1VROVZlaA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86489"
-    },
-    {
-      "id": 26,
+      "id": 39,
       "title": "[Amazon] (끌올) numberblocks Heroes with Zeroes",
       "productName": "(끌올) numberblocks Heroes with Zeroes",
       "category": "overseas",
@@ -801,7 +1161,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126864"
     },
     {
-      "id": 27,
+      "id": 40,
       "title": "[네이버] 갤럭시워치8 클래식 골프에디션 46mm 41.2만원 (체감39....",
       "productName": "갤럭시워치8 클래식 골프에디션 46mm 41.2만원 (체감39....",
       "category": "electronics",
@@ -827,196 +1187,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103356?"
     },
     {
-      "id": 28,
-      "title": "[알리뽐뿌] PD 30W USB A USB C 2포트 충전기",
-      "productName": "PD 30W USB A USB C 2포트 충전기",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T10:22:34.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "PD 30W USB A USB C 2포트 충전기 특가입니다. 알리뽐뿌 기준.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86488",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86488&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDY5ODEwODkwNjcuaHRtbD8=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86488"
-    },
-    {
-      "id": 29,
-      "title": "[알리뽐뿌] 샤지 SHARGEEK 170 보조베터리",
-      "productName": "샤지 SHARGEEK 170 보조베터리",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "무료배송",
-      "discount": 0,
-      "createdAt": "2026-04-14T10:21:48.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "샤지 SHARGEEK 170 보조베터리 특가입니다. 알리뽐뿌 기준 무료배송.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "배송: 무료배송"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86487",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86487&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDY5OTcwMTU5MjQuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86487"
-    },
-    {
-      "id": 30,
-      "title": "[알리뽐뿌] 말랑쫀떡 달콤고소 굳지않는 앙금절편 2kg (대용량)",
-      "productName": "말랑쫀떡 달콤고소 굳지않는 앙금절편 2kg (대용량)",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 7931,
-      "priceText": "7,931원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-04-14T10:09:41.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "말랑쫀떡 달콤고소 굳지않는 앙금절편 2kg (대용량) 특가입니다. 알리뽐뿌 기준 7,931원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 7,931원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86485",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86485&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTE4NTMzNjY2ODEuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86485"
-    },
-    {
-      "id": 31,
-      "title": "[알리뽐뿌] 린백 컴퓨터 의자 (33,703원) 학생 의자 (39,236원) 리클라이너 의자...",
-      "productName": "린백 컴퓨터 의자 (33,703원) 학생 의자 (39,236원) 리클라이너 의자...",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 33703,
-      "priceText": "33,703원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T09:59:19.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "린백 컴퓨터 의자 (33,703원) 학생 의자 (39,236원) 리클라이너 의자... 특가입니다. 알리뽐뿌 기준 33,703원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 33,703원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86484",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86484&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTAyMTYyODgwNDYuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86484"
-    },
-    {
-      "id": 32,
-      "title": "[알리뽐뿌] 구수한 전통 가마솥 누룽지 3kg 3개",
-      "productName": "구수한 전통 가마솥 누룽지 3kg 3개",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 26874,
-      "priceText": "26,874원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-14T09:58:48.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "구수한 전통 가마솥 누룽지 3kg 3개 특가입니다. 알리뽐뿌 기준 26,874원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 26,874원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86483",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86483&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTE4OTA4MDIxOTIuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86483"
-    },
-    {
-      "id": 33,
-      "title": "[알리뽐뿌] 프리미엄 소고기 갈비살 1kg 미국산(24,028원)/곱창세트 소 초벌 곱창구이(18,186...",
-      "productName": "프리미엄 소고기 갈비살 1kg 미국산(24,028원)/곱창세트 소 초벌 곱창구이(18,186...",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 24028,
-      "priceText": "24,028원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T09:37:43.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "프리미엄 소고기 갈비살 1kg 미국산(24,028원)/곱창세트 소 초벌 곱창구이(18,186... 특가입니다. 알리뽐뿌 기준 24,028원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 24,028원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86482",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86482&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDcxNzk4OTY2MjguaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86482"
-    },
-    {
-      "id": 34,
-      "title": "[알리뽐뿌] 에디파이어 M90 바이앰프 2.0 스피커 ($93) MR3 ($44) MR4",
-      "productName": "에디파이어 M90 바이앰프 2.0 스피커 ($93) MR3 ($44) MR4",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T09:37:29.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "에디파이어 M90 바이앰프 2.0 스피커 ($93) MR3 ($44) MR4 특가입니다. 알리뽐뿌 기준.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86481",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86481&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTAyMDc1MDYxODEuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86481"
-    },
-    {
-      "id": 35,
+      "id": 41,
       "title": "[루리웹] 닌텐도 스위치2 포코피아 81,840 원 멤버십 쿠폰적용가",
       "productName": "닌텐도 스위치2 포코피아 81,840 원 멤버십 쿠폰적용가",
       "category": "game",
@@ -1043,37 +1214,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103355?"
     },
     {
-      "id": 36,
-      "title": "[롯데온] 네파 여성 쿨냉감 아이스테크쉘 포레스타 후디 자켓",
-      "productName": "네파 여성 쿨냉감 아이스테크쉘 포레스타 후디 자켓",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 46230,
-      "priceText": "46,230원",
-      "shipping": "무료배송",
-      "discount": 0,
-      "createdAt": "2026-04-14T09:05:38.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "네파 여성 쿨냉감 아이스테크쉘 포레스타 후디 자켓 특가입니다. 롯데온 기준 46,230원, 무료배송.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 46,230원",
-        "배송: 무료배송"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696827",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_696827&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xFMTIyMTI1NDQ5OQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=696827"
-    },
-    {
-      "id": 37,
+      "id": 42,
       "title": "[알리] 코인딜 젠머신 5475u 미니PC 167,408원",
       "productName": "코인딜 젠머신 5475u 미니PC 167,408원",
       "category": "overseas",
@@ -1100,33 +1241,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103354?"
     },
     {
-      "id": 38,
-      "title": "[알리뽐뿌] 드리미 L30s 히트(63만), JONR VC12 PRO($71), VC10($56)/...",
-      "productName": "드리미 L30s 히트(63만), JONR VC12 PRO($71), VC10($56)/...",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-04-14T08:11:42.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "드리미 L30s 히트(63만), JONR VC12 PRO($71), VC10($56)/... 특가입니다. 알리뽐뿌 기준.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86479",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_86479&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTA2NzU0MzMzNjMuaHRtbD8=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86479"
-    },
-    {
-      "id": 39,
+      "id": 43,
       "title": "[지마켓] 대구축협 한우 1++등급 특수구이 설깃머리살 300g",
       "productName": "대구축협 한우 1++등급 특수구이 설깃머리살 300g",
       "category": "meat",
@@ -1156,7 +1271,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568856&page=1"
     },
     {
-      "id": 40,
+      "id": 44,
       "title": "[네이버] 엑스박스 무선 헤드셋 (70,580/무배)",
       "productName": "엑스박스 무선 헤드셋 (70,580/무배)",
       "category": "festa",
@@ -1185,7 +1300,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103353?"
     },
     {
-      "id": 41,
+      "id": 45,
       "title": "[알리] 드리미 L30s Pro Ultra Heat 로봇청소기 629,4...",
       "productName": "드리미 L30s Pro Ultra Heat 로봇청소기 629,4...",
       "category": "overseas",
@@ -1211,7 +1326,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103352?"
     },
     {
-      "id": 42,
+      "id": 46,
       "title": "[지마켓] 고양이 화장실 6종",
       "productName": "고양이 화장실 6종",
       "category": "festa",
@@ -1241,7 +1356,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568855&page=1"
     },
     {
-      "id": 43,
+      "id": 47,
       "title": "[루리웹] 앤커 사운드코어 리버티4 NC 블루투스이어폰(52,110원/무배...",
       "productName": "앤커 사운드코어 리버티4 NC 블루투스이어폰(52,110원/무배...",
       "category": "electronics",
@@ -1268,7 +1383,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103351?"
     },
     {
-      "id": 44,
+      "id": 48,
       "title": "[11번가] 쟌슨빌 냉동 폴리시 소시지 1670g T멤22,970원",
       "productName": "쟌슨빌 냉동 폴리시 소시지 1670g T멤22,970원",
       "category": "frozen",
@@ -1297,7 +1412,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103350?"
     },
     {
-      "id": 45,
+      "id": 49,
       "title": "[지마켓] 학산 인기만화 코믹스 모음(가격다양)",
       "productName": "학산 인기만화 코믹스 모음(가격다양)",
       "category": "festa",
@@ -1326,7 +1441,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103349?"
     },
     {
-      "id": 46,
+      "id": 50,
       "title": "[옥션] 봄 신상 남녀공용 밴딩슬랙스/조거/카고 외",
       "productName": "봄 신상 남녀공용 밴딩슬랙스/조거/카고 외",
       "category": "festa",
@@ -1356,7 +1471,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568854&page=1"
     },
     {
-      "id": 47,
+      "id": 51,
       "title": "[쿠팡] 팔도 밥알없는 비락식혜 175ml 30개",
       "productName": "팔도 밥알없는 비락식혜 175ml 30개",
       "category": "food-other",
@@ -1386,7 +1501,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568853&page=1"
     },
     {
-      "id": 48,
+      "id": 52,
       "title": "[네이버쇼핑] 넨도로이드 2786 마지마 고로 ₩65,500",
       "productName": "넨도로이드 2786 마지마 고로 ₩65,500",
       "category": "festa",
@@ -1414,7 +1529,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103347?"
     },
     {
-      "id": 49,
+      "id": 53,
       "title": "[지마켓] 슈어메디 밀크씨슬 3박스 3개월분 간건강 실리마린 간영양제",
       "productName": "슈어메디 밀크씨슬 3박스 3개월분 간건강 실리마린 간영양제",
       "category": "food-other",
@@ -1444,7 +1559,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568852&page=1"
     },
     {
-      "id": 50,
+      "id": 54,
       "title": "[G마켓] 닥터스베스트 마그네슘 240정 2통 삼카39,320원",
       "productName": "닥터스베스트 마그네슘 240정 2통 삼카39,320원",
       "category": "festa",
@@ -1473,7 +1588,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103345?"
     },
     {
-      "id": 51,
+      "id": 55,
       "title": "[토스] 펩시 제로 슈거 라임향, 500ml, 20개, 14,600원",
       "productName": "펩시 제로 슈거 라임향, 500ml, 20개, 14,600원",
       "category": "festa",
@@ -1502,7 +1617,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103344?"
     },
     {
-      "id": 52,
+      "id": 56,
       "title": "[옥션] 코엔자임Q10 바나바잎 추출물 은행잎",
       "productName": "코엔자임Q10 바나바잎 추출물 은행잎",
       "category": "food-other",
@@ -1532,7 +1647,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568851&page=1"
     },
     {
-      "id": 53,
+      "id": 57,
       "title": "[G마켓] 새우깡 8봉 + 매운새우깡 8봉",
       "productName": "새우깡 8봉 + 매운새우깡 8봉",
       "category": "meat",
@@ -1562,7 +1677,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103343?"
     },
     {
-      "id": 54,
+      "id": 58,
       "title": "[알리] 봄세일 추가 스페셜 쿠폰 배포 중 입니다.",
       "productName": "봄세일 추가 스페셜 쿠폰 배포 중 입니다.",
       "category": "overseas",
@@ -1590,7 +1705,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103342?"
     },
     {
-      "id": 55,
+      "id": 59,
       "title": "[딜바다 국내] 오브제 포어제로 올인원 150ml+30ml 증정",
       "productName": "오브제 포어제로 올인원 150ml+30ml 증정",
       "category": "festa",
@@ -1619,7 +1734,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568850&page=1"
     },
     {
-      "id": 56,
+      "id": 60,
       "title": "[오늘의집] CX PRO 매직타워 N 자동먼지비움 클린스테이션 무선청소기",
       "productName": "CX PRO 매직타워 N 자동먼지비움 클린스테이션 무선청소기",
       "category": "electronics",
@@ -1647,7 +1762,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568849&page=1"
     },
     {
-      "id": 57,
+      "id": 61,
       "title": "[알리] QCY Crossky C50 클립형 무선이어폰 / 32,073원",
       "productName": "QCY Crossky C50 클립형 무선이어폰 / 32,073원",
       "category": "overseas",
@@ -1674,7 +1789,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103341?"
     },
     {
-      "id": 58,
+      "id": 62,
       "title": "[오늘의집] CHERRY 엑스트리파이 MX 8.2 PRO TMR 무선 8K 래피드 트리거 블랙/화이트",
       "productName": "CHERRY 엑스트리파이 MX 8.2 PRO TMR 무선 8K 래피드 트리거 블랙/화이트",
       "category": "festa",
@@ -1704,7 +1819,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568848&page=1"
     },
     {
-      "id": 59,
+      "id": 63,
       "title": "[지마켓] 카카오/니니즈 포켓 선풍기 1+1",
       "productName": "카카오/니니즈 포켓 선풍기 1+1",
       "category": "electronics",
@@ -1731,7 +1846,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568847&page=1"
     },
     {
-      "id": 60,
+      "id": 64,
       "title": "[네이버] 닌텐도 스위치2 648000",
       "productName": "닌텐도 스위치2 648000",
       "category": "game",
@@ -1757,7 +1872,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103340?"
     },
     {
-      "id": 61,
+      "id": 65,
       "title": "[옥션] 고중량 팔레트 200g 호텔 수건 10장",
       "productName": "고중량 팔레트 200g 호텔 수건 10장",
       "category": "travel",
@@ -1785,7 +1900,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568846&page=1"
     },
     {
-      "id": 62,
+      "id": 66,
       "title": "[오늘의집] 통깨 100% 고소한 금방아 참기름350ml+들기름350ml 2병",
       "productName": "통깨 100% 고소한 금방아 참기름350ml+들기름350ml 2병",
       "category": "food-other",
@@ -1810,12 +1925,12 @@
         "가격: 11,659원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568845&page=1",
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568845&page=2",
       "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=568845&no=2&page=1",
-      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568845&page=1"
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568845&page=2"
     },
     {
-      "id": 63,
+      "id": 67,
       "title": "[딜바다 국내] 써모스 봄시즌 할인",
       "productName": "써모스 봄시즌 할인",
       "category": "festa",
@@ -1844,7 +1959,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568844&page=2"
     },
     {
-      "id": 64,
+      "id": 68,
       "title": "[딜바다 국내] 타미남성 시즈널 솔리드 티셔츠",
       "productName": "타미남성 시즈널 솔리드 티셔츠",
       "category": "festa",
@@ -1873,7 +1988,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568843&page=2"
     },
     {
-      "id": 65,
+      "id": 69,
       "title": "[지마켓] 칠갑농산 냉면 10인분 + 육수 10봉",
       "productName": "칠갑농산 냉면 10인분 + 육수 10봉",
       "category": "food-other",
@@ -1903,7 +2018,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568842&page=2"
     },
     {
-      "id": 66,
+      "id": 70,
       "title": "[알리] 바오터우 슬리퍼 마사지 슬리퍼",
       "productName": "바오터우 슬리퍼 마사지 슬리퍼",
       "category": "overseas",
@@ -1931,7 +2046,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307960&page=1"
     },
     {
-      "id": 67,
+      "id": 71,
       "title": "[지마켓] 오스템 뷰센 C 충치 케어 치약 120g 4개 + 칫솔 1P",
       "productName": "오스템 뷰센 C 충치 케어 치약 120g 4개 + 칫솔 1P",
       "category": "food-other",
@@ -1961,7 +2076,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568841&page=2"
     },
     {
-      "id": 68,
+      "id": 72,
       "title": "[딜바다 국내] ​[지마켓] 오스템 뷰센 C 충치 케어 치약 120g 4개 + 칫솔 1P",
       "productName": "​[지마켓] 오스템 뷰센 C 충치 케어 치약 120g 4개 + 칫솔 1P",
       "category": "food-other",
@@ -1990,7 +2105,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568840&page=2"
     },
     {
-      "id": 69,
+      "id": 73,
       "title": "[딜바다 국내] 100% 우리밀 수제 꽈배기 10개입",
       "productName": "100% 우리밀 수제 꽈배기 10개입",
       "category": "food-other",
@@ -2019,7 +2134,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568839&page=2"
     },
     {
-      "id": 70,
+      "id": 74,
       "title": "[쿠팡] LG 그램 Pro 16ZD90TS-GX5PK",
       "productName": "LG 그램 Pro 16ZD90TS-GX5PK",
       "category": "festa",
@@ -2049,7 +2164,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568838&page=2"
     },
     {
-      "id": 71,
+      "id": 75,
       "title": "[지마켓] 데일리온 프로폴리스 포도당 캔디 100정x2개",
       "productName": "데일리온 프로폴리스 포도당 캔디 100정x2개",
       "category": "food-other",
@@ -2079,7 +2194,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568837&page=2"
     },
     {
-      "id": 72,
+      "id": 76,
       "title": "[네이버페이] 2026-04-14 일일적립, 클릭 59원",
       "productName": "2026-04-14 일일적립, 클릭 59원",
       "category": "festa",
@@ -2109,7 +2224,7 @@
       "url": "https://www.dogdrip.net/hotdeal/696230380?sort_index=popular&page=1"
     },
     {
-      "id": 73,
+      "id": 77,
       "title": "[네이버페이] 2026-04-13 일일적립, 클릭 46원",
       "productName": "2026-04-13 일일적립, 클릭 46원",
       "category": "festa",
@@ -2139,7 +2254,7 @@
       "url": "https://www.dogdrip.net/hotdeal/696034144?sort_index=popular&page=1"
     },
     {
-      "id": 74,
+      "id": 78,
       "title": "[지마켓] 오쏘몰 이뮨 멀티비타민 30회분 2개",
       "productName": "오쏘몰 이뮨 멀티비타민 30회분 2개",
       "category": "meat",
@@ -2169,7 +2284,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568836&page=2"
     },
     {
-      "id": 75,
+      "id": 79,
       "title": "[딜바다 국내] 광동제약 영양제 7종 골라담기",
       "productName": "광동제약 영양제 7종 골라담기",
       "category": "food-other",
@@ -2198,7 +2313,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568835&page=2"
     },
     {
-      "id": 76,
+      "id": 80,
       "title": "[쿠팡] 디안트 BLDC 차량용청소기",
       "productName": "디안트 BLDC 차량용청소기",
       "category": "electronics",
@@ -2226,7 +2341,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568834&page=2"
     },
     {
-      "id": 77,
+      "id": 81,
       "title": "[오늘의집] 쿠쿠 에코웨일 큐브 라이브",
       "productName": "쿠쿠 에코웨일 큐브 라이브",
       "category": "electronics",
@@ -2256,7 +2371,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568833&page=2"
     },
     {
-      "id": 78,
+      "id": 82,
       "title": "[11번가] 퀀텀6 60분러시 할인 SKT (기변/번이)",
       "productName": "퀀텀6 60분러시 할인 SKT (기변/번이)",
       "category": "festa",
@@ -2286,7 +2401,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568832&page=2"
     },
     {
-      "id": 79,
+      "id": 83,
       "title": "[지마켓] 천양삼 쌍화 약도라지배 진액스틱 15g x 100포",
       "productName": "천양삼 쌍화 약도라지배 진액스틱 15g x 100포",
       "category": "food-other",
@@ -2316,37 +2431,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568831&page=2"
     },
     {
-      "id": 80,
-      "title": "[옥션] 데일리 맥주효모 비오틴 33000 고함량 6개월분 100mg x 180정",
-      "productName": "데일리 맥주효모 비오틴 33000 고함량 6개월분 100mg x 180정",
-      "category": "food-other",
-      "source": "딜바다 국내",
-      "platform": "옥션",
-      "price": 12900,
-      "priceText": "12,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-12T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "식품/건강",
-      "summary": "데일리 맥주효모 비오틴 33000 고함량 6개월분 100mg x 180정 특가입니다. 옥션 기준 12,900원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 옥션",
-        "가격: 12,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568830&page=2",
-      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=568830&no=1&page=1",
-      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=568830&page=2"
-    },
-    {
-      "id": 81,
+      "id": 84,
       "title": "[네이버페이] 2026-04-12 일일적립, 클릭 25원",
       "productName": "2026-04-12 일일적립, 클릭 25원",
       "category": "festa",
@@ -2376,7 +2461,7 @@
       "url": "https://www.dogdrip.net/hotdeal/695885245?sort_index=popular&page=1"
     },
     {
-      "id": 82,
+      "id": 85,
       "title": "[알리익스프레스] 4월 새로고침 세일 (4월13일(월)~4월19일(일))",
       "productName": "4월 새로고침 세일 (4월13일(월)~4월19일(일))",
       "category": "overseas",
@@ -2402,7 +2487,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103281?"
     },
     {
-      "id": 83,
+      "id": 86,
       "title": "[알리익스프레스] 4월 새로고침 프로모션 정보 안내",
       "productName": "4월 새로고침 프로모션 정보 안내",
       "category": "overseas",
@@ -2428,7 +2513,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=86285"
     },
     {
-      "id": 84,
+      "id": 87,
       "title": "[알리] 방수 레인 자켓 경량 외부 후드 야외 비옷 하이킹 방풍 자켓",
       "productName": "방수 레인 자켓 경량 외부 후드 야외 비옷 하이킹 방풍 자켓",
       "category": "overseas",
@@ -2456,7 +2541,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307959&page=1"
     },
     {
-      "id": 85,
+      "id": 88,
       "title": "[해외뽐뿌] Hoka Speedgoat 6 Women's Trail Running Shoes ($71.98 / $9.95 (85불 이상시는 미국내무료))",
       "productName": "Hoka Speedgoat 6 Women's Trail Running Shoes ($71.98 / $9.95 (85불 이상시는 미국내무료))",
       "category": "overseas",
@@ -2482,7 +2567,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126863"
     },
     {
-      "id": 86,
+      "id": 89,
       "title": "[알리] 무선 미니 천장 선풍기 조명, USB 선풍기, 리모컨, 스탠드",
       "productName": "무선 미니 천장 선풍기 조명, USB 선풍기, 리모컨, 스탠드",
       "category": "overseas",
@@ -2510,7 +2595,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307958&page=1"
     },
     {
-      "id": 87,
+      "id": 90,
       "title": "[해외뽐뿌] 폴로랄프로렌 반집업 풀오버",
       "productName": "폴로랄프로렌 반집업 풀오버",
       "category": "overseas",
@@ -2536,7 +2621,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126862"
     },
     {
-      "id": 88,
+      "id": 91,
       "title": "[알리] 데스크탑 코너 멀티탭, 개별 스위치 제어 멀티탭",
       "productName": "데스크탑 코너 멀티탭, 개별 스위치 제어 멀티탭",
       "category": "overseas",
@@ -2564,7 +2649,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307957&page=1"
     },
     {
-      "id": 89,
+      "id": 92,
       "title": "[알리] MIJIA 핸드헬드 의류 스티머 2 다리미",
       "productName": "MIJIA 핸드헬드 의류 스티머 2 다리미",
       "category": "overseas",
@@ -2592,7 +2677,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307956&page=1"
     },
     {
-      "id": 90,
+      "id": 93,
       "title": "[롯데온] 온쇼페 (4월6일(월)~4월15일(수))",
       "productName": "온쇼페 (4월6일(월)~4월15일(수))",
       "category": "voucher",
@@ -2618,7 +2703,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103123?"
     },
     {
-      "id": 91,
+      "id": 94,
       "title": "[알리] 바람막이 남성용 방수 전술 재킷",
       "productName": "바람막이 남성용 방수 전술 재킷",
       "category": "overseas",
@@ -2646,7 +2731,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307955&page=1"
     },
     {
-      "id": 92,
+      "id": 95,
       "title": "[woot] 갤럭시워치 FE LTE",
       "productName": "갤럭시워치 FE LTE",
       "category": "overseas",
@@ -2673,7 +2758,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126860"
     },
     {
-      "id": 93,
+      "id": 96,
       "title": "[Amazon] Crucial P5 Plus 2TB SSD",
       "productName": "Crucial P5 Plus 2TB SSD",
       "category": "overseas",
@@ -2700,7 +2785,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126859"
     },
     {
-      "id": 94,
+      "id": 97,
       "title": "[딜바다 해외] deerma 디어마 무선 청소기 T30W 원룸 자취방 진공청소기 핸디형 광학 감지 23000PA흡입력",
       "productName": "deerma 디어마 무선 청소기 T30W 원룸 자취방 진공청소기 핸디형 광학 감지 23000PA흡입력",
       "category": "overseas",
@@ -2727,7 +2812,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307954&page=1"
     },
     {
-      "id": 95,
+      "id": 98,
       "title": "[딜바다 해외] 자석식 창문 청소 브러쉬 양면 자동 물 배출",
       "productName": "자석식 창문 청소 브러쉬 양면 자동 물 배출",
       "category": "overseas",
@@ -2754,7 +2839,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307953&page=1"
     },
     {
-      "id": 96,
+      "id": 99,
       "title": "[ebay] adidas women Adizero Boston 12 Shoes",
       "productName": "adidas women Adizero Boston 12 Shoes",
       "category": "overseas",
@@ -2780,7 +2865,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126858"
     },
     {
-      "id": 97,
+      "id": 100,
       "title": "[WOOT] B&W PX7 S2 리퍼비쉬 리스탁",
       "productName": "B&W PX7 S2 리퍼비쉬 리스탁",
       "category": "overseas",
@@ -2806,7 +2891,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126857"
     },
     {
-      "id": 98,
+      "id": 101,
       "title": "[알리] DIVEDEER 창문 청소 로봇 5600PA 스프레이 낙하 방지",
       "productName": "DIVEDEER 창문 청소 로봇 5600PA 스프레이 낙하 방지",
       "category": "overseas",
@@ -2834,7 +2919,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307952&page=1"
     },
     {
-      "id": 99,
+      "id": 102,
       "title": "[알리] 네이처하이크 에어 메트리스",
       "productName": "네이처하이크 에어 메트리스",
       "category": "overseas",

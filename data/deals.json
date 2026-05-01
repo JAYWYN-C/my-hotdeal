@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T18:41:39.646Z",
+  "generatedAt": "2026-05-01T20:07:50.159Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -20,7 +20,7 @@
     {
       "source": "알리뽐뿌",
       "status": "ok",
-      "collected": 13
+      "collected": 12
     },
     {
       "source": "FM코리아",
@@ -35,7 +35,7 @@
     {
       "source": "루리웹",
       "status": "ok",
-      "collected": 15
+      "collected": 16
     },
     {
       "source": "딜바다 국내",
@@ -56,6 +56,62 @@
   "deals": [
     {
       "id": 1,
+      "title": "[뽐뿌] 호그와트 레거시",
+      "productName": "호그와트 레거시",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-01T19:13:02.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "호그와트 레거시 특가입니다. 무료.",
+      "summaryPoints": [
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700791",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_700791&target=aHR0cHM6Ly9zdG9yZS5lcGljZ2FtZXMuY29tL2VuLVVTL3AvaG9nd2FydHMtbGVnYWN5&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700791"
+    },
+    {
+      "id": 2,
+      "title": "[루리웹] 웨이스트랜드 리마스터 (이전에 무료로 추가한분만 무료 교체...",
+      "productName": "웨이스트랜드 리마스터 (이전에 무료로 추가한분만 무료 교체...",
+      "category": "festa",
+      "source": "루리웹",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-01T18:58:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
+      "summary": "웨이스트랜드 리마스터 (이전에 무료로 추가한분만 무료 교체... 특가입니다. 무료.",
+      "summaryPoints": [
+        "배송: 무료"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103845?",
+      "purchaseUrl": "",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/103845?"
+    },
+    {
+      "id": 3,
       "title": "[루리웹] 레이저 제품 다양 70% 세일 마우스/키보드/백팩 등등",
       "productName": "레이저 제품 다양 70% 세일 마우스/키보드/백팩 등등",
       "category": "electronics",
@@ -81,7 +137,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103844?"
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "[뽐뿌] 알뜰요금제 7gb + 결합시 5gb 1mbps",
       "productName": "알뜰요금제 7gb + 결합시 5gb 1mbps",
       "category": "festa",
@@ -110,7 +166,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700790"
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "[네이버] 메가커피 금액권 2만",
       "productName": "메가커피 금액권 2만",
       "category": "voucher",
@@ -140,7 +196,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700789"
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "[알리뽐뿌] QCY T13($15), C30($17), C50($21)/무료",
       "productName": "QCY T13($15), C30($17), C50($21)/무료",
       "category": "overseas",
@@ -167,7 +223,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87307"
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "[뽐뿌] 호주산 냉장 소찜갈비 100g (2,980원/4,000원) 행사카드가 1,790원",
       "productName": "호주산 냉장 소찜갈비 100g (2,980원/4,000원) 행사카드가 1,790원",
       "category": "meat",
@@ -195,7 +251,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700788"
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "[CJ더마켓] 스팸클래식 340g 3번들X2 3세트 18개+왕교자 1.05KG 페이코 포인트결제",
       "productName": "스팸클래식 340g 3번들X2 3세트 18개+왕교자 1.05KG 페이코 포인트결제",
       "category": "festa",
@@ -225,7 +281,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700787"
     },
     {
-      "id": 7,
+      "id": 9,
       "title": "[알리뽐뿌] 레토 원터치 그늘막 텐트 4~5인용(3.7만), 각도조절 캠핑의자 특대형(3.6만)/무료",
       "productName": "레토 원터치 그늘막 텐트 4~5인용(3.7만), 각도조절 캠핑의자 특대형(3.6만)/무료",
       "category": "overseas",
@@ -252,7 +308,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87306"
     },
     {
-      "id": 8,
+      "id": 10,
       "title": "[토스쇼핑] 크리넥스 안심 키친타월 140매x24롤+뽑타 40매",
       "productName": "크리넥스 안심 키친타월 140매x24롤+뽑타 40매",
       "category": "festa",
@@ -282,7 +338,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700786"
     },
     {
-      "id": 9,
+      "id": 11,
       "title": "[오늘의집] 잘풀리는집 퀼팅 광폭 화장지 30m x 24롤 x 2팩",
       "productName": "잘풀리는집 퀼팅 광폭 화장지 30m x 24롤 x 2팩",
       "category": "household",
@@ -310,7 +366,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700785"
     },
     {
-      "id": 10,
+      "id": 12,
       "title": "[네이버페이] 일일적립, 클릭 47원, 라이브예고 2원",
       "productName": "일일적립, 클릭 47원, 라이브예고 2원",
       "category": "festa",
@@ -341,7 +397,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103843?"
     },
     {
-      "id": 11,
+      "id": 13,
       "title": "[11번가] 광천김 3대째 달인 돌김 캔김 30g 4개",
       "productName": "광천김 3대째 달인 돌김 캔김 30g 4개",
       "category": "festa",
@@ -371,7 +427,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700784"
     },
     {
-      "id": 12,
+      "id": 14,
       "title": "[롯데온] 스포츠리서치 오메가3 180정 3통",
       "productName": "스포츠리서치 오메가3 180정 3통",
       "category": "food-other",
@@ -401,7 +457,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700783"
     },
     {
-      "id": 13,
+      "id": 15,
       "title": "[뽐뿌] 정관장 에너지 활기력샷30병",
       "productName": "정관장 에너지 활기력샷30병",
       "category": "festa",
@@ -430,7 +486,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700782"
     },
     {
-      "id": 14,
+      "id": 16,
       "title": "[토스] 큐잉 4IN1 C타입 8핀 도킹형 멀티 보조배터리 5000mAh",
       "productName": "큐잉 4IN1 C타입 8핀 도킹형 멀티 보조배터리 5000mAh",
       "category": "festa",
@@ -459,7 +515,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700781"
     },
     {
-      "id": 15,
+      "id": 17,
       "title": "[옥션] 홀라이프 파워부스트 아르기닌 6300 100포 / 타우린 200mg 상큼한 레몬맛",
       "productName": "홀라이프 파워부스트 아르기닌 6300 100포 / 타우린 200mg 상큼한 레몬맛",
       "category": "festa",
@@ -489,7 +545,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700780"
     },
     {
-      "id": 16,
+      "id": 18,
       "title": "[네이버] 고창 풍천 민물장어 1kg 세트 (손질후 700g이상) 소스2종+생강채",
       "productName": "고창 풍천 민물장어 1kg 세트 (손질후 700g이상) 소스2종+생강채",
       "category": "meat",
@@ -519,7 +575,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700779"
     },
     {
-      "id": 17,
+      "id": 19,
       "title": "[루리웹] Overcome Your Fears - Caretaker (무료...",
       "productName": "Overcome Your Fears - Caretaker (무료...",
       "category": "festa",
@@ -547,7 +603,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103842?"
     },
     {
-      "id": 18,
+      "id": 20,
       "title": "[11번가] 대추 방울토마토 중소과 2kg",
       "productName": "대추 방울토마토 중소과 2kg",
       "category": "produce",
@@ -577,7 +633,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700778"
     },
     {
-      "id": 19,
+      "id": 21,
       "title": "[토스쇼핑] 하이뮨 프로틴 밀크쉐이크 250ml 18개",
       "productName": "하이뮨 프로틴 밀크쉐이크 250ml 18개",
       "category": "food-other",
@@ -607,7 +663,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700777"
     },
     {
-      "id": 20,
+      "id": 22,
       "title": "[뽐뿌] Overcome Your Fears - Caretaker",
       "productName": "Overcome Your Fears - Caretaker",
       "category": "festa",
@@ -635,7 +691,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700776"
     },
     {
-      "id": 21,
+      "id": 23,
       "title": "[네이버페이] 2026-05-02 일일적립, 클릭 47원",
       "productName": "2026-05-02 일일적립, 클릭 47원",
       "category": "festa",
@@ -665,7 +721,7 @@
       "url": "https://www.dogdrip.net/hotdeal/699492856?sort_index=popular&page=1"
     },
     {
-      "id": 22,
+      "id": 24,
       "title": "[루리웹] 오늘의 팝업 x 반다이남코코리아몰 5/2 오픈 / 가격 다양",
       "productName": "오늘의 팝업 x 반다이남코코리아몰 5/2 오픈 / 가격 다양",
       "category": "festa",
@@ -693,7 +749,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103841?"
     },
     {
-      "id": 23,
+      "id": 25,
       "title": "[지마켓] 냉동 애플망고 1kg 3봉",
       "productName": "냉동 애플망고 1kg 3봉",
       "category": "frozen",
@@ -723,7 +779,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700775"
     },
     {
-      "id": 24,
+      "id": 26,
       "title": "[뽐뿌] 하겐다즈 파인트 6개",
       "productName": "하겐다즈 파인트 6개",
       "category": "festa",
@@ -752,37 +808,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700774"
     },
     {
-      "id": 25,
-      "title": "[G마켓] 1+1 무타공 5단/3단 LED 자석조명 스탠드 리모컨 터치",
-      "productName": "1+1 무타공 5단/3단 LED 자석조명 스탠드 리모컨 터치",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 12900,
-      "priceText": "12,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-30T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "1+1 무타공 5단/3단 LED 자석조명 스탠드 리모컨 터치 특가입니다. G마켓 기준 12,900원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 12,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700773",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_700773&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDcwMTg2MjE4OA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700773"
-    },
-    {
-      "id": 26,
+      "id": 27,
       "title": "[알리뽐뿌] 361도 펑예5 ($18) FLAME 4.0 믹스 ($47) ONEMIX 카본 플...",
       "productName": "361도 펑예5 ($18) FLAME 4.0 믹스 ($47) ONEMIX 카본 플...",
       "category": "overseas",
@@ -808,7 +834,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87303"
     },
     {
-      "id": 27,
+      "id": 28,
       "title": "[알리뽐뿌] 유그린 로봇디자인 65W GaN 충전기 KR플러그",
       "productName": "유그린 로봇디자인 65W GaN 충전기 KR플러그",
       "category": "overseas",
@@ -834,7 +860,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87301"
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "[알리뽐뿌] 특가) 전자식비데 코나에코홈(8만), 이누스 직수건조 방수비데(11만), 아메리칸스탠다드...",
       "productName": "특가) 전자식비데 코나에코홈(8만), 이누스 직수건조 방수비데(11만), 아메리칸스탠다드...",
       "category": "overseas",
@@ -860,7 +886,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87300"
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "[알리뽐뿌] 이누스 IN-1200T+(11.4만) IST-N72R PLUS+(13.8만) ISA-...",
       "productName": "이누스 IN-1200T+(11.4만) IST-N72R PLUS+(13.8만) ISA-...",
       "category": "overseas",
@@ -886,7 +912,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87299"
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "[알리뽐뿌] 알리특가) 800W GaN 충전기 100W KR코드($17.6) 330WGaN 충전기 100W($1...",
       "productName": "알리특가) 800W GaN 충전기 100W KR코드($17.6) 330WGaN 충전기 100W($1...",
       "category": "overseas",
@@ -912,7 +938,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87298"
     },
     {
-      "id": 31,
+      "id": 32,
       "title": "[알리뽐뿌] 캠핑 특가) 마운틴하이커 캠핑 웨건 폴딩(6.8만) IGT 5유닛 테이블(7.7만) IGT 테...",
       "productName": "캠핑 특가) 마운틴하이커 캠핑 웨건 폴딩(6.8만) IGT 5유닛 테이블(7.7만) IGT 테...",
       "category": "overseas",
@@ -938,7 +964,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87296"
     },
     {
-      "id": 32,
+      "id": 33,
       "title": "[알리뽐뿌] 베이스어스 BC1 이어 클립 이어폰",
       "productName": "베이스어스 BC1 이어 클립 이어폰",
       "category": "overseas",
@@ -965,7 +991,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87294"
     },
     {
-      "id": 33,
+      "id": 34,
       "title": "[알리뽐뿌] 드리미 L30s Pro Ultra Heat 로봇청소기",
       "productName": "드리미 L30s Pro Ultra Heat 로봇청소기",
       "category": "overseas",
@@ -993,7 +1019,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87293"
     },
     {
-      "id": 34,
+      "id": 35,
       "title": "[알리뽐뿌] 리큐 찌든때세탁세제1.8L 4개+200ml(12,483원),아이린실내건조섬유유연제2.3L4...",
       "productName": "리큐 찌든때세탁세제1.8L 4개+200ml(12,483원),아이린실내건조섬유유연제2.3L4...",
       "category": "overseas",
@@ -1018,34 +1044,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87292",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_87292&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDc3Nzc2MTk2ODYuaHRtbD8=&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87292"
-    },
-    {
-      "id": 35,
-      "title": "[알리뽐뿌] 라헨느 프리미엄 304 올스테인리스 에어프라이어",
-      "productName": "라헨느 프리미엄 304 올스테인리스 에어프라이어",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 79011,
-      "priceText": "79,011원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-04-30T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "라헨느 프리미엄 304 올스테인리스 에어프라이어 특가입니다. 알리뽐뿌 기준 79,011원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 79,011원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87291",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_87291&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDk5NDU0MDk3NjguaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87291"
     },
     {
       "id": 36,
@@ -1107,7 +1105,7 @@
       "id": 38,
       "title": "[네이버] 스위치 폭렬 스위츠 랜드 / 10,000 / 3,000",
       "productName": "스위치 폭렬 스위츠 랜드 / 10,000 / 3,000",
-      "category": "festa",
+      "category": "game",
       "source": "루리웹",
       "platform": "네이버",
       "price": 0,
@@ -1119,10 +1117,8 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
+      "eventTags": [],
+      "sourceCategory": "게임S/W",
       "summary": "스위치 폭렬 스위츠 랜드 / 10,000 / 3,000 특가입니다. 네이버 기준.",
       "summaryPoints": [
         "플랫폼: 네이버"

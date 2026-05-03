@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T20:46:25.306Z",
+  "generatedAt": "2026-05-03T21:45:07.139Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -702,7 +702,7 @@
       "id": 23,
       "title": "[네이버페이] 카페 2천원 이상 결제시 500원 적립",
       "productName": "카페 2천원 이상 결제시 500원 적립",
-      "category": "voucher",
+      "category": "festa",
       "source": "루리웹",
       "platform": "네이버페이",
       "price": 500,
@@ -718,7 +718,7 @@
         "적립",
         "페이적립"
       ],
-      "sourceCategory": "상품권",
+      "sourceCategory": "BEST",
       "summary": "카페 2천원 이상 결제시 500원 적립 특가입니다. 네이버페이 기준 500원.",
       "summaryPoints": [
         "플랫폼: 네이버페이",
@@ -789,14 +789,14 @@
     },
     {
       "id": 26,
-      "title": "[롯데온] 스케쳐스 고워크 아치핏 샌들 47,880원/무료",
-      "productName": "스케쳐스 고워크 아치핏 샌들 47,880원/무료",
+      "title": "[지마켓] 내셔널지오그래픽 키즈 여름샌들 2종 택1",
+      "productName": "내셔널지오그래픽 키즈 여름샌들 2종 택1",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 47880,
-      "priceText": "47,880원",
-      "shipping": "무료",
+      "platform": "지마켓",
+      "price": 17580,
+      "priceText": "17,580원",
+      "shipping": "",
       "discount": 0,
       "createdAt": "2026-05-02T15:00:00.000Z",
       "deadlineAt": "",
@@ -807,15 +807,14 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "스케쳐스 고워크 아치핏 샌들 47,880원/무료 특가입니다. 롯데온 기준 47,880원, 무료.",
+      "summary": "내셔널지오그래픽 키즈 여름샌들 2종 택1 특가입니다. 지마켓 기준 17,580원.",
       "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 47,880원",
-        "배송: 무료"
+        "플랫폼: 지마켓",
+        "가격: 17,580원"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700936",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_700936&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vbS9wcm9kdWN0L0xFMTIyMTIwOTA0Mz9tYWxsX25vPTEmY2hfbm89MTAwMjc5JmNoX2R0bF9ubz0xMDQ0NDI4&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700936"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700984",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_700984&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvSEVhUDIweGg3aQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=700984"
     },
     {
       "id": 27,
@@ -1052,7 +1051,7 @@
       "eventTags": [
         "식품"
       ],
-      "sourceCategory": "BEST",
+      "sourceCategory": "음식",
       "summary": "햇반 윤기가득쌀밥 210g 36개 (27,210원/무료) 특가입니다. 롯데온 기준 27,210원, 무료.",
       "summaryPoints": [
         "플랫폼: 롯데온",

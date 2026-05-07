@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T20:51:02.310Z",
+  "generatedAt": "2026-05-07T22:01:43.450Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,6 +56,36 @@
   "deals": [
     {
       "id": 1,
+      "title": "[지마켓] 꼬깔콘 군옥수수맛 67g 12입 1박스",
+      "productName": "꼬깔콘 군옥수수맛 67g 12입 1박스",
+      "category": "festa",
+      "source": "루리웹",
+      "platform": "지마켓",
+      "price": 10920,
+      "priceText": "10,920원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-07T21:52:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "음식",
+      "summary": "꼬깔콘 군옥수수맛 67g 12입 1박스 특가입니다. 지마켓 기준 10,920원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 10,920원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103971?",
+      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fm.gmarket.co.kr%2Fvi%2Fproduct%2F2941528049&bbs=1020",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/103971?"
+    },
+    {
+      "id": 2,
       "title": "[롯데온] 나이키 우먼 P-6000 토스페이",
       "productName": "나이키 우먼 P-6000 토스페이",
       "category": "festa",
@@ -85,7 +115,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702138"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "[뽐뿌] 완도 활전복 1kg 3-4미",
       "productName": "완도 활전복 1kg 3-4미",
       "category": "meat",
@@ -114,7 +144,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702137"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "[옥션] 1등급 암소 한우 등심 250g X 2팩",
       "productName": "1등급 암소 한우 등심 250g X 2팩",
       "category": "meat",
@@ -144,7 +174,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702136"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "[루리웹] (무료) Toon Shaders Pro for URP",
       "productName": "(무료) Toon Shaders Pro for URP",
       "category": "festa",
@@ -172,7 +202,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103970?"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "[지마켓] 마니커 리얼통살 치킨너겟 300g x 4팩",
       "productName": "마니커 리얼통살 치킨너겟 300g x 4팩",
       "category": "frozen",
@@ -201,7 +231,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702135"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "[뽐뿌] 손질 오징어 3미 800g",
       "productName": "손질 오징어 3미 800g",
       "category": "meat",
@@ -229,7 +259,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702134"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "[뽐뿌] 통화 기본, 데이터 4.5GB+1Mbps",
       "productName": "통화 기본, 데이터 4.5GB+1Mbps",
       "category": "festa",
@@ -257,7 +287,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702133"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "[네이버] 아이파킹 EV 충전 기프트카드 50,000원권",
       "productName": "아이파킹 EV 충전 기프트카드 50,000원권",
       "category": "festa",
@@ -287,7 +317,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702132"
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "[옥션] 프로젝트엠 남/여 여름 인기 아이템 9종 택1",
       "productName": "프로젝트엠 남/여 여름 인기 아이템 9종 택1",
       "category": "festa",
@@ -317,7 +347,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702131"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "[네이버] 배달의민족&올리브영 기프트세트 10만원",
       "productName": "배달의민족&올리브영 기프트세트 10만원",
       "category": "food-other",
@@ -347,7 +377,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702130"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "[지마켓] 누리푸드 미국산 목전지 주물럭용 250g x 8팩",
       "productName": "누리푸드 미국산 목전지 주물럭용 250g x 8팩",
       "category": "festa",
@@ -377,7 +407,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702129"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "[오늘의집] 고당도 하우스 수박 4~5kg",
       "productName": "고당도 하우스 수박 4~5kg",
       "category": "festa",
@@ -407,7 +437,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702128"
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "[토스] 통영멍게비빔장",
       "productName": "통영멍게비빔장",
       "category": "meat",
@@ -437,7 +467,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702127"
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "[네이버] 리디캐시 상품권 5만원 교환권",
       "productName": "리디캐시 상품권 5만원 교환권",
       "category": "voucher",
@@ -465,7 +495,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702126"
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "[롯데온] 핫식스 더킹 8종 355ml 24캔",
       "productName": "핫식스 더킹 8종 355ml 24캔",
       "category": "festa",
@@ -495,7 +525,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702125"
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "[옥션] 스파클 2리터 30병",
       "productName": "스파클 2리터 30병",
       "category": "festa",
@@ -525,7 +555,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702124"
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "[토스쇼핑] 삼육두유 달콤한B 190ml 15개입 1박스",
       "productName": "삼육두유 달콤한B 190ml 15개입 1박스",
       "category": "food-other",
@@ -555,7 +585,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702123"
     },
     {
-      "id": 18,
+      "id": 19,
       "title": "[네이버페이] 일일적립, 클릭 47원, 라이브예고 7원",
       "productName": "일일적립, 클릭 47원, 라이브예고 7원",
       "category": "festa",
@@ -586,7 +616,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103969?"
     },
     {
-      "id": 19,
+      "id": 20,
       "title": "[G마켓] 항아리반찬 낙지젓 1kg",
       "productName": "항아리반찬 낙지젓 1kg",
       "category": "meat",
@@ -616,7 +646,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702122"
     },
     {
-      "id": 20,
+      "id": 21,
       "title": "[루리웹] 금요일 네이버/토스 결제시 몬스터&핫식스 40% 할인 (5/8 ...",
       "productName": "금요일 네이버/토스 결제시 몬스터&핫식스 40% 할인 (5/8 ...",
       "category": "festa",
@@ -634,7 +664,7 @@
       "eventTags": [
         "할인페스타"
       ],
-      "sourceCategory": "음식",
+      "sourceCategory": "BEST",
       "summary": "금요일 네이버/토스 결제시 몬스터&핫식스 40% 할인 (5/8 ... 특가입니다.",
       "summaryPoints": [],
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103968?",
@@ -642,7 +672,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103968?"
     },
     {
-      "id": 21,
+      "id": 22,
       "title": "[알리뽐뿌] 차싹 내부세차 클리닝폼, 에어컨 탈취제(5,367원), 로베르타디까메리노 차...",
       "productName": "차싹 내부세차 클리닝폼, 에어컨 탈취제(5,367원), 로베르타디까메리노 차...",
       "category": "overseas",
@@ -669,7 +699,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87629"
     },
     {
-      "id": 22,
+      "id": 23,
       "title": "[네이버페이] 2026-05-08 일일적립, 클릭 47원",
       "productName": "2026-05-08 일일적립, 클릭 47원",
       "category": "festa",
@@ -699,7 +729,7 @@
       "url": "https://www.dogdrip.net/hotdeal/700510089?sort_index=popular&page=1"
     },
     {
-      "id": 23,
+      "id": 24,
       "title": "[루리웹] 트래시 고블린, 어레인저 (무료)",
       "productName": "트래시 고블린, 어레인저 (무료)",
       "category": "festa",
@@ -727,37 +757,35 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103967?"
     },
     {
-      "id": 24,
-      "title": "[롯데온] 반건조 오징어 특대 5미 750g",
-      "productName": "반건조 오징어 특대 5미 750g",
-      "category": "meat",
+      "id": 25,
+      "title": "[G마켓] 이스트팩 백팩 몰러파워 노트북수납",
+      "productName": "이스트팩 백팩 몰러파워 노트북수납",
+      "category": "electronics",
       "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 17980,
-      "priceText": "17,980원",
-      "shipping": "무료배송",
+      "platform": "G마켓",
+      "price": 29900,
+      "priceText": "29,900원",
+      "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-05-06T15:00:00.000Z",
       "deadlineAt": "",
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
+      "eventTags": [],
       "sourceCategory": "",
-      "summary": "반건조 오징어 특대 5미 750g 특가입니다. 롯데온 기준 17,980원, 무료배송.",
+      "summary": "이스트팩 백팩 몰러파워 노트북수납 특가입니다. G마켓 기준 29,900원, 무료.",
       "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 17,980원",
-        "배송: 무료배송"
+        "플랫폼: G마켓",
+        "가격: 29,900원",
+        "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=701997",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_701997&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L0xPMjY0MjYxNzU0MT9lbnRyeVBvaW50PWJv&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=701997"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=701941",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_701941&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDUyMzkzMjM5MA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=701941"
     },
     {
-      "id": 25,
+      "id": 26,
       "title": "[알리뽐뿌] 미니 보조배터리 1만mAh 22.5W 내장 케이블",
       "productName": "미니 보조배터리 1만mAh 22.5W 내장 케이블",
       "category": "overseas",
@@ -784,7 +812,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87627"
     },
     {
-      "id": 26,
+      "id": 27,
       "title": "[알리뽐뿌] 맥반석 몸통 오징어 구이 100g(5~7미)+청양마요(5,853원)/무료",
       "productName": "맥반석 몸통 오징어 구이 100g(5~7미)+청양마요(5,853원)/무료",
       "category": "overseas",
@@ -812,7 +840,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87626"
     },
     {
-      "id": 27,
+      "id": 28,
       "title": "[알리뽐뿌] HOCO 스마트 블루투스 트래커 애플 파인드 마이 호환 ($2.77) 구글",
       "productName": "HOCO 스마트 블루투스 트래커 애플 파인드 마이 호환 ($2.77) 구글",
       "category": "overseas",
@@ -838,7 +866,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87625"
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "[알리뽐뿌] 이지라이프 라운드 소파 사이드 테이블 (9,189원) 스퀘어 침대 협탁 (11,333원) 사이...",
       "productName": "이지라이프 라운드 소파 사이드 테이블 (9,189원) 스퀘어 침대 협탁 (11,333원) 사이...",
       "category": "overseas",
@@ -865,7 +893,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87624"
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "[알리뽐뿌] 헤디안 단백질 샴푸 1L(8,827원) 맥주효모 탈모샴푸(12,440원) 바디워시(8...",
       "productName": "헤디안 단백질 샴푸 1L(8,827원) 맥주효모 탈모샴푸(12,440원) 바디워시(8...",
       "category": "overseas",
@@ -892,7 +920,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87623"
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "[알리뽐뿌] 보조배터리 1만mAh 22.5W 내장 케이블",
       "productName": "보조배터리 1만mAh 22.5W 내장 케이블",
       "category": "overseas",
@@ -919,7 +947,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87622"
     },
     {
-      "id": 31,
+      "id": 32,
       "title": "[알리뽐뿌] 코인특가) 피온레이 카플레이 10.26인치 테슬라 겸용",
       "productName": "코인특가) 피온레이 카플레이 10.26인치 테슬라 겸용",
       "category": "overseas",
@@ -946,7 +974,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87621"
     },
     {
-      "id": 32,
+      "id": 33,
       "title": "[알리뽐뿌] 그늘 캐노피가 있는 경량 접이식 휴대용 캠핑의자 ($18), 천장 팔걸이 의자",
       "productName": "그늘 캐노피가 있는 경량 접이식 휴대용 캠핑의자 ($18), 천장 팔걸이 의자",
       "category": "overseas",
@@ -972,7 +1000,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87620"
     },
     {
-      "id": 33,
+      "id": 34,
       "title": "[알리뽐뿌] 써지오 안전멀티탭 5구접지 (10A) 3m 블랙",
       "productName": "써지오 안전멀티탭 5구접지 (10A) 3m 블랙",
       "category": "overseas",
@@ -1000,7 +1028,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87619"
     },
     {
-      "id": 34,
+      "id": 35,
       "title": "[알리뽐뿌] KUULAA 20000mAh 보조베터리",
       "productName": "KUULAA 20000mAh 보조베터리",
       "category": "overseas",
@@ -1027,7 +1055,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87618"
     },
     {
-      "id": 35,
+      "id": 36,
       "title": "[알리뽐뿌] 비타랩스 미네랄 23종 종합 멀티비타민 2종(13,618원) 밀크씨슬 6개월분(1...",
       "productName": "비타랩스 미네랄 23종 종합 멀티비타민 2종(13,618원) 밀크씨슬 6개월분(1...",
       "category": "overseas",
@@ -1054,7 +1082,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87617"
     },
     {
-      "id": 36,
+      "id": 37,
       "title": "[알리뽐뿌] SaengQ 진공 조장기 식품 진공 실러 진공백 10개 포함 ($9.41) /무료",
       "productName": "SaengQ 진공 조장기 식품 진공 실러 진공백 10개 포함 ($9.41) /무료",
       "category": "overseas",
@@ -1081,7 +1109,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87616"
     },
     {
-      "id": 37,
+      "id": 38,
       "title": "[알리뽐뿌] 유그린 마그네틱 차량용 핸드폰 거치대($6.77/무배)/UGREEN 자동차 전화 홀더 스...",
       "productName": "유그린 마그네틱 차량용 핸드폰 거치대($6.77/무배)/UGREEN 자동차 전화 홀더 스...",
       "category": "overseas",
@@ -1108,7 +1136,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87615"
     },
     {
-      "id": 38,
+      "id": 39,
       "title": "[알리뽐뿌] 코카콜라 업소용 500ml x 24PET",
       "productName": "코카콜라 업소용 500ml x 24PET",
       "category": "overseas",
@@ -1136,7 +1164,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87614"
     },
     {
-      "id": 39,
+      "id": 40,
       "title": "[알리뽐뿌] 라이프폼 3장1세트남성용쿨드라이 무지티(9천),3장1세트순면100%무지 반팔티(1만)/무료",
       "productName": "라이프폼 3장1세트남성용쿨드라이 무지티(9천),3장1세트순면100%무지 반팔티(1만)/무료",
       "category": "overseas",
@@ -1163,7 +1191,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87613"
     },
     {
-      "id": 40,
+      "id": 41,
       "title": "[네이버페이] 2026-05-07 일일적립, 클릭 69원",
       "productName": "2026-05-07 일일적립, 클릭 69원",
       "category": "festa",
@@ -1193,10 +1221,10 @@
       "url": "https://www.dogdrip.net/hotdeal/700315672?sort_index=popular&page=1"
     },
     {
-      "id": 41,
+      "id": 42,
       "title": "[루리웹] DJMAX RESPECT V 할인 (9,960원)",
       "productName": "DJMAX RESPECT V 할인 (9,960원)",
-      "category": "festa",
+      "category": "game",
       "source": "루리웹",
       "platform": "",
       "price": 9960,
@@ -1208,10 +1236,8 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
+      "eventTags": [],
+      "sourceCategory": "게임S/W",
       "summary": "DJMAX RESPECT V 할인 (9,960원) 특가입니다. 9,960원.",
       "summaryPoints": [
         "가격: 9,960원"
@@ -1221,7 +1247,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103966?"
     },
     {
-      "id": 42,
+      "id": 43,
       "title": "[11번가] 펩시제로 210ml 18캔+355ml 15캔(T멤14,300)",
       "productName": "펩시제로 210ml 18캔+355ml 15캔(T멤14,300)",
       "category": "festa",
@@ -1249,7 +1275,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103965?"
     },
     {
-      "id": 43,
+      "id": 44,
       "title": "[지마켓] 아이시스 8.0 300ml 60개 생수 (10,620원/유클무...",
       "productName": "아이시스 8.0 300ml 60개 생수 (10,620원/유클무...",
       "category": "festa",
@@ -1278,7 +1304,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103964?"
     },
     {
-      "id": 44,
+      "id": 45,
       "title": "[루리웹] slay the spire (6,750원)",
       "productName": "slay the spire (6,750원)",
       "category": "game",
@@ -1304,7 +1330,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103963?"
     },
     {
-      "id": 45,
+      "id": 46,
       "title": "[네이버] 베이스어스 오픈형 이어폰 MC1 PRO 네멤59,900원",
       "productName": "베이스어스 오픈형 이어폰 MC1 PRO 네멤59,900원",
       "category": "electronics",
@@ -1331,7 +1357,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103962?"
     },
     {
-      "id": 46,
+      "id": 47,
       "title": "[지마켓] MANLI RTX 5080 Stellar (1,493,940원...",
       "productName": "MANLI RTX 5080 Stellar (1,493,940원...",
       "category": "electronics",
@@ -1358,7 +1384,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103961?"
     },
     {
-      "id": 47,
+      "id": 48,
       "title": "[쿠팡] 바이크 헤드셋 JESIMAIK - R16Pro (96,900원)",
       "productName": "바이크 헤드셋 JESIMAIK - R16Pro (96,900원)",
       "category": "festa",
@@ -1387,7 +1413,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103959?"
     },
     {
-      "id": 48,
+      "id": 49,
       "title": "[네이버스토어] 체인소 맨 포치타 버켓 팝콘통 28,900원/유료배송",
       "productName": "체인소 맨 포치타 버켓 팝콘통 28,900원/유료배송",
       "category": "festa",
@@ -1416,7 +1442,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103958?"
     },
     {
-      "id": 49,
+      "id": 50,
       "title": "[루리웹] 네이버페이 현장 결제 2만원 50% 할인 (5/8하루)",
       "productName": "네이버페이 현장 결제 2만원 50% 할인 (5/8하루)",
       "category": "festa",
@@ -1442,7 +1468,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103956?"
     },
     {
-      "id": 50,
+      "id": 51,
       "title": "[롯데온] 쟌슨빌 소시지 김치볶음밥 250g 10팩 (23,650원/무배...",
       "productName": "쟌슨빌 소시지 김치볶음밥 250g 10팩 (23,650원/무배...",
       "category": "frozen",
@@ -1470,34 +1496,6 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103954?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fwww.lotteon.com%2Fp%2Fproduct%2FLO2493199760&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/103954?"
-    },
-    {
-      "id": 51,
-      "title": "[지마켓] 펩시제로라임 190ml 30캔+210ml30캔(21,900)",
-      "productName": "펩시제로라임 190ml 30캔+210ml30캔(21,900)",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "지마켓",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-05-06T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "음식",
-      "summary": "펩시제로라임 190ml 30캔+210ml30캔(21,900) 특가입니다. 지마켓 기준.",
-      "summaryPoints": [
-        "플랫폼: 지마켓"
-      ],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103953?",
-      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fitem.gmarket.co.kr%2FItem%3Fgoodscode%3D4739586573&bbs=1020",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/103953?"
     },
     {
       "id": 52,

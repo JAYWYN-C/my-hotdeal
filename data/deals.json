@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T19:05:31.577Z",
+  "generatedAt": "2026-05-09T20:11:18.091Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -86,7 +86,7 @@
       "id": 2,
       "title": "[루리웹] LivingBattle",
       "productName": "LivingBattle",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -98,8 +98,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "LivingBattle 특가입니다. 무료.",
       "summaryPoints": [
         "배송: 무료"
@@ -138,36 +140,6 @@
     },
     {
       "id": 4,
-      "title": "[G마켓] 로지텍 MX Keys S 무선 저소음 키보드",
-      "productName": "로지텍 MX Keys S 무선 저소음 키보드",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 90870,
-      "priceText": "90,870원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-05-09T17:45:14.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "로지텍 MX Keys S 무선 저소음 키보드 특가입니다. G마켓 기준 90,870원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 90,870원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702594",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_702594&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDUyNDE5OTE3OA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702594"
-    },
-    {
-      "id": 5,
       "title": "[뽐뿌] 100gb+5mps skt망 4개월",
       "productName": "100gb+5mps skt망 4개월",
       "category": "festa",
@@ -196,7 +168,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702593"
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "[네이버페이] 일일적립, 클릭 3원",
       "productName": "일일적립, 클릭 3원",
       "category": "festa",
@@ -226,7 +198,7 @@
       "url": "https://www.dogdrip.net/hotdeal/700840740?sort_index=popular&page=1"
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "[알리뽐뿌] 초코릿 브라우니 크리스프 40gX5봉(6,846원), 말차 브라우니 크리스프 40gX5봉(6,8...",
       "productName": "초코릿 브라우니 크리스프 40gX5봉(6,846원), 말차 브라우니 크리스프 40gX5봉(6,8...",
       "category": "overseas",
@@ -253,7 +225,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87711"
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "[g마켓] 국내산 갓김치 1.5kg",
       "productName": "국내산 갓김치 1.5kg",
       "category": "festa",
@@ -283,7 +255,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702592"
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "[롯데온] 아이스크림세트 30개 17,860원",
       "productName": "아이스크림세트 30개 17,860원",
       "category": "dessert",
@@ -313,7 +285,7 @@
       "url": "https://www.dogdrip.net/hotdeal/700816005?sort_index=popular&page=1"
     },
     {
-      "id": 10,
+      "id": 9,
       "title": "[알리뽐뿌] 6 in 1 10000mAh 무선캠핑용선풍기($19),휴대용 스탠딩 선풍기($18)/무료",
       "productName": "6 in 1 10000mAh 무선캠핑용선풍기($19),휴대용 스탠딩 선풍기($18)/무료",
       "category": "overseas",
@@ -340,7 +312,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87710"
     },
     {
-      "id": 11,
+      "id": 10,
       "title": "[지마켓] 도브 데오드란트 롤온 40ml 오리지널 3개+손거울 증정",
       "productName": "도브 데오드란트 롤온 40ml 오리지널 3개+손거울 증정",
       "category": "festa",
@@ -370,7 +342,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702591"
     },
     {
-      "id": 12,
+      "id": 11,
       "title": "[네이버페이] 일일적립, 클릭 3원",
       "productName": "일일적립, 클릭 3원",
       "category": "festa",
@@ -400,7 +372,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104007?"
     },
     {
-      "id": 13,
+      "id": 12,
       "title": "[옥션] 리츠 크래커 12개 골라담기 +리츠 미니타올",
       "productName": "리츠 크래커 12개 골라담기 +리츠 미니타올",
       "category": "festa",
@@ -430,7 +402,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702590"
     },
     {
-      "id": 14,
+      "id": 13,
       "title": "[롯데온] 화평동 왕 냉면 (물 / 비빔) 10인분 세트",
       "productName": "화평동 왕 냉면 (물 / 비빔) 10인분 세트",
       "category": "festa",
@@ -460,7 +432,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702589"
     },
     {
-      "id": 15,
+      "id": 14,
       "title": "[11번가] 메가박스 모바일 금액권 2만원권",
       "productName": "메가박스 모바일 금액권 2만원권",
       "category": "voucher",
@@ -488,7 +460,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702588"
     },
     {
-      "id": 16,
+      "id": 15,
       "title": "[11번가] 지오다노 봄여름 ~84% 기본티/셔츠/면바지 외",
       "productName": "지오다노 봄여름 ~84% 기본티/셔츠/면바지 외",
       "category": "festa",
@@ -518,7 +490,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702586"
     },
     {
-      "id": 17,
+      "id": 16,
       "title": "[오늘의집] 오뚜기 사천 마파두부 250g x 4개",
       "productName": "오뚜기 사천 마파두부 250g x 4개",
       "category": "festa",
@@ -547,7 +519,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702585"
     },
     {
-      "id": 18,
+      "id": 17,
       "title": "[지마켓] 니트릴장갑 100매 x 3개 세트",
       "productName": "니트릴장갑 100매 x 3개 세트",
       "category": "festa",
@@ -577,7 +549,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569303&page=1"
     },
     {
-      "id": 19,
+      "id": 18,
       "title": "[지마켓] 후드아노락+ 밴딩반바지 셋트 남녀공용 커플템",
       "productName": "후드아노락+ 밴딩반바지 셋트 남녀공용 커플템",
       "category": "festa",
@@ -606,7 +578,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702584"
     },
     {
-      "id": 20,
+      "id": 19,
       "title": "[토스] 드시모네 365캡슐 4박스",
       "productName": "드시모네 365캡슐 4박스",
       "category": "festa",
@@ -636,7 +608,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702583"
     },
     {
-      "id": 21,
+      "id": 20,
       "title": "[G마켓] 다룸 스마트 자동 센서 쓰레기통 20L 아이보리/화이트",
       "productName": "다룸 스마트 자동 센서 쓰레기통 20L 아이보리/화이트",
       "category": "household",
@@ -664,7 +636,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702582"
     },
     {
-      "id": 22,
+      "id": 21,
       "title": "[지마켓] 샥즈 SHOKZ OpenDots ONE 오픈식 블루투스 무선 이어폰 E310",
       "productName": "샥즈 SHOKZ OpenDots ONE 오픈식 블루투스 무선 이어폰 E310",
       "category": "electronics",
@@ -692,7 +664,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702581"
     },
     {
-      "id": 23,
+      "id": 22,
       "title": "[지마켓] 광천김 명작 재래 캔김 30g 5캔",
       "productName": "광천김 명작 재래 캔김 30g 5캔",
       "category": "festa",
@@ -722,7 +694,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702580"
     },
     {
-      "id": 24,
+      "id": 23,
       "title": "[지마켓] 단백콩 곤약면 180g+매콤소스 10개입",
       "productName": "단백콩 곤약면 180g+매콤소스 10개입",
       "category": "festa",
@@ -750,6 +722,36 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702579",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_702579&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDY3NDc0NzM1OQ==&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702579"
+    },
+    {
+      "id": 24,
+      "title": "[지마켓] 하루견과 블루베리 100봉",
+      "productName": "하루견과 블루베리 100봉",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "지마켓",
+      "price": 52910,
+      "priceText": "52,910원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-09T15:04:33.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "하루견과 블루베리 100봉 특가입니다. 지마켓 기준 52,910원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 52,910원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702578",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_702578&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9MjEwNzUzNjg4Mw==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702578"
     },
     {
       "id": 25,
@@ -781,13 +783,13 @@
     },
     {
       "id": 26,
-      "title": "[지마켓] 원팩마라탕 보통맛 1팩 + 1팩",
-      "productName": "원팩마라탕 보통맛 1팩 + 1팩",
-      "category": "festa",
+      "title": "[11번가] 자일렉 한강라면기계 인덕션 라면끓이는기계",
+      "productName": "자일렉 한강라면기계 인덕션 라면끓이는기계",
+      "category": "food-other",
       "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 13560,
-      "priceText": "13,560원",
+      "platform": "11번가",
+      "price": 159800,
+      "priceText": "159,800원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-05-08T15:00:00.000Z",
@@ -796,18 +798,18 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [
-        "할인페스타"
+        "라면"
       ],
       "sourceCategory": "",
-      "summary": "원팩마라탕 보통맛 1팩 + 1팩 특가입니다. 지마켓 기준 13,560원, 무료.",
+      "summary": "자일렉 한강라면기계 인덕션 라면끓이는기계 특가입니다. 11번가 기준 159,800원, 무료.",
       "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 13,560원",
+        "플랫폼: 11번가",
+        "가격: 159,800원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702566",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_702566&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9MjY2MTg5NjE2NA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702566"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702471",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_702471&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85MTgyNzg3MzI0&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=702471"
     },
     {
       "id": 27,
@@ -1196,36 +1198,6 @@
     },
     {
       "id": 41,
-      "title": "[롯데온] 예감 6개 + 찍먹예감 4개",
-      "productName": "예감 6개 + 찍먹예감 4개",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "롯데온",
-      "price": 11410,
-      "priceText": "11,410원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-05-08T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
-      "summary": "예감 6개 + 찍먹예감 4개 특가입니다. 롯데온 기준 11,410원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 11,410원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103999?",
-      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fwww.lotteon.com%2Fproduct%2FLO2491734007&bbs=1020",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/103999?"
-    },
-    {
-      "id": 42,
       "title": "[롯데온] 테이크핏 몬스터 단백질 2종 350ml 12개 (22,470원...",
       "productName": "테이크핏 몬스터 단백질 2종 350ml 12개 (22,470원...",
       "category": "festa",
@@ -1254,7 +1226,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104006?"
     },
     {
-      "id": 43,
+      "id": 42,
       "title": "[루리웹] (겜우리)[PS5]붉은 나비 프리미엄 박스 115,200원 배송비 250...",
       "productName": "(겜우리)[PS5]붉은 나비 프리미엄 박스 115,200원 배송비 250...",
       "category": "game",
@@ -1280,7 +1252,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104005?"
     },
     {
-      "id": 44,
+      "id": 43,
       "title": "[루리웹] 센소다인 오리지날 플러스 6개 외 증정(18,400원/무료)",
       "productName": "센소다인 오리지날 플러스 6개 외 증정(18,400원/무료)",
       "category": "household",
@@ -1307,7 +1279,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104002?"
     },
     {
-      "id": 45,
+      "id": 44,
       "title": "[11번가] 빙그레 단지우유 240ml 혼합 12개 (14,940원)",
       "productName": "빙그레 단지우유 240ml 혼합 12개 (14,940원)",
       "category": "dairy",
@@ -1336,7 +1308,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104001?"
     },
     {
-      "id": 46,
+      "id": 45,
       "title": "[g마켓] LEADJOY XENO Plus 게임패드[37,350/무료배송]",
       "productName": "LEADJOY XENO Plus 게임패드[37,350/무료배송]",
       "category": "game",
@@ -1361,6 +1333,36 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/104000?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fitem.gmarket.co.kr%2FItem%3Fspm%3Dgmktpc.searchlist.organictier.d0_0.38f37a87SAopYQ%26goodscode%3D4733377963%26utparam-url%3D%257B%2522x_object_id%2522%253A%25224733377963%2522%252C%2522x_object_type%2522%253A%2522item%2522%252C%2522query%2522%253A%2522leadjoy%2520xeno%2520plus%2522%252C%2522pvid%2522%253A%252270331478502f47d7964ce28257c7dd32%2522%252C%2522pvid_sys%2522%253A%2522gmarket%2520server%2522%252C%2522search_session_id%2522%253A%25221fc240b6-88f4-4972-917d-6fe9919fbd90%2522%252C%2522origin_price%2522%253A%252245000%2522%252C%2522promotion_price%2522%253A%252240500%2522%252C%2522coupon_price%2522%253A%252237350%2522%252C%2522ab_buckets%2522%253A%2522%2522%252C%2522trafficType%2522%253A%2522organic%2522%257D&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104000?"
+    },
+    {
+      "id": 46,
+      "title": "[롯데온] 예감 6개 + 찍먹예감 4개",
+      "productName": "예감 6개 + 찍먹예감 4개",
+      "category": "festa",
+      "source": "루리웹",
+      "platform": "롯데온",
+      "price": 11410,
+      "priceText": "11,410원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-05-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "음식",
+      "summary": "예감 6개 + 찍먹예감 4개 특가입니다. 롯데온 기준 11,410원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 롯데온",
+        "가격: 11,410원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/103999?",
+      "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fwww.lotteon.com%2Fproduct%2FLO2491734007&bbs=1020",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/103999?"
     },
     {
       "id": 47,

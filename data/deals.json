@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T21:20:36.415Z",
+  "generatedAt": "2026-05-11T22:36:17.031Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,6 +56,96 @@
   "deals": [
     {
       "id": 1,
+      "title": "[G마켓] 올반 핫도그 찰핫도그15봉+크런치핫도그15봉",
+      "productName": "올반 핫도그 찰핫도그15봉+크런치핫도그15봉",
+      "category": "frozen",
+      "source": "뽐뿌",
+      "platform": "G마켓",
+      "price": 19130,
+      "priceText": "19,130원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-05-11T22:31:56.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "올반 핫도그 찰핫도그15봉+크런치핫도그15봉 특가입니다. G마켓 기준 19,130원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: G마켓",
+        "가격: 19,130원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703179",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703179&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvSXd1eUo2RFIz&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703179"
+    },
+    {
+      "id": 2,
+      "title": "[옥션] 저온압착 더진한 참기름 350ml + 350ml",
+      "productName": "저온압착 더진한 참기름 350ml + 350ml",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 11880,
+      "priceText": "11,880원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-05-11T21:51:41.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "저온압착 더진한 참기름 350ml + 350ml 특가입니다. 옥션 기준 11,880원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 11,880원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703178",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703178&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/aXRlbW5vPUQ1NjMyMzg5ODI=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703178"
+    },
+    {
+      "id": 3,
+      "title": "[옥션] 삼양 불닭소스 2개 + 불닭마요소스 1개",
+      "productName": "삼양 불닭소스 2개 + 불닭마요소스 1개",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 7900,
+      "priceText": "7,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-11T21:26:19.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "삼양 불닭소스 2개 + 불닭마요소스 1개 특가입니다. 옥션 기준 7,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 7,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703177",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703177&target=aHR0cHM6Ly9tb2JpbGUuYXVjdGlvbi5jby5rci9lZ28uYXNweD90PXZwJnA9RjQ5MDI0NDkyNQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703177"
+    },
+    {
+      "id": 4,
       "title": "[옥션] 삼양 불닭소스 2개 + 불닭마요소스 1개",
       "productName": "삼양 불닭소스 2개 + 불닭마요소스 1개",
       "category": "festa",
@@ -85,7 +175,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104055?"
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "[알리뽐뿌] 신세계푸드] 24결 시나몬롤페스츄리 8개",
       "productName": "신세계푸드] 24결 시나몬롤페스츄리 8개",
       "category": "overseas",
@@ -113,7 +203,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=15&no=87796"
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "[루리웹] 데빌 메이 크라이 프랜차이즈 75%~85% 할인 (가격본문)",
       "productName": "데빌 메이 크라이 프랜차이즈 75%~85% 할인 (가격본문)",
       "category": "festa",
@@ -139,7 +229,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104054?"
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "[루리웹] 언차티드4 PSN 아바타 4종 (무료)",
       "productName": "언차티드4 PSN 아바타 4종 (무료)",
       "category": "festa",
@@ -167,7 +257,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104053?"
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "[옥션] 아동잠옷 실내복바지 고쟁이바지 1+1",
       "productName": "아동잠옷 실내복바지 고쟁이바지 1+1",
       "category": "festa",
@@ -196,7 +286,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703175"
     },
     {
-      "id": 6,
+      "id": 9,
       "title": "[롯데온] 공용 데일리 쿠션 트레일 런닝화 트레킹화 스카이스피드 ABYSHX4914",
       "productName": "공용 데일리 쿠션 트레일 런닝화 트레킹화 스카이스피드 ABYSHX4914",
       "category": "festa",
@@ -226,7 +316,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703174"
     },
     {
-      "id": 7,
+      "id": 10,
       "title": "[오늘의집] 오뚜기 XO만두 골라담기 8봉 4+4",
       "productName": "오뚜기 XO만두 골라담기 8봉 4+4",
       "category": "frozen",
@@ -256,7 +346,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703173"
     },
     {
-      "id": 8,
+      "id": 11,
       "title": "[루리웹] 디아블로 대악마 컬렉션 ￦23,760",
       "productName": "디아블로 대악마 컬렉션 ￦23,760",
       "category": "festa",
@@ -282,7 +372,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104052?"
     },
     {
-      "id": 9,
+      "id": 12,
       "title": "[마켓컬리] 아망떼 물티슈 70고평량 72매 10팩",
       "productName": "아망떼 물티슈 70고평량 72매 10팩",
       "category": "festa",
@@ -312,7 +402,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703172"
     },
     {
-      "id": 10,
+      "id": 13,
       "title": "[쿠팡] 켈로그 첵스초코 쿠키앤크림 420g 2번들",
       "productName": "켈로그 첵스초코 쿠키앤크림 420g 2번들",
       "category": "dessert",
@@ -342,7 +432,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703171"
     },
     {
-      "id": 11,
+      "id": 14,
       "title": "[오늘의집] 크런치 2종 15봉 골라담기",
       "productName": "크런치 2종 15봉 골라담기",
       "category": "festa",
@@ -372,7 +462,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703170"
     },
     {
-      "id": 12,
+      "id": 15,
       "title": "[지마켓] 휠라 경량 러닝화 아킴보 3종 택1",
       "productName": "휠라 경량 러닝화 아킴보 3종 택1",
       "category": "festa",
@@ -402,7 +492,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703169"
     },
     {
-      "id": 13,
+      "id": 16,
       "title": "[토스] 우마왕 한우 육회 물회 밀키트 1팩 560g",
       "productName": "우마왕 한우 육회 물회 밀키트 1팩 560g",
       "category": "meat",
@@ -432,7 +522,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703168"
     },
     {
-      "id": 14,
+      "id": 17,
       "title": "[옥션] K2 씬에어 new 바이브맥시 다운",
       "productName": "K2 씬에어 new 바이브맥시 다운",
       "category": "festa",
@@ -461,7 +551,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703167"
     },
     {
-      "id": 15,
+      "id": 18,
       "title": "[지마켓] 닭개장 5팩",
       "productName": "닭개장 5팩",
       "category": "festa",
@@ -491,7 +581,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703166"
     },
     {
-      "id": 16,
+      "id": 19,
       "title": "[G마켓] 1+1 풀라스 초강력 무소음 핸디 미니 휴대용 손 선풍기",
       "productName": "1+1 풀라스 초강력 무소음 핸디 미니 휴대용 손 선풍기",
       "category": "festa",
@@ -521,7 +611,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703165"
     },
     {
-      "id": 17,
+      "id": 20,
       "title": "[G마켓] 소문난삼부자 올리브유 도시락김 4g 48봉",
       "productName": "소문난삼부자 올리브유 도시락김 4g 48봉",
       "category": "frozen",
@@ -551,7 +641,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703164"
     },
     {
-      "id": 18,
+      "id": 21,
       "title": "[오늘의집] 당도보장 성주 꿀 참외 2kg 소과 (13-16입)",
       "productName": "당도보장 성주 꿀 참외 2kg 소과 (13-16입)",
       "category": "festa",
@@ -581,7 +671,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703163"
     },
     {
-      "id": 19,
+      "id": 22,
       "title": "[네이버] 사세 매콤점보 닭다리 1.3kg",
       "productName": "사세 매콤점보 닭다리 1.3kg",
       "category": "meat",
@@ -609,94 +699,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703162",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703162&target=aHR0cHM6Ly9uYXZlci5tZS9HRWRJRVU5bA==&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703162"
-    },
-    {
-      "id": 20,
-      "title": "[G마켓] 최상품 대추방울토마토 로얄과 2kg",
-      "productName": "최상품 대추방울토마토 로얄과 2kg",
-      "category": "produce",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 7570,
-      "priceText": "7570원",
-      "shipping": "무료배송",
-      "discount": 0,
-      "createdAt": "2026-05-11T15:25:31.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "최상품 대추방울토마토 로얄과 2kg 특가입니다. G마켓 기준 7570원, 무료배송.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 7570원",
-        "배송: 무료배송"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703161",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703161&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9Mzk4MzY3NDEzNA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703161"
-    },
-    {
-      "id": 21,
-      "title": "[뽐뿌] 통화 400분, 데이터 10GB",
-      "productName": "통화 400분, 데이터 10GB",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "",
-      "price": 3900,
-      "priceText": "3,900원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-05-11T15:25:08.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "통화 400분, 데이터 10GB 특가입니다. 3,900원.",
-      "summaryPoints": [
-        "가격: 3,900원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703160",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703160&target=aHR0cHM6Ly93d3cuZXllcy5jby5rci9wYXlwbGFuL2luZm9fdmlldy81OC9DMDE=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703160"
-    },
-    {
-      "id": 22,
-      "title": "[G마켓] 성주 참외 당도선별 꿀참외 4.5kg(혼합과)",
-      "productName": "성주 참외 당도선별 꿀참외 4.5kg(혼합과)",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 10980,
-      "priceText": "10,980원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-05-11T15:24:40.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "성주 참외 당도선별 꿀참외 4.5kg(혼합과) 특가입니다. G마켓 기준 10,980원, 무배.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 10,980원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703159",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703159&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDQxNDE3NTQyMA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703159"
     },
     {
       "id": 23,
@@ -847,14 +849,14 @@
     },
     {
       "id": 28,
-      "title": "[G마켓] 밀레 풀메쉬 반팔 집업티셔츠",
-      "productName": "밀레 풀메쉬 반팔 집업티셔츠",
+      "title": "[지마켓] 디스커버리 남여공용 고프코어 하이킹 / 트레킹 스니커즈",
+      "productName": "디스커버리 남여공용 고프코어 하이킹 / 트레킹 스니커즈",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 26260,
-      "priceText": "26,260원",
-      "shipping": "무료",
+      "platform": "지마켓",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
       "discount": 0,
       "createdAt": "2026-05-10T15:00:00.000Z",
       "deadlineAt": "",
@@ -865,15 +867,14 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "밀레 풀메쉬 반팔 집업티셔츠 특가입니다. G마켓 기준 26,260원, 무료.",
+      "summary": "디스커버리 남여공용 고프코어 하이킹 / 트레킹 스니커즈 특가입니다. 지마켓 기준 무배.",
       "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 26,260원",
-        "배송: 무료"
+        "플랫폼: 지마켓",
+        "배송: 무배"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703111",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703111&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDcyMjkyNTcwNQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703111"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703115",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_703115&target=aHR0cHM6Ly9saW5rLmdtYXJrZXQuY28ua3IvNmZXb2xjQkR6&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=111&no=703115"
     },
     {
       "id": 29,

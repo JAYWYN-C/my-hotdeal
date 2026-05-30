@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T21:36:47.472Z",
+  "generatedAt": "2026-05-30T23:00:58.212Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,6 +56,92 @@
   "deals": [
     {
       "id": 1,
+      "title": "[네이버] 버거킹 콰치와퍼주니어+불고기와퍼주니어+콜라R 2+프렌치프라이R",
+      "productName": "버거킹 콰치와퍼주니어+불고기와퍼주니어+콜라R 2+프렌치프라이R",
+      "category": "meat",
+      "source": "뽐뿌",
+      "platform": "네이버",
+      "price": 8300,
+      "priceText": "8,300원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-30T22:52:37.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "",
+      "summary": "버거킹 콰치와퍼주니어+불고기와퍼주니어+콜라R 2+프렌치프라이R 특가입니다. 네이버 기준 8,300원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 8,300원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707943",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707943&target=aHR0cHM6Ly9tLmJyYW5kLm5hdmVyLmNvbS9idXJnZXJraW5na29yZWEvcHJvZHVjdHMvMTM1MTM2OTAwNDAjWk9PTQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707943"
+    },
+    {
+      "id": 2,
+      "title": "[지마켓] 일리윤 세라마이드아토6.0탑투토워시 1000ml+리필 500ml 2개",
+      "productName": "일리윤 세라마이드아토6.0탑투토워시 1000ml+리필 500ml 2개",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "지마켓",
+      "price": 0,
+      "priceText": "",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-05-30T22:40:50.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "일리윤 세라마이드아토6.0탑투토워시 1000ml+리필 500ml 2개 특가입니다. 지마켓 기준.",
+      "summaryPoints": [
+        "플랫폼: 지마켓"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707942",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707942&target=aHR0cHM6Ly9tLmdtYXJrZXQuY28ua3IvdmkvcHJvZHVjdC8yMTA3NTMxODY4&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707942"
+    },
+    {
+      "id": 3,
+      "title": "[옥션] 프로월드컵 마블카메오슬리퍼WT",
+      "productName": "프로월드컵 마블카메오슬리퍼WT",
+      "category": "kitchen",
+      "source": "뽐뿌",
+      "platform": "옥션",
+      "price": 2900,
+      "priceText": "2900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-05-30T21:56:13.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "프로월드컵 마블카메오슬리퍼WT 특가입니다. 옥션 기준 2900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 2900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707941",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707941&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/SXRlbU5vPUI1OTIyMzYzOTMmZnJtMz1WMg==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707941"
+    },
+    {
+      "id": 4,
       "title": "[개드립] 평생요금제 6gb 300분 990원",
       "productName": "평생요금제 6gb 300분 990원",
       "category": "festa",
@@ -83,7 +169,7 @@
       "url": "https://www.dogdrip.net/hotdeal/704754506?sort_index=popular&page=1"
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "[지마켓] 오리온 고래밥 46g x 30입",
       "productName": "오리온 고래밥 46g x 30입",
       "category": "festa",
@@ -113,7 +199,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707940"
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "[네이버] 목우촌 뚝심 340g x 3개",
       "productName": "목우촌 뚝심 340g x 3개",
       "category": "festa",
@@ -143,7 +229,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707939"
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "[지마켓] 냉동밥 보관 용기 420ml 화이트 6P",
       "productName": "냉동밥 보관 용기 420ml 화이트 6P",
       "category": "frozen",
@@ -173,7 +259,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707938"
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "[루리웹] Moonrise Fall 외 1(무료/무료)",
       "productName": "Moonrise Fall 외 1(무료/무료)",
       "category": "festa",
@@ -201,7 +287,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104460?"
     },
     {
-      "id": 6,
+      "id": 9,
       "title": "[뽐뿌] Moonrise Fall / IQ Under Construction",
       "productName": "Moonrise Fall / IQ Under Construction",
       "category": "festa",
@@ -229,7 +315,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707937"
     },
     {
-      "id": 7,
+      "id": 10,
       "title": "[지마켓] 5부 트래이빙복 반바지 1+1",
       "productName": "5부 트래이빙복 반바지 1+1",
       "category": "festa",
@@ -258,7 +344,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707936"
     },
     {
-      "id": 8,
+      "id": 11,
       "title": "[지마켓] 갤럭시 아이폰 맥세이프 케이스 1+1",
       "productName": "갤럭시 아이폰 맥세이프 케이스 1+1",
       "category": "electronics",
@@ -286,7 +372,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707935"
     },
     {
-      "id": 9,
+      "id": 12,
       "title": "[롯데온] 박재서 명인안동소주 35도 360ml 4병",
       "productName": "박재서 명인안동소주 35도 360ml 4병",
       "category": "festa",
@@ -316,7 +402,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707934"
     },
     {
-      "id": 10,
+      "id": 13,
       "title": "[11번가] 토레타 500ml 24개",
       "productName": "토레타 500ml 24개",
       "category": "festa",
@@ -346,16 +432,16 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707933"
     },
     {
-      "id": 11,
-      "title": "[네이버페이] 6월 현장결제 프렌차이즈&편의점&마트 이벤트 (6/1~30...",
-      "productName": "6월 현장결제 프렌차이즈&편의점&마트 이벤트 (6/1~30...",
+      "id": 14,
+      "title": "[네이버페이] 6월 현장결제 맥도날드 30% 페이백 외 (6/1~30)",
+      "productName": "6월 현장결제 맥도날드 30% 페이백 외 (6/1~30)",
       "category": "festa",
       "source": "루리웹",
       "platform": "네이버페이",
       "price": 0,
       "priceText": "",
       "shipping": "",
-      "discount": 0,
+      "discount": 30,
       "createdAt": "2026-05-30T15:46:00.000Z",
       "deadlineAt": "",
       "deadlineText": "",
@@ -365,7 +451,7 @@
         "페이적립"
       ],
       "sourceCategory": "BEST",
-      "summary": "6월 현장결제 프렌차이즈&편의점&마트 이벤트 (6/1~30... 특가입니다. 네이버페이 기준.",
+      "summary": "6월 현장결제 맥도날드 30% 페이백 외 (6/1~30) 특가입니다. 네이버페이 기준.",
       "summaryPoints": [
         "플랫폼: 네이버페이"
       ],
@@ -374,7 +460,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104459?"
     },
     {
-      "id": 12,
+      "id": 15,
       "title": "[옥션] 카누 돌체구스토 호환캡슐 48캡슐+16캡슐 증정 총 64캡슐",
       "productName": "카누 돌체구스토 호환캡슐 48캡슐+16캡슐 증정 총 64캡슐",
       "category": "festa",
@@ -404,7 +490,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707932"
     },
     {
-      "id": 13,
+      "id": 16,
       "title": "[G마켓] 스낵24 사무실 과자 10종 탕비실 간식과자세트",
       "productName": "스낵24 사무실 과자 10종 탕비실 간식과자세트",
       "category": "dessert",
@@ -434,7 +520,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707931"
     },
     {
-      "id": 14,
+      "id": 17,
       "title": "[뽐뿌] 남성 클리퍼 AMM417(블랙/연밤/진밤)",
       "productName": "남성 클리퍼 AMM417(블랙/연밤/진밤)",
       "category": "festa",
@@ -462,7 +548,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707930"
     },
     {
-      "id": 15,
+      "id": 18,
       "title": "[11번가] 어바웃미 숲 진정 수분크림 80ml+80ml+10ml+10ml 기획세트",
       "productName": "어바웃미 숲 진정 수분크림 80ml+80ml+10ml+10ml 기획세트",
       "category": "festa",
@@ -492,7 +578,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707929"
     },
     {
-      "id": 16,
+      "id": 19,
       "title": "[네이버] 마른파이브 브랜드데이 캡내장 모달 끈나시 외 다양",
       "productName": "마른파이브 브랜드데이 캡내장 모달 끈나시 외 다양",
       "category": "festa",
@@ -522,7 +608,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707928"
     },
     {
-      "id": 17,
+      "id": 20,
       "title": "[토스] 비빔오징어젓 1kg",
       "productName": "비빔오징어젓 1kg",
       "category": "meat",
@@ -550,96 +636,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707927",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707927&target=aHR0cHM6Ly9zZXJ2aWNlLnRvc3MuaW0vc2hvcHBpbmcvYy81NzAxODg0NDk/YWk9MjgxNjU1&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707927"
-    },
-    {
-      "id": 18,
-      "title": "[네이버] 제주흑돼지 갈비양념육 순살 250g",
-      "productName": "제주흑돼지 갈비양념육 순살 250g",
-      "category": "meat",
-      "source": "뽐뿌",
-      "platform": "네이버",
-      "price": 990,
-      "priceText": "990원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-05-30T15:16:31.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "제주흑돼지 갈비양념육 순살 250g 특가입니다. 네이버 기준 990원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 네이버",
-        "가격: 990원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707926",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707926&target=aHR0cHM6Ly9icmFuZC5uYXZlci5jb20vbWVhdGphbmcvcHJvZHVjdHMvMTI2OTY2MTQyMzk=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707926"
-    },
-    {
-      "id": 19,
-      "title": "[롯데온] 낫소 여름 쿠션 쪼리",
-      "productName": "낫소 여름 쿠션 쪼리",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "롯데온",
-      "price": 4490,
-      "priceText": "4,490원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-05-30T15:15:06.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "낫소 여름 쿠션 쪼리 특가입니다. 롯데온 기준 4,490원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 롯데온",
-        "가격: 4,490원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707925",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707925&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vcC9wcm9kdWN0L2J1bmRsZS9MTzI0NTczODk5MjA=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707925"
-    },
-    {
-      "id": 20,
-      "title": "[오늘의집] 농협 신비복숭아 2kg 중소과",
-      "productName": "농협 신비복숭아 2kg 중소과",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "오늘의집",
-      "price": 14963,
-      "priceText": "14,963원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-05-30T15:09:39.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "농협 신비복숭아 2kg 중소과 특가입니다. 오늘의집 기준 14,963원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 오늘의집",
-        "가격: 14,963원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707924",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707924&target=aHR0cHM6Ly9zdG9yZS5vaG91LnNlL2dvb2RzLzM1MzcxNzg=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707924"
     },
     {
       "id": 21,
@@ -734,13 +730,13 @@
     },
     {
       "id": 24,
-      "title": "[옥션] 1+1 소가죽 남성 핀 버클 벨트",
-      "productName": "1+1 소가죽 남성 핀 버클 벨트",
+      "title": "[뽐뿌] 네파 남녀공용 브레보 쿠셔닝 워킹화",
+      "productName": "네파 남녀공용 브레보 쿠셔닝 워킹화",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "옥션",
-      "price": 13950,
-      "priceText": "13,950원",
+      "platform": "",
+      "price": 48035,
+      "priceText": "48,035원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-05-29T15:00:00.000Z",
@@ -752,15 +748,14 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "1+1 소가죽 남성 핀 버클 벨트 특가입니다. 옥션 기준 13,950원, 무료.",
+      "summary": "네파 남녀공용 브레보 쿠셔닝 워킹화 특가입니다. 48,035원, 무료.",
       "summaryPoints": [
-        "플랫폼: 옥션",
-        "가격: 13,950원",
+        "가격: 48,035원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707916",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707916&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/aXRlbW5vPUU4NDk1MDI1Nzg=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707916"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707803",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_707803&target=aHR0cHM6Ly9tLWVzaG9wLnNzZy5jb20vaXRlbS9pdGVtVmlldy5zc2c/aXRlbUlkPTEwMDA0OTM3NDM4MTU=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=112&no=707803"
     },
     {
       "id": 25,

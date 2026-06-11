@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T19:23:27.428Z",
+  "generatedAt": "2026-06-11T21:39:55.738Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -56,9 +56,96 @@
   "deals": [
     {
       "id": 1,
+      "title": "[뽐뿌] 신라면 120g 40개 1박스",
+      "productName": "신라면 120g 40개 1박스",
+      "category": "food-other",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 25328,
+      "priceText": "25,328원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-11T20:53:26.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "라면"
+      ],
+      "sourceCategory": "",
+      "summary": "신라면 120g 40개 1박스 특가입니다. 25,328원, 무료.",
+      "summaryPoints": [
+        "가격: 25,328원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711247",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711247&target=aHR0cHM6Ly9tLm5vbmdzaGltbWFsbC5jb20vcHJvZHVjdC9kZXRhaWwuaHRtbD9wcm9kdWN0X25vPTI0NjAmY2F0ZV9ubz05ODAmdXRtX3NvdXJjZT1zaGFyZSZ1dG1fbWVkaXVtPXNvY2lhbCZ1dG1fY2FtcGFpZ249cHJvZHVjdF9zaGFyZSZ1dG1fY29udGVudD1saW5r&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711247"
+    },
+    {
+      "id": 2,
+      "title": "[뽐뿌] 통화 300분, 데이터 15GB(월 90원/12개월간)외 1건",
+      "productName": "통화 300분, 데이터 15GB(월 90원/12개월간)외 1건",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 90,
+      "priceText": "90원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-11T20:49:03.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "통화 300분, 데이터 15GB(월 90원/12개월간)외 1건 특가입니다. 90원.",
+      "summaryPoints": [
+        "가격: 90원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711246",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711246&target=aHR0cHM6Ly93d3cuam95dGVsLmNvLmtyL3JhdGVwbGFuX3ZpZXcuZG8/Jm5vPTQ4Nw==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711246"
+    },
+    {
+      "id": 3,
+      "title": "[네이버쇼핑] 삼탠바이미 이동식 스탠드 (345,920원/무료)",
+      "productName": "삼탠바이미 이동식 스탠드 (345,920원/무료)",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "네이버쇼핑",
+      "price": 345920,
+      "priceText": "345,920원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-11T19:18:50.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "삼탠바이미 이동식 스탠드 (345,920원/무료) 특가입니다. 네이버쇼핑 기준 345,920원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버쇼핑",
+        "가격: 345,920원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711245",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711245&target=aHR0cHM6Ly9tLnNpdGUubmF2ZXIuY29tLzJhZE5D&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711245"
+    },
+    {
+      "id": 4,
       "title": "[루리웹] 파이널 판타지 프렌차이즈 세일 17,430~ 가격 다양",
       "productName": "파이널 판타지 프렌차이즈 세일 17,430~ 가격 다양",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -70,8 +157,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "파이널 판타지 프렌차이즈 세일 17,430~ 가격 다양 특가입니다. 다양.",
       "summaryPoints": [
         "가격: 다양"
@@ -81,7 +170,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104759?"
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "[루리웹] 돈 스타브 투게더 90% 1550원",
       "productName": "돈 스타브 투게더 90% 1550원",
       "category": "game",
@@ -107,7 +196,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104758?"
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "[뽐뿌] EA스포츠 FC26 [4400원/무료]",
       "productName": "EA스포츠 FC26 [4400원/무료]",
       "category": "festa",
@@ -136,10 +225,10 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711244"
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "[루리웹] FC 26 80% 4400원",
       "productName": "FC 26 80% 4400원",
-      "category": "game",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 4400,
@@ -151,8 +240,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "게임S/W",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "FC 26 80% 4400원 특가입니다. 4400원.",
       "summaryPoints": [
         "가격: 4400원"
@@ -162,7 +253,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104757?"
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "[뽐뿌] Eets",
       "productName": "Eets",
       "category": "festa",
@@ -190,7 +281,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711243"
     },
     {
-      "id": 6,
+      "id": 9,
       "title": "[루리웹] Eets (무료)",
       "productName": "Eets (무료)",
       "category": "festa",
@@ -218,7 +309,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104756?"
     },
     {
-      "id": 7,
+      "id": 10,
       "title": "[뽐뿌] 125기가+5mbps 5지 24개월 알뜰요금제",
       "productName": "125기가+5mbps 5지 24개월 알뜰요금제",
       "category": "festa",
@@ -247,7 +338,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711242"
     },
     {
-      "id": 8,
+      "id": 11,
       "title": "[네이버쇼핑] 춤추는 고라파덕 피규어 댄싱머신 kfc 9,900원",
       "productName": "춤추는 고라파덕 피규어 댄싱머신 kfc 9,900원",
       "category": "electronics",
@@ -275,7 +366,7 @@
       "url": "https://www.dogdrip.net/hotdeal/707280410?sort_index=popular&page=1"
     },
     {
-      "id": 9,
+      "id": 12,
       "title": "[뽐뿌] 코닥 캐리어 3개 세트 28인치+기내용+보스턴백",
       "productName": "코닥 캐리어 3개 세트 28인치+기내용+보스턴백",
       "category": "festa",
@@ -304,7 +395,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711241"
     },
     {
-      "id": 10,
+      "id": 13,
       "title": "[오늘의집] 신비복숭아 2kg 중소과",
       "productName": "신비복숭아 2kg 중소과",
       "category": "festa",
@@ -334,7 +425,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711240"
     },
     {
-      "id": 11,
+      "id": 14,
       "title": "[알리뽐뿌] 1+1 스카이 7날개 휴대용 선풍기(13,741원), 330W GaN 충전기($14)/무료",
       "productName": "1+1 스카이 7날개 휴대용 선풍기(13,741원), 330W GaN 충전기($14)/무료",
       "category": "overseas",
@@ -362,7 +453,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90373"
     },
     {
-      "id": 12,
+      "id": 15,
       "title": "[알리뽐뿌] 통등심 돈까스 650g X 2팩",
       "productName": "통등심 돈까스 650g X 2팩",
       "category": "overseas",
@@ -390,9 +481,9 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90372"
     },
     {
-      "id": 13,
-      "title": "[뽐뿌] 통화 200분, 데이터 5GB",
-      "productName": "통화 200분, 데이터 5GB",
+      "id": 16,
+      "title": "[뽐뿌] SKT망, 통화 200분, 데이터 5GB",
+      "productName": "SKT망, 통화 200분, 데이터 5GB",
       "category": "festa",
       "source": "뽐뿌",
       "platform": "",
@@ -409,7 +500,7 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "통화 200분, 데이터 5GB 특가입니다. 690원.",
+      "summary": "SKT망, 통화 200분, 데이터 5GB 특가입니다. 690원.",
       "summaryPoints": [
         "가격: 690원"
       ],
@@ -418,7 +509,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711239"
     },
     {
-      "id": 14,
+      "id": 17,
       "title": "[G마켓] 신비복숭아 1.5kg (14~18과) 6/15(월) 출고",
       "productName": "신비복숭아 1.5kg (14~18과) 6/15(월) 출고",
       "category": "festa",
@@ -448,7 +539,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711238"
     },
     {
-      "id": 15,
+      "id": 18,
       "title": "[뽐뿌] 이지아이론 민트 마이크로체크 반팔 셔츠",
       "productName": "이지아이론 민트 마이크로체크 반팔 셔츠",
       "category": "festa",
@@ -476,7 +567,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711237"
     },
     {
-      "id": 16,
+      "id": 19,
       "title": "[옥션] 오레오 쿠키 100g 12개 골라담기",
       "productName": "오레오 쿠키 100g 12개 골라담기",
       "category": "dessert",
@@ -506,7 +597,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711236"
     },
     {
-      "id": 17,
+      "id": 20,
       "title": "[뽐뿌] 산지직송 청상추 1kg",
       "productName": "산지직송 청상추 1kg",
       "category": "festa",
@@ -535,7 +626,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711235"
     },
     {
-      "id": 18,
+      "id": 21,
       "title": "[G마켓] 햇복숭아 경산 산지직송 당일수확 신선복숭아 1.5kg (14~18과)",
       "productName": "햇복숭아 경산 산지직송 당일수확 신선복숭아 1.5kg (14~18과)",
       "category": "festa",
@@ -565,7 +656,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711234"
     },
     {
-      "id": 19,
+      "id": 22,
       "title": "[네이버] 신비복숭아 1kg 소과/대과",
       "productName": "신비복숭아 1kg 소과/대과",
       "category": "festa",
@@ -595,7 +686,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711233"
     },
     {
-      "id": 20,
+      "id": 23,
       "title": "[롯데온] 스타벅스 네스프레소 호환 캡슐 8가지맛 100캡슐",
       "productName": "스타벅스 네스프레소 호환 캡슐 8가지맛 100캡슐",
       "category": "festa",
@@ -625,7 +716,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711232"
     },
     {
-      "id": 21,
+      "id": 24,
       "title": "[토스] 카무트 브랜드 밀 함유 효소 30포 1박스",
       "productName": "카무트 브랜드 밀 함유 효소 30포 1박스",
       "category": "festa",
@@ -652,96 +743,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711231",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711231&target=aHR0cHM6Ly9zZXJ2aWNlLnRvc3MuaW0vc2hvcHBpbmctZGlzY292ZXJ5L2MvNzgxODgzMTk=&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711231"
-    },
-    {
-      "id": 22,
-      "title": "[G마켓] 아워홈 한 점의 카츠 3종 6팩(로스히레치킨)세트",
-      "productName": "아워홈 한 점의 카츠 3종 6팩(로스히레치킨)세트",
-      "category": "food-other",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 24900,
-      "priceText": "24,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-11T15:11:39.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "치킨"
-      ],
-      "sourceCategory": "",
-      "summary": "아워홈 한 점의 카츠 3종 6팩(로스히레치킨)세트 특가입니다. G마켓 기준 24,900원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 24,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711230",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711230&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDY5MjQ3NjI4NA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711230"
-    },
-    {
-      "id": 23,
-      "title": "[지마켓] 가시없는 가자미 중M 10팩",
-      "productName": "가시없는 가자미 중M 10팩",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 14960,
-      "priceText": "14,960원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-06-11T15:10:56.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "가시없는 가자미 중M 10팩 특가입니다. 지마켓 기준 14,960원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 14,960원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711229",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711229&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDc3MDA1NjIwMA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711229"
-    },
-    {
-      "id": 24,
-      "title": "[지마켓] 무안 유기농 꿀고구마 특상 5kg",
-      "productName": "무안 유기농 꿀고구마 특상 5kg",
-      "category": "produce",
-      "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 13970,
-      "priceText": "13,970원",
-      "shipping": "무배",
-      "discount": 0,
-      "createdAt": "2026-06-11T15:09:41.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "무안 유기농 꿀고구마 특상 5kg 특가입니다. 지마켓 기준 13,970원, 무배.",
-      "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 13,970원",
-        "배송: 무배"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711228",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711228&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvaXRlbT9nb29kc0NvZGU9MjU0NTg5NDEyNQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711228"
     },
     {
       "id": 25,
@@ -820,7 +821,7 @@
       "eventTags": [
         "페이적립"
       ],
-      "sourceCategory": "BEST",
+      "sourceCategory": "음식",
       "summary": "네이버페이 5천원 결제시 2500원 할인 (6/12) 특가입니다. 2500원.",
       "summaryPoints": [
         "가격: 2500원"
@@ -887,7 +888,7 @@
       "id": 30,
       "title": "[루리웹] 길드 오브 던저니어링 얼티밋 에디션 (무료)",
       "productName": "길드 오브 던저니어링 얼티밋 에디션 (무료)",
-      "category": "festa",
+      "category": "game",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -899,10 +900,8 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
+      "eventTags": [],
+      "sourceCategory": "게임S/W",
       "summary": "길드 오브 던저니어링 얼티밋 에디션 (무료) 특가입니다. 무료.",
       "summaryPoints": [
         "배송: 무료"
@@ -995,14 +994,14 @@
     },
     {
       "id": 34,
-      "title": "[g마켓] 아이더 POP ON 2PACK 반팔 라운드 티셔츠 DMM26292",
-      "productName": "아이더 POP ON 2PACK 반팔 라운드 티셔츠 DMM26292",
+      "title": "[옥션] 지오지아 미라쿨 냉감 소재 카라 티셔츠모음",
+      "productName": "지오지아 미라쿨 냉감 소재 카라 티셔츠모음",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "g마켓",
-      "price": 24170,
-      "priceText": "24,170원",
-      "shipping": "무료",
+      "platform": "옥션",
+      "price": 13900,
+      "priceText": "13,900원",
+      "shipping": "",
       "discount": 0,
       "createdAt": "2026-06-10T15:00:00.000Z",
       "deadlineAt": "",
@@ -1013,15 +1012,14 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "아이더 POP ON 2PACK 반팔 라운드 티셔츠 DMM26292 특가입니다. g마켓 기준 24,170원, 무료.",
+      "summary": "지오지아 미라쿨 냉감 소재 카라 티셔츠모음 특가입니다. 옥션 기준 13,900원.",
       "summaryPoints": [
-        "플랫폼: g마켓",
-        "가격: 24,170원",
-        "배송: 무료"
+        "플랫폼: 옥션",
+        "가격: 13,900원"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711107",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711107&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9zcG09Z21rdHBjLnNlYXJjaGxpc3Qub3JnYW5pY3RpZXIuZDBfNC40MTFiMjNlNUp1UEs2NCZnb29kc2NvZGU9NDc3Mjg1Mzg1Mg==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711107"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711193",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711193&target=aHR0cHM6Ly9pdGVtcGFnZTMuYXVjdGlvbi5jby5rci9EZXRhaWxWaWV3LmFzcHg/aXRlbU5vPUY1Nzc3OTkwMDA=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711193"
     },
     {
       "id": 35,

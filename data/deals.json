@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T18:02:10.757Z",
+  "generatedAt": "2026-06-14T19:46:56.910Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -103,7 +103,7 @@
       "eventTags": [
         "멤버십"
       ],
-      "sourceCategory": "음식",
+      "sourceCategory": "BEST",
       "summary": "멤버십 오뚜기밥 매일우유 펩시제로 등 할인 특가입니다. 네이버 기준 다양, 무료.",
       "summaryPoints": [
         "플랫폼: 네이버",
@@ -1002,39 +1002,43 @@
     },
     {
       "id": 34,
-      "title": "[개드립] 더 레드 랜턴 0원",
-      "productName": "더 레드 랜턴 0원",
-      "category": "game",
+      "title": "[&#x1f964;네이버페이] 2026-06-15 일일적립, 클릭 186원",
+      "productName": "2026-06-15 일일적립, 클릭 186원",
+      "category": "festa",
       "source": "개드립",
-      "platform": "",
-      "price": 0,
-      "priceText": "0원",
+      "platform": "&#x1f964;네이버페이",
+      "price": 186,
+      "priceText": "186원",
       "shipping": "",
       "discount": 0,
-      "createdAt": "2026-06-13T21:50:01.591Z",
+      "createdAt": "2026-06-14T15:00:00.000Z",
       "deadlineAt": "",
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "SW/게임",
-      "summary": "더 레드 랜턴 0원 특가입니다. 0원.",
-      "summaryPoints": [
-        "가격: 0원"
+      "eventTags": [
+        "적립",
+        "페이적립"
       ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/707471593?sort_index=popular&page=1",
-      "purchaseUrl": "",
-      "url": "https://www.dogdrip.net/hotdeal/707471593?sort_index=popular&page=1"
+      "sourceCategory": "기타",
+      "summary": "2026-06-15 일일적립, 클릭 186원 특가입니다. &#x1f964;네이버페이 기준 186원.",
+      "summaryPoints": [
+        "플랫폼: &#x1f964;네이버페이",
+        "가격: 186원"
+      ],
+      "originalUrl": "https://www.dogdrip.net/hotdeal/707846814?sort_index=popular&page=1",
+      "purchaseUrl": "https://point.pay.naver.com/pc/mission-detail?dataType=category&rank=18&pageKey=quickreward",
+      "url": "https://www.dogdrip.net/hotdeal/707846814?sort_index=popular&page=1"
     },
     {
       "id": 35,
-      "title": "[11번가] 제주 미니단호박 특품 1kg",
-      "productName": "제주 미니단호박 특품 1kg",
+      "title": "[롯데온] 라벨르 윈드스타퍼 다운자켓 DWW25528",
+      "productName": "라벨르 윈드스타퍼 다운자켓 DWW25528",
       "category": "festa",
       "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 7940,
-      "priceText": "7,940원",
+      "platform": "롯데온",
+      "price": 295070,
+      "priceText": "295,070원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-06-13T15:00:00.000Z",
@@ -1046,15 +1050,15 @@
         "할인페스타"
       ],
       "sourceCategory": "",
-      "summary": "제주 미니단호박 특품 1kg 특가입니다. 11번가 기준 7,940원, 무료.",
+      "summary": "라벨르 윈드스타퍼 다운자켓 DWW25528 특가입니다. 롯데온 기준 295,070원, 무료.",
       "summaryPoints": [
-        "플랫폼: 11번가",
-        "가격: 7,940원",
+        "플랫폼: 롯데온",
+        "가격: 295,070원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711883",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711883&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy8yOTY3OTY1MDQ0&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711883"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711877",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_711877&target=aHR0cHM6Ly93d3cubG90dGVvbi5jb20vbS9wcm9kdWN0L0xFMTIyMTc4NDEyNA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=711877"
     },
     {
       "id": 36,
@@ -1116,7 +1120,7 @@
       "id": 38,
       "title": "[루리웹] 성녀전기 80% 할인",
       "productName": "성녀전기 80% 할인",
-      "category": "festa",
+      "category": "game",
       "source": "루리웹",
       "platform": "",
       "price": 0,
@@ -1128,10 +1132,8 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
+      "eventTags": [],
+      "sourceCategory": "게임S/W",
       "summary": "성녀전기 80% 할인 특가입니다.",
       "summaryPoints": [],
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/104810?",

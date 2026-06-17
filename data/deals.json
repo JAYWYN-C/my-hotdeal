@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T21:11:28.609Z",
+  "generatedAt": "2026-06-17T23:02:38.432Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -20,7 +20,7 @@
     {
       "source": "알리뽐뿌",
       "status": "ok",
-      "collected": 8
+      "collected": 11
     },
     {
       "source": "FM코리아",
@@ -35,17 +35,17 @@
     {
       "source": "루리웹",
       "status": "ok",
-      "collected": 17
+      "collected": 18
     },
     {
       "source": "딜바다 국내",
-      "status": "error",
-      "message": "HTTP 522"
+      "status": "ok",
+      "collected": 29
     },
     {
       "source": "딜바다 해외",
-      "status": "error",
-      "message": "HTTP 522"
+      "status": "ok",
+      "collected": 30
     },
     {
       "source": "쿨엔조이",
@@ -56,6 +56,281 @@
   "deals": [
     {
       "id": 1,
+      "title": "[알리뽐뿌] 공업용 업소용 대형 선풍기 12인치(2.9만),16인치(3.6만),20인치(4.4만)/무료",
+      "productName": "공업용 업소용 대형 선풍기 12인치(2.9만),16인치(3.6만),20인치(4.4만)/무료",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:50:38.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "공업용 업소용 대형 선풍기 12인치(2.9만),16인치(3.6만),20인치(4.4만)/무료 특가입니다. 알리뽐뿌 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90913",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90913&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDU2NTY4NTE3NTkuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90913"
+    },
+    {
+      "id": 2,
+      "title": "[알리] Kapvoe 포토 크로믹 변색 스포츠 선글라스",
+      "productName": "Kapvoe 포토 크로믹 변색 스포츠 선글라스",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 1250,
+      "priceText": "1250원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:50:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "식품/건강",
+      "summary": "Kapvoe 포토 크로믹 변색 스포츠 선글라스 특가입니다. 알리 기준 1250원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 1250원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308017&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308017&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308017&page=1"
+    },
+    {
+      "id": 3,
+      "title": "[알리뽐뿌] 현대식 무선 선풍기 천장등 6단 속도 조절 가능",
+      "productName": "현대식 무선 선풍기 천장등 6단 속도 조절 가능",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:39:40.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "현대식 무선 선풍기 천장등 6단 속도 조절 가능 특가입니다. 알리뽐뿌 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90912",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90912&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTA0NjAyMzY5NjkuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90912"
+    },
+    {
+      "id": 4,
+      "title": "[오늘의집] 조선호텔 특제육수 포기김치 8kg",
+      "productName": "조선호텔 특제육수 포기김치 8kg",
+      "category": "travel",
+      "source": "뽐뿌",
+      "platform": "오늘의집",
+      "price": 47795,
+      "priceText": "47,795원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:28:03.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "조선호텔 특제육수 포기김치 8kg 특가입니다. 오늘의집 기준 47,795원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 오늘의집",
+        "가격: 47,795원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713043",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_713043&target=aHR0cHM6Ly9vemlwLm1lL0xxWXhXQXg=&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713043"
+    },
+    {
+      "id": 5,
+      "title": "[네이버페이] NS 테일즈 오브 베르세리아 리마스터 34,800원",
+      "productName": "NS 테일즈 오브 베르세리아 리마스터 34,800원",
+      "category": "game",
+      "source": "루리웹",
+      "platform": "네이버페이",
+      "price": 34800,
+      "priceText": "34,800원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:25:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "페이적립"
+      ],
+      "sourceCategory": "게임S/W",
+      "summary": "NS 테일즈 오브 베르세리아 리마스터 34,800원 특가입니다. 네이버페이 기준 34,800원.",
+      "summaryPoints": [
+        "플랫폼: 네이버페이",
+        "가격: 34,800원"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/104897?",
+      "purchaseUrl": "",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/104897?"
+    },
+    {
+      "id": 6,
+      "title": "[알리뽐뿌] JONR P20 Pro($107)/무료",
+      "productName": "JONR P20 Pro($107)/무료",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:05:22.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "JONR P20 Pro($107)/무료 특가입니다. 알리뽐뿌 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90910",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90910&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMTE2ODk4NjQyMzQuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90910"
+    },
+    {
+      "id": 7,
+      "title": "[알리뽐뿌] 국산 1+1 제로갭 과부하차단 멀티탭(1.3만), 국산1+1 원스탑 개별 스위치 멀티탭(1...",
+      "productName": "국산 1+1 제로갭 과부하차단 멀티탭(1.3만), 국산1+1 원스탑 개별 스위치 멀티탭(1...",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-17T22:04:21.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "국산 1+1 제로갭 과부하차단 멀티탭(1.3만), 국산1+1 원스탑 개별 스위치 멀티탭(1... 특가입니다. 알리뽐뿌 기준.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90909",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90909&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDU2NTY4NTE3NTkuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90909"
+    },
+    {
+      "id": 8,
+      "title": "[알리뽐뿌] 풀무원 워터루틴 무라벨생수 2L 12개",
+      "productName": "풀무원 워터루틴 무라벨생수 2L 12개",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 1694,
+      "priceText": "1,694원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T21:57:49.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "풀무원 워터루틴 무라벨생수 2L 12개 특가입니다. 알리뽐뿌 기준 1,694원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "가격: 1,694원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90908",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90908&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDY4ODk5MzcxMzAuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90908"
+    },
+    {
+      "id": 9,
+      "title": "[뽐뿌] 메밀소바 10인세트 생면10봉 소스10봉",
+      "productName": "메밀소바 10인세트 생면10봉 소스10봉",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T21:57:46.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "메밀소바 10인세트 생면10봉 소스10봉 특가입니다. 무료.",
+      "summaryPoints": [
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713042",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_713042&target=aHR0cHM6Ly9zdG9yZS5rYWthby5jb20vamlpdW0vcHJvZHVjdHMvMzUxMDMwODQ4P3JlZj1TSEFSRQ==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713042"
+    },
+    {
+      "id": 10,
+      "title": "[알리뽐뿌] JONR P20 Pro 올인원 로봇청소기",
+      "productName": "JONR P20 Pro 올인원 로봇청소기",
+      "category": "overseas",
+      "source": "알리뽐뿌",
+      "platform": "알리뽐뿌",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-17T21:18:27.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "",
+      "summary": "JONR P20 Pro 올인원 로봇청소기 특가입니다. 알리뽐뿌 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리뽐뿌",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90906",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90895&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDkxMDA1NDE1MjcuaHRtbA==&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90906"
+    },
+    {
+      "id": 11,
       "title": "[알리뽐뿌] 외갓집 개별포장 동치미 함흥 물냉면 5인분+비빔냉면 5인분(1.4만)/무료",
       "productName": "외갓집 개별포장 동치미 함흥 물냉면 5인분+비빔냉면 5인분(1.4만)/무료",
       "category": "overseas",
@@ -82,7 +357,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90903"
     },
     {
-      "id": 2,
+      "id": 12,
       "title": "[알리뽐뿌] Qi2 15W 냉각쿨링팬 차량용 맥세이프 충전기(2.4만),100W GaN 3포트 초고속...",
       "productName": "Qi2 15W 냉각쿨링팬 차량용 맥세이프 충전기(2.4만),100W GaN 3포트 초고속...",
       "category": "overseas",
@@ -108,7 +383,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90901"
     },
     {
-      "id": 3,
+      "id": 13,
       "title": "[알리뽐뿌] 함흥 냉면 골라담기 물냉면 5인분 비빔냉면 5인분",
       "productName": "함흥 냉면 골라담기 물냉면 5인분 비빔냉면 5인분",
       "category": "overseas",
@@ -136,7 +411,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90900"
     },
     {
-      "id": 4,
+      "id": 14,
       "title": "[뽐뿌] 락토핏 골드 7통 350일분+30포 증정외",
       "productName": "락토핏 골드 7통 350일분+30포 증정외",
       "category": "festa",
@@ -165,7 +440,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713041"
     },
     {
-      "id": 5,
+      "id": 15,
       "title": "[뽐뿌] 100gb 5mbps skt망 4개월할인",
       "productName": "100gb 5mbps skt망 4개월할인",
       "category": "festa",
@@ -194,7 +469,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713039"
     },
     {
-      "id": 6,
+      "id": 16,
       "title": "[뽐뿌] (끌올) [에픽게임즈] The Ouroboros King, Warhammer 40,000 : Speed Freeks",
       "productName": "(끌올) [에픽게임즈] The Ouroboros King, Warhammer 40,000 : Speed Freeks",
       "category": "game",
@@ -220,7 +495,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713038"
     },
     {
-      "id": 7,
+      "id": 17,
       "title": "[개드립] 지오다노 베이직 반팔티(퍼펙트티) 9,000원",
       "productName": "지오다노 베이직 반팔티(퍼펙트티) 9,000원",
       "category": "festa",
@@ -248,7 +523,7 @@
       "url": "https://www.dogdrip.net/hotdeal/708402722?sort_index=popular&page=1"
     },
     {
-      "id": 8,
+      "id": 18,
       "title": "[네이버멤버십] 나랑드사이다 345ml 24캔 (9,800원/무료)",
       "productName": "나랑드사이다 345ml 24캔 (9,800원/무료)",
       "category": "food-other",
@@ -266,7 +541,7 @@
       "eventTags": [
         "멤버십"
       ],
-      "sourceCategory": "음식",
+      "sourceCategory": "BEST",
       "summary": "나랑드사이다 345ml 24캔 (9,800원/무료) 특가입니다. 네이버멤버십 기준 9,800원, 무료.",
       "summaryPoints": [
         "플랫폼: 네이버멤버십",
@@ -278,7 +553,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104896?"
     },
     {
-      "id": 9,
+      "id": 19,
       "title": "[알리뽐뿌] 에디파이어 T5s ($74) M90($89) MR5 2.0($85) MR3($47) M...",
       "productName": "에디파이어 T5s ($74) M90($89) MR5 2.0($85) MR3($47) M...",
       "category": "overseas",
@@ -304,7 +579,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90899"
     },
     {
-      "id": 10,
+      "id": 20,
       "title": "[G마켓] 다룸 스마트 자동 센서 쓰레기통 스테인리스 20L 일반형 휴지통 아이보리/화이트",
       "productName": "다룸 스마트 자동 센서 쓰레기통 스테인리스 20L 일반형 휴지통 아이보리/화이트",
       "category": "household",
@@ -332,7 +607,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713037"
     },
     {
-      "id": 11,
+      "id": 21,
       "title": "[네이버] 나랑드사이다 제로 345ml 24개",
       "productName": "나랑드사이다 제로 345ml 24개",
       "category": "food-other",
@@ -362,7 +637,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713036"
     },
     {
-      "id": 12,
+      "id": 22,
       "title": "[뽐뿌] 통화 : 기본, 데이터 : 10GB",
       "productName": "통화 : 기본, 데이터 : 10GB",
       "category": "festa",
@@ -390,7 +665,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713035"
     },
     {
-      "id": 13,
+      "id": 23,
       "title": "[G마켓] 수제 닭다리살 파닭꼬치 10개+닭꼬치 10개(총20개) 캠핑꼬치구이",
       "productName": "수제 닭다리살 파닭꼬치 10개+닭꼬치 10개(총20개) 캠핑꼬치구이",
       "category": "meat",
@@ -420,7 +695,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713034"
     },
     {
-      "id": 14,
+      "id": 24,
       "title": "[G마켓] 복야관 1개월 복분자 야관문 활력스틱",
       "productName": "복야관 1개월 복분자 야관문 활력스틱",
       "category": "festa",
@@ -450,7 +725,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713033"
     },
     {
-      "id": 15,
+      "id": 25,
       "title": "[11번가] 롯데웰푸드 티코 510ml 3개",
       "productName": "롯데웰푸드 티코 510ml 3개",
       "category": "festa",
@@ -480,7 +755,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713032"
     },
     {
-      "id": 16,
+      "id": 26,
       "title": "[무신사] 지오다노 피케 폴로 반팔 카라티 015502 11,520원/무배",
       "productName": "지오다노 피케 폴로 반팔 카라티 015502 11,520원/무배",
       "category": "festa",
@@ -510,7 +785,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713031"
     },
     {
-      "id": 17,
+      "id": 27,
       "title": "[루리웹] 몬스터헌터 라이즈+선브레이크(9,900원/무료)",
       "productName": "몬스터헌터 라이즈+선브레이크(9,900원/무료)",
       "category": "festa",
@@ -539,7 +814,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104895?"
     },
     {
-      "id": 18,
+      "id": 28,
       "title": "[옥션] 포스트 콘푸라이트 시리얼 600g 3개 +크리치오 30g 2개",
       "productName": "포스트 콘푸라이트 시리얼 600g 3개 +크리치오 30g 2개",
       "category": "festa",
@@ -569,7 +844,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713030"
     },
     {
-      "id": 19,
+      "id": 29,
       "title": "[G마켓] 짜먹는 설빙 아이스크림 120ml 24개 골라담기(팥빙수맛/쿠키앤크림/망고맛)",
       "productName": "짜먹는 설빙 아이스크림 120ml 24개 골라담기(팥빙수맛/쿠키앤크림/망고맛)",
       "category": "dessert",
@@ -599,7 +874,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713029"
     },
     {
-      "id": 20,
+      "id": 30,
       "title": "[G마켓] 허브갈릭 훈제오리 슬라이스 210g x 6팩",
       "productName": "허브갈릭 훈제오리 슬라이스 210g x 6팩",
       "category": "festa",
@@ -629,7 +904,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713028"
     },
     {
-      "id": 21,
+      "id": 31,
       "title": "[오늘의집] 간편 분리보관 저소음 스탠드 리모컨 선풍기",
       "productName": "간편 분리보관 저소음 스탠드 리모컨 선풍기",
       "category": "festa",
@@ -659,7 +934,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713027"
     },
     {
-      "id": 22,
+      "id": 32,
       "title": "[지마켓] NEW 카스제로 0.00 500ml 24캔 논알콜맥주 +FIFA 2026 월드컵 변온잔2개증정",
       "productName": "NEW 카스제로 0.00 500ml 24캔 논알콜맥주 +FIFA 2026 월드컵 변온잔2개증정",
       "category": "kitchen",
@@ -687,67 +962,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713026"
     },
     {
-      "id": 23,
-      "title": "[11번가] 갤럭시용 강화유리필름 2매입",
-      "productName": "갤럭시용 강화유리필름 2매입",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "11번가",
-      "price": 3450,
-      "priceText": "3,450원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-17T15:21:10.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "갤럭시용 강화유리필름 2매입 특가입니다. 11번가 기준 3,450원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 11번가",
-        "가격: 3,450원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713025",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_713025&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy83ODI2NjQ2OTk2&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713025"
-    },
-    {
-      "id": 24,
-      "title": "[G마켓] 서천 마량진항 광어축제 자연산 광어회 300g 초장간장와사비3종세트",
-      "productName": "서천 마량진항 광어축제 자연산 광어회 300g 초장간장와사비3종세트",
-      "category": "meat",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 16070,
-      "priceText": "16,070원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-17T15:20:09.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "식품"
-      ],
-      "sourceCategory": "",
-      "summary": "서천 마량진항 광어축제 자연산 광어회 300g 초장간장와사비3종세트 특가입니다. G마켓 기준 16,070원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 16,070원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713024",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_713024&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDUzODI5ODEwNw==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=713024"
-    },
-    {
-      "id": 25,
+      "id": 33,
       "title": "[네이버페이] 일일적립, 클릭 58원, 라이브예고 10원",
       "productName": "일일적립, 클릭 58원, 라이브예고 10원",
       "category": "festa",
@@ -778,7 +993,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104894?"
     },
     {
-      "id": 26,
+      "id": 34,
       "title": "[오늘의집] 헤드앤숄더샴푸 850ml 3개 + 미니2개(토스페이22,438...",
       "productName": "헤드앤숄더샴푸 850ml 3개 + 미니2개(토스페이22,438...",
       "category": "household",
@@ -804,62 +1019,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104893?"
     },
     {
-      "id": 27,
-      "title": "[알리뽐뿌] 하루견과 20입x2세트(23,341원)/무료",
-      "productName": "하루견과 20입x2세트(23,341원)/무료",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 23341,
-      "priceText": "23,341원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-17T15:05:22.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "하루견과 20입x2세트(23,341원)/무료 특가입니다. 알리뽐뿌 기준 23,341원, 무료.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 23,341원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90896",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90896&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDkyMzMyNjQxMzAuaHRtbD8=&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90896"
-    },
-    {
-      "id": 28,
-      "title": "[알리뽐뿌] JONR P20 Pro 올인원 로봇청소기",
-      "productName": "JONR P20 Pro 올인원 로봇청소기",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-17T15:00:28.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "JONR P20 Pro 올인원 로봇청소기 특가입니다. 알리뽐뿌 기준 무료.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90895",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90895&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDkxMDA1NDE1MjcuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90895"
-    },
-    {
-      "id": 29,
+      "id": 35,
       "title": "[&#x1f964;네이버페이] 2026-06-18 일일적립, 클릭 58원",
       "productName": "2026-06-18 일일적립, 클릭 58원",
       "category": "festa",
@@ -889,14 +1049,14 @@
       "url": "https://www.dogdrip.net/hotdeal/708447485?sort_index=popular&page=1"
     },
     {
-      "id": 30,
-      "title": "[지마켓] 네파 아르테 숏 윈드스토퍼 구스 다운자켓",
-      "productName": "네파 아르테 숏 윈드스토퍼 구스 다운자켓",
-      "category": "festa",
+      "id": 36,
+      "title": "[11번가] 1++ 투쁠 한우 마장동 소고기 등심 400g(200g+200g)",
+      "productName": "1++ 투쁠 한우 마장동 소고기 등심 400g(200g+200g)",
+      "category": "meat",
       "source": "뽐뿌",
-      "platform": "지마켓",
-      "price": 218190,
-      "priceText": "218,190원",
+      "platform": "11번가",
+      "price": 28950,
+      "priceText": "28,950원",
       "shipping": "무료",
       "discount": 0,
       "createdAt": "2026-06-16T15:00:00.000Z",
@@ -905,47 +1065,21 @@
       "statusText": "",
       "expiresAt": "",
       "eventTags": [
-        "할인페스타"
+        "식품"
       ],
       "sourceCategory": "",
-      "summary": "네파 아르테 숏 윈드스토퍼 구스 다운자켓 특가입니다. 지마켓 기준 218,190원, 무료.",
+      "summary": "1++ 투쁠 한우 마장동 소고기 등심 400g(200g+200g) 특가입니다. 11번가 기준 28,950원, 무료.",
       "summaryPoints": [
-        "플랫폼: 지마켓",
-        "가격: 218,190원",
+        "플랫폼: 11번가",
+        "가격: 28,950원",
         "배송: 무료"
       ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=712938",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_712938&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDc1NzM4NzAxNA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=712938"
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=712792",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_712792&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85NDI5MDQwMzUw&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=712792"
     },
     {
-      "id": 31,
-      "title": "[알리뽐뿌] 아이닉 Q마크인증 음식물 처리기(23만), 올스텐 에어프라이어",
-      "productName": "아이닉 Q마크인증 음식물 처리기(23만), 올스텐 에어프라이어",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-06-16T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "",
-      "summary": "아이닉 Q마크인증 음식물 처리기(23만), 올스텐 에어프라이어 특가입니다. 알리뽐뿌 기준.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90890",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_90849&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDYyNTU3NTg4ODAuaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90890"
-    },
-    {
-      "id": 32,
+      "id": 37,
       "title": "[&#x1f964;네이버페이] 2026-06-17 일일적립, 클릭 44원",
       "productName": "2026-06-17 일일적립, 클릭 44원",
       "category": "festa",
@@ -975,7 +1109,7 @@
       "url": "https://www.dogdrip.net/hotdeal/708244625?sort_index=popular&page=1"
     },
     {
-      "id": 33,
+      "id": 38,
       "title": "[루리웹] (구글플레이) 4000원 할인 쿠폰 [렌덤] 배포 중.",
       "productName": "(구글플레이) 4000원 할인 쿠폰 [렌덤] 배포 중.",
       "category": "festa",
@@ -1003,35 +1137,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104891?"
     },
     {
-      "id": 34,
-      "title": "[루리웹] 바이엔슈테판 4종 3병 / 9,900원",
-      "productName": "바이엔슈테판 4종 3병 / 9,900원",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "",
-      "price": 9900,
-      "priceText": "9,900원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-06-16T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
-      "summary": "바이엔슈테판 4종 3병 / 9,900원 특가입니다. 9,900원.",
-      "summaryPoints": [
-        "가격: 9,900원"
-      ],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/104886?",
-      "purchaseUrl": "",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/104886?"
-    },
-    {
-      "id": 35,
+      "id": 39,
       "title": "[쿠팡] 메탈카드봇 미니특공대 세일+BC카드 토이페스타 15%세일",
       "productName": "메탈카드봇 미니특공대 세일+BC카드 토이페스타 15%세일",
       "category": "festa",
@@ -1059,7 +1165,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104892?"
     },
     {
-      "id": 36,
+      "id": 40,
       "title": "[지마켓] 갤럭시S26울트라1TB(체감가156만)(삼성,스마일+꼭멤버십)",
       "productName": "갤럭시S26울트라1TB(체감가156만)(삼성,스마일+꼭멤버십)",
       "category": "electronics",
@@ -1088,7 +1194,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104890?"
     },
     {
-      "id": 37,
+      "id": 41,
       "title": "[네이버] 닌텐도 스위치 파이널판타지 택틱스 이발리스 크로니클즈 /44,...",
       "productName": "닌텐도 스위치 파이널판타지 택틱스 이발리스 크로니클즈 /44,...",
       "category": "game",
@@ -1114,7 +1220,35 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104888?"
     },
     {
-      "id": 38,
+      "id": 42,
+      "title": "[루리웹] 바이엔슈테판 4종 3병 / 9,900원",
+      "productName": "바이엔슈테판 4종 3병 / 9,900원",
+      "category": "festa",
+      "source": "루리웹",
+      "platform": "",
+      "price": 9900,
+      "priceText": "9,900원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-16T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "음식",
+      "summary": "바이엔슈테판 4종 3병 / 9,900원 특가입니다. 9,900원.",
+      "summaryPoints": [
+        "가격: 9,900원"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/104886?",
+      "purchaseUrl": "",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/104886?"
+    },
+    {
+      "id": 43,
       "title": "[지마켓] 오리온 포카칩 오리지널 66g 20봉 (19,710원/무료)",
       "productName": "오리온 포카칩 오리지널 66g 20봉 (19,710원/무료)",
       "category": "festa",
@@ -1144,7 +1278,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104885?"
     },
     {
-      "id": 39,
+      "id": 44,
       "title": "[루리웹] MG V2어설트 버스터 건담 Ver.Ka / 96,000원",
       "productName": "MG V2어설트 버스터 건담 Ver.Ka / 96,000원",
       "category": "festa",
@@ -1172,7 +1306,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104884?"
     },
     {
-      "id": 40,
+      "id": 45,
       "title": "[루리웹] 비쵸비 딸기 5P 3개+초코 5P 3개+증정 (15,416원)",
       "productName": "비쵸비 딸기 5P 3개+초코 5P 3개+증정 (15,416원)",
       "category": "dessert",
@@ -1200,7 +1334,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104883?"
     },
     {
-      "id": 41,
+      "id": 46,
       "title": "[루리웹] 3D 에셋 3종 무료",
       "productName": "3D 에셋 3종 무료",
       "category": "game",
@@ -1226,7 +1360,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104882?"
     },
     {
-      "id": 42,
+      "id": 47,
       "title": "[G마켓] 파워에이드 마운틴블라스트 355ml 20개 (12,440원)",
       "productName": "파워에이드 마운틴블라스트 355ml 20개 (12,440원)",
       "category": "festa",
@@ -1255,7 +1389,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104881?"
     },
     {
-      "id": 43,
+      "id": 48,
       "title": "[루리웹] NS1 파판택틱스 일반판 / 41,860원 (350...",
       "productName": "NS1 파판택틱스 일반판 / 41,860원 (350...",
       "category": "game",
@@ -1281,7 +1415,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104880?"
     },
     {
-      "id": 44,
+      "id": 49,
       "title": "[루리웹] Scorn 스콘 / 90% 4100원",
       "productName": "Scorn 스콘 / 90% 4100원",
       "category": "game",
@@ -1307,7 +1441,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104879?"
     },
     {
-      "id": 45,
+      "id": 50,
       "title": "[해외뽐뿌] 원데이 오아시스 MAX 90매입 2팩",
       "productName": "원데이 오아시스 MAX 90매입 2팩",
       "category": "overseas",
@@ -1331,7 +1465,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126883"
     },
     {
-      "id": 46,
+      "id": 51,
       "title": "[알리익스프레스] 바캉스 준비 세일 (6월15일(월)~6월20일(토))",
       "productName": "바캉스 준비 세일 (6월15일(월)~6월20일(토))",
       "category": "overseas",
@@ -1357,7 +1491,7 @@
       "url": "https://bbs.ruliweb.com/market/board/1020/read/104799?"
     },
     {
-      "id": 47,
+      "id": 52,
       "title": "[알리익스프레스] 바캉스 준비 정보 안내",
       "productName": "바캉스 준비 정보 안내",
       "category": "overseas",
@@ -1381,6 +1515,1544 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90383",
       "purchaseUrl": "",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=90383"
+    },
+    {
+      "id": 53,
+      "title": "[지마켓] 염증,기관지 파이토 삼백초추출물 골드 6개월분 900mg 180정",
+      "productName": "염증,기관지 파이토 삼백초추출물 골드 6개월분 900mg 180정",
+      "category": "food-other",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 13900,
+      "priceText": "13,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "염증,기관지 파이토 삼백초추출물 골드 6개월분 900mg 180정 특가입니다. 지마켓 기준 13,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 13,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569987&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569987&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569987&page=1"
+    },
+    {
+      "id": 54,
+      "title": "[딜바다 국내] 밸리곰 모음전, 실리콘 파우치",
+      "productName": "밸리곰 모음전, 실리콘 파우치",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "디지털",
+      "summary": "밸리곰 모음전, 실리콘 파우치 특가입니다. 무배.",
+      "summaryPoints": [
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569986&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569986&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569986&page=1"
+    },
+    {
+      "id": 55,
+      "title": "[G마켓] 폴햄 남성여성 트윌 와이드 밴딩 슬랙스 팬츠 외 4종",
+      "productName": "폴햄 남성여성 트윌 와이드 밴딩 슬랙스 팬츠 외 4종",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "G마켓",
+      "price": 21390,
+      "priceText": "21,390원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "폴햄 남성여성 트윌 와이드 밴딩 슬랙스 팬츠 외 4종 특가입니다. G마켓 기준 21,390원, 무배.",
+      "summaryPoints": [
+        "플랫폼: G마켓",
+        "가격: 21,390원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569985&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569985&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569985&page=1"
+    },
+    {
+      "id": 56,
+      "title": "[쿠팡] LG 그램 Pro 16ZD90TS-GX5PK",
+      "productName": "LG 그램 Pro 16ZD90TS-GX5PK",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "쿠팡",
+      "price": 1467350,
+      "priceText": "1,467,350원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "디지털",
+      "summary": "LG 그램 Pro 16ZD90TS-GX5PK 특가입니다. 쿠팡 기준 1,467,350원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 쿠팡",
+        "가격: 1,467,350원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569984&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569984&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569984&page=1"
+    },
+    {
+      "id": 57,
+      "title": "[지마켓] 크린손 니트릴장갑(소,중,대) 100매",
+      "productName": "크린손 니트릴장갑(소,중,대) 100매",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 8910,
+      "priceText": "8,910원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "크린손 니트릴장갑(소,중,대) 100매 특가입니다. 지마켓 기준 8,910원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 8,910원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569983&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569983&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569983&page=1"
+    },
+    {
+      "id": 58,
+      "title": "[지마켓] 화장실 변기 세정제 변기클리너 310g * 8개",
+      "productName": "화장실 변기 세정제 변기클리너 310g * 8개",
+      "category": "cleaning",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 15370,
+      "priceText": "15,370원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "화장실 변기 세정제 변기클리너 310g * 8개 특가입니다. 지마켓 기준 15,370원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 15,370원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569982&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569982&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569982&page=1"
+    },
+    {
+      "id": 59,
+      "title": "[지마켓] 대건명가 돼지국밥 630g 5팩",
+      "productName": "대건명가 돼지국밥 630g 5팩",
+      "category": "meat",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 23380,
+      "priceText": "23,380원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "대건명가 돼지국밥 630g 5팩 특가입니다. 지마켓 기준 23,380원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 23,380원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569981&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569981&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569981&page=1"
+    },
+    {
+      "id": 60,
+      "title": "[쿠팡] Verveo 무음 독립 스프링 매트리스",
+      "productName": "Verveo 무음 독립 스프링 매트리스",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "쿠팡",
+      "price": 60800,
+      "priceText": "60,800원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "Verveo 무음 독립 스프링 매트리스 특가입니다. 쿠팡 기준 60,800원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 쿠팡",
+        "가격: 60,800원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569980&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569980&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569980&page=1"
+    },
+    {
+      "id": 61,
+      "title": "[딜바다 국내] 필립스 프레스티지 울트라 면도기 XP9406/65+파우치",
+      "productName": "필립스 프레스티지 울트라 면도기 XP9406/65+파우치",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 659300,
+      "priceText": "659,300원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "디지털",
+      "summary": "필립스 프레스티지 울트라 면도기 XP9406/65+파우치 특가입니다. 659,300원, 무료.",
+      "summaryPoints": [
+        "가격: 659,300원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569979&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569979&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569979&page=1"
+    },
+    {
+      "id": 62,
+      "title": "[딜바다 국내] 지오지아 크루넥 반팔 니트",
+      "productName": "지오지아 크루넥 반팔 니트",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 11130,
+      "priceText": "11,130원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "지오지아 크루넥 반팔 니트 특가입니다. 11,130원.",
+      "summaryPoints": [
+        "가격: 11,130원"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569978&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569978&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569978&page=1"
+    },
+    {
+      "id": 63,
+      "title": "[11번가] 고압 수압상승 필터 샤워기 헤드 본품+필터 6개 세트",
+      "productName": "고압 수압상승 필터 샤워기 헤드 본품+필터 6개 세트",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "11번가",
+      "price": 9900,
+      "priceText": "9,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "고압 수압상승 필터 샤워기 헤드 본품+필터 6개 세트 특가입니다. 11번가 기준 9,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 9,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569977&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569977&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569977&page=1"
+    },
+    {
+      "id": 64,
+      "title": "[쿠팡] LG 그램 17Z90T-GA50K",
+      "productName": "LG 그램 17Z90T-GA50K",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "쿠팡",
+      "price": 1524990,
+      "priceText": "1,524,990원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "컴퓨터",
+      "summary": "LG 그램 17Z90T-GA50K 특가입니다. 쿠팡 기준 1,524,990원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 쿠팡",
+        "가격: 1,524,990원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569976&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569976&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569976&page=1"
+    },
+    {
+      "id": 65,
+      "title": "[네이버 라이브] 캐치웰 CX PRO N 무선청소기",
+      "productName": "캐치웰 CX PRO N 무선청소기",
+      "category": "electronics",
+      "source": "딜바다 국내",
+      "platform": "네이버 라이브",
+      "price": 274000,
+      "priceText": "274,000원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "라이브특가"
+      ],
+      "sourceCategory": "가전",
+      "summary": "캐치웰 CX PRO N 무선청소기 특가입니다. 네이버 라이브 기준 274,000원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버 라이브",
+        "가격: 274,000원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569975&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569975&no=2&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569975&page=1"
+    },
+    {
+      "id": 66,
+      "title": "[지마켓] 1+1 스텐락 국산 스텐물병 1.1L",
+      "productName": "1+1 스텐락 국산 스텐물병 1.1L",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 14640,
+      "priceText": "14,640원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "1+1 스텐락 국산 스텐물병 1.1L 특가입니다. 지마켓 기준 14,640원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 14,640원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569974&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569974&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569974&page=1"
+    },
+    {
+      "id": 67,
+      "title": "[딜바다 국내] 푸마 여성 데일리 앤 컴포트 삼각팬티 5종 세트",
+      "productName": "푸마 여성 데일리 앤 컴포트 삼각팬티 5종 세트",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 18900,
+      "priceText": "18,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "푸마 여성 데일리 앤 컴포트 삼각팬티 5종 세트 특가입니다. 18,900원, 무료.",
+      "summaryPoints": [
+        "가격: 18,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569973&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569973&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569973&page=2"
+    },
+    {
+      "id": 68,
+      "title": "[알리] 아치 서포트 홀 안티 슬립 데오도란트 슬리퍼",
+      "productName": "아치 서포트 홀 안티 슬립 데오도란트 슬리퍼",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 10300,
+      "priceText": "10,300원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-10T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "의류/잡화",
+      "summary": "아치 서포트 홀 안티 슬립 데오도란트 슬리퍼 특가입니다. 알리 기준 10,300원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 10,300원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308016&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308016&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308016&page=1"
+    },
+    {
+      "id": 69,
+      "title": "[딜바다 국내] 29cm) 하바이아나스 플립플랍 2만원대부터",
+      "productName": "29cm) 하바이아나스 플립플랍 2만원대부터",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 0,
+      "priceText": "다양",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "29cm) 하바이아나스 플립플랍 2만원대부터 특가입니다. 다양, 무료.",
+      "summaryPoints": [
+        "가격: 다양",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569972&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569972&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569972&page=2"
+    },
+    {
+      "id": 70,
+      "title": "[옥션] 리포좀 글루타치온 화이트 콜라겐 6개월분",
+      "productName": "리포좀 글루타치온 화이트 콜라겐 6개월분",
+      "category": "food-other",
+      "source": "딜바다 국내",
+      "platform": "옥션",
+      "price": 15900,
+      "priceText": "15,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "리포좀 글루타치온 화이트 콜라겐 6개월분 특가입니다. 옥션 기준 15,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 옥션",
+        "가격: 15,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569971&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569971&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569971&page=2"
+    },
+    {
+      "id": 71,
+      "title": "[딜바다 국내] 자이글 창고대방출 최대 96% 할인",
+      "productName": "자이글 창고대방출 최대 96% 할인",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 96,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "자이글 창고대방출 최대 96% 할인 특가입니다. 무료.",
+      "summaryPoints": [
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569970&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569970&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569970&page=2"
+    },
+    {
+      "id": 72,
+      "title": "[딜바다 국내] 타미진스 에센셜 레귤러 폴로셔츠",
+      "productName": "타미진스 에센셜 레귤러 폴로셔츠",
+      "category": "produce",
+      "source": "딜바다 국내",
+      "platform": "",
+      "price": 33090,
+      "priceText": "33,090원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "의류/잡화",
+      "summary": "타미진스 에센셜 레귤러 폴로셔츠 특가입니다. 33,090원, 무배.",
+      "summaryPoints": [
+        "가격: 33,090원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569969&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569969&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569969&page=2"
+    },
+    {
+      "id": 73,
+      "title": "[네이버] 의정부식 1960 부대찌개 700g 햄 4종 가득 x 2세트",
+      "productName": "의정부식 1960 부대찌개 700g 햄 4종 가득 x 2세트",
+      "category": "food-other",
+      "source": "딜바다 국내",
+      "platform": "네이버",
+      "price": 7900,
+      "priceText": "7,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "의정부식 1960 부대찌개 700g 햄 4종 가득 x 2세트 특가입니다. 네이버 기준 7,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 7,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569968&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569968&no=2&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569968&page=2"
+    },
+    {
+      "id": 74,
+      "title": "[네이버] 캐치웰 CX PRO 매직타워 N 자동 먼지비움 무선 청소기",
+      "productName": "캐치웰 CX PRO 매직타워 N 자동 먼지비움 무선 청소기",
+      "category": "electronics",
+      "source": "딜바다 국내",
+      "platform": "네이버",
+      "price": 274000,
+      "priceText": "274,000원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "가전",
+      "summary": "캐치웰 CX PRO 매직타워 N 자동 먼지비움 무선 청소기 특가입니다. 네이버 기준 274,000원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 네이버",
+        "가격: 274,000원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569967&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569967&no=2&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569967&page=2"
+    },
+    {
+      "id": 75,
+      "title": "[쿠팡] Qicco 침대 매트리스 무음 포켓스프링 매트리스 69,800원/무배",
+      "productName": "Qicco 침대 매트리스 무음 포켓스프링 매트리스 69,800원/무배",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "쿠팡",
+      "price": 69800,
+      "priceText": "69,800원",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "Qicco 침대 매트리스 무음 포켓스프링 매트리스 69,800원/무배 특가입니다. 쿠팡 기준 69,800원, 무배.",
+      "summaryPoints": [
+        "플랫폼: 쿠팡",
+        "가격: 69,800원",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569966&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569966&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569966&page=2"
+    },
+    {
+      "id": 76,
+      "title": "[11번가] 목우촌 허브갈릭 훈제오리 슬라이스 210g 4팩 (반값딜)",
+      "productName": "목우촌 허브갈릭 훈제오리 슬라이스 210g 4팩 (반값딜)",
+      "category": "food-other",
+      "source": "딜바다 국내",
+      "platform": "11번가",
+      "price": 9900,
+      "priceText": "9,900원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "식품"
+      ],
+      "sourceCategory": "식품/건강",
+      "summary": "목우촌 허브갈릭 훈제오리 슬라이스 210g 4팩 (반값딜) 특가입니다. 11번가 기준 9,900원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 9,900원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569965&page=2",
+      "purchaseUrl": "",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569965&page=2"
+    },
+    {
+      "id": 77,
+      "title": "[알리] 유그린 마그네틱 보조배터리 20000mah pd충전 맥세이프",
+      "productName": "유그린 마그네틱 보조배터리 20000mah pd충전 맥세이프",
+      "category": "overseas",
+      "source": "딜바다 국내",
+      "platform": "알리",
+      "price": 123350,
+      "priceText": "123,350원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "유그린 마그네틱 보조배터리 20000mah pd충전 맥세이프 특가입니다. 알리 기준 123,350원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 123,350원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569964&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569964&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569964&page=2"
+    },
+    {
+      "id": 78,
+      "title": "[알리] LENCENT 120W GaN 국제 여행용 어댑터 고속 충전기",
+      "productName": "LENCENT 120W GaN 국제 여행용 어댑터 고속 충전기",
+      "category": "overseas",
+      "source": "딜바다 국내",
+      "platform": "알리",
+      "price": 39053,
+      "priceText": "39,053원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "LENCENT 120W GaN 국제 여행용 어댑터 고속 충전기 특가입니다. 알리 기준 39,053원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 39,053원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569963&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569963&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569963&page=2"
+    },
+    {
+      "id": 79,
+      "title": "[알리] 존쿠 아징 낚싯대 S682L",
+      "productName": "존쿠 아징 낚싯대 S682L",
+      "category": "overseas",
+      "source": "딜바다 국내",
+      "platform": "알리",
+      "price": 61681,
+      "priceText": "61,681원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "등산/캠핑",
+      "summary": "존쿠 아징 낚싯대 S682L 특가입니다. 알리 기준 61,681원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 61,681원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569962&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569962&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569962&page=2"
+    },
+    {
+      "id": 80,
+      "title": "[알리] Baseus USB C 허브-DP 4K@60Hz HDMI 도킹스테이션",
+      "productName": "Baseus USB C 허브-DP 4K@60Hz HDMI 도킹스테이션",
+      "category": "overseas",
+      "source": "딜바다 국내",
+      "platform": "알리",
+      "price": 114673,
+      "priceText": "114,673원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "가전",
+      "summary": "Baseus USB C 허브-DP 4K@60Hz HDMI 도킹스테이션 특가입니다. 알리 기준 114,673원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 114,673원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569961&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569961&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569961&page=2"
+    },
+    {
+      "id": 81,
+      "title": "[알리] 앵커 마그고 3-in-1 충전 스테이션 Qi2 인증 15W",
+      "productName": "앵커 마그고 3-in-1 충전 스테이션 Qi2 인증 15W",
+      "category": "overseas",
+      "source": "딜바다 국내",
+      "platform": "알리",
+      "price": 75847,
+      "priceText": "75,847원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "가전",
+      "summary": "앵커 마그고 3-in-1 충전 스테이션 Qi2 인증 15W 특가입니다. 알리 기준 75,847원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 75,847원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569960&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569960&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569960&page=2"
+    },
+    {
+      "id": 82,
+      "title": "[지마켓] 라미 사파리 샤프 0.5",
+      "productName": "라미 사파리 샤프 0.5",
+      "category": "festa",
+      "source": "딜바다 국내",
+      "platform": "지마켓",
+      "price": 21510,
+      "priceText": "21,510원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "기타",
+      "summary": "라미 사파리 샤프 0.5 특가입니다. 지마켓 기준 21,510원.",
+      "summaryPoints": [
+        "플랫폼: 지마켓",
+        "가격: 21,510원"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569959&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_domestic&wr_id=569959&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=569959&page=2"
+    },
+    {
+      "id": 83,
+      "title": "[알리] 18인치 풀알루미늄 기내용캐리어 가방",
+      "productName": "18인치 풀알루미늄 기내용캐리어 가방",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "의류/잡화",
+      "summary": "18인치 풀알루미늄 기내용캐리어 가방 특가입니다. 알리 기준.",
+      "summaryPoints": [
+        "플랫폼: 알리"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308015&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308015&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308015&page=1"
+    },
+    {
+      "id": 84,
+      "title": "[알리] IGT 캠핑 테이블 프레임",
+      "productName": "IGT 캠핑 테이블 프레임",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 60046,
+      "priceText": "60,046원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "IGT 캠핑 테이블 프레임 특가입니다. 알리 기준 60,046원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 60,046원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308014&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308014&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308014&page=1"
+    },
+    {
+      "id": 85,
+      "title": "[알리] 베이스어스 100W GaN 충전기",
+      "productName": "베이스어스 100W GaN 충전기",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 48618,
+      "priceText": "48,618원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "베이스어스 100W GaN 충전기 특가입니다. 알리 기준 48,618원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 48,618원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308012&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308012&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308012&page=1"
+    },
+    {
+      "id": 86,
+      "title": "[알리] 고순대 10종 찰순대 간 허파 염통 오소리감투 돼지내장",
+      "productName": "고순대 10종 찰순대 간 허파 염통 오소리감투 돼지내장",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 2950,
+      "priceText": "2,950원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "식품/건강",
+      "summary": "고순대 10종 찰순대 간 허파 염통 오소리감투 돼지내장 특가입니다. 알리 기준 2,950원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 2,950원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308011&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308011&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308011&page=1"
+    },
+    {
+      "id": 87,
+      "title": "[알리] 논슬립 옷걸이 30개 어깨뿔 방지 pvc 스틸재질",
+      "productName": "논슬립 옷걸이 30개 어깨뿔 방지 pvc 스틸재질",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 14949,
+      "priceText": "14,949원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "논슬립 옷걸이 30개 어깨뿔 방지 pvc 스틸재질 특가입니다. 알리 기준 14,949원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 14,949원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308010&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308010&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308010&page=1"
+    },
+    {
+      "id": 88,
+      "title": "[알리] 벤션 10000mAh 미니 보조배터리 22.5w 휴대용 충전기 내장 USB C 케이블 PD 3.0 고속 충전(21,542원/무료배송) …",
+      "productName": "벤션 10000mAh 미니 보조배터리 22.5w 휴대용 충전기 내장 USB C 케이블 PD 3.0 고속 충전(21,542원/무료배송) …",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 21542,
+      "priceText": "21,542원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "벤션 10000mAh 미니 보조배터리 22.5w 휴대용 충전기 내장 USB C 케이블 PD 3.0 고속 충전(21,542원/무료배송) … 특가입니다. 알리 기준 21,542원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 21,542원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308009&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308009&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308009&page=1"
+    },
+    {
+      "id": 89,
+      "title": "[알리] CCC 인증 벤션 165W 파워뱅크 20000mAh PD 고속 파워뱅크(68,546원/무료배송) 쿠폰 추가 할인",
+      "productName": "CCC 인증 벤션 165W 파워뱅크 20000mAh PD 고속 파워뱅크(68,546원/무료배송) 쿠폰 추가 할인",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 68546,
+      "priceText": "68,546원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "쿠폰"
+      ],
+      "sourceCategory": "가전",
+      "summary": "CCC 인증 벤션 165W 파워뱅크 20000mAh PD 고속 파워뱅크(68,546원/무료배송) 쿠폰 추가 할인 특가입니다. 알리 기준 68,546원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 68,546원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308008&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308008&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308008&page=1"
+    },
+    {
+      "id": 90,
+      "title": "[알리] 테크스킨스탠다드 높이조절 골프티 40mm 우드티((50개입)",
+      "productName": "테크스킨스탠다드 높이조절 골프티 40mm 우드티((50개입)",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 14700,
+      "priceText": "14,700원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-09T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "테크스킨스탠다드 높이조절 골프티 40mm 우드티((50개입) 특가입니다. 알리 기준 14,700원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 14,700원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308007&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308007&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308007&page=1"
+    },
+    {
+      "id": 91,
+      "title": "[알리] NexTool EDC 미니 나이프",
+      "productName": "NexTool EDC 미니 나이프",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "등산/캠핑",
+      "summary": "NexTool EDC 미니 나이프 특가입니다. 알리 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308006&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308006&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308006&page=1"
+    },
+    {
+      "id": 92,
+      "title": "[알리] 팬텀 남성용 7120 수동 기계식 시계 36mm",
+      "productName": "팬텀 남성용 7120 수동 기계식 시계 36mm",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "시계",
+      "summary": "팬텀 남성용 7120 수동 기계식 시계 36mm 특가입니다. 알리 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308005&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308005&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308005&page=1"
+    },
+    {
+      "id": 93,
+      "title": "[알리] 고메쿠스 낚시 립그리퍼",
+      "productName": "고메쿠스 낚시 립그리퍼",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 44353,
+      "priceText": "44,353원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "고메쿠스 낚시 립그리퍼 특가입니다. 알리 기준 44,353원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 44,353원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308004&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308004&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308004&page=1"
+    },
+    {
+      "id": 94,
+      "title": "[알리] 튼튼한 105cm 대형 손잡이 우산",
+      "productName": "튼튼한 105cm 대형 손잡이 우산",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 10750,
+      "priceText": "10,750원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "의류/잡화",
+      "summary": "튼튼한 105cm 대형 손잡이 우산 특가입니다. 알리 기준 10,750원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 10,750원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308003&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308003&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308003&page=1"
+    },
+    {
+      "id": 95,
+      "title": "[알리] 에사저 20000mAh 65W 보조배터리",
+      "productName": "에사저 20000mAh 65W 보조배터리",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 32820,
+      "priceText": "32,820원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "에사저 20000mAh 65W 보조배터리 특가입니다. 알리 기준 32,820원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 32,820원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308002&page=1",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308002&no=1&page=1",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308002&page=1"
+    },
+    {
+      "id": 96,
+      "title": "[알리] 충전식 LED 휴대용 캠핑 조명 5가지 조명 모드 방수",
+      "productName": "충전식 LED 휴대용 캠핑 조명 5가지 조명 모드 방수",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 830,
+      "priceText": "0830원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "등산/캠핑",
+      "summary": "충전식 LED 휴대용 캠핑 조명 5가지 조명 모드 방수 특가입니다. 알리 기준 0830원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 0830원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308001&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308001&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308001&page=2"
+    },
+    {
+      "id": 97,
+      "title": "[알리] 3피스 360도 퍼팅라인 비거리 골프공 1더즌",
+      "productName": "3피스 360도 퍼팅라인 비거리 골프공 1더즌",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 18881,
+      "priceText": "18,881원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-08T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "의류/잡화",
+      "summary": "3피스 360도 퍼팅라인 비거리 골프공 1더즌 특가입니다. 알리 기준 18,881원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 18,881원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308000&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=308000&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308000&page=2"
+    },
+    {
+      "id": 98,
+      "title": "[알리] LEYDUN ISO 텐션 낚싯대",
+      "productName": "LEYDUN ISO 텐션 낚싯대",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 110300,
+      "priceText": "110,300원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-07T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "LEYDUN ISO 텐션 낚싯대 특가입니다. 알리 기준 110,300원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 110,300원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307999&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307999&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307999&page=2"
+    },
+    {
+      "id": 99,
+      "title": "[알리] 에디파이어 M90 바이앰프 2.0 고음질 블루투스 스피커",
+      "productName": "에디파이어 M90 바이앰프 2.0 고음질 블루투스 스피커",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무배",
+      "discount": 0,
+      "createdAt": "2026-06-07T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "에디파이어 M90 바이앰프 2.0 고음질 블루투스 스피커 특가입니다. 알리 기준 무배.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무배"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307998&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307998&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307998&page=2"
+    },
+    {
+      "id": 100,
+      "title": "[알리] MCHOSE ACE68 V2 게이밍 키보드",
+      "productName": "MCHOSE ACE68 V2 게이밍 키보드",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 62522,
+      "priceText": "62,522원",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-07T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "컴퓨터",
+      "summary": "MCHOSE ACE68 V2 게이밍 키보드 특가입니다. 알리 기준 62,522원, 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 62,522원",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307997&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307997&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307997&page=2"
+    },
+    {
+      "id": 101,
+      "title": "[알리] 테슬라 모델Y주니퍼, 모델3 하이랜드 윈도우 바이저 선/비 차단",
+      "productName": "테슬라 모델Y주니퍼, 모델3 하이랜드 윈도우 바이저 선/비 차단",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 28300,
+      "priceText": "28,300원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-07T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "기타",
+      "summary": "테슬라 모델Y주니퍼, 모델3 하이랜드 윈도우 바이저 선/비 차단 특가입니다. 알리 기준 28,300원.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 28,300원"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307996&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307996&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307996&page=2"
+    },
+    {
+      "id": 102,
+      "title": "[알리] 22.4인치 접이식 보관 정리함, 이중 도어",
+      "productName": "22.4인치 접이식 보관 정리함, 이중 도어",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 17700,
+      "priceText": "17,700원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-07T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "의류/잡화",
+      "summary": "22.4인치 접이식 보관 정리함, 이중 도어 특가입니다. 알리 기준 17,700원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 17,700원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307995&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307995&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307995&page=2"
+    },
+    {
+      "id": 103,
+      "title": "[알리] Fosi Audio ZH3 HIFI 헤드폰 앰프 DAC",
+      "productName": "Fosi Audio ZH3 HIFI 헤드폰 앰프 DAC",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-06T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "Fosi Audio ZH3 HIFI 헤드폰 앰프 DAC 특가입니다. 알리 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307994&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307994&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307994&page=2"
+    },
+    {
+      "id": 104,
+      "title": "[알리] 330W GaN 고속 10포트 충전기 100W",
+      "productName": "330W GaN 고속 10포트 충전기 100W",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-05T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "330W GaN 고속 10포트 충전기 100W 특가입니다. 알리 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307993&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307993&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307993&page=2"
+    },
+    {
+      "id": 105,
+      "title": "[알리] 800W GaN 10포트 고속 충전기 100W KR코드",
+      "productName": "800W GaN 10포트 고속 충전기 100W KR코드",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 0,
+      "priceText": "",
+      "shipping": "무료",
+      "discount": 0,
+      "createdAt": "2026-06-05T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "디지털",
+      "summary": "800W GaN 10포트 고속 충전기 100W KR코드 특가입니다. 알리 기준 무료.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "배송: 무료"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307992&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307992&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307992&page=2"
+    },
+    {
+      "id": 106,
+      "title": "[알리] 풍량 최고 미지아 H501 초고속 드라이기",
+      "productName": "풍량 최고 미지아 H501 초고속 드라이기",
+      "category": "overseas",
+      "source": "딜바다 해외",
+      "platform": "알리",
+      "price": 40554,
+      "priceText": "40,554원",
+      "shipping": "무료배송",
+      "discount": 0,
+      "createdAt": "2026-06-04T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [],
+      "sourceCategory": "가전",
+      "summary": "풍량 최고 미지아 H501 초고속 드라이기 특가입니다. 알리 기준 40,554원, 무료배송.",
+      "summaryPoints": [
+        "플랫폼: 알리",
+        "가격: 40,554원",
+        "배송: 무료배송"
+      ],
+      "originalUrl": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307991&page=2",
+      "purchaseUrl": "https://www.dealbada.com/bbs/link.php?bo_table=deal_oversea&wr_id=307991&no=1&page=2",
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=307991&page=2"
     }
   ]
 }

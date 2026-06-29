@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T19:07:28.015Z",
+  "generatedAt": "2026-06-29T21:11:26.079Z",
   "policy": {
     "mode": "public-list-only",
     "policyVersion": "1.2.0",
@@ -20,7 +20,7 @@
     {
       "source": "알리뽐뿌",
       "status": "ok",
-      "collected": 16
+      "collected": 15
     },
     {
       "source": "FM코리아",
@@ -118,7 +118,7 @@
       "id": 3,
       "title": "[루리웹] AW3926QW (1,897,500원/무배)",
       "productName": "AW3926QW (1,897,500원/무배)",
-      "category": "electronics",
+      "category": "festa",
       "source": "루리웹",
       "platform": "",
       "price": 1897500,
@@ -130,8 +130,10 @@
       "deadlineText": "",
       "statusText": "",
       "expiresAt": "",
-      "eventTags": [],
-      "sourceCategory": "PC/가전",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "BEST",
       "summary": "AW3926QW (1,897,500원/무배) 특가입니다. 1,897,500원, 무배.",
       "summaryPoints": [
         "가격: 1,897,500원",
@@ -757,36 +759,6 @@
     },
     {
       "id": 25,
-      "title": "[G마켓] 3개세트 에어솔 쿠션강화 깔창 235~285mm",
-      "productName": "3개세트 에어솔 쿠션강화 깔창 235~285mm",
-      "category": "festa",
-      "source": "뽐뿌",
-      "platform": "G마켓",
-      "price": 7900,
-      "priceText": "7,900원",
-      "shipping": "무료",
-      "discount": 0,
-      "createdAt": "2026-06-29T15:05:41.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "",
-      "summary": "3개세트 에어솔 쿠션강화 깔창 235~285mm 특가입니다. G마켓 기준 7,900원, 무료.",
-      "summaryPoints": [
-        "플랫폼: G마켓",
-        "가격: 7,900원",
-        "배송: 무료"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=716356",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_716356&target=aHR0cHM6Ly9pdGVtLmdtYXJrZXQuY28ua3IvSXRlbT9nb29kc2NvZGU9NDQ1NzY4MTk3MQ==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=716356"
-    },
-    {
-      "id": 26,
       "title": "[지마켓] UV차단 3단 대형 우양산 겸 자동우산 외 우산 모음전",
       "productName": "UV차단 3단 대형 우양산 겸 자동우산 외 우산 모음전",
       "category": "festa",
@@ -816,7 +788,66 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=570222&page=1"
     },
     {
+      "id": 26,
+      "title": "[&#x1f964;네이버페이] 2026-06-30 일일적립, 클릭적립 28원",
+      "productName": "2026-06-30 일일적립, 클릭적립 28원",
+      "category": "festa",
+      "source": "개드립",
+      "platform": "&#x1f964;네이버페이",
+      "price": 28,
+      "priceText": "28원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-29T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "적립",
+        "페이적립"
+      ],
+      "sourceCategory": "기타",
+      "summary": "2026-06-30 일일적립, 클릭적립 28원 특가입니다. &#x1f964;네이버페이 기준 28원.",
+      "summaryPoints": [
+        "플랫폼: &#x1f964;네이버페이",
+        "가격: 28원"
+      ],
+      "originalUrl": "https://www.dogdrip.net/hotdeal/710659000?sort_index=popular&page=1",
+      "purchaseUrl": "https://point.pay.naver.com/pc/mission-detail?dataType=category&rank=18&pageKey=quickreward",
+      "url": "https://www.dogdrip.net/hotdeal/710659000?sort_index=popular&page=1"
+    },
+    {
       "id": 27,
+      "title": "[11번가] NBA 남여공용 트레이닝 반바지 249PT262",
+      "productName": "NBA 남여공용 트레이닝 반바지 249PT262",
+      "category": "festa",
+      "source": "뽐뿌",
+      "platform": "11번가",
+      "price": 8180,
+      "priceText": "8,180원",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-28T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "",
+      "summary": "NBA 남여공용 트레이닝 반바지 249PT262 특가입니다. 11번가 기준 8,180원.",
+      "summaryPoints": [
+        "플랫폼: 11번가",
+        "가격: 8,180원"
+      ],
+      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=716313",
+      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu_716313&target=aHR0cHM6Ly93d3cuMTFzdC5jby5rci9wcm9kdWN0cy85MjIyMzQzMTEx&encode=on",
+      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu&page=1&divpage=113&no=716313"
+    },
+    {
+      "id": 28,
       "title": "[알리익스프레스] 쿨-다운 위크 정보 안내",
       "productName": "쿨-다운 위크 정보 안내",
       "category": "overseas",
@@ -842,7 +873,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91807"
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "[알리뽐뿌] 이지라이프 경량랙 조립식 앵글 무볼트 선반 4단 (22,962원) 5단",
       "productName": "이지라이프 경량랙 조립식 앵글 무볼트 선반 4단 (22,962원) 5단",
       "category": "overseas",
@@ -869,7 +900,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91855"
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "[알리뽐뿌] Soom 천연펄프 베이직 키친타올 6롤 2팩(6,300원), 클리어 뽑아쓰는 ...",
       "productName": "Soom 천연펄프 베이직 키친타올 6롤 2팩(6,300원), 클리어 뽑아쓰는 ...",
       "category": "overseas",
@@ -896,7 +927,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91854"
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "[알리뽐뿌] 풀라스 5단 대용량 폴더블 선풍기(9,288원), 1+1 모란카노 BLDC 100단 냉각 손선...",
       "productName": "풀라스 5단 대용량 폴더블 선풍기(9,288원), 1+1 모란카노 BLDC 100단 냉각 손선...",
       "category": "overseas",
@@ -923,7 +954,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91853"
     },
     {
-      "id": 31,
+      "id": 32,
       "title": "[알리뽐뿌] 스위티오 파인애플 대과 3개(12,371원) 아보카도 중소과 10개(8,811원) 화...",
       "productName": "스위티오 파인애플 대과 3개(12,371원) 아보카도 중소과 10개(8,811원) 화...",
       "category": "overseas",
@@ -950,7 +981,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91852"
     },
     {
-      "id": 32,
+      "id": 33,
       "title": "[알리뽐뿌] 이지라이프 2단 협탁 (8,469원) 라운드 소파 사이드 테이블 (9,407원) 스퀘어 침대 ...",
       "productName": "이지라이프 2단 협탁 (8,469원) 라운드 소파 사이드 테이블 (9,407원) 스퀘어 침대 ...",
       "category": "overseas",
@@ -977,7 +1008,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91851"
     },
     {
-      "id": 33,
+      "id": 34,
       "title": "[알리뽐뿌] 800W GaN 충전기 100W KR코드($18.70) 샤오미 나이트 라이트3 (...",
       "productName": "800W GaN 충전기 100W KR코드($18.70) 샤오미 나이트 라이트3 (...",
       "category": "overseas",
@@ -1003,7 +1034,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91850"
     },
     {
-      "id": 34,
+      "id": 35,
       "title": "[알리뽐뿌] 헬레마 코코넛 쿠키 150gX3(7,031원), 땅콩쿠기 150gX3(6,784원), 피시스낵...",
       "productName": "헬레마 코코넛 쿠키 150gX3(7,031원), 땅콩쿠기 150gX3(6,784원), 피시스낵...",
       "category": "overseas",
@@ -1030,7 +1061,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91849"
     },
     {
-      "id": 35,
+      "id": 36,
       "title": "[알리뽐뿌] 써지오 안전멀티탭 (4,063원~) 2구 3구 4구 5구 6구 1.5m/3m/5m 길이...",
       "productName": "써지오 안전멀티탭 (4,063원~) 2구 3구 4구 5구 6구 1.5m/3m/5m 길이...",
       "category": "overseas",
@@ -1057,7 +1088,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91848"
     },
     {
-      "id": 36,
+      "id": 37,
       "title": "[알리뽐뿌] 카카오프렌즈 춘식이 멜라민 안주접시 (3,181원) 글라스 텀블러 리틀 어피치 (4,329원...",
       "productName": "카카오프렌즈 춘식이 멜라민 안주접시 (3,181원) 글라스 텀블러 리틀 어피치 (4,329원...",
       "category": "overseas",
@@ -1084,7 +1115,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91847"
     },
     {
-      "id": 37,
+      "id": 38,
       "title": "[알리뽐뿌] 미국산 볶음땅콩 500gx2봉(9,749원), 몸통오징어 100g(5,967원)/무료",
       "productName": "미국산 볶음땅콩 500gx2봉(9,749원), 몸통오징어 100g(5,967원)/무료",
       "category": "overseas",
@@ -1112,7 +1143,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91846"
     },
     {
-      "id": 38,
+      "id": 39,
       "title": "[알리뽐뿌] SHARGE 165W 보조배터리 20000mAh",
       "productName": "SHARGE 165W 보조배터리 20000mAh",
       "category": "overseas",
@@ -1139,7 +1170,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91845"
     },
     {
-      "id": 39,
+      "id": 40,
       "title": "[알리뽐뿌] 메르헨트 미셀라 저자극 폼클렌징 230ml 8개(17,531원), 그린티 시카 버블 폼클...",
       "productName": "메르헨트 미셀라 저자극 폼클렌징 230ml 8개(17,531원), 그린티 시카 버블 폼클...",
       "category": "overseas",
@@ -1164,35 +1195,6 @@
       "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91844",
       "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_91844&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDIyMTIwNzM1MjguaHRtbA==&encode=on",
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91844"
-    },
-    {
-      "id": 40,
-      "title": "[알리뽐뿌] TNI 킹커피 아메리카노15입x1g (2,670원),킹커피 블랙 커피 2g, 100개(...",
-      "productName": "TNI 킹커피 아메리카노15입x1g (2,670원),킹커피 블랙 커피 2g, 100개(...",
-      "category": "overseas",
-      "source": "알리뽐뿌",
-      "platform": "알리뽐뿌",
-      "price": 2670,
-      "priceText": "2,670원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-06-28T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "커피"
-      ],
-      "sourceCategory": "",
-      "summary": "TNI 킹커피 아메리카노15입x1g (2,670원),킹커피 블랙 커피 2g, 100개(... 특가입니다. 알리뽐뿌 기준 2,670원.",
-      "summaryPoints": [
-        "플랫폼: 알리뽐뿌",
-        "가격: 2,670원"
-      ],
-      "originalUrl": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91843",
-      "purchaseUrl": "https://s.ppomppu.co.kr/?idno=ppomppu8_91843&target=aHR0cHM6Ly9rby5hbGlleHByZXNzLmNvbS9pdGVtLzEwMDUwMDk2MTUxMTA3OTguaHRtbA==&encode=on",
-      "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu8&page=1&divpage=16&no=91843"
     },
     {
       "id": 41,
@@ -1310,34 +1312,6 @@
     },
     {
       "id": 45,
-      "title": "[네이버쇼핑] 넨도로이드 코지마 히데오 ₩64,600",
-      "productName": "넨도로이드 코지마 히데오 ₩64,600",
-      "category": "festa",
-      "source": "루리웹",
-      "platform": "네이버쇼핑",
-      "price": 0,
-      "priceText": "",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-06-28T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "할인페스타"
-      ],
-      "sourceCategory": "BEST",
-      "summary": "넨도로이드 코지마 히데오 ₩64,600 특가입니다. 네이버쇼핑 기준.",
-      "summaryPoints": [
-        "플랫폼: 네이버쇼핑"
-      ],
-      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/105217?",
-      "purchaseUrl": "",
-      "url": "https://bbs.ruliweb.com/market/board/1020/read/105217?"
-    },
-    {
-      "id": 46,
       "title": "[쿠팡] 안성탕면 해물맛 112g 5개 (2,850원/무료)",
       "productName": "안성탕면 해물맛 112g 5개 (2,850원/무료)",
       "category": "festa",
@@ -1365,6 +1339,34 @@
       "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/105218?",
       "purchaseUrl": "https://web.ruliweb.com/link.php?ol=https%3A%2F%2Fwww.coupang.com%2Fvp%2Fproducts%2F2149200399%3FitemId%3D3649906506&bbs=1020",
       "url": "https://bbs.ruliweb.com/market/board/1020/read/105218?"
+    },
+    {
+      "id": 46,
+      "title": "[네이버쇼핑] 넨도로이드 코지마 히데오 ₩64,600",
+      "productName": "넨도로이드 코지마 히데오 ₩64,600",
+      "category": "festa",
+      "source": "루리웹",
+      "platform": "네이버쇼핑",
+      "price": 0,
+      "priceText": "",
+      "shipping": "",
+      "discount": 0,
+      "createdAt": "2026-06-28T15:00:00.000Z",
+      "deadlineAt": "",
+      "deadlineText": "",
+      "statusText": "",
+      "expiresAt": "",
+      "eventTags": [
+        "할인페스타"
+      ],
+      "sourceCategory": "취미용품",
+      "summary": "넨도로이드 코지마 히데오 ₩64,600 특가입니다. 네이버쇼핑 기준.",
+      "summaryPoints": [
+        "플랫폼: 네이버쇼핑"
+      ],
+      "originalUrl": "https://bbs.ruliweb.com/market/board/1020/read/105217?",
+      "purchaseUrl": "",
+      "url": "https://bbs.ruliweb.com/market/board/1020/read/105217?"
     },
     {
       "id": 47,
@@ -2415,36 +2417,6 @@
     },
     {
       "id": 83,
-      "title": "[&#x1f964;네이버페이] 2026-06-28 일일적립, 클릭적립 28원",
-      "productName": "2026-06-28 일일적립, 클릭적립 28원",
-      "category": "festa",
-      "source": "개드립",
-      "platform": "&#x1f964;네이버페이",
-      "price": 28,
-      "priceText": "28원",
-      "shipping": "",
-      "discount": 0,
-      "createdAt": "2026-06-27T15:00:00.000Z",
-      "deadlineAt": "",
-      "deadlineText": "",
-      "statusText": "",
-      "expiresAt": "",
-      "eventTags": [
-        "적립",
-        "페이적립"
-      ],
-      "sourceCategory": "기타",
-      "summary": "2026-06-28 일일적립, 클릭적립 28원 특가입니다. &#x1f964;네이버페이 기준 28원.",
-      "summaryPoints": [
-        "플랫폼: &#x1f964;네이버페이",
-        "가격: 28원"
-      ],
-      "originalUrl": "https://www.dogdrip.net/hotdeal/710268858?sort_index=popular&page=1",
-      "purchaseUrl": "https://point.pay.naver.com/pc/mission-detail?dataType=category&rank=18&pageKey=quickreward",
-      "url": "https://www.dogdrip.net/hotdeal/710268858?sort_index=popular&page=1"
-    },
-    {
-      "id": 84,
       "title": "[네이버] 아워홈 온더고 직장인 냉동 도시락 14팩 세트",
       "productName": "아워홈 온더고 직장인 냉동 도시락 14팩 세트",
       "category": "frozen",
@@ -2474,7 +2446,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_domestic&wr_id=570195&page=2"
     },
     {
-      "id": 85,
+      "id": 84,
       "title": "[Amazon.com] Apple iPad Air 11-inch (M4) wifi, Space gray",
       "productName": "Apple iPad Air 11-inch (M4) wifi, Space gray",
       "category": "overseas",
@@ -2501,7 +2473,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126888"
     },
     {
-      "id": 86,
+      "id": 85,
       "title": "[알리] Fosi Audio BOX X5 HIFI 포노 MM/MC 카트리지 턴테이블용 프리앰프 $90.4",
       "productName": "Fosi Audio BOX X5 HIFI 포노 MM/MC 카트리지 턴테이블용 프리앰프 $90.4",
       "category": "overseas",
@@ -2527,7 +2499,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308035&page=1"
     },
     {
-      "id": 87,
+      "id": 86,
       "title": "[알리] 휴대용 골프 스윙 자세 보조 페달 스윙 교정 트레이너",
       "productName": "휴대용 골프 스윙 자세 보조 페달 스윙 교정 트레이너",
       "category": "overseas",
@@ -2555,7 +2527,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308034&page=1"
     },
     {
-      "id": 88,
+      "id": 87,
       "title": "[알리] 갤럭시 S26 Ultra 카본 파이버 텍스처 MagSafe 케이스커버",
       "productName": "갤럭시 S26 Ultra 카본 파이버 텍스처 MagSafe 케이스커버",
       "category": "overseas",
@@ -2583,7 +2555,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308033&page=1"
     },
     {
-      "id": 89,
+      "id": 88,
       "title": "[알리] 알루미늄 프레임 롤링 캐리어 20 24 26 28인치 USB 여행용 캐리어",
       "productName": "알루미늄 프레임 롤링 캐리어 20 24 26 28인치 USB 여행용 캐리어",
       "category": "overseas",
@@ -2611,7 +2583,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308032&page=1"
     },
     {
-      "id": 90,
+      "id": 89,
       "title": "[알리] 100W GaN 충전기 4포트 USB 타입 C PD3.0 PPS 고속 충전",
       "productName": "100W GaN 충전기 4포트 USB 타입 C PD3.0 PPS 고속 충전",
       "category": "overseas",
@@ -2639,7 +2611,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308031&page=1"
     },
     {
-      "id": 91,
+      "id": 90,
       "title": "[알리] 10개입 골프 티 - 공을 때리면 좋은 반응을 얻고, 좋은 느낌",
       "productName": "10개입 골프 티 - 공을 때리면 좋은 반응을 얻고, 좋은 느낌",
       "category": "overseas",
@@ -2666,7 +2638,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308030&page=1"
     },
     {
-      "id": 92,
+      "id": 91,
       "title": "[알리] 네이처하이크 접이식 라운지 의자",
       "productName": "네이처하이크 접이식 라운지 의자",
       "category": "overseas",
@@ -2694,7 +2666,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308029&page=1"
     },
     {
-      "id": 93,
+      "id": 92,
       "title": "[해외뽐뿌] 애플워치 se3 LIKE NEW",
       "productName": "애플워치 se3 LIKE NEW",
       "category": "overseas",
@@ -2718,7 +2690,7 @@
       "url": "https://www.ppomppu.co.kr/zboard/view.php?id=ppomppu4&page=1&divpage=23&no=126887"
     },
     {
-      "id": 94,
+      "id": 93,
       "title": "[알리] 워킹 러닝화 통기성 경량 편안한 운동화 미끄럼 방지",
       "productName": "워킹 러닝화 통기성 경량 편안한 운동화 미끄럼 방지",
       "category": "overseas",
@@ -2746,7 +2718,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308028&page=1"
     },
     {
-      "id": 95,
+      "id": 94,
       "title": "[알리] 미지아 전기면도기 S100, 충전 한 번으로 3개월 사용",
       "productName": "미지아 전기면도기 S100, 충전 한 번으로 3개월 사용",
       "category": "overseas",
@@ -2773,7 +2745,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308027&page=1"
     },
     {
-      "id": 96,
+      "id": 95,
       "title": "[알리익스프레스] 브랜드 특가전 정보 안내",
       "productName": "브랜드 특가전 정보 안내",
       "category": "overseas",
@@ -2799,7 +2771,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308026&page=1"
     },
     {
-      "id": 97,
+      "id": 96,
       "title": "[알리] 2026년형 목베개, 수면 목 보호 경추 콩섬유",
       "productName": "2026년형 목베개, 수면 목 보호 경추 콩섬유",
       "category": "overseas",
@@ -2827,7 +2799,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308025&page=1"
     },
     {
-      "id": 98,
+      "id": 97,
       "title": "[알리] MR.GREEN 스플래시 방지 손톱깎이",
       "productName": "MR.GREEN 스플래시 방지 손톱깎이",
       "category": "overseas",
@@ -2855,7 +2827,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308024&page=1"
     },
     {
-      "id": 99,
+      "id": 98,
       "title": "[알리] 빠른 건조 조깅 피트니스 반바지",
       "productName": "빠른 건조 조깅 피트니스 반바지",
       "category": "overseas",
@@ -2883,7 +2855,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308023&page=2"
     },
     {
-      "id": 100,
+      "id": 99,
       "title": "[알리] 30W/40W 리모컨 LED 조명 팬 천장 선풍기 지능형 무소음",
       "productName": "30W/40W 리모컨 LED 조명 팬 천장 선풍기 지능형 무소음",
       "category": "overseas",
@@ -2911,7 +2883,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308022&page=2"
     },
     {
-      "id": 101,
+      "id": 100,
       "title": "[알리] 4 in 1 쇼트 타입 C 키체인 랜야드 데이터 케이블 LED 디스플레이 PD 고속 충전",
       "productName": "4 in 1 쇼트 타입 C 키체인 랜야드 데이터 케이블 LED 디스플레이 PD 고속 충전",
       "category": "overseas",
@@ -2939,7 +2911,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308021&page=2"
     },
     {
-      "id": 102,
+      "id": 101,
       "title": "[알리] HOMFISH 골프 벨트 클립 팬 휴대용 보조 배터리 손전등",
       "productName": "HOMFISH 골프 벨트 클립 팬 휴대용 보조 배터리 손전등",
       "category": "overseas",
@@ -2967,7 +2939,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308020&page=2"
     },
     {
-      "id": 103,
+      "id": 102,
       "title": "[알리] 손목 그립볼 자이로스코픽 피트니스 전완 운동기구",
       "productName": "손목 그립볼 자이로스코픽 피트니스 전완 운동기구",
       "category": "overseas",
@@ -2995,7 +2967,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308019&page=2"
     },
     {
-      "id": 104,
+      "id": 103,
       "title": "[알리] 충전식 3IN1 다기능 휴대용 선풍기 벽걸이형",
       "productName": "충전식 3IN1 다기능 휴대용 선풍기 벽걸이형",
       "category": "overseas",
@@ -3023,7 +2995,7 @@
       "url": "https://www.dealbada.com/bbs/board.php?bo_table=deal_oversea&wr_id=308018&page=2"
     },
     {
-      "id": 105,
+      "id": 104,
       "title": "[알리] Kapvoe 포토 크로믹 변색 스포츠 선글라스",
       "productName": "Kapvoe 포토 크로믹 변색 스포츠 선글라스",
       "category": "overseas",
